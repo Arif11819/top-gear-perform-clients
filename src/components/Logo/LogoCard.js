@@ -3,7 +3,7 @@ import React from 'react';
 const LogoCard = ({ img, title }) => {
   return (
     <div >
-      <div class="card lg:w-80 w-56 bg-base-100 shadow-xl max-w-sm ">
+      <div class="card lg:w-72 w-56 bg-base-100 shadow-xl max-w-sm ">
         <figure class="px-10 pt-10">
           <img src={img} width={100} alt="Shoes" class="rounded-xl " />
         </figure>
