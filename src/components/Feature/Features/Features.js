@@ -12,9 +12,9 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="bg-slate-100">
-      <div className=" card-container py-20">
-        <h1 className="text-center bg-black-300 text-4xl lg:text-6xl m-4 text-white font-bold">
+    <div className="">
+      <div className="lg:py-20 py-10">
+        <h1 className="text-center bg-black-300 text-4xl lg:text-6xl  text-white font-bold">
           Explore TopGear Features
         </h1>
         <p className="text-center text-xl text-white m-8">
