@@ -5,7 +5,7 @@ const LogoCard = ({img, title}) => {
         <div >
             <div class="card w-96 bg-base-100 shadow-xl max-w-sm ">
   <figure class="px-10 pt-10">
-    <img src={img} width={100} alt="Shoes" class="rounded-xl" />
+    <img src={img} width={100} alt="Shoes" class="rounded-xl " />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">{title}</h2>
