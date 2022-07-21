@@ -12,8 +12,8 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="bg-slate-100">
-      <div className=" card-container lg:py-20 py-10">
+    <div className="">
+      <div className="lg:py-20 py-10">
         <h1 className="text-center bg-black-300 text-4xl lg:text-6xl  text-white font-bold">
           Explore TopGear Features
         </h1>

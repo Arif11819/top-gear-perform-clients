@@ -3,10 +3,10 @@ import LogoCard from './LogoCard';
 
 
 const Logo = () => {
-    return (
-        <div className='lg: m-20' >
-         
-           <h1 className='md:text-3xl font-bold text-center mb-11 mt-7 '>Top Gear Perform is a great choice for:</h1>
+  return (
+    <div className='lg: m-20' >
+
+      <h1 className='md:text-4xl text-white font-bold text-center mb-11 mt-7 '>Top Gear Perform is a great choice for:</h1>
       <div className='grid grid-cols-1 lg:grid-cols-4  md:grid-cols-2 gap-4   '>
         <LogoCard title='Online Communities' img='https://i.ibb.co/wLJKTKb/chat.png' />
         <LogoCard title='Internet/Extranet' img='https://i.ibb.co/NsJ8k60/worldwide.png' />
@@ -17,11 +17,11 @@ const Logo = () => {
         <LogoCard title='Konwledgebase' img='https://i.ibb.co/vQ2JhRc/light-bulbs.png' />
         <LogoCard title='Dashboard' img='https://i.ibb.co/34qp4qc/dashboard.png' />
       </div>
-           </div>
-        
-     
-        
-    );
+    </div>
+
+
+
+  );
 };
 
 export default Logo;

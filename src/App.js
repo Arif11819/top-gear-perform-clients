@@ -11,11 +11,11 @@ AOS.init();
 
 function App() {
   return (
-    <div >
+    <div className='card-container'>
       <Header></Header>
-      <Dashboard></Dashboard>
       <Features></Features>
       <Employees />
+      <Dashboard></Dashboard>
       <Logo />
       <Footer></Footer>
     </div>
