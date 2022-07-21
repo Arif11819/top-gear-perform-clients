@@ -1,0 +1,108 @@
+nav {
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: white;
+    margin: 0px 15px;
+
+}
+
+.button button {
+    background-color: #ED5427;
+    color: white;
+    padding: 8px 20px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+/* toggle menu code */
+
+.hamburger-icon {
+    display: none;
+
+}
+
+.toggle-menu {
+    width: 70%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.918);
+    padding: 15px;
+    z-index: 888;
+
+}
+
+.close-icon {
+    font-size: 40px;
+    color: white;
+    margin-left: 80%;
+    margin-top: 20px;
+}
+
+.toggle-menu-links a {
+    display: block;
+    color: white;
+    padding: 10px;
+    margin: 8px 0px;
+    font-size: 20px;
+}
+
+.toggle-menu-button {
+    background-color: #ED5427;
+    color: white;
+    padding: 8px 20px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.close-menu {
+    left: 100%;
+    transition: 1s;
+    animation: closeMenu linear ease-in-out;
+}
+
+@keyframes closeMenu {
+    from {
+       left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+/* toggle menu code ended */
+
+
+/* responsive cod here */
+@media only screen and (max-width:600px) {
+
+    nav {
+        padding: 0px 15px;
+    }
+
+    .navbar-links {
+        display: none;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+        color: white;
+        font-size: 40px;
+    }
+}
