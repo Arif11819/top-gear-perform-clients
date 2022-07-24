@@ -5,13 +5,16 @@ import './Navbar.css'
 import { MdLogin } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
+import { NavLink, useNavigate } from 'react-router-dom';
 const Navbar = () => {
     const [toggle, setToggle] = useState(true)
+
+    const navigate = useNavigate()
     return (
         <>
             <nav>
                 <div className="logo">
-                    <img width='300px' src="https://i.ibb.co/f9ZDrz1/logo.png" alt="" />
+                    <img onClick={() => navigate('/')} width='300px' src="https://i.ibb.co/f9ZDrz1/logo.png" alt="" />
                 </div>
                 {toggle
                     ?
@@ -20,10 +23,16 @@ const Navbar = () => {
                     null
                 }
 
-                <div className="navbar-links">
-                    <a href="/">Home</a>
-                    <a href="/">Documentation</a>
-                    <a href="/">About Us</a>
+                <div>
+                    <NavLink to="/" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Home</NavLink>
+
+
+
+                    <NavLink to="/aboutUs" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>About Us</NavLink>
                 </div>
                 <div className="button">
                     <button>Login <MdLogin className='inline' /></button>
@@ -35,10 +44,16 @@ const Navbar = () => {
                 <MdClose onClick={() => setToggle(!toggle)} className='close-icon' />
 
 
-                <div className={toggle ? " close-menu" : 'toggle-menu-links'}>
-                    <a href="/">Home</a>
-                    <a href="/">Documentation</a>
-                    <a href="/">About Us</a>
+                <div  className={toggle ? " close-menu" : 'toggle-menu-links'}>
+                    <NavLink onClick={()=>setToggle(!toggle)} to="/" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Home</NavLink>
+
+
+
+                    <NavLink onClick={()=>setToggle(!toggle)} to="/aboutUs" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>About Us</NavLink>
                     <button className='toggle-menu-button'>Login <MdLogin className='inline' /></button>
                 </div>
 
