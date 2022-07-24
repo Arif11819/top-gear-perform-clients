@@ -34,7 +34,7 @@ const Navbar = () => {
                         isActive ? "active-link" : "navbar-links"
                     }>About Us</NavLink>
                 </div>
-                <div className="button">
+                <div className="login-button">
                     <button>Login <MdLogin className='inline' /></button>
                 </div>
 
