@@ -36,23 +36,5 @@ export const employees = [
         comment: 'Only perf mgnt tool I have enjoyed using!',
         name: 'CIARA F.',
         position: 'Software'
-    },
-    // {
-    //     img: "https://randomuser.me/api/portraits/men/78.jpg",
-    //     comment: "He's Saved us so much time.",
-    //     name: 'CARLA M.',
-    //     position: 'Packaging Solutions'
-    // },
-    // {
-    //     img: "https://randomuser.me/api/portraits/men/32.jpg",
-    //     comment: 'Flexible, easy and intuitive work.',
-    //     name: 'ASHLEY A.',
-    //     position: 'Consulting'
-    // },
-    // {
-    //     img: "https://randomuser.me/api/portraits/men/60.jpg",
-    //     comment: 'Awesome way to track goals!',
-    //     name: 'JAN K.',
-    //     position: 'Engineering'
-    // },
+    }
 ]
