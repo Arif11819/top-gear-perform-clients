@@ -6,29 +6,28 @@ nav {
     justify-content: space-between;
     padding: 0px 50px;
     align-items: center;
-    
+  
 }
-.logo{
+
+.logo {
     cursor: pointer;
 }
+
 .navbar-links {
     color: white;
     margin: 0px 15px;
     position: relative;
     opacity: 0.8;
     transition: 400ms
-
-
 }
-.active-link{
+
+.active-link {
     color: white;
     margin: 0px 15px;
     position: relative;
     border-bottom: 3px solid #ED5427;
     opacity: 1;
     transition: 400ms
-    
-   
 }
 
 
@@ -40,14 +39,16 @@ nav {
     background-color: #ED5427;
     bottom: -4px;
     width: 0%;
-    
+
 }
-.navbar-links:hover{
+
+.navbar-links:hover {
     opacity: 1;
 }
-.navbar-links:hover::before{
+
+.navbar-links:hover::before {
     width: 100%;
-    
+
 }
 
 
@@ -56,9 +57,9 @@ nav {
     color: white;
     padding: 8px 20px;
     width: 200px;
-    cursor: pointer;
+
     border-radius: 50px;
-    
+
 }
 
 /* toggle menu code */
@@ -128,9 +129,10 @@ nav {
 
     nav {
         padding: 0px 15px;
-       
+
     }
-    .active-link{
+
+    .active-link {
         display: none;
     }
 
@@ -138,7 +140,7 @@ nav {
         display: none;
     }
 
-    .button {
+    .login-button {
         display: none;
     }
 

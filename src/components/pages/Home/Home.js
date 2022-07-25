@@ -8,7 +8,7 @@ import Logo from '../../Logo/Logo';
 
 const Home = () => {
     return (
-        <div className='bg-color'>
+        <div>
             <Header></Header>
             <Features></Features>
             <Employees />

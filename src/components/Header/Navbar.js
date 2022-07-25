@@ -44,14 +44,14 @@ const Navbar = () => {
                 <MdClose onClick={() => setToggle(!toggle)} className='close-icon' />
 
 
-                <div  className={toggle ? " close-menu" : 'toggle-menu-links'}>
-                    <NavLink onClick={()=>setToggle(!toggle)} to="/" className={({ isActive }) =>
+                <div className={toggle ? " close-menu" : 'toggle-menu-links'}>
+                    <NavLink onClick={() => setToggle(!toggle)} to="/" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>Home</NavLink>
 
 
 
-                    <NavLink onClick={()=>setToggle(!toggle)} to="/aboutUs" className={({ isActive }) =>
+                    <NavLink onClick={() => setToggle(!toggle)} to="/aboutUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>About Us</NavLink>
                     <button className='toggle-menu-button'>Login <MdLogin className='inline' /></button>
