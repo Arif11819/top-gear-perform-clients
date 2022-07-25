@@ -10,9 +10,57 @@
     justify-content: center;
     align-items: center;
 }
-
+.login-logo{
+    background-color: rgba(0, 0, 0, 0.075);
+}
+.login-logo img {
+    width: 200px;
+    padding: 8px 4px;
+}
 .modal-container {
-    width: 50%;
-    height: 300px;
+    width: 30%;
+    height: 400px;
     background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+.modal-close-icon{
+    font-size: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.modal-close-icon:hover{
+    background-color: rgba(0, 0, 0, 0.233);
+}
+
+.login-form{
+
+}
+.register{
+    display: block;
+    width: 250px;
+    margin: 0px auto;
+    color: rgba(0, 0, 0, 0.664);
+}
+.login-form input {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid black;
+    width: 250px;
+    padding: 5px
+
+    
+}
+.login-form button{
+    background-color: #000;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 20px;
+    width: 250px;
+    display: block;
+    margin: 10px auto;
 }

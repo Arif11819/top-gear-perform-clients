@@ -6,9 +6,10 @@ import { MdLogin } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
 import { NavLink, useNavigate } from 'react-router-dom';
+import Modal from '../Modal/Modal';
 const Navbar = () => {
     const [toggle, setToggle] = useState(true)
-
+    const [modal,setModal] = useState(false)
     const navigate = useNavigate()
     return (
         <>
@@ -35,7 +36,7 @@ const Navbar = () => {
                     }>About Us</NavLink>
                 </div>
                 <div className="login-button">
-                    <button>Login <MdLogin className='inline' /></button>
+                    <button onClick={()=>setModal(true)}>Login <MdLogin className='inline' /></button>
                 </div>
 
             </nav>
@@ -54,10 +55,14 @@ const Navbar = () => {
                     <NavLink onClick={() => setToggle(!toggle)} to="/aboutUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>About Us</NavLink>
-                    <button className='toggle-menu-button'>Login <MdLogin className='inline' /></button>
+                    <button onClick={()=>setModal(true)} className='toggle-menu-button'>Login <MdLogin className='inline' /></button>
                 </div>
 
             </div>}
+
+            {
+                modal && <Modal setModal = {setModal} />
+            }
 
         </>
     );
