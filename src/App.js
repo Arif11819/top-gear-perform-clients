@@ -1,24 +1,25 @@
 import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Header from './components/Header/Header';
-import Dashboard from './components/Dashboard/Dashboard';
-import Features from './components/Feature/Features/Features';
-import Footer from './components/Footer/Footer';
-import Logo from './components/Logo/Logo';
-import Employees from './components/Employees/Employees';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/pages/Home/Home';
+import Navbar from './components/Header/Navbar';
+import AboutUs from './components/pages/AboutUs/AboutUs';
+import ParticleBackground from './ParticleSetup/ParticleBackground';
 AOS.init();
 
 function App() {
   return (
-    <div className='card-container'>
-      <Header></Header>
-      <Features></Features>
-      <Employees />
-      <Dashboard></Dashboard>
-      <Logo />
-      <Footer></Footer>
-    </div>
+    <>
+      <ParticleBackground />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/aboutUs' element={<AboutUs />} />
+
+      </Routes>
+
+    </>
   );
 }
 

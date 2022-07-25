@@ -1,11 +1,9 @@
 import React from 'react';
 import './Header.css'
-import Navbar from './Navbar';
 const Header = () => {
     return (
         <header>
             <div className="overly">
-                <Navbar />
                 <div className="header-container">
                     <div className="header-content" data-aos="fade-right" data-aos-duration="1000" >
                         <h1>Helping people with hight drive track! </h1>
