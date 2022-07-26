@@ -13,7 +13,7 @@ const Employees = () => {
                     <EmployeesCard />
                 </div>
                 <div className='flex justify-center items-center lg:pb-4'>
-                    <a className='lg:text-2xl text-1xl font-bold text-white' href="#">More From Our Customers </a>
+                    <a className='lg:text-2xl text-1xl font-bold text-white' href="/">More From Our Customers </a>
                     <FcRight className='text-2xl mt-1 ml-3 font-bold' />
                 </div>
             </div>
