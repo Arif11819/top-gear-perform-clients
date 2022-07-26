@@ -6,7 +6,7 @@ import { MdLogin } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdClose } from 'react-icons/md';
 import { NavLink, useNavigate } from 'react-router-dom';
-import Modal from '../Modal/Modal';
+import LoginModal from '../LoginModal/LoginModal'
 const Navbar = () => {
     const [toggle, setToggle] = useState(true)
     const [modal,setModal] = useState(false)
@@ -61,7 +61,7 @@ const Navbar = () => {
             </div>}
 
             {
-                modal && <Modal setModal = {setModal} />
+                modal && <LoginModal setModal = {setModal} />
             }
 
         </>

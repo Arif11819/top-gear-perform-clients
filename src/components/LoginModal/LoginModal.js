@@ -1,5 +1,5 @@
 import React from 'react';
-import './Modal.css'
+import './LoginModal.css'
 import { MdClose } from 'react-icons/md';
 
 import { Link } from 'react-router-dom';

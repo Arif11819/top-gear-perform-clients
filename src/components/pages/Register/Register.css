@@ -1,0 +1,15 @@
+.register-container{
+    width: 70%;
+    height: calc(80vh - 80px);
+    background-color: white;
+    margin: 40px auto;
+}
+.register-form{
+    background-color: aliceblue;
+}
+.register-form input{
+
+    display: block;
+    margin: 20px 0px;
+    
+}
