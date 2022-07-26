@@ -7,6 +7,7 @@ import Features from './components/Feature/Features/Features';
 import Footer from './components/Footer/Footer';
 import Logo from './components/Logo/Logo';
 import Employees from './components/Employees/Employees';
+import ActiveProjects from './components/ActiveProjects/ActiveProjects';
 AOS.init();
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Features></Features>
       <Employees />
       <Dashboard></Dashboard>
+      <ActiveProjects />
       <Logo />
       <Footer></Footer>
     </div>
