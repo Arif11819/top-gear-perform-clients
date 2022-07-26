@@ -1,15 +1,53 @@
 .register-container{
-    width: 70%;
-    height: calc(80vh - 80px);
+    width: 100%;
+  
     background-color: white;
-    margin: 40px auto;
+    display: flex;
+
+    
 }
 .register-form{
     background-color: aliceblue;
 }
-.register-form input{
+.register-img{
+    width: 30%;
+    background-color: aqua;
+}
+.reg-form-container{
+    width: 70%;
+    background-color: azure;
 
+}
+.register-form{
+    width: 60%;
+    background-color: rgba(60, 44, 75, 0.233);
+    margin: 20px auto;
+    padding: 50px;
+}
+.register-form input,select{
+
+    padding: 5px;
+    border-radius: 4px;
+    margin: 10px 0px;
+    
+}
+.short-input{
+    width: 49%;
+}
+.register-form input:focus{
+    outline: none;
+}
+.register-button{
+    background-color: #ED5427;
+    color: white;
+    padding: 8px 20px;
+    width: 200px;
+    border-radius: 5px;
     display: block;
-    margin: 20px 0px;
+    margin: 20px auto;
+}
+.checkbox{
+    width: 20px;
+    
     
 }

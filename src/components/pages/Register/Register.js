@@ -47,30 +47,62 @@ const Register = () => {
         }
 
         // handle match password
-        if(confirmPassword === ''){
+        if (confirmPassword === '') {
             return;
         }
-        if(confirmPassword === password){
+        if (confirmPassword === password) {
             setconfirmPasswordError(confirmPassword)
             setconfirmPasswordError('')
         }
-        else{
-        setConfirmPassword('')
-        setconfirmPasswordError('Password did not match')
+        else {
+            setConfirmPassword('')
+            setconfirmPasswordError('Password did not match')
+
         }
     }
     return (
         <div className='register-container'>
-            <form onSubmit={submitResgisterForm} className='register-form' >
-                {emailError && <small>{emailError}</small>}
-                <input name='email' type="text" placeholder='Email' />
-                {passwordError && <small>{passwordError}</small>}
-                <input name='password' type="text" placeholder='Password' />
-                {confirmPasswordError && <small>{confirmPasswordError}</small>}
-                <input name='confirmPassword' type="text" placeholder='Confirm Password' />
-                <button type='submit'>Register Now</button>
+            <div className="register-img">
+                <h1>Image here</h1>
+            </div>
 
-            </form>
+
+            <div className="reg-form-container">
+                <form onSubmit={submitResgisterForm} className='register-form' >
+                    <h1 className='text-center text-4xl'>Please Register</h1>
+
+                    <div className='flex justify-between w-full'>
+                        <input className='short-input' type="text" placeholder='First Name' />
+                        <input className='short-input' type="text" placeholder='Last Name' />
+                    </div>
+                    <input className='w-full' name='email' type="text" placeholder='Email' />
+                    <div className='flex justify-between w-full'>
+                        <input className='short-input' name='password' type="text" placeholder='Password' />
+                        <input className='short-input' name='confirmPassword' type="text" placeholder='Confirm Password' />
+                    </div>
+                    <input className='w-full' name='email' type="text" placeholder='Address' />
+                    <div className='flex justify-between w-full'>
+                        <input className='short-input' name='Age' type="text" placeholder='Age' />
+                        <select className='short-input' name="gender" id="gender">
+                            <option value="Gender">Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div className='flex justify-between w-full'>
+                        <select className='short-input' name="role" id="role">
+                            <option value="Gender">Role</option>
+                            <option value="Male">HR Manager</option>
+                            <option value="Female">CEO</option>
+                            <option value="Female">Employee</option>
+                            <option value="Female">Deapartment Head</option>
+                        </select>
+                        <input className='short-input' name='number' type="text" placeholder='Phone number' />
+                    </div>
+                    <input className='checkbox' type="checkbox" name="term-condition" /><p>Accept our term</p>
+                    <button className='register-button' type='submit'>Register Now</button>
+                </form>
+            </div>
         </div>
     );
 };
