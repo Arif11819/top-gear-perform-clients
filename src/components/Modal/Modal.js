@@ -1,8 +1,8 @@
 import React from 'react';
 import './Modal.css'
 import { MdClose } from 'react-icons/md';
-import { FcGoogle } from 'react-icons/fc';
-import { BsGithub } from 'react-icons/bs';
+
+import { Link } from 'react-router-dom';
 const Modal = ({ setModal }) => {
     return (
         <div className='modal-backdrop'>
@@ -16,15 +16,11 @@ const Modal = ({ setModal }) => {
                     <input type="text" placeholder='Email' />
                     <input type="text" placeholder='Password' />
                     <div className='register'>
-                    <p className=''>New to TopGear ? Register</p>
+                        <p className=''>New to TopGear ? <Link onClick={() => setModal(false)} className='regis' to='/register'>Register</Link></p>
                     </div>
                     <button type='submit'>Login</button>
                 </form>
-                <div class="divider">OR</div>
-                <div className="social-links">
-                <FcGoogle />
-                <BsGithub />
-                </div>
+             
 
             </div>
 

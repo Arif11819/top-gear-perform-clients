@@ -19,9 +19,9 @@
 }
 .modal-container {
     width: 30%;
-    height: 400px;
-    background-color: white;
-    border-radius: 5px;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
     position: relative;
 }
 .modal-close-icon{
@@ -37,9 +37,6 @@
     background-color: rgba(0, 0, 0, 0.233);
 }
 
-.login-form{
-
-}
 .register{
     display: block;
     width: 250px;
@@ -49,18 +46,36 @@
 .login-form input {
     display: block;
     margin: 10px auto;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.37);
     width: 250px;
-    padding: 5px
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
 
     
 }
+.login-form input:focus{
+    outline: none;
+}
 .login-form button{
-    background-color: #000;
+    background-color:#ED5427;
     border-radius: 5px;
     color: white;
     padding: 8px 20px;
     width: 250px;
     display: block;
     margin: 10px auto;
+}
+.regis{
+    color: #ED5427;
+}
+
+/* responsive code for mobile devices */
+
+@media only screen and (max-width:600px) {
+
+    .modal-container{
+        width: 90%;
+    }
+    
 }
