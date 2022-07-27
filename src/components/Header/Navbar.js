@@ -33,6 +33,9 @@ const Navbar = () => {
                     <NavLink to="/aboutUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>About Us</NavLink>
+                    <NavLink to="/contactUs" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Contact Us</NavLink>
                 </div>
                 <div className="login-button">
                     <button>Login <MdLogin className='inline' /></button>
@@ -54,6 +57,9 @@ const Navbar = () => {
                     <NavLink onClick={() => setToggle(!toggle)} to="/aboutUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>About Us</NavLink>
+                    <NavLink to="/contactUs" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Contact Us</NavLink>
                     <button className='toggle-menu-button'>Login <MdLogin className='inline' /></button>
                 </div>
 
