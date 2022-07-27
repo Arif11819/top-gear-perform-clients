@@ -1,43 +1,57 @@
-.register-container{
+.register-container {
     width: 100%;
-  
-    background-color: white;
+
     display: flex;
+   
+}
 
-    
-}
-.register-form{
-    background-color: aliceblue;
-}
-.register-img{
+.register-img {
     width: 30%;
-    background-color: aqua;
-}
-.reg-form-container{
-    width: 70%;
-    background-color: azure;
+    background-color:black;
+    padding: 30px;
 
 }
-.register-form{
+
+.reg-form-container {
+    width: 70%;
+
+}
+.reg-title{
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px;
+    color: #ED5427;
+    font-size: 35px;
+}
+
+.register-form {
     width: 60%;
-    background-color: rgba(60, 44, 75, 0.233);
+    background-color: white	;
+    border-radius: 10px;
     margin: 20px auto;
     padding: 50px;
 }
-.register-form input,select{
 
-    padding: 5px;
+.register-form input,
+select {
+
+    padding: 8px;
     border-radius: 4px;
     margin: 10px 0px;
-    
+    border: 1px solid rgba(0, 0, 0, 0.267);    
+
+
 }
-.short-input{
+
+.short-input {
     width: 49%;
 }
-.register-form input:focus{
+
+.register-form input:focus {
     outline: none;
 }
-.register-button{
+
+.register-button {
     background-color: #ED5427;
     color: white;
     padding: 8px 20px;
@@ -46,8 +60,34 @@
     display: block;
     margin: 20px auto;
 }
-.checkbox{
-    width: 20px;
-    
-    
+
+label {
+    display: flex;
+    align-items: center;
+}
+input[type=checkbox]{
+    flex: none;
+    width: 15px;
+    height: 15px;
+    margin:0px 5px;
+    cursor: pointer;
+}
+.error-container{
+    padding: 5px;
+    margin: 10px 0px;
+    background-color: rgba(255, 0, 0, 0.11);
+}
+.term-link{
+    padding: 0px 3px;
+    color: #ED5427;
+}
+
+.warning-icon{
+    display: inline;
+    font-size: 18px;
+    margin: 0px 10px;
+}
+.error-message{
+    color: rgb(255, 0, 0);
+    font-size: 14px;
 }
