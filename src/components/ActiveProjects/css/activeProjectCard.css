@@ -1,7 +1,7 @@
 .project-card {
   position: relative;
   margin-top: 50px;
-  width: 350px;
+  width: 25rem;
   height: 250px;
   border-radius: 10px;
   border: 2px solid white;
@@ -25,7 +25,7 @@
 
 .project-img {
   position: absolute;
-  width: 350px;
+  width: 25rem;
   height: 250px;
   left: 0;
   border-radius: 10px;
@@ -33,7 +33,7 @@
 
 .project-title {
   position: absolute;
-  width: 350px;
+  width: 400px;
   left: 0;
   top:100px;
   font-weight: 700;
@@ -52,7 +52,7 @@
 
 .project-button {
   position: absolute;
-  width: 350px;
+  width: 400px;
   left:0;
   top: 160px;
   text-align: center;
@@ -83,4 +83,14 @@
 }
 .project-card:hover .project-title{
   opacity: 1;
+}
+@media only screen and (max-width: 600px) {
+  .project-card{
+    width: 23rem;
+    height: 230px;
+  }
+  .project-img{
+    width: 23rem;
+    height: 230px;
+  }
 }
