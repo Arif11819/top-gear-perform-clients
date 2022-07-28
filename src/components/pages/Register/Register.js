@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
 import auth from '../../../firebase.init'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { TiWarning } from 'react-icons/ti'
+import Loading from './Loading/Loading';
 
 
 const Register = () => {
@@ -28,6 +29,8 @@ const Register = () => {
     const [ageError, setAgeError] = useState('')
     const [genderError, setGenderError] = useState('')
     const [roleError, setroleError] = useState('')
+
+    const navigate = useNavigate()
 
 
     const handleEmail = email => {
@@ -56,7 +59,7 @@ const Register = () => {
     }
 
     const handleConfirmPassword = confirmPassword => {
-        
+
         if (password === confirmPassword) {
             setConfirmPassword(confirmPassword)
             setconfirmPasswordError('')
@@ -77,7 +80,7 @@ const Register = () => {
             setAgeError('')
         }
     }
-    const handleRole = role =>{
+    const handleRole = role => {
         if (role === 'Role') {
             setrole('')
             setroleError('Please select your role')
@@ -87,7 +90,7 @@ const Register = () => {
             setroleError('')
         }
     }
-    const handleGender = gender=>{
+    const handleGender = gender => {
         if (gender === 'Gender') {
             setGender('')
             setGenderError('Please select your gender')
@@ -97,24 +100,31 @@ const Register = () => {
             setGenderError('')
         }
     }
+
+    if (user) {
+        console.log(user)
+        navigate('/')
+    }
+    if (error) {
+        console.log(error)
+    }
     const submitResgisterForm = (event) => {
         event.preventDefault()
 
-        if(role === ''){
+        if (role === '') {
             setroleError('Please select your role')
+            return;
         }
-        if(gender ===''){
+        if (gender === '') {
             setGenderError('Please select your gender')
+            return;
         }
-        
-        
 
-
- 
         // creating new user here
 
-        if(email && password && confirmPassword && role && age && gender){
-            console.log('User created')
+        if (email && password && confirmPassword && role && age && gender) {
+
+            createUserWithEmailAndPassword(email, password)
         }
 
 
@@ -148,14 +158,14 @@ const Register = () => {
                     <input autoComplete='off' required className='w-full' name='address' type="text" placeholder='Address' />
                     <div className='flex justify-between w-full'>
                         <input autoComplete='off' onBlur={(e) => handleAge(e.target.value)} required className='short-input' name='age' type="number" placeholder='Age' />
-                        <select onBlur={(e)=>handleGender(e.target.value)} required className='short-input' name="gender" id="gender">
+                        <select onBlur={(e) => handleGender(e.target.value)} required className='short-input' name="gender" id="gender">
                             <option value="Gender">Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </div>
                     <div className='flex justify-between w-full'>
-                        <select onBlur={(e)=>handleRole(e.target.value)} required className='short-input' name="role" id="role">
+                        <select onBlur={(e) => handleRole(e.target.value)} required className='short-input' name="role" id="role">
                             <option value="Role">Role</option>
                             <option value="HR Manager">HR Manager</option>
                             <option value="CEO">CEO</option>
@@ -186,7 +196,9 @@ const Register = () => {
                     {genderError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' /> {genderError}</p>
                     </div>}
-                    <button className='register-button' type='submit'>Register Now</button>
+                    <button   disabled={loading} className='register-button' type='submit'>
+                        {loading ? <Loading /> : <span>Register Now</span>}
+                    </button>
                 </form>
             </div>
         </div>
