@@ -5,7 +5,7 @@ const ActiveProjectDetails = () => {
     const { id } = useParams();
     return (
         <div>
-            <h2>this is id {id}</h2>
+            <h2 className='text-xl text-white text-center'>Selected id: {id}</h2>
         </div>
     );
 };

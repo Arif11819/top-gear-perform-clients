@@ -1,19 +1,19 @@
 [
     {
         "id":1,
-        "img":"https://i.ibb.co/cbfJwVK/Screenshot-from-2022-07-28-07-18-41.png",
+        "img":"https://i.ibb.co/tJtdWD6/car.png",
         "description":"This is our car selling website.Management running of this website",
         "name":"Auto Maintains & repair service"
     },
 {
         "id":2,
-        "img":"https://i.ibb.co/K0tLmhS/Screenshot-from-2022-07-28-07-21-24.png",
+        "img":"https://i.ibb.co/g3bH75w/vehicle.png",
         "description":"This is our car website. We have all the information on the website.",
         "name":"AutoKit Vehicle website"
     },
 {
         "id":3,
-        "img":"https://i.ibb.co/sCK5NHh/Screenshot-from-2022-07-28-07-23-18.png",
+        "img":"https://i.ibb.co/rs9xLkm/electronic.png",
         "description":"It is a website for selling electronic devices. Through which they sell the device.",
         "name":"Chronos Electronic device website"
     }

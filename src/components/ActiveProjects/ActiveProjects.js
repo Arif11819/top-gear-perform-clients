@@ -11,7 +11,7 @@ const ActiveProjects = () => {
     return (
         <div>
             <div className='my-5'>
-                <h2 className='text-5xl font-bold text-center text-white'>Active Projects</h2>
+                <h2 className='text-5xl font-bold text-center text-white py-8'>Active Projects</h2>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-10 w-fit mx-auto'>
                 {
