@@ -44,6 +44,7 @@ const Register = () => {
         }
     }
     const handlePassword = password => {
+        console.log(password.length)
         if (password.length < 6) {
             setPassword('')
             setpasswordError('Password is too short')
@@ -54,8 +55,9 @@ const Register = () => {
         }
     }
 
-    const handleConfirmPassword = confirmpassword => {
-        if (password === confirmpassword) {
+    const handleConfirmPassword = confirmPassword => {
+        
+        if (password === confirmPassword) {
             setConfirmPassword(confirmPassword)
             setconfirmPasswordError('')
         }
@@ -68,15 +70,14 @@ const Register = () => {
     const handleAge = age => {
         if (age > 100 || age < 0) {
             setAge('')
-            setAgeError('Invalid')
+            setAgeError('Invalid age')
         }
         else {
             setAge(age)
             setAgeError('')
         }
     }
-
-    const handleRole = role => {
+    const handleRole = role =>{
         if (role === 'Role') {
             setrole('')
             setroleError('Please select your role')
@@ -86,8 +87,7 @@ const Register = () => {
             setroleError('')
         }
     }
-    const handleGender = gender => {
-        console.log(gender)
+    const handleGender = gender=>{
         if (gender === 'Gender') {
             setGender('')
             setGenderError('Please select your gender')
@@ -97,15 +97,25 @@ const Register = () => {
             setGenderError('')
         }
     }
-
-
-
-
-
     const submitResgisterForm = (event) => {
         event.preventDefault()
 
-        console.log(email, password, confirmPassword, role, age)
+        if(role === ''){
+            setroleError('Please select your role')
+        }
+        if(gender ===''){
+            setGenderError('Please select your gender')
+        }
+        
+        
+
+
+ 
+        // creating new user here
+
+        if(email && password && confirmPassword && role && age && gender){
+            console.log('User created')
+        }
 
 
 
@@ -126,43 +136,43 @@ const Register = () => {
                     <h1 className='reg-title'>Please Register</h1>
 
                     <div className='flex justify-between w-full'>
-                        <input name='firstName' required className='short-input' type="text" placeholder='First Name' />
-                        <input name='lastName' required className='short-input' type="text" placeholder='Last Name' />
+                        <input autoComplete='off' name='firstName' required className='short-input' type="text" placeholder='First Name' />
+                        <input autoComplete='off' name='lastName' required className='short-input' type="text" placeholder='Last Name' />
                     </div>
-                    <input onBlur={(e) => handleEmail(e.target.value)} required className='w-full' name='email' type="text" placeholder='Email' />
+                    <input autoComplete='off' onBlur={(e) => handleEmail(e.target.value)} required className='w-full' name='email' type="text" placeholder='Email' />
 
                     <div className='flex justify-between w-full'>
-                        <input onBlur={(e) => handlePassword(e.target.value)} required className='short-input' name='password' type="text" placeholder='Password' />
-                        <input onBlur={(e) => handleConfirmPassword(e.target.value)} required className='short-input' name='confirmPassword' type="text" placeholder='Confirm Password' />
+                        <input autoComplete='off' onBlur={(e) => handlePassword(e.target.value)} required className='short-input' name='password' type="password" placeholder='Password' />
+                        <input autoComplete='off' onBlur={(e) => handleConfirmPassword(e.target.value)} required className='short-input' name='confirmPassword' type="password" placeholder='Confirm Password' />
                     </div>
-                    <input required className='w-full' name='address' type="text" placeholder='Address' />
+                    <input autoComplete='off' required className='w-full' name='address' type="text" placeholder='Address' />
                     <div className='flex justify-between w-full'>
-                        <input onBlur={(e) => handleAge(e.target.value)} required className='short-input' name='age' type="text" placeholder='Age' />
-                        <select onBlur={(e) => handleGender(e.target.value)} required className='short-input' name="gender" id="gender">
+                        <input autoComplete='off' onBlur={(e) => handleAge(e.target.value)} required className='short-input' name='age' type="number" placeholder='Age' />
+                        <select onBlur={(e)=>handleGender(e.target.value)} required className='short-input' name="gender" id="gender">
                             <option value="Gender">Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </div>
                     <div className='flex justify-between w-full'>
-                        <select onBlur={(e) => handleRole(e.target.value)} required className='short-input' name="role" id="role">
+                        <select onBlur={(e)=>handleRole(e.target.value)} required className='short-input' name="role" id="role">
                             <option value="Role">Role</option>
                             <option value="HR Manager">HR Manager</option>
                             <option value="CEO">CEO</option>
                             <option value="Employee">Employee</option>
                             <option value="Deapartment Head">Deapartment Head</option>
                         </select>
-                        <input required className='short-input' name='phoneNumber' type="text" placeholder='Phone number' />
+                        <input autoComplete='off' required className='short-input' name='phoneNumber' type="number" placeholder='Phone number' />
                     </div>
                     <label>
-                        <input required name='checkBox' type="checkbox" />
+                        <input autoComplete='off' required name='checkBox' type="checkbox" />
                         <p > Accept our <Link className='term-link' to='/term-and-condition'> terms </Link> and condition</p>
                     </label>
                     {emailError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />{emailError}</p>
                     </div>}
                     {passwordError && <div className='error-container'>
-                        <p className='error-message'><TiWarning className='warning-icon' /> {emailError}</p>
+                        <p className='error-message'><TiWarning className='warning-icon' /> {passwordError}</p>
                     </div>}
                     {confirmPasswordError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' /> {confirmPasswordError}</p>
