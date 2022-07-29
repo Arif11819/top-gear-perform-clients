@@ -1,6 +1,5 @@
 .register-container {
     width: 100%;
-
     display: flex;
    
 }
@@ -99,4 +98,21 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/*  responsive code for registration page */
+
+@media only screen and (max-width:600px) {
+    
+.register-img{
+    display: none;
+}
+.register-form{
+    width: 100%;
+    padding: 10px;
+}
+.reg-form-container{
+    width: 100%;
+    margin: 20px;
+}
 }

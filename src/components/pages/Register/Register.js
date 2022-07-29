@@ -29,6 +29,7 @@ const Register = () => {
     const [ageError, setAgeError] = useState('')
     const [genderError, setGenderError] = useState('')
     const [roleError, setroleError] = useState('')
+    const [firebaseError,setFirebaseError] = useState('')
 
     const navigate = useNavigate()
 
@@ -47,7 +48,7 @@ const Register = () => {
         }
     }
     const handlePassword = password => {
-        console.log(password.length)
+
         if (password.length < 6) {
             setPassword('')
             setpasswordError('Password is too short')
@@ -101,13 +102,7 @@ const Register = () => {
         }
     }
 
-    if (user) {
-        console.log(user)
-        navigate('/')
-    }
-    if (error) {
-        console.log(error)
-    }
+  
     const submitResgisterForm = (event) => {
         event.preventDefault()
 
@@ -127,11 +122,17 @@ const Register = () => {
             createUserWithEmailAndPassword(email, password)
         }
 
-
+     
+        if (error) {
+            console.log(error)
+            setFirebaseError('Email already exist')
+        }
 
     }
 
-
+    if (user) {
+        navigate('/')
+    }
 
     return (
         <div className='register-container'>
@@ -196,7 +197,10 @@ const Register = () => {
                     {genderError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' /> {genderError}</p>
                     </div>}
-                    <button   disabled={loading} className='register-button' type='submit'>
+                    {firebaseError && <div className='error-container'>
+                        <p className='error-message'><TiWarning className='warning-icon' /> {firebaseError}</p>
+                    </div>}
+                    <button disabled={loading} className='register-button' type='submit'>
                         {loading ? <Loading /> : <span>Register Now</span>}
                     </button>
                 </form>
