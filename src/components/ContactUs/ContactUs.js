@@ -13,7 +13,7 @@ const ContactUs = () => {
     const sendEmail = event => {
         event.preventDefault();
         emailjs.sendForm('service_tm2tdpn', 'template_wpyuvqd', event.target, '4G3TJbMbX1vhXkKYZ', 'tdwpv6i_AVpfZ0mZGQ8d1').then(res => {
-            toast.success("Thank You")
+            toast.success("Thank You Sir For Your Response!!")
         }).catch(err => console.log(err));
         setName('');
         setEmail('');

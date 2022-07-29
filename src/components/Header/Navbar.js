@@ -52,6 +52,9 @@ const Navbar = () => {
                     <NavLink to="/contactUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>Contact Us</NavLink>
+                    <NavLink to="/dashboardRoute" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Dashboard</NavLink>
                 </div>
                 {user ? <div className='flex items-center'>
                     <div className="avatar placeholder">
@@ -89,6 +92,9 @@ const Navbar = () => {
                     <NavLink to="/contactUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>Contact Us</NavLink>
+                    <NavLink to="/dashboardRoute" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Dashboard</NavLink>
 
                     <button onClick={() => setModal(true)} className='toggle-menu-button'>Login <MdLogin className='inline' /></button>
                 </div>
