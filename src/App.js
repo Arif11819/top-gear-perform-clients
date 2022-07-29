@@ -8,6 +8,7 @@ import Navbar from './components/Header/Navbar';
 import AboutUs from './components/pages/AboutUs/AboutUs';
 import ParticleBackground from './ParticleSetup/ParticleBackground';
 import Register from './components/pages/Register/Register';
+import ContactUs from './components/ContactUs/ContactUs';
 AOS.init();
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/aboutUs' element={<AboutUs />} />
+        <Route path='/contactUs' element={<ContactUs />} />
         <Route path='/register' element={<Register />} />
-
       </Routes>
     </>
 
