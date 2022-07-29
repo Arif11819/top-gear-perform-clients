@@ -13,11 +13,11 @@ const Features = () => {
 
   return (
     <div className="bg-slate-100">
-      <div className=" card-container py-20">
-        <h1 className="text-center bg-black-300 text-4xl lg:text-6xl m-4 text-white font-bold">
-          Explore TopGear Features
+      <div className=" card-container lg:px-40 lg:py-20">
+        <h1 className="text-center bg-black-300 text-4xl lg:text-6xl lg:m-4 text-white font-bold">
+          Explore<span className="text-orange-500"> TopGear Features</span>
         </h1>
-        <p className="text-center text-xl text-white m-8">
+        <p className="text-center text-xl text-orange-500 m-8">
           Learn about more our website features
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-20 m-14">
