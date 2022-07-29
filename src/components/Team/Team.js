@@ -6,7 +6,7 @@ const Team = () => {
   return (
     <div className="bg-black lg:p-20">
       <h1 className="text-5xl lg:p-20 font-bold text-orange-500 text-center">Our Team Members</h1>
-      <div className="grid lg:grid-cols-3 lg:gap:5 lg:gap-10 lg:mx-40">
+      <div className="grid lg:grid-cols-3 lg:gap:5 lg:gap-10 lg:mx-20">
         {/* card-01 */}
         <div
           data-aos="flip-left"
@@ -26,7 +26,7 @@ const Team = () => {
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title font-bold text-2xl text-fuchsia-900 ">Ariful Islam</h2>
-            <p className="font-bold py-7 ">Team Leader of Team The Errors</p>
+            <p className="font-bold py-7 ">Team Leader of Team-Error</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
           <a href="https://twitter.com/ArifulI12455813 " class="link text-sky-500 link-hover text-3xl"> <FaTwitterSquare /></a>
@@ -56,7 +56,7 @@ const Team = () => {
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title font-bold text-fuchsia-900 text-2xl ">Mehady Hasan</h2>
-            <p className="font-bold py-5 ">Member of Team The Errors</p>
+            <p className="font-bold py-5 ">Member of Team-Error</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
           <a href="https://twitter.com/mehadyhasan1000" class="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
@@ -86,7 +86,7 @@ const Team = () => {
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title font-bold text-fuchsia-900 text-2xl ">Torikul Islam</h2>
-            <p className="font-bold py-5 ">Member of Team The Errors</p>
+            <p className="font-bold py-5 ">Member of Team-Error</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
           <a href="https://www.facebook.com/timutorikul/" class="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
@@ -116,7 +116,7 @@ const Team = () => {
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title font-bold text-fuchsia-900 text-2xl ">Sumaya  Islam</h2>
-            <p className="font-bold py-5 ">Member of Team The Errors</p>
+            <p className="font-bold py-5 ">Member of Team-Error</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
           <a href="https://twitter.com/eshita_sumaya" class="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
@@ -146,7 +146,7 @@ const Team = () => {
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title font-bold text-fuchsia-900 text-2xl ">Badhon Chaki</h2>
-            <p className="font-bold py-5 ">Member of Team The Errors</p>
+            <p className="font-bold py-5 ">Member of Team-Error</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
           <a href="https://twitter.com/badhonchaki3" class="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
@@ -168,7 +168,7 @@ const Team = () => {
             <div class="avatar">
               <div class="lg:w-24 w-28 rounded-full">
                 <img
-                  src="https://placeimg.com/192/192/people"
+                  src="https://i.ibb.co/wC11dfG/Mahfuz.png "
                   alt="Person pic"
                 />
               </div>
@@ -176,7 +176,7 @@ const Team = () => {
           </figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title font-bold text-fuchsia-900 text-2xl ">Mazharul Islam</h2>
-            <p className="font-bold py-5 ">Member of Team The Errors</p>
+            <p className="font-bold py-5 ">Member of Team-Error</p>
           </div>
           <div className="grid gap-5 lg:gap-8 grid-cols-4 mb-10 mx-20  text-center ">
           <a href="https://www.facebook.com/timutorikul/" class="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
