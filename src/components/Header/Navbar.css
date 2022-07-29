@@ -6,7 +6,7 @@ nav {
     justify-content: space-between;
     padding: 0px 50px;
     align-items: center;
-  
+
 }
 
 .logo {
@@ -61,7 +61,26 @@ nav {
     border-radius: 50px;
 
 }
-
+.logout-button{
+    background-color: #ED5427;
+    color: white;
+    width: 200px;
+    padding: 8px 0px;
+}
+.profile-pic{
+    position: relative;
+    cursor: pointer;
+}
+.profile-modal{
+    width: 250px;
+    height:300px;
+    background-color: white;
+    position: absolute;
+    top:70px;
+    right: 80px;
+    border-radius: 5px;
+    z-index: 999;
+}
 /* toggle menu code */
 
 .hamburger-icon {

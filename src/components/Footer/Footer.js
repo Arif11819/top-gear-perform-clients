@@ -31,11 +31,12 @@ const Footer = () => {
 
                 <div className='socials'>
                     <h3 className='font-semibold'>FOLLOW US</h3>
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-twitch"></i>
+                    <i className="fab fa-facebook"></i>
+                    <i className="fab fa-twitter"></i>
+                    <i className="fab fa-linkedin"></i>
+                    <i className="fab fa-twitch"></i>
                 </div>
+
             </div>
         </div>
     );
