@@ -1,0 +1,40 @@
+[
+  {
+    "_id": 1,
+    "name": "Login Privacy",
+    "url": "https://i.ibb.co/HT1VNKX/account.png",
+    "description": "Turn on login privacy and make your website accessible to trusted users only."
+  },
+  {
+    "_id": 2 ,
+    "name": "Charts & Graphs",
+    "url": "https://i.ibb.co/6YYr96k/bar-chart.png",
+    "description": "Add interactive data visualization with the help of the M Chart plugin."
+  },
+    
+  {
+    "_id": 3,
+    "name": "Maps",
+    "url": "https://i.ibb.co/DpZrN6P/location.png",
+    "description": "Conduct polls in a matter of minutes by using a simple widget."
+    
+  },
+  {
+    "_id": 4,
+    "name": "Calender",
+    "url": "https://i.ibb.co/tbv81LX/timetable.png",
+    "description": "Add an extra touch to your UI by placing a calendar widget."
+  },
+  {
+    "_id": 5,
+    "name": "Count Down",
+    "url": "https://i.ibb.co/QKST5rw/countdown-1.png",
+    "description": "Choose whether to display widgets in a boxed or regular format."
+  },
+  {
+    "_id": 6,
+    "name": "Reviews",
+    "url": "https://i.ibb.co/Y31V2jB/review.png",
+    "description": "Customize the navigation menu by choosing from several display options."
+  }
+]
