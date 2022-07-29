@@ -36,6 +36,7 @@ const Footer = () => {
                     <i class="fab fa-linkedin"></i>
                     <i class="fab fa-twitch"></i>
                 </div>
+
             </div>
         </div>
     );
