@@ -197,8 +197,8 @@ const Register = () => {
                     {genderError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' /> {genderError}</p>
                     </div>}
-                    {firebaseError && <div className='error-container'>
-                        <p className='error-message'><TiWarning className='warning-icon' /> {firebaseError}</p>
+                    {error && <div className='error-container'>
+                        <p className='error-message'><TiWarning className='warning-icon' />Email already exist</p>
                     </div>}
                     <button disabled={loading} className='register-button' type='submit'>
                         {loading ? <Loading /> : <span>Register Now</span>}
