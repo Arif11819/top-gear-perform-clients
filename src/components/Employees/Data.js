@@ -36,7 +36,6 @@ export const employees = [
         comment: 'Only perf mgnt tool I have enjoyed using!',
         name: 'CIARA F.',
         position: 'Software'
-<<<<<<< HEAD
     },
     {
         img: "https://randomuser.me/api/portraits/men/78.jpg",
@@ -56,7 +55,4 @@ export const employees = [
         name: 'JAN K.',
         position: 'Engineering'
     },
-=======
-    }
->>>>>>> 38038db00287bf573b53ed46ce854811bd1c5d7c
 ]

@@ -86,6 +86,9 @@ const Navbar = () => {
                     <NavLink onClick={() => setToggle(!toggle)} to="/aboutUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>About Us</NavLink>
+                    <NavLink to="/contactUs" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Contact Us</NavLink>
 
                     <button onClick={() => setModal(true)} className='toggle-menu-button'>Login <MdLogin className='inline' /></button>
                 </div>
