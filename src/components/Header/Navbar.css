@@ -62,24 +62,42 @@ nav {
 
 }
 .logout-button{
-    background-color: #ED5427;
-    color: white;
-    width: 200px;
-    padding: 8px 0px;
+    background-color:transparent;
+    color: black;
+    display: block;
+
+   
+}
+.profile-icons{
+    display: inline;
+    font-size: 30px;
+    margin-right: 15px;
 }
 .profile-pic{
     position: relative;
     cursor: pointer;
 }
 .profile-modal{
-    width: 250px;
-    height:300px;
+    width: 200px;
+    height:250px;
     background-color: white;
     position: absolute;
     top:70px;
-    right: 80px;
+    right: 40px;
     border-radius: 5px;
     z-index: 999;
+    padding: 20px;
+}
+.profile-modal a {
+    display: block;
+    margin: 3px 0px;
+    transition: 0.2s;
+    padding: 5px;
+    border-radius: 4px;
+}
+.profile-modal a:hover{
+    background-color: #ED5427;
+    color: white;
 }
 /* toggle menu code */
 

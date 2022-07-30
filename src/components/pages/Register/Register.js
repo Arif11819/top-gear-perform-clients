@@ -5,6 +5,7 @@ import auth from '../../../firebase.init'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { TiWarning } from 'react-icons/ti'
 import Loading from './Loading/Loading';
+import { toast } from 'react-toastify';
 
 
 const Register = () => {
@@ -29,7 +30,6 @@ const Register = () => {
     const [ageError, setAgeError] = useState('')
     const [genderError, setGenderError] = useState('')
     const [roleError, setroleError] = useState('')
-    const [firebaseError,setFirebaseError] = useState('')
 
     const navigate = useNavigate()
 
@@ -106,6 +106,19 @@ const Register = () => {
     const submitResgisterForm = (event) => {
         event.preventDefault()
 
+        const firstName = event.target.firstName.value
+        const lastName = event.target.lastName.value
+        const fullName = `${firstName} ${lastName}`
+        const userEmail = email
+        const userAddress = event.target.address.value
+        const userAge = event.target.age.value
+        const userGender = event.target.gender.value
+        const userRole = event.target.role.value
+        const userPhoneNumber = event.target.phoneNumber.value
+  
+        // console.log(firstName,lastName,fullName,userEmail,userAddress,userAge,userGender,userRole,userPhoneNumber)
+        const userData = {firstName,lastName,fullName,userEmail,userAddress,userAge,userGender,userRole,userPhoneNumber}
+
         if (role === '') {
             setroleError('Please select your role')
             return;
@@ -120,13 +133,23 @@ const Register = () => {
         if (email && password && confirmPassword && role && age && gender) {
 
             createUserWithEmailAndPassword(email, password)
+            fetch('http://localhost:5000/users',{
+                method:'POST',
+                headers:{
+                    'content-type' : 'application/json'
+                },
+                body:JSON.stringify(userData)
+                
+               })
+               .then((data)=>{
+                if(data.status === 200){
+                    toast.success('Register successfull')
+                }
+               }).catch(err =>console.log(err))
         }
 
-     
-        if (error) {
-            console.log(error)
-            setFirebaseError('Email already exist')
-        }
+        
+      
 
     }
 

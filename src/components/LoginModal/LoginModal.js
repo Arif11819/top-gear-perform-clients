@@ -45,8 +45,8 @@ const Modal = ({ setModal }) => {
         </div>
         <form onSubmit={handleLogin} className='login-form'>
           <h1 className='text-3xl text-center font-bold py-2'>Login Here</h1>
-          <input onBlur={(e) => setEmail(e.target.value)} type="text" placeholder='Email' name='email' required />
-          <input onBlur={(e) => setPassword(e.target.value)} type="password" placeholder='Password' name='password' required />
+          <input autoComplete='off' onBlur={(e) => setEmail(e.target.value)} type="text" placeholder='Email' name='email' required />
+          <input autoComplete='off' onBlur={(e) => setPassword(e.target.value)} type="password" placeholder='Password' name='password' required />
           <div className='register'>
             <p className=''>New to TopGear ? <Link onClick={() => setModal(false)} className='regis' to='/register'>Register</Link></p>
           </div>
