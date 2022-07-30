@@ -20,7 +20,7 @@ const Navbar = () => {
 
     const handleSignout = () => {
         signOut(auth)
-            .then(() =>{
+            .then(() => {
                 setShowProfile(false)
             })
             .catch((err) => console.log(err))
@@ -49,6 +49,12 @@ const Navbar = () => {
                     <NavLink to="/aboutUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>About Us</NavLink>
+                    <NavLink to="/contactUs" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Contact Us</NavLink>
+                    <NavLink to="/dashboardRoute" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Dashboard</NavLink>
                 </div>
                 {user ? <div className='flex items-center'>
                     <div className="avatar placeholder">
@@ -67,7 +73,7 @@ const Navbar = () => {
             </nav>
 
 
-                                 {/* mobile menu */}
+            {/* mobile menu */}
 
             {toggle ? null : <div className='toggle-menu' data-aos="fade-left" data-aos-duration="600">
                 <MdClose onClick={() => setToggle(!toggle)} className='close-icon' />
@@ -83,6 +89,12 @@ const Navbar = () => {
                     <NavLink onClick={() => setToggle(!toggle)} to="/aboutUs" className={({ isActive }) =>
                         isActive ? "active-link" : "navbar-links"
                     }>About Us</NavLink>
+                    <NavLink to="/contactUs" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Contact Us</NavLink>
+                    <NavLink to="/dashboardRoute" className={({ isActive }) =>
+                        isActive ? "active-link" : "navbar-links"
+                    }>Dashboard</NavLink>
 
                     <button onClick={() => setModal(true)} className='toggle-menu-button'>Login <MdLogin className='inline' /></button>
                 </div>
