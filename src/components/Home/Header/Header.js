@@ -1,6 +1,8 @@
 import React from 'react';
 import './Header.css'
 import { RiArrowDownSLine, RiGlobalLine } from 'react-icons/ri';
+import { IoCheckmarkCircle } from 'react-icons/io5';
+
 import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
@@ -37,11 +39,25 @@ const Header = () => {
                 <div className="header-content">
                     <h1>OKR Software that helps you execute your strategy</h1>
                     <p className='banner-desc'>Focus on Goals. Measure your Progress. Achieve Results</p>
+                    <div>
+                        <button className='primary-btn h-btn'>GET STARTED FREE</button>
+                        <button className='outline-btn'>SCHEDULE DEMO</button>
+                    </div>
+                    <div className='mt-10'>
+                        <p className='inline mr-8 pt-8 small-txt'>  <IoCheckmarkCircle className='success-circle' /> Free for 5 Users</p>
+                        <p className='inline mr-8 pt-8 small-txt'>  <IoCheckmarkCircle className='success-circle' /> No Credit Card Required</p>
+
+                    </div>
+                    <div className="awards-container mt-10">
+                        <p className='award-title'>Awards & Recognitions</p>
+                    </div>
+
                 </div>
                 <div className="header-image">
                     <img src="https://cdns.profit.co/site/v1.2.21/images/banner-progress-img.png" alt="" />
                 </div>
             </div>
+
 
         </header>
     );
