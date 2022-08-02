@@ -1,23 +1,12 @@
 import './App.css';
-<<<<<<< HEAD
-import BusinessPlatform from './components/BusinessPlatform/BusinessPlatform';
-
-function App() {
-  return (
-
-    <>
-    <BusinessPlatform/>
-    </>
-
-=======
+import Home from './components/Home/Home';
 
 
 function App() {
   return (
     <div >
-      
+      <Home />
     </div>
->>>>>>> 14e9f3686632791a5d8efd38b97b21e9737a6db9
   );
 }
 
