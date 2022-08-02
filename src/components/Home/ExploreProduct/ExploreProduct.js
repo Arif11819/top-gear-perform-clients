@@ -2,6 +2,8 @@ import React from 'react';
 import HrCloud from './HrCloud';
 import ItCloud from './ItCloud';
 
+//  Mazharul section      
+
 const ExploreProduct = () => {
     return (
         <div className='bg-[#f6f3f0] pb-10'>
