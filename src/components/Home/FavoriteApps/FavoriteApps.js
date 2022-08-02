@@ -2,6 +2,9 @@ import React from 'react';
 
 const FavoriteApps = () => {
     return (
+
+        // Mazharul section 
+
         <section className='overflow-hidden my-4'>
             <h2 className='text-4xl text-center font-bold mt-5'>Integrate with your favorite apps</h2>
             <div className='text-center mx-auto'>
