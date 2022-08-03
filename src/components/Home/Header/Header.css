@@ -17,6 +17,7 @@ nav {
 
 .logo img {
     width: 250px;
+    cursor: pointer;
 }
 
 .top-nav-bar {
@@ -87,10 +88,11 @@ label {
 }
 
 .header-container {
-    margin-top: 40px;
+    padding-top: 30px;
     display: flex;
     width: 100%;
-    padding: 0px 80px;
+    padding-left: 80px;
+    padding-right: 80px;
     height: calc(100vh - 100px);
 }
 
@@ -214,7 +216,7 @@ label {
     }
 
     nav {
-        height: 50px;
+        height: 75px;
         padding: 0px;
     }
 
