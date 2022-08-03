@@ -9,12 +9,14 @@ import { Link, useNavigate } from 'react-router-dom';
 const Header = () => {
     const [toggle, setToggle] = useState(false)
 
+   
     const navigate = useNavigate()
     return (
         <>
             <header>
 
-                <nav>
+               
+            <nav>
                     <div className="top-nav-bar">
                         <Link to="/">About us</Link>
                         <Link to="/">Blog</Link>
