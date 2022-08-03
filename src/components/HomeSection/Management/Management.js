@@ -6,7 +6,7 @@ const Management = () => {
     <div className="bg-base-200">
       <h1 className="text-center pt-10 font-bold text-black text-2xl lg:text-4xl">
         Manage your strategy, OKRs, people, process and <br /> <span className="text-sky-500">performance in
-        one platform</span> 
+          one platform</span>
       </h1>
       <div className="hero lg:min-h-screen ">
         <div className="hero-content grid lg:grid-cols-2 lg:gap-8 mx-8">
