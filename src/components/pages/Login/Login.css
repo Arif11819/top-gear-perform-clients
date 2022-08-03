@@ -1,0 +1,17 @@
+.login-container{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+}
+
+.login-form{
+    background-color: aqua;
+    padding: 30px;
+    width: 40%;
+    height: 100%;
+}
+.right-side{
+    width: 70%;
+    background-color: rgb(230, 215, 250);
+    height: 100%;
+}
