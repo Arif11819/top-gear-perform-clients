@@ -1,0 +1,274 @@
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f8fe;
+
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: #f3f8fe;
+    padding: 0px 50px;
+    position: sticky;
+    top: 0;
+
+}
+
+.logo img {
+    width: 250px;
+}
+
+.top-nav-bar {
+    padding: 10px 40px;
+    text-align: right;
+    font-size: 14px;
+
+
+}
+
+.top-nav-bar a {
+    margin: 0px 15px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.top-nav-bar a:hover {
+    color: #337ab7;
+
+}
+
+.global-icon {
+    display: inline;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.global-icon:hover {
+    color: #337ab7;
+}
+
+.main-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.burger-icon {
+    display: none;
+}
+
+.main-nav-bar a,
+label {
+    margin: 0px 15px;
+    display: inline;
+    color: #1C3C5F;
+    font-size: 14px;
+    transition: 0.2s;
+    font-weight: 600;
+    user-select: none;
+
+}
+
+.dropdown-container img {
+    display: inline;
+}
+
+.main-nav-bar li:hover {
+    color: #337ab7;
+}
+
+.arrow-icon {
+    display: inline;
+    font-size: 15px;
+}
+
+.header-container {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    padding: 0px 80px;
+    height: calc(100vh - 100px);
+}
+
+.header-content {
+    width: 50%;
+    height: 100%;
+    padding: 20px 0px;
+}
+
+.header-content h1 {
+    font-weight: bold;
+    font-size: 35px;
+    width: 90%;
+    line-height: 44px;
+    margin-bottom: 15px;
+    color: #070F18;
+    user-select: none;
+}
+
+.banner-desc {
+    margin-bottom: 35px;
+    color: #070F18;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.h-btn {
+    margin: 0px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+.outline-btn {
+    background-color: white;
+    font-weight: 600;
+    color: #337ab7;
+    padding: 7px 20px;
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0px 15px;
+    transition: 0.2s;
+}
+
+.outline-btn:hover {
+    background-color: #58A0EF;
+    color: white;
+    border: none;
+}
+
+.success-circle {
+    display: inline;
+    color: #337ab7;
+    font-size: 20px;
+}
+
+.small-txt {
+    font-size: 13px;
+    color: #333;
+}
+
+.award-title {
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+/* mobile menu css */
+
+.toggle-menu {
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f8fe;
+    position: absolute;
+    top: 0;
+    display: none;
+    animation-name: toggle-open;
+    animation-duration: 0.5s;
+
+}
+
+.close-icon {
+    margin-left: 85%;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.price-link {
+    margin-left: 15px;
+    display: block;
+    color: #1C3C5F;
+    font-size: 14px;
+    transition: 0.2s;
+    font-weight: 600;
+    user-select: none;
+}
+
+.toggle-top-menu {
+    width: 100%;
+
+}
+
+.toggle-top-menu a {
+    margin: 5px 10px;
+}
+
+@keyframes toggle-open {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+
+
+/* responsive for mobile device */
+
+@media only screen and (max-width:600px) {
+    header {
+        height: auto;
+    }
+
+    nav {
+        height: 50px;
+        padding: 0px;
+    }
+
+    .header-image {
+        display: none;
+    }
+
+    .header-content {
+        width: 100%;
+        padding: 0px;
+
+    }
+
+    .main-nav-links {
+        display: none;
+    }
+
+    .header-content h1 {
+        text-align: center;
+        margin: 30px auto;
+        font-size: 30px;
+    }
+
+    .banner-desc {
+        text-align: center;
+    }
+
+    .header-container {
+        padding: 10px 30px;
+        margin-top: 0px;
+    }
+
+    .top-nav-bar {
+        display: none;
+    }
+
+    .outline-btn,
+    .h-btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .burger-icon {
+        display: block;
+        font-size: 30px;
+        color: #333;
+
+    }
+
+    .toggle-menu {
+        display: block;
+    }
+
+}
