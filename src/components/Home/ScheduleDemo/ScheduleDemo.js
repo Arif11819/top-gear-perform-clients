@@ -4,6 +4,7 @@ import './ScheduleDemo.css'
 import ScheduleOption from './ScheduleOption';
 import { format } from 'date-fns';
 import UserInput from './UserInput';
+import UserCount from './UserCount';
 
 const ScheduleDemo = () => {
     const [date, setDate] = useState(new Date())
@@ -27,7 +28,7 @@ const ScheduleDemo = () => {
                     <UserInput />
                 </div>
                 <div className='flex justify-evenly mt-5 text-center gap-2 mx-5'>
-                    {/* input radio */}
+                    <UserCount />
                 </div>
                 <div className='p-4 bg-orange-600 text-center mb-4 text-white mx-5 hover:bg-orange-700 cursor-pointer'>
                     <button>Submit</button>

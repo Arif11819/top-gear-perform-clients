@@ -1,11 +1,11 @@
 import React from 'react';
+import './UserCount.css'
 
-
-const Home = () => {
+const UserCount = () => {
     return (
         <div>
         </div>
     );
 };
 
-export default Home;
+export default UserCount;
