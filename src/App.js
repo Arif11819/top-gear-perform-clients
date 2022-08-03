@@ -1,22 +1,31 @@
 import './App.css';
-import Faq from './components/Faq/Faq';
 
 
-import Motive from './components/Motive/Motive';
+
+
+
+
+import Header from './components/Home/Header/Header';
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/pages/Login/Login';
+import Navbar from './components/Home/Header/Navbar';
+
 
 
 
 function App() {
   return (
 
-    <div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Header />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </>
+  )
 
-      <Faq />
-      <Motive />
 
-    </div>
 
-  );
 }
-
 export default App;

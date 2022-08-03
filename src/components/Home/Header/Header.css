@@ -17,10 +17,12 @@ nav {
 
 .logo img {
     width: 250px;
+    cursor: pointer;
 }
 
 .top-nav-bar {
-    padding: 10px 40px;
+    padding-top: 12px;
+    padding-right: 20px;
     text-align: right;
     font-size: 14px;
 
@@ -53,7 +55,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
+
+
+    padding: 0px 10px;
 }
+
 
 .burger-icon {
     display: none;
@@ -89,6 +95,11 @@ label {
     display: flex;
     width: 100%;
     padding: 0px 80px;
+    padding-top: 30px;
+    display: flex;
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
     height: calc(100vh - 100px);
 }
 
@@ -216,7 +227,7 @@ label {
     }
 
     nav {
-        height: 50px;
+        height: 75px;
         padding: 0px;
     }
 
@@ -228,6 +239,10 @@ label {
         width: 100%;
         padding: 0px;
 
+    }
+
+    .main-nav-bar {
+        padding: 15px;
     }
 
     .main-nav-links {
