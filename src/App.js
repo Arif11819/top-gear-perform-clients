@@ -1,15 +1,4 @@
 import './App.css';
-<<<<<<< HEAD
-import BusinessPlatform from './components/BusinessPlatform/BusinessPlatform';
-
-function App() {
-  return (
-
-    <>
-    <BusinessPlatform/>
-    </>
-
-=======
 
 
 function App() {
@@ -17,7 +6,6 @@ function App() {
     <div >
       
     </div>
->>>>>>> 14e9f3686632791a5d8efd38b97b21e9737a6db9
   );
 }
 
