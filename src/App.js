@@ -1,16 +1,31 @@
 import './App.css';
-import Home from './components/Home/Home';
+
+
+
+
+
+
+import Header from './components/Home/Header/Header';
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/pages/Login/Login';
+import Navbar from './components/Home/Header/Navbar';
+
+
 
 
 function App() {
-
   return (
 
     <>
-     <Home></Home>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Header />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
     </>
+  )
 
-  );
+
+
 }
-
 export default App;

@@ -1,16 +1,16 @@
 import React from 'react';
-import EmployeeEngagement from '../HomeSection/EmployeeEngagement/EmployeeEngagement';
-import Management from '../HomeSection/Management/Management';
-import PerformanceManagement from '../HomeSection/PerformanceManagement/PerformanceManagement';
+
+import TaskManagement from './TaskManagement/TaskManagement';
+
 
 const Home = () => {
-  return (
-    <div>
-      <Management></Management>
-      <PerformanceManagement></PerformanceManagement>
-      <EmployeeEngagement></EmployeeEngagement>
-    </div>
-  );
+    return (
+        <div>
+
+            <TaskManagement />
+
+        </div>
+    );
 };
 
 export default Home;
