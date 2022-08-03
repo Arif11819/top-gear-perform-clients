@@ -1,3 +1,35 @@
-.bg-color{
-    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+ 
+ *{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    /* font-family: 'Inter', sans-serif; */
+ }
+ /* buttons */
+
+ .primary-btn{
+   background-color: #58A0EF;
+   padding: 7px 10px;
+   color: white;
+   border-radius: 5px;
+   font-size: 14px;
+   margin: 0px 15px;
+   font-weight: 600;
+ }
+ .primary-btn:hover{
+   background-color: #58a1efd7;
+ }
+ .secondary-btn{
+   background-color: #f26d21 ;
+   font-weight: 600;
+   color: white;
+   padding: 7px 10px;
+   border-radius: 5px;
+   font-size: 14px;
+   margin: 0px 15px;
+ }
+ .secondary-btn:hover{
+   background-color: #da621e ;
+ }
