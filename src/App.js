@@ -1,24 +1,22 @@
 import './App.css';
-<<<<<<< HEAD
-import BusinessPlatform from './components/BusinessPlatform/BusinessPlatform';
-
+import Header from './components/Home/Header/Header';
+import Register from './components/pages/SignUp/Register';
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/pages/Login/Login';
+import Navbar from './components/Home/Header/Navbar';
 function App() {
   return (
 
     <>
-    <BusinessPlatform/>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Header />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
     </>
+  )
 
-=======
 
 
-function App() {
-  return (
-    <div >
-      
-    </div>
->>>>>>> 14e9f3686632791a5d8efd38b97b21e9737a6db9
-  );
 }
-
 export default App;
