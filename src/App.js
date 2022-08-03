@@ -1,6 +1,5 @@
 import './App.css';
 import Header from './components/Home/Header/Header';
-import Register from './components/pages/SignUp/Register';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
 import Navbar from './components/Home/Header/Navbar';
