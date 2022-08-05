@@ -161,7 +161,7 @@ const Register = () => {
         <div className='register-container'>
             <div className="register-img">
                 <img src="https://i.ibb.co/WD9s7s8/Mobile-login-bro.png" alt="" />
-                <h1 className='text-white text-4xl'>Hey welcome <br /> Looks like you are new here !</h1>
+                <h1 className='text-4xl'>Hey welcome <br /> Looks like you are new here !</h1>
             </div>
 
 

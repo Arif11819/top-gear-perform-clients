@@ -310,3 +310,19 @@
   .rdp-day_range_middle {
     border-radius: 0;
   }
+
+  /* time slots  */
+
+input[type="radio"]{
+  display: none;
+}
+.lvl h3{
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type=radio]:checked+ .lvl h3{
+    background-color: #4596ed;
+    color: white;
+}
