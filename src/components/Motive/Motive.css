@@ -1,0 +1,50 @@
+.motive {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    background-color: #f0f0f0;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 250px;
+
+}
+
+.motive-img {
+
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.outline-btn {
+    background-color: #F4731E;
+    font-weight: 600;
+    color: white;
+    padding: 7px 20px;
+    border: 1px solid #F4731E;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0px 15px;
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .motive {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:580px) and (max-width: 992px) {
+    .motive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width:993px) and (max-width: 1400px) {
+    .motive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

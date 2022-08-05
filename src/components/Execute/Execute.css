@@ -1,0 +1,51 @@
+.execute {
+    width: 100%;
+    padding: 5%;
+}
+
+.h-btn {
+    margin: 0px;
+    padding: 8px 20px;
+    background-color: #F4731E;
+    font-weight: 600;
+    color: white;
+    padding: 7px 20px;
+    border: 1px solid #F4731E;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0px 15px;
+    transition: 0.2s;
+}
+
+.outline-btn {
+    background-color: white;
+    font-weight: 600;
+    color: #F4731E;
+    padding: 7px 20px;
+    border: 1px solid #F4731E;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0px 15px;
+    transition: 0.2s;
+}
+
+
+
+.h-btn:hover {
+    background-color: #F4731E;
+    color: white;
+    border: none;
+}
+
+.outline-btn:hover {
+    background-color: #f4901e;
+    color: white;
+    border: none;
+}
+
+.success-circle {
+    display: inline;
+    color: RoyalBlue;
+    font-size: 20px;
+
+}

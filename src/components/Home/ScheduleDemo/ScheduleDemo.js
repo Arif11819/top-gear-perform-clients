@@ -5,9 +5,12 @@ import ScheduleOption from './ScheduleOption';
 import { format } from 'date-fns';
 import UserInput from './UserInput';
 import UserCount from './UserCount';
+import { MdCall } from 'react-icons/md'
+import { MdEmail } from 'react-icons/md'
 
 const ScheduleDemo = () => {
-    const [date, setDate] = useState(new Date())
+    const [date, setDate] = useState(new Date());
+    const [time, setTime] = useState('')
     return (
         <div>
             <div className='text-center my-10'>
@@ -21,8 +24,8 @@ const ScheduleDemo = () => {
                 </div>
                 <p className='ml-3 my-4 text-slate-500'>Date</p>
                 <div className='p-4'>
-                    <ScheduleCalender date={date} setDate={setDate} />
-                    <p className='bg-[#cbe2f7] p-3 font-bold text-sm'>Selected Date: {format(date, 'PPPP')}</p>
+                    <ScheduleCalender date={date} setDate={setDate} time={time} setTime={setTime} />
+                    <p className='bg-[#cbe2f7] p-3 font-bold text-sm'>Selected Date: {format(date, 'PPPP')} {time}</p>
                 </div>
                 <div className='flex justify-center'>
                     <UserInput />
@@ -35,6 +38,23 @@ const ScheduleDemo = () => {
                 </div>
                 <div className='text-center pb-4'>
                     <p>By submitting this form, I agree to Profit.co's <a className='text-[#1fade4]' href="#">Privacy Policy.</a> </p>
+                </div>
+            </div>
+            <div className='text-center py-8 bg-[#f5f8fd] mt-5'>
+                <h2 className='text-4xl font-bold'>Contact Us Now</h2>
+                <div className='flex justify-center gap-10 mt-8'>
+                    <div>
+                        <a href="+8801900000000">
+                            <MdCall className='text-5xl text-[#2196f3]' />
+                            <h3 className='text-2xl'>Call</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="info@topgareperporm.com">
+                            <MdEmail className='text-5xl text-[#2196f3]' />
+                            <h3 className='text-2xl'>Call</h3>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

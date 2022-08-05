@@ -22,8 +22,8 @@ nav {
 }
 
 .top-nav-bar {
-  padding-top: 12px;
-  padding-right: 20px;
+    padding-top: 12px;
+    padding-right: 20px;
     text-align: right;
     font-size: 14px;
 
@@ -55,6 +55,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 30px;
+
+
     padding: 0px 10px;
 }
 
@@ -89,6 +92,10 @@ label {
 }
 
 .header-container {
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    padding: 0px 80px;
     padding-top: 30px;
     display: flex;
     width: 100%;
@@ -173,14 +180,16 @@ label {
     display: none;
     animation-name: toggle-open;
     animation-duration: 0.5s;
-    
+
 }
-.close-icon{
+
+.close-icon {
     margin-left: 85%;
-    margin-top: 20px ;
+    margin-top: 20px;
     font-size: 30px;
 }
-.price-link{
+
+.price-link {
     margin-left: 15px;
     display: block;
     color: #1C3C5F;
@@ -189,10 +198,12 @@ label {
     font-weight: 600;
     user-select: none;
 }
-.toggle-top-menu{
+
+.toggle-top-menu {
     width: 100%;
 
 }
+
 .toggle-top-menu a {
     margin: 5px 10px;
 }
@@ -230,7 +241,8 @@ label {
         padding: 0px;
 
     }
-    .main-nav-bar{
+
+    .main-nav-bar {
         padding: 15px;
     }
 
@@ -270,8 +282,9 @@ label {
         color: #333;
 
     }
-.toggle-menu{
-    display: block;
-}
+
+    .toggle-menu {
+        display: block;
+    }
 
 }
