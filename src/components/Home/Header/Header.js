@@ -6,6 +6,8 @@ import { IoCheckmarkCircle } from 'react-icons/io5';
 import { GrClose } from 'react-icons/gr'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import BusinessPlatform from '../BusinessPlatform.js/BusinessPlatform';
+import HelpCenter from '../../HelpCenter/HelpCenter';
 
 const Header = () => {
     const [toggle, setToggle] = useState(false)
@@ -40,6 +42,8 @@ const Header = () => {
 
 
             </header>
+            <BusinessPlatform/>
+            <HelpCenter/>
            
         </>
     );
