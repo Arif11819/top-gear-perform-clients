@@ -1,6 +1,9 @@
 import './App.css';
 import Motive from './components/Motive/Motive';
 
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/pages/Login/Login';
+import Home from './components/Home/Home';
 
 
 
@@ -9,9 +12,12 @@ import Motive from './components/Motive/Motive';
 function App() {
   return (
 
-    <div>
-
-    </div>
+    <>
+      <Home></Home>
+      <Routes>
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </>
   )
 
 
