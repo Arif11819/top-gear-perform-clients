@@ -1,4 +1,5 @@
 import './App.css';
+import Motive from './components/Motive/Motive';
 
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
