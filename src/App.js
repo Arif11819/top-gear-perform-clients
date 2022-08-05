@@ -1,10 +1,10 @@
 import './App.css';
+import Motive from './components/Motive/Motive';
 
-import Header from './components/Home/Header/Header';
 import { Route, Routes } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
-import Navbar from './components/Home/Header/Navbar';
-import BusinessPlatform from './components/Home/BusinessPlatform.js/BusinessPlatform';
+import Home from './components/Home/Home';
+
 
 
 
@@ -13,9 +13,8 @@ function App() {
   return (
 
     <>
-      <Navbar />
+      <Home></Home>
       <Routes>
-        <Route path='/' element={<Header />} />
         <Route path='/login' element={<Login />} />
         
       </Routes>

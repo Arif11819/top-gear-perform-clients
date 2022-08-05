@@ -42,9 +42,6 @@ const Header = () => {
 
 
             </header>
-            <BusinessPlatform/>
-            <HelpCenter/>
-           
         </>
     );
 };
