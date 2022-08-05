@@ -1,5 +1,5 @@
-.secondary-btn{
-  background-color: #f26d21 ;
+.secondary-btn {
+  background-color: #f26d21;
   font-weight: 600;
   color: white;
   padding: 7px 10px;
@@ -7,6 +7,7 @@
   font-size: 14px;
   margin: 0px 15px;
 }
-.secondary-btn:hover{
-  background-color: #da621e ;
+
+.secondary-btn:hover {
+  background-color: #da621e;
 }
