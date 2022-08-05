@@ -16,6 +16,7 @@ import HelpCenter from './components/HelpCenter/HelpCenter';
 import Faq from './components/Faq/Faq';
 import Ebooks from './components/Ebooks/Ebooks';
 import Register from './components/pages/SignUp/Register';
+import Praise from './components/Praise/Praise';
 
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<Register />} />
         <Route path='/reviews' element={<Reviews />} />
+        <Route path='/praise' element={<Praise />} />
         <Route path='/schedule' element={<ScheduleDemo />} />
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />

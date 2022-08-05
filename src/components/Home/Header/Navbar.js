@@ -58,7 +58,7 @@ const Navbar = () => {
                             <label tabIndex="0">CUSTOMERS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu  shadow bg-base-100 w-72">
                                 <li><Link to='/reviews'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
-                                <li><a href='/'><img src="https://i.ibb.co/thRDcVS/integrations.png" alt="" /> Why TopGear Perform</a></li>
+                                <li><Link to='/praise'><img src="https://i.ibb.co/thRDcVS/integrations.png" alt="" /> Why TopGear Perform</Link></li>
                             </ul>
                         </div>
 
