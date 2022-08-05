@@ -70,7 +70,7 @@ const Navbar = () => {
                                 <li> <a href='/'><img src="https://i.ibb.co/19V7SY7/universtiy.png" alt="" />OKR University</a></li>
 
 
-                                <li><a href='/'><img src="https://i.ibb.co/7C61C9N/books.png" alt="" /> eBooks</a></li>
+                                <li><Link to='/ebook'><img src="https://i.ibb.co/7C61C9N/books.png" alt="" /> eBooks</Link></li>
 
                                 <li><a href='/'><img src="https://i.ibb.co/mbkby2D/library.png" alt="" />  KPI Library</a></li>
 
@@ -84,18 +84,17 @@ const Navbar = () => {
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">SUPPORT<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 w-72">
-                                <li> <a href='/'><img src="https://i.ibb.co/kHtgtPX/faq.png" alt="" />Answers FAQ</a></li>
+                                <li> <Link to='/faq'><img src="https://i.ibb.co/kHtgtPX/faq.png" alt="" />Answers FAQ</Link></li>
 
                                 <li><a href='/'><img src="https://i.ibb.co/gPD8XsB/canvas.png" alt="" /> OKI Canvas</a></li>
 
-                                <li><a href='/'><img src="https://i.ibb.co/GsNLVfK/help.png" alt="" /> Help Center</a></li>
+                                <li><Link to='/helpCenter'><img src="https://i.ibb.co/GsNLVfK/help.png" alt="" /> Help Center</Link></li>
 
                                 <li><a href='/'><img src="https://i.ibb.co/BPqdR82/update.png" alt="" />Release and Updates</a></li>
                             </ul>
                         </div>
-
                         <button className='primary-btn'>TRY IT FREE</button>
-                        <button className='secondary-btn'>SCHEDULE DEMO</button>
+                        <button className='secondary-btn'> <Link className='text-white' to="/schedule">SCHEDULE DEMO</Link> </button>
                     </div>
                 </div>
             </nav>
@@ -140,7 +139,7 @@ const Navbar = () => {
                             <li> <a href='/'>OKR University</a></li>
 
 
-                            <li><a href='/'>eBooks</a></li>
+                            <li><Link to='/ebook'>eBooks</Link></li>
 
                             <li><a href='/'>  KPI Library</a></li>
 
@@ -154,13 +153,13 @@ const Navbar = () => {
                     <div className="dropdown dropdown-hover cursor-pointer dropdown-containermt-4 mt-4 mb-4">
                         <label tabIndex="0">SUPPORT<RiArrowDownSLine className='arrow-icon' /> </label>
                         <ul tabIndex="0" className="dropdown-content menu p-2 shadow-xl ml-20 bg-base-100 w-72">
-                            <li> <a href='/'>Answers FAQ</a></li>
+                            <li> <Link to='/faq'>Answers FAQ</Link></li>
 
-                            <li><a href='/'> OKI Canvas</a></li>
+                            <li><Link href='/'> OKI Canvas</Link></li>
 
-                            <li><a href='/'> Help Center</a></li>
+                            <li><Link to='/helpCenter'> Help Center</Link></li>
 
-                            <li><a href='/'>Release and Updates</a></li>
+                            <li><Link href='/'>Release and Updates</Link></li>
                         </ul>
                     </div>
                     <hr />
@@ -175,7 +174,7 @@ const Navbar = () => {
                     <hr />
                     <div className='mt-8'>
                         <button className='primary-btn'>TRY IT FREE</button>
-                        <button className='secondary-btn'>SCHEDULE DEMO</button>
+                        <button className='secondary-btn'> <Link to="/schedule">SCHEDULE DEMO</Link> </button>
                     </div>
                 </div>
 
