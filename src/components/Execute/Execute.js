@@ -10,7 +10,7 @@ const Execute = () => {
                 <h2>industry’s most preferred and</h2>
                 <h2>intuitive software</h2>
             </div>
-            <div className='mt-7 text-white mx-auto text-center mt-4'>
+            <div className='mt-7 circle-text mx-auto text-center'>
                 <p className='inline mr-8 pt-8 small-txt'>  <IoCheckmarkCircle className='success-circle' /> Free for one month</p>
                 <p className='inline mr-8 pt-8 small-txt'>  <IoCheckmarkCircle className='success-circle ' /> No Credit Card needed</p>
 
