@@ -13,14 +13,16 @@
 
 .reg-form-container {
     width: 70%;
+    background-color: #f3f8fe;
 
 }
 .reg-title{
     font-weight: bold;
     text-align: center;
     margin: 10px 0px;
-    color: #ED5427;
+    color: #58A0EF;
     font-size: 35px;
+    font-weight: 800;
 }
 
 .register-form {
@@ -37,7 +39,7 @@ select {
     padding: 8px;
     border-radius: 4px;
     margin: 10px 0px;
-    border: 1px solid rgba(0, 0, 0, 0.267);    
+    border: 1px solid rgba(0, 0, 0, 0.144);    
 
 
 }
@@ -51,7 +53,7 @@ select {
 }
 
 .register-button {
-    background-color: #ED5427;
+    background-color: #58A0EF;
     color: white;
     padding: 8px 20px;
     width: 200px;
