@@ -9,7 +9,8 @@ import { MdCall } from 'react-icons/md'
 import { MdEmail } from 'react-icons/md'
 
 const ScheduleDemo = () => {
-    const [date, setDate] = useState(new Date())
+    const [date, setDate] = useState(new Date());
+    const [time, setTime] = useState('')
     return (
         <div>
             <div className='text-center my-10'>
@@ -23,8 +24,8 @@ const ScheduleDemo = () => {
                 </div>
                 <p className='ml-3 my-4 text-slate-500'>Date</p>
                 <div className='p-4'>
-                    <ScheduleCalender date={date} setDate={setDate} />
-                    <p className='bg-[#cbe2f7] p-3 font-bold text-sm'>Selected Date: {format(date, 'PPPP')}</p>
+                    <ScheduleCalender date={date} setDate={setDate} time={time} setTime={setTime} />
+                    <p className='bg-[#cbe2f7] p-3 font-bold text-sm'>Selected Date: {format(date, 'PPPP')} {time}</p>
                 </div>
                 <div className='flex justify-center'>
                     <UserInput />
