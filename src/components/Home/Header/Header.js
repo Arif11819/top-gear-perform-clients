@@ -12,8 +12,6 @@ const Header = () => {
     return (
         <>
             <header>
-
-
                 <div className="header-container">
                     <div className="header-content">
                         <h1>OKR Software that helps you execute your strategy</h1>
@@ -22,9 +20,9 @@ const Header = () => {
                             <button className='primary-btn h-btn'>GET STARTED FREE</button>
                             <button className='outline-btn'>SCHEDULE DEMO</button>
                         </div>
-                        <div className='mt-4'>
-                            <p className='inline mr-8 pt-8 small-txt'>  <IoCheckmarkCircle className='success-circle' /> Free for 5 Users</p>
-                            <p className='inline mr-8 pt-8 small-txt'>  <IoCheckmarkCircle className='success-circle' /> No Credit Card Required</p>
+                        <div className='flex flex-row text-center mt-2 pl-8'>
+                            <p className='mr-8 pt-3 small-txt'>  <IoCheckmarkCircle className='success-circle' /> Free for 5 Users</p>
+                            <p className='mr-8 pt-3 small-txt'>  <IoCheckmarkCircle className='success-circle' /> No Credit Card Required</p>
 
                         </div>
                         <div className="awards-container mt-10">
