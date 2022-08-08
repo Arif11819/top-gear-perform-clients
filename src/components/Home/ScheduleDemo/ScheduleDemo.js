@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ScheduleCalender from './ScheduleCalender';
 import './ScheduleDemo.css'
 import ScheduleOption from './ScheduleOption';
@@ -10,7 +10,24 @@ import { MdEmail } from 'react-icons/md'
 
 const ScheduleDemo = () => {
     const [date, setDate] = useState(new Date());
-    const [time, setTime] = useState('')
+    const [time, setTime] = useState('');
+    const [timeSlots, setTimeSlots] = useState([]);
+    const [timeZone, setTimeZone] = useState('+06:00')
+    const [languageSelect, setLanguageSelect] = useState('English')
+    const [userCount, setUserCount] = useState('1-50');
+    const [userName, setUserName] = useState('');
+    const [email, setEmail] = useState('');
+    const [companyName, setCompanyName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    useEffect(() => {
+        fetch("timeSlots.json")
+            .then(res => res.json())
+            .then(data => setTimeSlots(data))
+    }, [])
+    const handleSubmit = () => {
+        console.log(timeZone, languageSelect, date, time, userCount);
+        console.log(userName, email, companyName, phoneNumber);
+    }
     return (
         <div>
             <div className='text-center my-10'>
@@ -19,22 +36,22 @@ const ScheduleDemo = () => {
             </div>
             <div className='md:w-2/5 mx-auto bg-white rounded shadow-lg pt-4'>
                 <div>
-                    <ScheduleOption />
+                    <ScheduleOption setTimeZone={setTimeZone} setLanguageSelect={setLanguageSelect} />
 
                 </div>
                 <p className='ml-3 my-4 text-slate-500'>Date</p>
                 <div className='p-4'>
-                    <ScheduleCalender date={date} setDate={setDate} time={time} setTime={setTime} />
+                    <ScheduleCalender date={date} setDate={setDate} time={time} setTime={setTime} timeSlots={timeSlots} setTimeSlots={setTimeSlots} />
                     <p className='bg-[#cbe2f7] p-3 font-bold text-sm'>Selected Date: {format(date, 'PPPP')} {time}</p>
                 </div>
                 <div className='flex justify-center'>
-                    <UserInput />
+                    <UserInput setUserName={setUserName} setEmail={setEmail} setCompanyName={setCompanyName} setPhoneNumber={setPhoneNumber} />
                 </div>
                 <div className='flex justify-evenly mt-5 text-center gap-2 mx-5'>
-                    <UserCount />
+                    <UserCount userCount={userCount} setUserCount={setUserCount} />
                 </div>
                 <div className='p-4 bg-orange-600 text-center mb-4 text-white mx-5 hover:bg-orange-700 cursor-pointer'>
-                    <button>Submit</button>
+                    <button onClick={handleSubmit}>Submit</button>
                 </div>
                 <div className='text-center pb-4'>
                     <p>By submitting this form, I agree to Profit.co's <a className='text-[#1fade4]' href="#">Privacy Policy.</a> </p>

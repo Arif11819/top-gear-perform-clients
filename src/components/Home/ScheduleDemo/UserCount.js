@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './UserCount.css'
 
-const UserCount = () => {
-    const [userCount, setUserCount] = useState('1-50');
+const UserCount = ({ userCount, setUserCount }) => {
+
     const handleChange = (event) => {
         setUserCount(event.target.value)
     }
