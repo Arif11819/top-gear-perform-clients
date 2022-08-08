@@ -152,9 +152,9 @@ const Register = () => {
 
 
     }
-
+console.log(error)
     if (user) {
-        navigate('/')
+        navigate('/dashboard')
     }
 
     return (

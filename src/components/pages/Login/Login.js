@@ -6,11 +6,10 @@ import auth from '../../../firebase.init'
 import { toast } from 'react-toastify'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { TiWarning } from 'react-icons/ti';
-const Login = ({ setModal }) => {
+const Login = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [loginError, setLoginError] = useState('')
     const navigate = useNavigate()
 
     const [
@@ -20,10 +19,8 @@ const Login = ({ setModal }) => {
     ] = useSignInWithEmailAndPassword(auth);
     if (user) {
 
-        navigate('/')
+        navigate('/dashboard')
         toast.success('Login successfull')
-
-        setModal(false)
     }
     const handleLogin = (event) => {
         event.preventDefault()
@@ -31,8 +28,8 @@ const Login = ({ setModal }) => {
         signInWithEmailAndPassword(email, password)
 
     }
-    console.log(error)
 
+    console.log(error)
 
     return (
         <div className='login-container'>
@@ -42,7 +39,7 @@ const Login = ({ setModal }) => {
                 <input autoComplete='off' onBlur={(e) => setEmail(e.target.value)} type="text" placeholder='Email' name='email' required />
                 <input autoComplete='off' onBlur={(e) => setPassword(e.target.value)} type="password" placeholder='Password' name='password' required />
                 {error && <div className='error-container'>
-                    <p className='error-message'><TiWarning className='warning-icon' />User not found</p>
+                    <p className='error-message'><TiWarning className='warning-icon' />Wrong email or password</p>
                 </div>}
 
                 <button type='submit'>Login</button>

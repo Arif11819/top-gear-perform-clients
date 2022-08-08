@@ -4,10 +4,14 @@
     grid-gap: 15px;
     background-color: #f0f0f0;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: 250px;
+
 
 }
+
+h2 {
+    margin-bottom: 15px;
+}
+
 
 .motive-img {
 
@@ -17,7 +21,7 @@
     width: 70%;
 }
 
-.outline-btn {
+.explore-btn {
     background-color: #F4731E;
     font-weight: 600;
     color: white;
@@ -25,7 +29,7 @@
     border: 1px solid #F4731E;
     border-radius: 5px;
     font-size: 14px;
-    margin: 0px 15px;
+
 
 }
 

@@ -15,7 +15,7 @@ const HelpCenter = () => {
             .then(res => res.json())
             .then(data => {
                 setData(data)
-            setSearch(data)
+                setSearch(data)
             }
             )
     }, [])
@@ -25,19 +25,19 @@ const HelpCenter = () => {
         setWordEntered(searchWork)
         const newFilter = data.filter((value) => {
             return value.title.toLowerCase().includes(wordEntered.toLowerCase());
-          });
+        });
 
-          if (searchWork === "") {
+        if (searchWork === "") {
             setData(search);
-          } else {
+        } else {
             setData(newFilter);
-          }
-          setWordEntered(e.target.value)
-       
+        }
+        setWordEntered(e.target.value)
+
 
     }
 
-    
+
 
 
     return (
@@ -54,23 +54,23 @@ const HelpCenter = () => {
 
             </div>
 
-            
-                <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 sm:mt-10'>
 
-                    {
-                        data.map(value => <HelpCard
+            <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 sm:mt-10'>
 
-                            value={value}
-                            key={value.id}
+                {
+                    data.map(value => <HelpCard
 
-                        ></HelpCard>)
+                        value={value}
+                        key={value.id}
 
-                    }
+                    ></HelpCard>)
+
+                }
 
 
-                </div>
+            </div>
 
-           
+
 
         </div>
     );
