@@ -50,8 +50,8 @@ const ScheduleDemo = () => {
                 <div className='flex justify-evenly mt-5 text-center gap-2 mx-5'>
                     <UserCount userCount={userCount} setUserCount={setUserCount} />
                 </div>
-                <div className='p-4 bg-orange-600 text-center mb-4 text-white mx-5 hover:bg-orange-700 cursor-pointer'>
-                    <button onClick={handleSubmit}>Submit</button>
+                <div onClick={handleSubmit} className='p-4 bg-orange-600 text-center mb-4 text-white mx-5 hover:bg-orange-700 cursor-pointer'>
+                    <button>Submit</button>
                 </div>
                 <div className='text-center pb-4'>
                     <p>By submitting this form, I agree to Profit.co's <a className='text-[#1fade4]' href="#">Privacy Policy.</a> </p>
