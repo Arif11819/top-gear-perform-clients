@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Ebook from "./Ebook";
 import "./Ebook.css";
+import NewBooks from "./NewBooks";
 
 const Ebooks = () => {
   const [books, setbooks] = useState([]);
@@ -42,6 +43,7 @@ const Ebooks = () => {
           ))}
         </div>
       </section>
+      <NewBooks />
     </div>
   );
 };
