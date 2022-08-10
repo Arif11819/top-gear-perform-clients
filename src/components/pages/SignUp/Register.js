@@ -223,7 +223,10 @@ const Register = () => {
                     {error && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />Email already exist</p>
                     </div>}
-                   
+                    <button disabled={loading} type='submit' className='register-button '>
+                        {loading ? <Loading /> : <span>Sign Up</span>}
+                    </button>
+
                 </form>
             </div>
         </div>
