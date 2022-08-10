@@ -25,8 +25,28 @@ const ScheduleDemo = () => {
             .then(data => setTimeSlots(data))
     }, [])
     const handleSubmit = () => {
-        console.log(timeZone, languageSelect, date, time, userCount);
-        console.log(userName, email, companyName, phoneNumber);
+        const scheduleData = {
+            timeZone: timeZone,
+            language: languageSelect,
+            date: date,
+            time: time,
+            userName: userName,
+            email: email,
+            company: companyName,
+            phone: phoneNumber,
+            userCount: userCount
+        }
+        fetch("http://localhost:5000/scheduleData", {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(scheduleData)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
     }
     return (
         <div>
