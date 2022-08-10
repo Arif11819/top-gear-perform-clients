@@ -6,17 +6,18 @@ import auth from '../../../firebase.init'
 import { toast } from 'react-toastify'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { TiWarning } from 'react-icons/ti';
+import Loading from '../SignUp/Loading/Loading';
 const Login = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
-
     const [
         signInWithEmailAndPassword,
         user,
+        loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+      ] = useSignInWithEmailAndPassword(auth);
     if (user) {
 
         navigate('/dashboard')
@@ -29,7 +30,7 @@ const Login = () => {
 
     }
 
-    console.log(error)
+
 
     return (
         <div className='login-container'>
@@ -42,7 +43,9 @@ const Login = () => {
                     <p className='error-message'><TiWarning className='warning-icon' />Wrong email or password</p>
                 </div>}
 
-                <button type='submit'>Login</button>
+                <button disabled={loading}type='submit'>
+                        {loading ? <Loading /> : <span>Login</span>}
+                    </button>
                 <small className='text-center block pt-4'>don't have an account ? <Link className='signUp' to='/signUp'>Sign Up</Link></small>
             </form>
 
