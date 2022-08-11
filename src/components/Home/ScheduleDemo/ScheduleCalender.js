@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { DayPicker } from 'react-day-picker';
 import './scheduleCalender.css'
 
-const ScheduleCalender = ({ date, setDate, time, setTime }) => {
-    const [timeSlots, setTimeSlots] = useState([])
+const ScheduleCalender = ({ date, setDate, time, setTime, timeSlots }) => {
+
     const handleChange = (e) => {
         setTime(e.target.value)
     }
-    useEffect(() => {
-        fetch("timeSlots.json")
-            .then(res => res.json())
-            .then(data => setTimeSlots(data))
-    }, [])
+
     return (
         <div className='flex'>
             <DayPicker
@@ -22,7 +18,7 @@ const ScheduleCalender = ({ date, setDate, time, setTime }) => {
             <div className='grid grid-cols-2 gap-2 h-5'>
                 {
                     timeSlots.map(timeSlot =>
-                        <form>
+                        <form key={timeSlot.id}>
 
                             <div>
                                 <input className='radio' type="radio" value={timeSlot.time} id={timeSlot.time} checked={time === timeSlot.time} onChange={handleChange} />
