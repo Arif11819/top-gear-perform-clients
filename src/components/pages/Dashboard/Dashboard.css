@@ -1,0 +1,54 @@
+.dashboard-container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.dashboard-navbar {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    z-index: 999;
+    box-shadow: 0 5px 8px rgb(192 198 213 / 20%);
+}
+
+.dash-nav-icon {
+    display: inline;
+    font-size: 20px;
+    margin: 0px 10px;
+    color: #58A0EF;
+}
+
+.profie {
+    display: inline;
+    cursor: pointer;
+}
+
+.profie p {
+    color: #58A0EF;
+}
+
+.sidebar {
+    width: 55px;
+    height: calc(100vh - 50px);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 50px;
+    background-color: #58A0EF;
+}
+
+.sidebar-icon {
+    font-size: 25px;
+    margin: 20px auto;
+    color: white;
+}
+
+.dashboard-body {
+    margin-left: 55px;
+}

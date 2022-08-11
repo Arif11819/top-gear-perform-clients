@@ -154,14 +154,14 @@ const Register = () => {
     }
 
     if (user) {
-        navigate('/')
+        navigate('/dashboard')
     }
 
     return (
         <div className='register-container'>
             <div className="register-img">
                 <img src="https://i.ibb.co/WD9s7s8/Mobile-login-bro.png" alt="" />
-                <h1 className='text-white text-4xl'>Hey welcome <br /> Looks like you are new here !</h1>
+                <h1 className='text-4xl'>Hey welcome <br /> Looks like you are new here !</h1>
             </div>
 
 
@@ -200,7 +200,7 @@ const Register = () => {
                     </div>
                     <label>
                         <input autoComplete='off' required name='checkBox' type="checkbox" />
-                        <p > Accept our <Link className='term-link' to='/term-and-condition'> terms </Link> and condition</p>
+                        <p> Accept our <Link className='term-link' to='/term-and-condition'> terms </Link> and condition</p>
                     </label>
                     {emailError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />{emailError}</p>
@@ -223,9 +223,10 @@ const Register = () => {
                     {error && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />Email already exist</p>
                     </div>}
-                    <button disabled={loading} className='register-button' type='submit'>
-                        {loading ? <Loading /> : <span>Register Now</span>}
+                    <button disabled={loading} type='submit' className='register-button '>
+                        {loading ? <Loading /> : <span>Sign Up</span>}
                     </button>
+
                 </form>
             </div>
         </div>
