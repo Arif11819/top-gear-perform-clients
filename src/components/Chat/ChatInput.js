@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import io from 'socket.io-client'
 import Chats from './Chats';
-const socket = io.connect('https://rocky-waters-72967.herokuapp.com');
+const socket = io.connect('https://topgearperformchat.herokuapp.com');
 
 const ChatInput = () => {
     const [userName, setUserName] = useState("")
