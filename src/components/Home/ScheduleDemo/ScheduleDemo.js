@@ -99,6 +99,9 @@ const ScheduleDemo = () => {
                     </div>
                 </div>
             </div>
+            <div className='hidden'>
+                <ScheduleSubmit timeZone={timeZone} date={date} />
+            </div>
         </div>
     );
 };
