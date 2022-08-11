@@ -21,7 +21,7 @@ const ScheduleCalender = ({ date, setDate, time, setTime, timeSlots }) => {
                         <form key={timeSlot.id}>
 
                             <div>
-                                <input className='radio' type="radio" value={timeSlot.time} id={timeSlot.time} checked={time === timeSlot.time} onChange={handleChange} />
+                                <input className='radio' type="radio" value={timeSlot.time} id={timeSlot.time} checked={time === timeSlot.time} onChange={handleChange} required />
                                 <label className='lvl m-0' htmlFor={timeSlot.time}>
                                     <div>
                                         <h3>{timeSlot.time}</h3>
