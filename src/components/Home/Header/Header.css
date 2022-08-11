@@ -12,6 +12,7 @@ nav {
     padding: 0px 50px;
     position: sticky;
     top: 0;
+    z-index: 999;
 
 }
 
@@ -91,7 +92,7 @@ label {
 }
 
 .header-container {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     display: flex;
     width: 100%;
     padding: 0px 80px;
@@ -126,13 +127,13 @@ label {
     font-weight: 500;
 }
 
-.h-btn {
+.header-btn {
     margin: 0px;
     padding: 8px 20px;
     font-weight: 500;
 }
 
-.outline-btn {
+.outline-button {
     background-color: white;
     font-weight: 600;
     color: #337ab7;
