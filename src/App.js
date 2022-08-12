@@ -23,6 +23,8 @@ import Task from './components/pages/Dashboard/Task/Task';
 import Chat from './components/pages/Dashboard/Chat/Chat';
 import Notifications from './components/pages/Dashboard/Notifications/Notifications';
 import Action from './components/pages/Dashboard/Actions/Action';
+import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
+
 
 
 
@@ -48,6 +50,7 @@ function App() {
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/praise' element={<Praise />} />
         <Route path='/schedule' element={<ScheduleDemo />} />
+        <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />
         <Route path='/faq' element={<Faq />} />

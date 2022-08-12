@@ -28,7 +28,7 @@ const Dashboard = () => {
                         <Link to="">< BiMessage className='dash-nav-icon' /></Link>
                         <div className="profie">
                             <CgProfile className='dash-nav-icon' />
-                            <p className='inline text-sm'>Torikul Islam <MdOutlineKeyboardArrowDown className='inline' /></p>
+                            <p className='inline text-sm'>Sumaya Islam <MdOutlineKeyboardArrowDown className='inline' /></p>
                         </div>
 
                     </div>
