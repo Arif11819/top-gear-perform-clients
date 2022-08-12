@@ -21,10 +21,10 @@ import Dashboard from './components/pages/Dashboard/Dashboard';
 import DashHome from './components/pages/Dashboard/DashHome/DashHome';
 import Focus from './components/pages/Dashboard/Focus/Focus';
 import MyTask from './components/MyTask/MyTask';
-import Chat from './components/pages/Dashboard/Chat/Chat';
 import Notifications from './components/pages/Dashboard/Notifications/Notifications';
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
+import ChatInput from './components/Chat/ChatInput';
 
 
 
@@ -44,7 +44,7 @@ function App() {
           <Route path='home' element={<DashHome />} />
           <Route path='focus' element={<Focus />} />
           <Route path='task' element={<MyTask />} />
-          <Route path='chat' element={<Chat />} />
+          <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
           <Route path='action' element={<Action />} />
         </Route>
