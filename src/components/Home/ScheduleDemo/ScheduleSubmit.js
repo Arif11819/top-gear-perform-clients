@@ -15,7 +15,6 @@ const ScheduleSubmit = ({ timeZone, date }) => {
                     </div>
                     <h2 className='text-xl font-bold'>Demo Booked Successfully</h2>
                     <h1 className='text-4xl font-bold'>Schedule a Call</h1>
-                    <p>{`GTM ${timeZone}`}</p>
                 </div>
             </div>
         </div>
