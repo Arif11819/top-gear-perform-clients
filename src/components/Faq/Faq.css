@@ -1,98 +1,100 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitter&family=Mate+SC&family=Raleway&family=Roboto:wght@500&family=Source+Sans+Pro:wght@300;600&family=Squada+One&display=swap");
-
 * {
-    margin: 0;
-    padding: 0%;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 
-.main-div {
+
+#accordion {
+
     width: 800px;
     margin: auto;
-}
 
-h1 {
-    text-align: center;
-    font-family: "Bitter", serif;
-    text-transform: capitalize;
-    font-size: 32px;
-    letter-spacing: 5;
-    word-spacing: 5px;
-    margin-bottom: 50px;
 
 }
 
-.main-heading {
+li :hover {
+    background-color: rgba(0, 255, 217, 0.427);
+}
+
+#accordion li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#accordion li label {
+    padding: 10px;
     display: flex;
-    margin-top: 30px;
-    padding: 20px 0 20px 20px;
-    background: #f1f4ff;
-}
-
-.main-heading:first-child {
-    margin-top: 0;
-}
-
-.main-heading h3 {
-    margin-left: 30px;
-    font-family: "Mate SC", serif;
-    color: #303243;
-    font-family: "Raleway", sans-serif;
-    word-spacing: 1px;
-    letter-spacing: 1px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
     font-weight: 600;
-    font-size: 18px;
-}
-
-.main-heading p {
     cursor: pointer;
-
-    background: #fff;
-    padding: 5px;
 }
 
-.answers {
-    padding: 30px 20px 40px 20px;
-    font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    word-spacing: 2px;
-    font-weight: 400;
-    line-height: 1.7;
-    background: #fcf6f5;
-    color: rgb(40, 37, 53);
+#accordion li label span {
+    transform: rotate(90deg);
+}
+
+#accordion label+input[type='radio'] {
+
+    display: none;
+}
+
+#accordion .content {
+
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .5s;
+}
+
+#accordion label+input[type='radio']:checked+.content {
+    max-height: 500px;
+}
+
+@media only screen and (max-width: 576px) {
+    #accordion {
+        width: 350px;
+        margin: auto;
+    }
 }
 
 @media only screen and (min-width:360px) and (max-width: 640px) {
-    .main-div {
+    #accordion {
         width: 350px;
         margin: auto;
     }
 }
 
 @media only screen and (min-width:414px) and (max-width: 610px) {
-    .main-div {
+    #accordion {
         width: 350px;
         margin: auto;
     }
 }
 
 @media only screen and (min-width:580px) and (max-width: 992px) {
-    .main-div {
+    #accordion {
         width: 450px;
         margin: auto;
     }
 }
 
 @media only screen and (min-width:712px) and (max-width: 1150px) {
-    .main-div {
+    #accordion {
         width: 600px;
         margin: auto;
     }
 }
 
 @media only screen and (min-width:993px) and (max-width: 1400px) {
-    .main-div {
+    #accordion {
         width: 800px;
         margin: auto;
     }

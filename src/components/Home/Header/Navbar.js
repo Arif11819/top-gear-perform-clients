@@ -27,7 +27,7 @@ const Navbar = () => {
                 <div className="top-nav-bar">
                     <Link to="/">About us</Link>
                     <Link to="/">Blog</Link>
-                    <Link to="/">Contact us</Link>
+                    <Link to="/contact">Contact us</Link>
                     {user ? <Link onClick={handleSignout} to="/">Logout </Link> : <Link to="/login">Sign in </Link>}
                     <RiGlobalLine className='global-icon' />
                 </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
                             <label tabIndex="0">PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu shadow bg-base-100 w-72">
 
-                                <li> <a href='/'><img src="https://i.ibb.co/rMtSDJZ/product-overview.png" alt="" />Product Overview</a></li>
+                                <li className='hover:none'> <a href='/'><img src="https://i.ibb.co/rMtSDJZ/product-overview.png" alt="" />Product Overview</a></li>
 
                                 <li><a href='/'><img src="https://i.ibb.co/yNLbTG8/management.png" alt="" /> OKR Management</a></li>
 
@@ -94,7 +94,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <button className='primary-btn'>TRY IT FREE</button>
-                        <button className='secondary-btn'> <Link className='text-white' to="/schedule">SCHEDULE DEMO</Link> </button>
+                        <button className='secondary-btn'> <Link id='demo-text' to="/schedule">SCHEDULE DEMO</Link> </button>
                     </div>
                 </div>
             </nav>
@@ -168,7 +168,7 @@ const Navbar = () => {
                     <hr />
                     <Link className='price-link mt-4 mb-4' to='/'>BLOG</Link>
                     <hr />
-                    <Link className='price-link mt-4 mb-4' to='/'>CONTACT US</Link>
+                    <Link className='price-link mt-4 mb-4' to='/contact'>CONTACT US</Link>
                     <hr />
                     <Link className='price-link mt-4 mb-4' to='/login'>SIGN IN</Link>
                     <hr />
