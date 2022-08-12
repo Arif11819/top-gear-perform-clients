@@ -1,23 +1,15 @@
 import './App.css';
-import Motive from './components/Motive/Motive';
 
-import { Route, Routes } from 'react-router-dom';
-import Login from './components/pages/Login/Login';
-import Home from './components/Home/Home';
-
-
-
+import MyTask from './components/MyTask/MyTask';
 
 
 function App() {
   return (
 
-    <>
-      <Home></Home>
-      <Routes>
-        <Route path='/login' element={<Login />} />
-      </Routes>
-    </>
+    <div>
+      <MyTask />
+
+    </div>
   )
 
 
