@@ -25,7 +25,7 @@ const Navbar = () => {
         <>
             <nav>
                 <div className="top-nav-bar">
-                    <Link to="/">About us</Link>
+                    <Link to="/team">About us</Link>
                     <Link to="/">Blog</Link>
                     <Link to="/">Contact us</Link>
                     {user ? <Link onClick={handleSignout} to="/">Logout </Link> : <Link to="/login">Sign in </Link>}

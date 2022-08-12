@@ -200,7 +200,7 @@ const Register = () => {
                     </div>
                     <label>
                         <input autoComplete='off' required name='checkBox' type="checkbox" />
-                        <p> Accept our <Link className='term-link' to='/term-and-condition'> terms </Link> and condition</p>
+                        <p> Accept our <Link className='term-link' to='/terms'> terms </Link> and condition</p>
                     </label>
                     {emailError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />{emailError}</p>

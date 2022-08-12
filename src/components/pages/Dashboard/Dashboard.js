@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom'
-import './Dashboard.css'
+import './Dashboard.css';
 import { VscFileSymlinkDirectory } from 'react-icons/vsc'
 import { FiFlag } from 'react-icons/fi'
 import { MdOutlineNotificationsActive, MdOutlineKeyboardArrowDown } from 'react-icons/md'

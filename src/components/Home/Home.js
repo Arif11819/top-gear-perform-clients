@@ -6,6 +6,7 @@ import NewsLetter from '../NewsLetter/NewsLetter';
 import Recognition from '../Recognition/Recognition';
 import BlogSection from './BlogSection/BlogSection';
 import BusinessPlatform from './BusinessPlatform.js/BusinessPlatform';
+import CountDown from './CountDown/CountDown';
 import ExploreProduct from './ExploreProduct/ExploreProduct';
 import Header from './Header/Header';
 import Partner from './Partner/Partner';
@@ -15,6 +16,10 @@ import WhyTopGare from './WhyTopGare/WhyTopGare';
 
 
 const Home = () => {
+    const TWENTY_DAYS_IN_MS = 190 * 9 * 17 * 60 * 1000;
+  const NOW_IN_MS = new Date().getTime();
+
+  const dateTimeAfterTwentyDays = NOW_IN_MS + TWENTY_DAYS_IN_MS;
     return (
         <div>
             <Header></Header>
@@ -28,6 +33,7 @@ const Home = () => {
             <Recognition></Recognition>
             <BlogSection></BlogSection>
             <WhyTopGare></WhyTopGare>
+            <CountDown targetDate={dateTimeAfterTwentyDays}></CountDown>
             <NewsLetter></NewsLetter>
         </div>
     );
