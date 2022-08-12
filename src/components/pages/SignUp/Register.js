@@ -133,7 +133,7 @@ const Register = () => {
         if (email && password && confirmPassword && role && age && gender) {
 
             createUserWithEmailAndPassword(email, password)
-            fetch('http://localhost:5000/users', {
+            fetch('https://dry-ravine-83506.herokuapp.com/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

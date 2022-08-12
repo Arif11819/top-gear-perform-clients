@@ -16,16 +16,16 @@ const Dashboard = () => {
             <div className='dashboard-container'>
                 <div className="dashboard-navbar">
                     <div onClick={() => navigate('/')} className="dashboard-logo">
-                    <div className="logo">
-                        <img onClick={() => navigate('/dashboard')} width='200px' src="https://i.ibb.co/f9ZDrz1/logo.png" alt="" />
-                    </div>
+                        <div className="logo">
+                            <img onClick={() => navigate('/dashboard')} width='200px' src="https://i.ibb.co/f9ZDrz1/logo.png" alt="" />
+                        </div>
                     </div>
                     <div className="dashboard-links">
                         <Link to="">< VscFileSymlinkDirectory className='dash-nav-icon' /></Link>
                         <Link to="/dashboard/action">< FiFlag className='dash-nav-icon' /></Link>
                         <Link to="/dashboard/notification">< MdOutlineNotificationsActive className='dash-nav-icon' /></Link>
                         <Link to="">< BiHelpCircle className='dash-nav-icon' /></Link>
-                        <Link to="">< BiMessage className='dash-nav-icon' /></Link>
+                        <Link to="/dashboard/chat">< BiMessage className='dash-nav-icon' /></Link>
                         <div className="profie">
                             <CgProfile className='dash-nav-icon' />
                             <p className='inline text-sm'>Sumaya Islam <MdOutlineKeyboardArrowDown className='inline' /></p>
