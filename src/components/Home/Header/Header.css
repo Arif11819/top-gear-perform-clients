@@ -132,7 +132,9 @@ label {
     padding: 8px 20px;
     font-weight: 500;
 }
-
+#demo-text{
+    color: white;
+}
 .outline-button {
     background-color: white;
     font-weight: 600;
