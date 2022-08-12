@@ -1,5 +1,8 @@
 import React from 'react';
 import Motive from '../Motive/Motive';
+
+import NewsLetter from '../NewsLetter/NewsLetter';
+
 import './Praise.css'
 const Praise = () => {
     return (
@@ -68,6 +71,9 @@ const Praise = () => {
                     </div>
                 </div>
             </div>
+
+            <NewsLetter />
+
         </div>
     );
 };
