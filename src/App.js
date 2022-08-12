@@ -25,6 +25,9 @@ import Notifications from './components/pages/Dashboard/Notifications/Notificati
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
 import ChatInput from './components/Chat/ChatInput';
+import ContactUs from './components/ContactUs/ContactUs';
+import Team from './components/Team/Team';
+import Terms from './components/pages/Dashboard/Terms';
 
 
 
@@ -40,6 +43,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
+        <Route path='/contact' element={<ContactUs />} />
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='home' element={<DashHome />} />
           <Route path='focus' element={<Focus />} />
@@ -56,6 +60,8 @@ function App() {
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />
+        <Route path='/team' element={<Team />} />
+        <Route path='/terms' element={<Terms />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/reviews/:reviewsId' element={<FullReview />} />
         <Route path='*' element={<NotFound />}></Route>
