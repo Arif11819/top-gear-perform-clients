@@ -7,8 +7,11 @@ import UserInput from './UserInput';
 import UserCount from './UserCount';
 import { MdCall } from 'react-icons/md'
 import { MdEmail } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom';
+import ScheduleSubmit from './ScheduleSubmit';
 
 const ScheduleDemo = () => {
+    const navigate = useNavigate();
     const [date, setDate] = useState(new Date());
     const [time, setTime] = useState('');
     const [timeSlots, setTimeSlots] = useState([]);
@@ -45,7 +48,9 @@ const ScheduleDemo = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data) {
+                    navigate('/scheduleSubmit')
+                }
             })
     }
     return (
@@ -93,6 +98,9 @@ const ScheduleDemo = () => {
                         </a>
                     </div>
                 </div>
+            </div>
+            <div className='hidden'>
+                <ScheduleSubmit timeZone={timeZone} date={date} />
             </div>
         </div>
     );

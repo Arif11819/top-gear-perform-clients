@@ -18,21 +18,21 @@ const UserInput = ({ setUserName, setEmail, setCompanyName, setPhoneNumber }) =>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
             <div className='flex flex-col'>
                 <label className="custom-field one">
-                    <input onChange={handleUserName} type="text" placeholder=" " />
+                    <input onChange={handleUserName} type="text" placeholder=" " required />
                     <span className="placeholder">Name</span>
                 </label>
                 <label className="custom-field one">
-                    <input onChange={handleCompanyName} type="text" placeholder=" " />
+                    <input onChange={handleCompanyName} type="text" placeholder=" " required />
                     <span className="placeholder">Company</span>
                 </label>
             </div>
             <div className='flex flex-col'>
                 <label className="custom-field one">
-                    <input onChange={handleEmail} type="text" placeholder=" " />
+                    <input onChange={handleEmail} type="text" placeholder=" " required />
                     <span className="placeholder">Email</span>
                 </label>
                 <label className="custom-field one">
-                    <input onChange={handlePhoneNumber} type="text" placeholder=" " />
+                    <input onChange={handlePhoneNumber} type="text" placeholder=" " required />
                     <span className="placeholder">Phone Number</span>
                 </label>
             </div>
