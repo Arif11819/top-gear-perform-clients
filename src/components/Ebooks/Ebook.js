@@ -1,7 +1,7 @@
 import React from "react";
 
-const Ebook = ({book}) => {
-  const {name, url, btn, description} = book;
+const Ebook = ({ book }) => {
+  const { name, url, btn, description } = book;
 
 
   return (

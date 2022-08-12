@@ -6,7 +6,7 @@ const WhyTopGare = () => {
         <div className='mt-10  '>
             <div>
                 <h1 className='text-center text-3xl p-4'>Why TopGear</h1>
-                <h1 className='text-center text-xl p-4'>Beacuse you need a free and easy way to communicate with you customers  </h1>
+                <h1 className='text-center text-xl p-4'>Because you need a free and easy way to communicate with you customers  </h1>
 
             </div>
 

@@ -1,17 +1,78 @@
-.login-container{
+.login-container {
     width: 100%;
     height: calc(100vh - 100px);
     display: flex;
 }
 
-.login-form{
-    background-color: aqua;
-    padding: 30px;
+.login-form {
+    background-color: #f3f8fe;
+    padding: 70px;  
     width: 40%;
     height: 100%;
 }
-.right-side{
+
+.login-form input {
+    display: block;
+    padding: 5px;
+    margin: 10px auto;
+    width: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.281);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.534);
+
+}
+.login-form input:focus{
+    outline: none;
+}
+.login-form h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    font-weight: bold;
+    color: #58A0EF ;
+
+}
+
+.login-form button {
+    display: block;
+    width: 300px;
+    margin: 0px auto;
+    background-color: #58A0EF;
+    padding: 7px 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.primary-btn:hover {
+    background-color: #58a1efd7;
+}
+
+.right-side {
     width: 70%;
     background-color: rgb(230, 215, 250);
     height: 100%;
+}
+
+.right-side img {
+    overflow: hidden;
+    height: 100%;
+   
+    width: 100%;
+}
+.signUp{
+    color: #58A0EF;
+}
+
+@media only screen and (max-width:600px) {
+    .right-side{
+        display: none;
+    }
+     .login-form{
+        width: 100%;
+        padding: 10px;
+        padding-top: 100px;
+     }
 }
