@@ -16,7 +16,9 @@ const Dashboard = () => {
             <div className='dashboard-container'>
                 <div className="dashboard-navbar">
                     <div onClick={() => navigate('/')} className="dashboard-logo">
-                        <p className='text-2xl'>Logo</p>
+                    <div className="logo">
+                        <img onClick={() => navigate('/dashboard')} width='200px' src="https://i.ibb.co/f9ZDrz1/logo.png" alt="" />
+                    </div>
                     </div>
                     <div className="dashboard-links">
                         <Link to="">< VscFileSymlinkDirectory className='dash-nav-icon' /></Link>
