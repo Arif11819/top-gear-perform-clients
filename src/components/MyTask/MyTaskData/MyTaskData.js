@@ -4,7 +4,7 @@ const MyTaskData = ({ task }) => {
 
     const handleDeleteTask = id => {
 
-        const url = `http://localhost:5000/task/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/task/${id}`
         fetch(url, {
             method: 'DELETE'
         })

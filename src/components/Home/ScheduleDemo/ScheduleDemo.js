@@ -39,7 +39,7 @@ const ScheduleDemo = () => {
             phone: phoneNumber,
             userCount: userCount
         }
-        fetch("http://localhost:5000/scheduleData", {
+        fetch("https://dry-ravine-83506.herokuapp.com/scheduleData", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -10,25 +10,25 @@ const MyTask = () => {
 
     const [tasks, setTasks] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/task')
+        fetch('https://dry-ravine-83506.herokuapp.com/task')
             .then(res => res.json())
             .then(data => setTasks(data))
     }, []);
     const [schedules, setSchedules] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/schedule')
+        fetch('https://dry-ravine-83506.herokuapp.com/schedule')
             .then(res => res.json())
             .then(data => setSchedules(data))
     }, []);
     const [proceeds, setProceeds] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/progress')
+        fetch('https://dry-ravine-83506.herokuapp.com/progress')
             .then(res => res.json())
             .then(data => setProceeds(data))
     }, []);
     const [completes, setCompletes] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/complete')
+        fetch('https://dry-ravine-83506.herokuapp.com/complete')
             .then(res => res.json())
             .then(data => setCompletes(data))
     }, []);
@@ -36,7 +36,7 @@ const MyTask = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmitProgress = data => {
 
-        const url = `http://localhost:5000/progress`;
+        const url = `https://dry-ravine-83506.herokuapp.com/progress`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -55,7 +55,7 @@ const MyTask = () => {
 
     const onSubmitSchedule = data => {
 
-        const url = `http://localhost:5000/schedule`;
+        const url = `https://dry-ravine-83506.herokuapp.com/schedule`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -74,7 +74,7 @@ const MyTask = () => {
 
     const onSubmitComplete = data => {
 
-        const url = `http://localhost:5000/complete`;
+        const url = `https://dry-ravine-83506.herokuapp.com/complete`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -93,7 +93,7 @@ const MyTask = () => {
 
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/task`;
+        const url = `https://dry-ravine-83506.herokuapp.com/task`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -4,7 +4,7 @@ const ProgressData = ({ proceed }) => {
 
     const handleDeleteTask = id => {
 
-        const url = `http://localhost:5000/proceed/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/proceed/${id}`
         fetch(url, {
             method: 'DELETE'
         })

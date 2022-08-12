@@ -6,7 +6,7 @@ const ScheduleData = ({ schedule }) => {
 
     const handleDeleteTask = id => {
 
-        const url = `http://localhost:5000/schedule/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/schedule/${id}`
         fetch(url, {
             method: 'DELETE'
         })
