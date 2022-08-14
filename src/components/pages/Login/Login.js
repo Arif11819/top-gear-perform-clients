@@ -6,24 +6,22 @@ import auth from '../../../firebase.init'
 import { toast } from 'react-toastify'
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { TiWarning } from 'react-icons/ti';
-const Login = ({ setModal }) => {
+import Loading from '../SignUp/Loading/Loading';
+const Login = () => {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [loginError, setLoginError] = useState('')
     const navigate = useNavigate()
-
     const [
         signInWithEmailAndPassword,
         user,
+        loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+      ] = useSignInWithEmailAndPassword(auth);
     if (user) {
 
-        navigate('/')
+        navigate('/dashboard')
         toast.success('Login successfull')
-
-        setModal(false)
     }
     const handleLogin = (event) => {
         event.preventDefault()
@@ -31,7 +29,7 @@ const Login = ({ setModal }) => {
         signInWithEmailAndPassword(email, password)
 
     }
-    console.log(error)
+
 
 
     return (
@@ -42,10 +40,12 @@ const Login = ({ setModal }) => {
                 <input autoComplete='off' onBlur={(e) => setEmail(e.target.value)} type="text" placeholder='Email' name='email' required />
                 <input autoComplete='off' onBlur={(e) => setPassword(e.target.value)} type="password" placeholder='Password' name='password' required />
                 {error && <div className='error-container'>
-                    <p className='error-message'><TiWarning className='warning-icon' />User not found</p>
+                    <p className='error-message'><TiWarning className='warning-icon' />Wrong email or password</p>
                 </div>}
 
-                <button type='submit'>Login</button>
+                <button disabled={loading}type='submit'>
+                        {loading ? <Loading /> : <span>Login</span>}
+                    </button>
                 <small className='text-center block pt-4'>don't have an account ? <Link className='signUp' to='/signUp'>Sign Up</Link></small>
             </form>
 

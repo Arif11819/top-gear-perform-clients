@@ -53,6 +53,7 @@ const Footer = () => {
                 <img className='w-28 mb-1' src='https://i.ibb.co/sJRRQ5N/92-921027-join-our-newsletter-app-store.jpg' alt=''></img>
                 <img className='w-28' src='https://i.ibb.co/HVtrCXB/images.png' alt=''></img>
                 <img className='w-28 mt-1' src='https://i.ibb.co/tDLGMh0/classic-mac-os-logo-900x330.png' alt=''></img>
+
             </div>
 
         </div>
