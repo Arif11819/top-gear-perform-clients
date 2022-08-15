@@ -39,7 +39,7 @@ const ScheduleDemo = () => {
             phone: phoneNumber,
             userCount: userCount
         }
-        fetch("https://dry-ravine-83506.herokuapp.com/scheduleData", {
+        fetch("http://localhost:5000/scheduleData", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -48,8 +48,11 @@ const ScheduleDemo = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data) {
+                if (data.success === true) {
+                    console.log(data);
                     navigate('/scheduleSubmit')
+                } else {
+                    console.log("already book this time");
                 }
             })
     }
