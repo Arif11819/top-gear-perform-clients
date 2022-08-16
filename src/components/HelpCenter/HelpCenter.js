@@ -55,10 +55,10 @@ const HelpCenter = () => {
             </div>
 
             
-                <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 sm:mt-10'>
+                <div className='grid grid-cols-1 lg:grid-cols-3  md:grid-cols-2 gap-6 sm:mt-10'>
 
                     {
-                        data.map(value => <HelpCard
+                        data.slice(0, 9).map (value => <HelpCard
 
                             value={value}
                             key={value.id}
