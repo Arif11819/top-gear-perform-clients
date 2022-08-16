@@ -20,7 +20,7 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
     if (user) {
 
-        navigate('/dashboard')
+        navigate('/dashboard/home')
         toast.success('Login successfull')
     }
     const handleLogin = (event) => {

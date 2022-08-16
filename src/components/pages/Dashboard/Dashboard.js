@@ -9,20 +9,17 @@ import { CgProfile } from 'react-icons/cg'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BiTargetLock, BiTask } from 'react-icons/bi'
 import { BsChatLeftDots } from 'react-icons/bs'
-import auth from '../../../firebase.init'
-import {useAuthState} from 'react-firebase-hooks/auth'
-
+import useUser from '../../../hooks/useUser';
 const Dashboard = () => {
     const navigate = useNavigate()
 
-    const [user] = useAuthState(auth)
-
+    const [singleUser] = useUser()
     return (
         <>
             <div className='dashboard-container'>
                 <div className="dashboard-navbar">
                     <div onClick={() => navigate('/')} className="dashboard-logo">
-                      <img src="https://i.ibb.co/f9ZDrz1/logo.png" width='200px' alt="" />
+                        <img src="https://i.ibb.co/f9ZDrz1/logo.png" width='200px' alt="" />
                     </div>
                     <div className="dashboard-links">
                         <Link to="">< VscFileSymlinkDirectory className='dash-nav-icon' /></Link>
@@ -32,7 +29,7 @@ const Dashboard = () => {
                         <Link to="">< BiMessage className='dash-nav-icon' /></Link>
                         <div className="profie">
                             <CgProfile className='dash-nav-icon' />
-                            <p className='inline text-sm'>Torikul Islam <MdOutlineKeyboardArrowDown className='inline' /></p>
+                            <p className='inline text-sm'>{singleUser[0]?.fullName} <MdOutlineKeyboardArrowDown className='inline' /></p>
                         </div>
 
                     </div>

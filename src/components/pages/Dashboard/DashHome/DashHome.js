@@ -6,8 +6,11 @@ import { useEffect } from 'react';
 import NewsCard from './NewsCard/NewsCard';
 import auth from '../../../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
-const DashHome = () => {
+import { toast } from 'react-toastify';
 
+
+const DashHome = () => {
+    const [load, setLoad] = useState(false)
     const [user] = useAuthState(auth)
     const [post, setPost] = useState(false)
     const [newses, setNews] = useState([])
@@ -26,14 +29,15 @@ const DashHome = () => {
         fetch('http://localhost:4000/news')
             .then(res => res.json())
             .then(data => setNews(data))
-    }, [])
+    }, [load])
 
     const handlePost = () => {
         const postDesc = postDescription
         const userEmail = user?.email
         const postTime = time
         const postData = { postDesc, userEmail, postTime }
-        fetch('http://localhost:4000/postNews', {
+        if(postDescription){
+            fetch('http://localhost:4000/postNews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +45,15 @@ const DashHome = () => {
             body: JSON.stringify(postData)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                if (data) {
+                    setPost(false)
+                    setLoad(!load)
+                    toast.success('Posted')
+                }
+            }
+       )
+        } 
 
     }
     return (
@@ -75,12 +87,12 @@ const DashHome = () => {
                 }
                 <div className="news-container">
                     {
-                        newses.map(news => <NewsCard news={news} />)
+                        newses.map(news => <NewsCard news={news} />).reverse()
                     }
                 </div>
             </div>
 
-
+            
         </div>
     );
 };

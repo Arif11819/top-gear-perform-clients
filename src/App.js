@@ -1,8 +1,7 @@
 
 import './App.css';
-import { Route, Routes, useLocation, useParams } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
-import 'react-toastify/dist/ReactToastify.css';
 import Home from './components/Home/Home';
 import Reviews from './components/Reviews/Reviews';
 import Footer from './components/Home/Footer/Footer';
@@ -21,6 +20,9 @@ import DashHome from './components/pages/Dashboard/DashHome/DashHome';
 import Focus from './components/pages/Dashboard/Focus/Focus';
 import Task from './components/pages/Dashboard/Task/Task';
 import Chat from './components/pages/Dashboard/Chat/Chat';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 
 
 
@@ -29,6 +31,7 @@ function App() {
   return (
 
     <>
+      <ToastContainer limit={1} />
       {pathname?.includes('/dashboard') ? null : <Navbar></Navbar>}
       <Routes>
         <Route path='/' element={<Home />}></Route>
