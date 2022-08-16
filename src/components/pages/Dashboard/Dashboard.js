@@ -16,7 +16,7 @@ const Dashboard = () => {
     const navigate = useNavigate()
 
     const [user] = useAuthState(auth)
-    console.log(user)
+
     return (
         <>
             <div className='dashboard-container'>
