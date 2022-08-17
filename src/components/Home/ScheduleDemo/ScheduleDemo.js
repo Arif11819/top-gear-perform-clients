@@ -53,7 +53,7 @@ const ScheduleDemo = () => {
                 if (data.success === true) {
                     navigate('/scheduleSubmit')
                 } else {
-                    setBookedTime('Your selected time is already booked')
+                    setBookedTime('Your selected time is already booked,Try another time')
 
                 }
             })
@@ -72,6 +72,7 @@ const ScheduleDemo = () => {
                 <p className='ml-3 my-4 text-slate-500'>Date</p>
                 <div className='p-4'>
                     <ScheduleCalender bookedTime={bookedTime} date={date} setDate={setDate} time={time} setTime={setTime} timeSlots={timeSlots} setTimeSlots={setTimeSlots} />
+                    <p className='text-red-600 font-bold text-center'>{bookedTime}</p>
                     <p className='bg-[#cbe2f7] p-3 font-bold text-sm'>Selected Date: {format(date, 'PPPP')} {time}</p>
                 </div>
                 <div className='flex justify-center'>

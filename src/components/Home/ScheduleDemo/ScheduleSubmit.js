@@ -13,8 +13,8 @@ const ScheduleSubmit = ({ timeZone, date }) => {
                     <div className='flex justify-center'>
                         <IoIosCheckmarkCircle className='text-5xl text-green-700' />
                     </div>
-                    <h2 className='text-xl font-bold'>Demo Booked Successfully</h2>
-                    <h1 className='text-4xl font-bold'>Schedule a Call</h1>
+                    <h2 className='text-xl font-bold text-center'>Demo Booked Successfully</h2>
+                    <p className='font-bold mb-4'>A calendar invitation and meet link has been sent to your email address.</p>
                 </div>
             </div>
         </div>
