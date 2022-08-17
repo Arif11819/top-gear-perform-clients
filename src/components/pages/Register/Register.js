@@ -29,7 +29,7 @@ const Register = () => {
     const [ageError, setAgeError] = useState('')
     const [genderError, setGenderError] = useState('')
     const [roleError, setroleError] = useState('')
-    const [firebaseError,setFirebaseError] = useState('')
+    const [firebaseError, setFirebaseError] = useState('')
 
     const navigate = useNavigate()
 
@@ -102,7 +102,7 @@ const Register = () => {
         }
     }
 
-  
+
     const submitResgisterForm = (event) => {
         event.preventDefault()
 
@@ -122,7 +122,7 @@ const Register = () => {
             createUserWithEmailAndPassword(email, password)
         }
 
-     
+
         if (error) {
             console.log(error)
             setFirebaseError('Email already exist')
