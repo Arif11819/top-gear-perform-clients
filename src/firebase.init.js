@@ -1,13 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth'
 
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCn0kvEQkngEGSP5ifoWgw6I5naWNMCJxc",
-  authDomain: "topgear-perform.firebaseapp.com",
-  projectId: "topgear-perform",
-  storageBucket: "topgear-perform.appspot.com",
-  messagingSenderId: "14434189879",
-  appId: "1:14434189879:web:e040af7ae120d3bee835b2"
+  apiKey: "AIzaSyDct4IaxNQBA9M1I2wAN6CHpubEZih4UWY",
+  authDomain: "top-gear-perform.firebaseapp.com",
+  projectId: "top-gear-perform",
+  storageBucket: "top-gear-perform.appspot.com",
+  messagingSenderId: "988683612252",
+  appId: "1:988683612252:web:84a01bcfa4aa4fd967f699"
 };
 
 // Initialize Firebase
