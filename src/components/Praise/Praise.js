@@ -74,6 +74,10 @@ const Praise = () => {
 
             <NewsLetter />
 
+
+
+
+
         </div>
     );
 };

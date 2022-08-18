@@ -1,36 +1,41 @@
-
-.book-head{
+.book-head {
   height: 20%;
   background-image: url(https://storage.googleapis.com/profit-prod/wp-content/uploads/2022/03/71b089b1-bannner-bg.png);
 }
-.newbookcard{
-  height: 400px;
+
+.newbookcard {
+  height: 450px;
   width: 300px;
 }
-.ebookcard{
-  height: 430px;
+
+.ebookcard {
+  height: 480px;
   width: 300px;
 }
-.book-description{
+
+.book-description {
   font-size: 12px;
 }
-.ebook-btn{
-      height: 28px;
-      width: 100px;
-      font-size: 15px;
-      background-color: #52cbf4;
-      align-items: center;
-      font-weight:600;
-      color: black;
-      border-radius: 5px;
+
+.ebook-btn {
+  height: 28px;
+  width: 100px;
+  font-size: 15px;
+  background-color: #52cbf4;
+  align-items: center;
+  font-weight: 600;
+  color: black;
+  border-radius: 5px;
 }
-.ebook-btn:hover{
-      background-color: #da621e;
+
+.ebook-btn:hover {
+  background-color: #da621e;
 }
-.ebookcard:hover{
-  background-color: rgba(187, 234, 247, 0.991);
-}
-.newbookcard:hover{
+
+.ebookcard:hover {
   background-color: rgba(187, 234, 247, 0.991);
 }
 
+.newbookcard:hover {
+  background-color: rgba(187, 234, 247, 0.991);
+}
