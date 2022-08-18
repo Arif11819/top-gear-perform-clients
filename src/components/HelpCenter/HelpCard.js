@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HelpCard = ({value}) => {
-    const { link, title,country, year, language} = value
+    const { author, description, url, urlToImage, title} = value
     return (
     //     <div>
     //         <div class="card w-96 bg-base-100 ">
@@ -12,25 +12,44 @@ const HelpCard = ({value}) => {
     // </div>
     //     </div>
 
-    <div class="card w-96 bg-base-100 shadow-xl">
-  <div class="card-body">
-    <h2 class="card-title">Title:{title}</h2>
-    <p>Country: {country}</p>
-    <p>Year: {year}</p>
-    <p>language: {language}</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary"><a href={link} target="_blank"  > 
-      <p>{`Read more ....... `}</p>
+//     <div class="card  ">
+//   <div class="card-body">
+//     <h2 class="card-title">Title:{author}</h2>
+//     { <p>Country: {country}</p> }
+//     { <p>Year: {year}</p> }
+//     { <p>language: {language}</p>}
+//     <div class="card-actions justify-end">
+//       {<button class="btn btn-primary"><a href={link} target="_blank"  > 
+//       <p>{`Read more ....... `}</p>
       
     
         
         
         
-         </a>
-</button>
+//          </a>
+// </button> }
 
 
 
+//     </div>
+//   </div>
+// </div>
+<div class="card card-side bg-base-100 ">
+  <img src={urlToImage} width={400} alt="business"/>
+  <div class="card-body">
+    <h2 class="card-title">{description}</h2>
+    <h2 class="card-title">{title}</h2>
+    <p>author:  {author}</p>
+    <div class="card-actions justify-end">
+    <button class="btn btn-primary"><a href={url} target="_blank"  > 
+       <p>{`Read more ....... `}</p>
+      
+    
+        
+        
+        
+          </a>
+          </button>
     </div>
   </div>
 </div>
