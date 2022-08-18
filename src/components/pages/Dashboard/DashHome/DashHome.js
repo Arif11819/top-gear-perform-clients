@@ -66,7 +66,7 @@ const DashHome = () => {
                     <div className='h-full flex justify-between items-center'>
                         <div className="news-nav-add flex items-center ">
                             <ImNewspaper className='inline text-xl' /><p className='inline mx-3'>News Feed</p>
-                            <button onClick={() => setPost(!post)}><BsFillPlusCircleFill className='plus' /></button>
+                            <button title='Post news'  onClick={() => setPost(!post)}><BsFillPlusCircleFill className='plus' /></button>
                         </div>
                         <div className="news-nav-search">
                             <input placeholder='Find news' type="text" className='rounded' /> <button >Search</button>

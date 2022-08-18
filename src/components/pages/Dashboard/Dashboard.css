@@ -21,15 +21,18 @@
     font-size: 20px;
     margin: 0px 10px;
     color: #58A0EF;
+    cursor: pointer;
 }
 
 .profie {
     display: inline;
-    cursor: pointer;
+    position: relative;
 }
+
 
 .profie p {
     color: #58A0EF;
+    cursor: pointer;
 }
 
 .sidebar {
@@ -50,4 +53,31 @@
 
 .dashboard-body {
     margin-left: 55px;
+}
+
+.user-profile {
+    width: 250px;
+    height: 300px;
+    background-color: #58A0EF;
+    color: white;
+    position: absolute;
+    z-index: 999;
+    border-radius: 5px;
+    top: 25px;
+    right: 0;
+    padding:15px;
+}
+
+.profile-close-icon {
+    margin-left: 85%;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.3s;
+
+
+}
+
+.profile-close-icon:hover {
+    background-color: rgba(0, 0, 0, 0.062);
+    border-radius: 50px;
 }
