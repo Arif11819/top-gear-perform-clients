@@ -17,16 +17,25 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
-    if (user) {
-
-        navigate('/dashboard')
-        toast.success('Login successfull')
-    }
+    ] = useSignInWithEmailAndPassword(auth);
     const handleLogin = (event) => {
         event.preventDefault()
 
-        signInWithEmailAndPassword(email, password)
+        signInWithEmailAndPassword(email, password);
+        const url = `http://localhost:5000/login`
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "content-type": 'application/json'
+            },
+            body: JSON.stringify({ email })
+        })
+            .then(res => res.json())
+            .then(result => {
+                localStorage.setItem('accessToken', result.accessToken);
+                navigate('/dashboard')
+                toast.success('Login successfull')
+            })
 
     }
 
@@ -43,9 +52,9 @@ const Login = () => {
                     <p className='error-message'><TiWarning className='warning-icon' />Wrong email or password</p>
                 </div>}
 
-                <button disabled={loading}type='submit'>
-                        {loading ? <Loading /> : <span>Login</span>}
-                    </button>
+                <button disabled={loading} type='submit'>
+                    {loading ? <Loading /> : <span>Login</span>}
+                </button>
                 <small className='text-center block pt-4'>don't have an account ? <Link className='signUp' to='/signUp'>Sign Up</Link></small>
             </form>
 

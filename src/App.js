@@ -58,14 +58,15 @@ function App() {
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />
-        <Route path='/team' element={<Team/>} />
-        <Route path='/terms' element={<Terms/>} />
+        <Route path='/team' element={<Team />} />
+        <Route path='/terms' element={<Terms />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/reviews/:reviewsId' element={<FullReview />} />
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
       {pathname?.includes('/dashboard') ? null : <Footer></Footer>}
+
     </>
 
   )
