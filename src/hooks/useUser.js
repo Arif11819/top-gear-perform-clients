@@ -8,7 +8,7 @@ const useUser = () => {
     const [singleUser, setUser] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:4000/user/${userEmail}`)
+        fetch(`http://localhost:5000/user/${userEmail}`)
             .then(res => res.json())
             .then(data => {
                 if (data) {
