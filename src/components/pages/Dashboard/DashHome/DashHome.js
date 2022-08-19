@@ -1,99 +1,75 @@
-
-import React, { useState } from 'react';
-import './DashHome.css'
-import { ImNewspaper } from 'react-icons/im'
-import { BsFillPlusCircleFill } from 'react-icons/bs'
-import { useEffect } from 'react';
-import NewsCard from './NewsCard/NewsCard';
-import auth from '../../../../firebase.init';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import "./DashHome.css";
 
 const DashHome = () => {
-  const [load, setLoad] = useState(false)
-  const [user] = useAuthState(auth)
-  const [post, setPost] = useState(false)
-  const [newses, setNews] = useState([])
-  const [postDescription, setPostDescription] = useState('')
-  const date = new Date()
-  const day = date.getDate()
-  const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-  const month = monthNames[date.getMonth()]
-  const year = date.getFullYear()
-  const time = `${day} ${month} ${year} `
-
-
-  useEffect(() => {
-    fetch('http://localhost:4000/news')
-      .then(res => res.json())
-      .then(data => setNews(data))
-  }, [load])
-
-  const handlePost = () => {
-    const postDesc = postDescription
-    const userEmail = user?.email
-    const postTime = time
-    const postData = { postDesc, userEmail, postTime }
-    if (postDescription) {
-      fetch('http://localhost:4000/postNews', {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-      })
-        .then(res => res.json())
-        .then(data => {
-          if (data) {
-            setPost(false)
-            setLoad(!load)
-            toast.success('Posted')
-          }
-        }
-        )
-    }
-
-  }
   return (
-    <div className='dash-home-container '>
-      <div className="dash-sidebar">
-        this is home sidebar
-      </div>
-      <div className="newsfeed-container p-8">
-        <div className="newsfeed-nav">
-          <div className='h-full flex justify-between items-center'>
-            <div className="news-nav-add flex items-center ">
-              <ImNewspaper className='inline text-xl' /><p className='inline mx-3'>News Feed</p>
-              <button title='Post news' onClick={() => setPost(!post)}><BsFillPlusCircleFill className='plus' /></button>
-            </div>
-            <div className="news-nav-search">
-              <input placeholder='Find news' type="text" className='rounded' /> <button >Search</button>
-            </div>
-          </div>
-        </div>
-        <hr />
-        {post &&
-          <>
-            <div className="post-container">
-              <textarea onBlur={(e) => setPostDescription(e.target.value)} placeholder="What's on your mind ?" name="post" rows="5"></textarea>
-            </div>
-            <div className='post-handle'>
-              <button onClick={() => setPost(!post)}>Cancel</button>
-              <button onClick={handlePost} className='post-button'>Post</button>
-            </div>
-          </>
-        }
-        <div className="news-container">
-          {
-            newses.map(news => <NewsCard news={news} />).reverse()
-          }
-        </div>
-      </div>
+    <div className="flex">
+      <div>
+        <ul class="menu bg-base-100 w-56 p-2 rounded-box">
+          {/* num-01 */}
 
+          <li className="notification-text" tabindex="0">
+            <button>Alignments</button>
+          </li>
 
+          {/* num-02 */}
+
+          <li className="notification-text" tabindex="1">
+            <Link to="/dashboard/action">Action Center</Link>
+          </li>
+
+          {/* num-03 */}
+
+          <li className="notification-text" tabindex="2">
+            <span>Alignments and Dependencies</span>
+          </li>
+
+          {/* num-04 */}
+
+          <li className="notification-text" tabindex="3">
+            <Link to='/dashboard/notes'>Notes</Link>
+          </li>
+
+          {/* num-05 */}
+
+          <li className="notification-text" tabindex="4">
+            <span>Company Dashboard</span>
+          </li>
+
+          {/* num-06 */}
+
+          <li className="notification-text" tabindex="5">
+            <span>Department Hierarchy</span>
+          </li>
+
+          {/* num-07 */}
+
+          <li className="notification-text" tabindex="6">
+            <span>KPI Boards</span>
+            <ul class="bg-base-100">
+              <li>
+                <a href="/">KPI Boards Founds</a>
+              </li>
+            </ul>
+          </li>
+
+          {/* num-09 */}
+
+          <li className="notification-text" tabindex="8">
+            <Link to="/dashboard/newsfeed" >News Feed</Link>
+          </li>
+
+          {/* num-10 */}
+
+          <li className="notification-text" tabindex="9">
+            <span>Organizatin Hierarchy</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <img src="https://i.ibb.co/C2s1jkX/Screenshot-2022-08-12-111904.png" alt="" className="w-3/2 " />
+      </div>
     </div>
   );
 };

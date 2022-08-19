@@ -32,6 +32,7 @@ import Team from './components/Home/Team/Team';
 import Terms from './components/pages/Login/Terms';
 import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
+import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 
 
 
@@ -55,6 +56,7 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
+          <Route path='newsfeed' element={<NewsFeed/>} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
         </Route>
