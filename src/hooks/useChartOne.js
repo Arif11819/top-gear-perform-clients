@@ -4,7 +4,7 @@ const useChartOne = chartId => {
     const [chartOne, setChartOne] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/employee/${chartId}`;
+        const url = `https://dry-ravine-83506.herokuapp.com/employee/${chartId}`;
 
         fetch(url)
             .then(res => res.json())
