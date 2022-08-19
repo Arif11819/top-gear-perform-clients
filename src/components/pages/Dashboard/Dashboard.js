@@ -33,7 +33,7 @@ const Dashboard = () => {
                         <div className="logo">
                             <img onClick={() => navigate('/dashboard')} width='200px' src="https://i.ibb.co/f9ZDrz1/logo.png" alt="" />
                         </div>
-                        <img src="https://i.ibb.co/f9ZDrz1/logo.png" width='200px' alt="" />
+
                     </div>
                     <div className="dashboard-links">
                         <Link to="">< VscFileSymlinkDirectory className='dash-nav-icon' /></Link>

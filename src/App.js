@@ -25,23 +25,16 @@ import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
 import Charts from './components/Chart/Charts';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-
 import Pricing from './components/Pricing/Pricing';
-
 import Team from './components/Home/Team/Team';
 import Terms from './components/pages/Login/Terms';
 import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
-
-
-
+import ContactUs from './components/ContactUs/ContactUs';
 
 function App() {
   const { pathname } = useLocation()
   return (
-
-
-
 
     <>
       <ToastContainer limit={1} />
@@ -49,6 +42,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
+        <Route path='/contact' element={<ContactUs />} />
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='home' element={<DashHome />} />
           <Route path='focus' element={<Focus />} />

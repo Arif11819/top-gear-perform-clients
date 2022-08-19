@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoCheckmarkCircle } from 'react-icons/io5';
+
 import './Execute.css'
 const Execute = () => {
     return (
@@ -19,6 +20,7 @@ const Execute = () => {
                 <button className='primary-btn free-btn h-btn'>GET STARTED FREE</button>
                 <button className='outline-btn'>SCHEDULE DEMO</button>
             </div>
+
         </div>
     );
 };

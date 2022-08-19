@@ -15,7 +15,7 @@ const Navbar = () => {
     const [toggle, setToggle] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
-        
+
 
     }
     return (
@@ -26,6 +26,10 @@ const Navbar = () => {
                     <Link to="/">Blog</Link>
                     <Link to="/">Contact us</Link>
                     <Link to="/login">Sign in </Link>
+
+                    <Link to="/contact">Contact us</Link>
+                    {user ? <Link onClick={handleSignout} to="/">Logout </Link> : <Link to="/login">Sign in </Link>}
+
                     <RiGlobalLine className='global-icon' />
                 </div>
                 <div className="main-nav-bar">
@@ -165,7 +169,7 @@ const Navbar = () => {
                     <hr />
                     <Link className='price-link mt-4 mb-4' to='/'>BLOG</Link>
                     <hr />
-                    <Link className='price-link mt-4 mb-4' to='/'>CONTACT US</Link>
+                    <Link className='price-link mt-4 mb-4' to='/contact'>CONTACT US</Link>
                     <hr />
                     <Link className='price-link mt-4 mb-4' to='/login'>SIGN IN</Link>
                     <hr />

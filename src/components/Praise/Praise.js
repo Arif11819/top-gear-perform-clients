@@ -73,6 +73,10 @@ const Praise = () => {
 
             <Recognition />
 
+
+
+
+
         </div>
     );
 };
