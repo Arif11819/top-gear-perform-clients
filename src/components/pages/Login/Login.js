@@ -18,24 +18,15 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    if (user) {
+
+        navigate('/dashboard/home')
+        toast.success('Login successfull')
+    }
     const handleLogin = (event) => {
         event.preventDefault()
 
-        signInWithEmailAndPassword(email, password);
-        const url = `http://localhost:5000/login`
-        fetch(url, {
-            method: "POST",
-            headers: {
-                "content-type": 'application/json'
-            },
-            body: JSON.stringify({ email })
-        })
-            .then(res => res.json())
-            .then(result => {
-                localStorage.setItem('accessToken', result.accessToken);
-                navigate('/dashboard')
-                toast.success('Login successfull')
-            })
+        signInWithEmailAndPassword(email, password)
 
     }
 
