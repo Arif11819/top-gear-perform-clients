@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom'
-import './Dashboard.css'
+import './Dashboard.css';
 import { VscFileSymlinkDirectory } from 'react-icons/vsc'
 import { FiFlag, FiLogOut } from 'react-icons/fi'
 import { MdOutlineNotificationsActive, MdOutlineKeyboardArrowDown, MdClose } from 'react-icons/md'
@@ -40,7 +40,7 @@ const Dashboard = () => {
                         <Link to="/dashboard/action">< FiFlag className='dash-nav-icon' /></Link>
                         <Link to="/dashboard/notification">< MdOutlineNotificationsActive className='dash-nav-icon' /></Link>
                         <Link to="">< BiHelpCircle className='dash-nav-icon' /></Link>
-                        <Link to="">< BiMessage className='dash-nav-icon' /></Link>
+                        <Link to="/dashboard/chat">< BiMessage className='dash-nav-icon' /></Link>
                         <div className="profie">
                             <CgProfile className='dash-nav-icon' />
                             <p className='inline text-sm'>Sumaya Islam <MdOutlineKeyboardArrowDown className='inline' /></p>

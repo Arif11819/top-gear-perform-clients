@@ -19,13 +19,20 @@ import Dashboard from './components/pages/Dashboard/Dashboard';
 import DashHome from './components/pages/Dashboard/DashHome/DashHome';
 import Focus from './components/pages/Dashboard/Focus/Focus';
 import MyTask from './components/MyTask/MyTask';
-import Chat from './components/pages/Dashboard/Chat/Chat';
 import Notifications from './components/pages/Dashboard/Notifications/Notifications';
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
 import Charts from './components/Chart/Charts';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+
+import Pricing from './components/Pricing/Pricing';
+
+import Team from './components/Home/Team/Team';
+import Terms from './components/pages/Login/Terms';
+import ChatInput from './components/Chat/ChatInput';
+import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
+
 
 
 
@@ -46,11 +53,12 @@ function App() {
           <Route path='home' element={<DashHome />} />
           <Route path='focus' element={<Focus />} />
           <Route path='task' element={<MyTask />} />
-          <Route path='chat' element={<Chat />} />
+          <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
           <Route path='action' element={<Action />} />
+          <Route path='notes' element={<NoteHome />} />
         </Route>
-
+        <Route path='/pricing' element={<Pricing />} />
         <Route path='/signUp' element={<Register />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/chart' element={<Charts />} />
@@ -59,12 +67,15 @@ function App() {
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />
+        <Route path='/team' element={<Team />} />
+        <Route path='/terms' element={<Terms />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/reviews/:reviewsId' element={<FullReview />} />
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
       {pathname?.includes('/dashboard') ? null : <Footer></Footer>}
+
     </>
 
   )

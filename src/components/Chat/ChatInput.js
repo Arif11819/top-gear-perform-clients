@@ -14,7 +14,7 @@ const ChatInput = () => {
         }
     }
     return (
-        <>
+        <div className='flex items-center justify-center mt-12 bg-slate-50'>
             <div className='w-96 h-[90%] shadow-2xl'>
                 {!show ?
                     (
@@ -36,7 +36,7 @@ const ChatInput = () => {
                         <Chats socket={socket} userName={userName} room={room} />
                     )}
             </div>
-        </>
+        </div>
     );
 };
 

@@ -22,7 +22,7 @@ const Navbar = () => {
         <>
             <nav>
                 <div className="top-nav-bar">
-                    <Link to="/">About us</Link>
+                    <Link to="/team">About us</Link>
                     <Link to="/">Blog</Link>
                     <Link to="/">Contact us</Link>
                     <Link to="/login">Sign in </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
                             </ul>
                         </div>
 
-                        <Link to='/'>PRICING</Link>
+                        <Link to='/pricing'>PRICING</Link>
 
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">RESOURCES<RiArrowDownSLine className='arrow-icon' /> </label>
