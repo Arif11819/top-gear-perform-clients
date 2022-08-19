@@ -2,9 +2,9 @@ import React from "react";
 
 const Terms = () => {
   return (
-    <div>
+    <div className="m-20">
       <p>
-        <h2 className="text-2xl">
+        <h2 className="text-2xl text-center">
           <b>TERMS AND CONDITIONS</b>
         </h2>
         <p>Last updated: 2022-08-10</p>
