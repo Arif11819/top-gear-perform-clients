@@ -1,7 +1,7 @@
 import React from 'react';
 import TopGare from './TopGare';
 
-const WhyTopGare = () => {
+const WhyTopGear = () => {
     return (
         <div className='mt-10  '>
             <div>
@@ -39,4 +39,4 @@ const WhyTopGare = () => {
     );
 };
 
-export default WhyTopGare;
+export default WhyTopGear;

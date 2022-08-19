@@ -24,10 +24,14 @@ import MyTask from './components/MyTask/MyTask';
 import Notifications from './components/pages/Dashboard/Notifications/Notifications';
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
+
+import Pricing from './components/Pricing/Pricing';
+
 import Team from './components/Home/Team/Team';
 import Terms from './components/pages/Login/Terms';
 import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
+
 
 
 
@@ -52,7 +56,7 @@ function App() {
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
         </Route>
-
+        <Route path='/pricing' element={<Pricing />} />
         <Route path='/signUp' element={<Register />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/praise' element={<Praise />} />
