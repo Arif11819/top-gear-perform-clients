@@ -1,9 +1,7 @@
 
 import './App.css';
-
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
-import 'react-toastify/dist/ReactToastify.css';
 import Home from './components/Home/Home';
 import Reviews from './components/Reviews/Reviews';
 import Footer from './components/Home/Footer/Footer';
@@ -26,6 +24,8 @@ import Notifications from './components/pages/Dashboard/Notifications/Notificati
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
 import Charts from './components/Chart/Charts';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 
 
@@ -37,6 +37,7 @@ function App() {
 
 
     <>
+      <ToastContainer limit={1} />
       {pathname?.includes('/dashboard') ? null : <Navbar></Navbar>}
       <Routes>
         <Route path='/' element={<Home />}></Route>

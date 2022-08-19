@@ -116,7 +116,6 @@ const Register = () => {
         const userRole = event.target.role.value
         const userPhoneNumber = event.target.phoneNumber.value
 
-        // console.log(firstName,lastName,fullName,userEmail,userAddress,userAge,userGender,userRole,userPhoneNumber)
         const userData = { firstName, lastName, fullName, userEmail, userAddress, userAge, userGender, userRole, userPhoneNumber }
 
         if (role === '') {
@@ -146,15 +145,24 @@ const Register = () => {
                         toast.success('Register successfull')
                     }
                 }).catch(err => console.log(err))
+            if (error === undefined || error) {
+                return
+            }
+            else {
+                fetch('http://localhost:4000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+
+                })
+            }
         }
-
-
-
-
     }
-
     if (user) {
-        navigate('/dashboard')
+        navigate('/dashboard/home')
+        toast.success('Register successfull')
     }
 
     return (

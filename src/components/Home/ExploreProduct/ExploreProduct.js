@@ -6,7 +6,7 @@ import ItCloud from './ItCloud';
 
 const ExploreProduct = () => {
     return (
-        <div className='bg-[#f6f3f0] pb-10 mt-32'>
+        <div className='bg-[#f6f3f0] pb-10'>
             <div className='text-center lg:w-2/4 w-full mx-auto p-10'>
                 <h5 className='text-sm font-bold font-serif'>THE #1 RATED WORKFORCE PLATFORM</h5>
                 <h1 className='text-4xl p-5'>Explore Rippling by product</h1>
