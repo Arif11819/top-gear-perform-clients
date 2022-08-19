@@ -2,7 +2,7 @@ import React from 'react';
 import { DayPicker } from 'react-day-picker';
 import './scheduleCalender.css'
 
-const ScheduleCalender = ({ date, setDate, time, setTime, timeSlots }) => {
+const ScheduleCalender = ({ date, setDate, time, setTime, timeSlots, bookedTime }) => {
 
     const handleChange = (e) => {
         setTime(e.target.value)
