@@ -22,7 +22,7 @@ const Login = () => {
         event.preventDefault()
 
         signInWithEmailAndPassword(email, password);
-        const url = `http://localhost:5000/login`
+        const url = `https://dry-ravine-83506.herokuapp.com/login`
         fetch(url, {
             method: "POST",
             headers: {

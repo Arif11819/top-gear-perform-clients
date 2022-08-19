@@ -24,7 +24,7 @@ const ScheduleDemo = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [bookedTime, setBookedTime] = useState('');
     useEffect(() => {
-        fetch("http://localhost:5000/timeSlots")
+        fetch("https://dry-ravine-83506.herokuapp.com/timeSlots")
             .then(res => res.json())
             .then(data => setTimeSlots(data))
     }, [])
@@ -41,7 +41,7 @@ const ScheduleDemo = () => {
             phone: phoneNumber,
             userCount: userCount
         }
-        fetch("http://localhost:5000/scheduleData", {
+        fetch("https://dry-ravine-83506.herokuapp.com/scheduleData", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
