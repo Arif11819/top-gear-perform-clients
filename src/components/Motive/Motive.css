@@ -2,24 +2,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
-    background-color: #f0f0f0;
+
     margin: auto;
 
 
 }
 
-h2 {
-    margin-bottom: 15px;
-}
 
 
-.motive-img {
 
 
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
 
 .explore-btn {
     background-color: #F4731E;

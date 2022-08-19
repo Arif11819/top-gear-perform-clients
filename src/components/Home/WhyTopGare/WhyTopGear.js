@@ -1,7 +1,7 @@
 import React from 'react';
 import TopGare from './TopGare';
 
-const WhyTopGare = () => {
+const WhyTopGear = () => {
     return (
         <div className='mt-10  '>
             <div>
@@ -29,7 +29,7 @@ const WhyTopGare = () => {
                     <TopGare title="Get in front" titleP='Your customers have questions before they buy.
                 Be where they are, when they need  you, so they
                 haave the confidence they need to choose you over
-                the compeltion, every time.' img="https://i.ibb.co/44GtJYY/teams-planning-and-discussion-of-new-ideas-by-men.png" />
+                the compeltion, every time.' img="https://img.freepik.com/free-vector/coach-speaking-before-audience-mentor-presenting-charts-reports-employees-meeting-business-training-seminar-conference-vector-illustration-presentation-lecture-education_74855-8294.jpg?w=2000" />
 
                 </div>
             </div>
@@ -39,4 +39,4 @@ const WhyTopGare = () => {
     );
 };
 
-export default WhyTopGare;
+export default WhyTopGear;

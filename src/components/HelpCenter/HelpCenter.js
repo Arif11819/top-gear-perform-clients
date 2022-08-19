@@ -16,8 +16,10 @@ const HelpCenter = () => {
             .then(data => {
                 setData(data)
                 setSearch(data)
+                console.log(data)
             }
             )
+            
     }, [])
 
     const hendelSearch = (e) => {
@@ -42,12 +44,13 @@ const HelpCenter = () => {
 
     return (
         <div className='min-h-screen  bg-cyan-50 '>
+            <h1 className='4xl text-center font-bold'>How can we help you?</h1>
             <div className='relative flex justify-center items-center '>
-
+                    
                 <div>
                     <SearchIcon className='absolute ml-4 mt-3 text-sky-400 '></SearchIcon>
 
-                    <input type="text" placeholder="Book Name" value={wordEntered} onChange={hendelSearch} className="  grid w-96 mx-auto   input input-bordered input-success  text-center " />
+                    <input type="text" placeholder="Find help, articles, ueser guides" value={wordEntered} onChange={hendelSearch} className="  grid w-96 mx-auto   input input-bordered input-success  text-center " />
                 </div>
 
 
@@ -55,10 +58,10 @@ const HelpCenter = () => {
             </div>
 
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 sm:mt-10'>
+            <div className='grid grid-cols-1 gap-6 mt-32 m-3.5'>
 
                 {
-                    data.map(value => <HelpCard
+                    data.slice(0,5).map(value => <HelpCard
 
                         value={value}
                         key={value.id}
