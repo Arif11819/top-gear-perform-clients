@@ -6,7 +6,7 @@ const Progress = () => {
 
     const [progress, setprogress] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/progress')
+        fetch('https://dry-ravine-83506.herokuapp.com/progress')
             .then(res => res.json())
             .then(data => setprogress(data))
     }, [progress]);
@@ -14,7 +14,7 @@ const Progress = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/progress`;
+        const url = `https://dry-ravine-83506.herokuapp.com/progress`;
         fetch(url, {
             method: 'POST',
             headers: {
