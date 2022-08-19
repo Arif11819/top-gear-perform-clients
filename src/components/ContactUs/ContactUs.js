@@ -66,7 +66,7 @@ const ContactUs = () => {
                         <input onChange={event => setSubject(event.target.value)} value={subject} className='rounded-[5px] lg:w-[780px] w-80 h-[42px] pl-6 text-black' type="text" name="subject" placeholder='Subject' required /><br /> <br />
                         <textarea onChange={event => setTextarea(event.target.value)} value={textarea} className='rounded-[5px] lg:w-[780px] lg:h-32 w-80 h-[150px] pl-6 pt-6 text-black' name="message" id="" placeholder='Write Your Message' required></textarea>
                         <div className='flex'>
-                            <input type="submit" className='btn sm:btn-md md:btn-md lg:btn-lg text-green-600 bg-white lg:mt-6 mt-4' value="Send Message" />
+                            <input type="submit" className='btn sm:btn-md md:btn-md lg:btn-lg shadow lg:mt-6 mt-4' value="Send Message" />
                             <ToastContainer className="w-20 ml-48 pt-4" />
                         </div>
                     </form>

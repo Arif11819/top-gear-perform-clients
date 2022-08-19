@@ -1,0 +1,12 @@
+.news-card{
+    width: 80%;
+    display: block;
+    margin: 15px auto;
+    background-color: bisque;
+    min-height: 200px;
+    padding: 10px;
+}
+.post-date{
+    font-size: 11px;
+  
+}

@@ -8,7 +8,7 @@ const Scheduled = () => {
         fetch('https://dry-ravine-83506.herokuapp.com/schedule')
             .then(res => res.json())
             .then(data => setSchedules(data))
-    }, []);
+    }, [schedules]);
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
