@@ -25,6 +25,7 @@ import Chat from './components/pages/Dashboard/Chat/Chat';
 import Notifications from './components/pages/Dashboard/Notifications/Notifications';
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
+import Pricing from './components/Pricing/Pricing';
 
 
 
@@ -48,7 +49,7 @@ function App() {
           <Route path='notification' element={<Notifications />} />
           <Route path='action' element={<Action />} />
         </Route>
-
+        <Route path='/pricing' element={<Pricing />} />
         <Route path='/signUp' element={<Register />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/praise' element={<Praise />} />

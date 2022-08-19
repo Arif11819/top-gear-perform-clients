@@ -1,14 +1,13 @@
 import React from 'react';
 import Motive from '../Motive/Motive';
-
-import NewsLetter from '../NewsLetter/NewsLetter';
+import Recognition from '../Recognition/Recognition';
 
 import './Praise.css'
 const Praise = () => {
     return (
         <div>
             <Motive></Motive>
-            <h1 className='text-4xl mb-4 mt-4 text-center font-bold text-slate-900'>Why Our Customers Love Us?</h1>
+            <h1 className='text-5xl mb-4 mt-4 text-center font-bold'>Why Our Customers Love Us?</h1>
             <div className='justify-items-center praise mx-auto px-10 py-10 '>
                 <div className="card transform transition duration-500 hover:scale-110 w-80 bg-base-100 ">
                     <figure className="px-10 pt-10">
@@ -72,7 +71,7 @@ const Praise = () => {
                 </div>
             </div>
 
-            <NewsLetter />
+            <Recognition />
 
         </div>
     );

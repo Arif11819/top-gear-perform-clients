@@ -62,7 +62,7 @@ const Navbar = () => {
                             </ul>
                         </div>
 
-                        <Link to='/'>PRICING</Link>
+                        <Link to='/pricing'>PRICING</Link>
 
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">RESOURCES<RiArrowDownSLine className='arrow-icon' /> </label>

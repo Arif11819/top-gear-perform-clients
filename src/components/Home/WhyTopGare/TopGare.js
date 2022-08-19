@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopGare = ({ img, title, titleP }) => {
   return (
-    <div>
+    <div className='bg-slate-100'>
       <div class="card w-96 ">
         <figure class="px-10 pt-10">
           <img src={img} height={400} alt="Shoes" class="rounded-xl" />
