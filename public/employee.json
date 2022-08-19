@@ -1,0 +1,137 @@
+[
+    {
+        "name": "Everett Phillips",
+        "image": "https://ibb.co/56xTRZh",
+        "Experience": "2 Years",
+        "Role": "Technology Officer",
+        "TotalGoal": 67,
+        "Target": 15,
+        "Achieved": 4
+    },
+    {
+        "name": "Glenn Kristy",
+        "image": "https://ibb.co/vVwv77T",
+        "Experience": "1 Year",
+        "Role": "Executive Assistants",
+        "TotalGoal": 45,
+        "Target": 12,
+        "Achieved": 3
+    },
+    {
+        "name": "Antonio Leonard",
+        "image": "https://ibb.co/cgmq9Vt",
+        "Experience": "2 Years",
+        "Role": "Marketing manager",
+        "TotalGoal": 55,
+        "Target": 17,
+        "Achieved": 6
+    },
+    {
+        "name": "Leonard Gibson",
+        "image": "https://ibb.co/Jx6SsM0",
+        "Experience": "3 Years",
+        "Role": "Product manager",
+        "TotalGoal": 75,
+        "Target": 16,
+        "Achieved": 2
+    },
+    {
+        "name": "Garrett Weaver",
+        "image": "https://ibb.co/dryZXw7",
+        "Experience": "1.5 Years",
+        "Role": "Project manager",
+        "TotalGoal": 80,
+        "Target": 20,
+        "Achieved": 8
+    },
+    {
+        "name": "Devin Moreno",
+        "image": "https://ibb.co/zHVLy9K",
+        "Experience": "1 Year",
+        "Role": "Finance manager",
+        "TotalGoal": 85,
+        "Target": 11,
+        "Achieved": 4
+    },
+    {
+        "name": "Everett Phillips",
+        "image": "https://ibb.co/9tkG30q",
+        "Experience": "4 Years",
+        "Role": "Project analyst",
+        "TotalGoal": 50,
+        "Target": 10,
+        "Achieved": 5
+    },
+    {
+        "name": "Jon Stokes",
+        "image": "https://ibb.co/jR0PJWr",
+        "Experience": "3 Years",
+        "Role": "Marketing specialist",
+        "TotalGoal": 107,
+        "Target": 30,
+        "Achieved": 10
+    },
+    {
+        "name": "Shannon Willis",
+        "image": "https://ibb.co/G5pX66b",
+        "Experience": "3 Years",
+        "Role": "Business analyst",
+        "TotalGoal": 35,
+        "Target": 8,
+        "Achieved": 3
+    },
+    {
+        "Name": "Greg Stevens",
+        "Image": "https://ibb.co/b5wpg4J",
+        "Experience": "5 Years",
+        "Role": "Accountant",
+        "TotalGoal": 55,
+        "Target": 15,
+        "Achieved": 4
+    },
+    {
+        "name": "Pat Daniel",
+        "image": "https://ibb.co/nRCpDCV",
+        "Experience": "4 Years",
+        "Role": "Sales representative",
+        "TotalGoal": 110,
+        "Target": 17,
+        "Achieved": 7
+    },
+    {
+        "name": "Hazel Barber",
+        "image": "https://ibb.co/BgWJDkH",
+        "Experience": "2 Years",
+        "Role": "Administrative assistant",
+        "TotalGoal": 89,
+        "Target": 16,
+        "Achieved": 4
+    },
+    {
+        "name": "Johnnie Craig",
+        "image": "https://ibb.co/fnFVV2L",
+        "Experience": "1 Years",
+        "Role": "Regional Manager",
+        "TotalGoal": 42,
+        "Target": 6,
+        "Achieved": 2
+    },
+    {
+        "name": "Lester Flores",
+        "image": "https://ibb.co/Yyq6Pt8",
+        "Experience": "3 Years",
+        "Role": "Safety Manager",
+        "TotalGoal": 77,
+        "Target": 8,
+        "Achieved": 2
+    },
+    {
+        "name": "Carly Seymour",
+        "image": "https://ibb.co/GVv9KQ0",
+        "Experience": "5 Years",
+        "Role": "Senior Developer",
+        "TotalGoal": 66,
+        "Target": 12,
+        "Achieved": 4
+    }
+]

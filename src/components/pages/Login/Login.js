@@ -18,24 +18,15 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    if (user) {
+
+        navigate('/dashboard')
+        toast.success('Login successfull')
+    }
     const handleLogin = (event) => {
         event.preventDefault()
 
-        signInWithEmailAndPassword(email, password);
-        const url = `https://dry-ravine-83506.herokuapp.com/login`
-        fetch(url, {
-            method: "POST",
-            headers: {
-                "content-type": 'application/json'
-            },
-            body: JSON.stringify({ email })
-        })
-            .then(res => res.json())
-            .then(result => {
-                localStorage.setItem('accessToken', result.accessToken);
-                navigate('/dashboard')
-                toast.success('Login successfull')
-            })
+        signInWithEmailAndPassword(email, password)
 
     }
 

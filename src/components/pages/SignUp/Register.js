@@ -116,7 +116,6 @@ const Register = () => {
         const userRole = event.target.role.value
         const userPhoneNumber = event.target.phoneNumber.value
 
-        // console.log(firstName,lastName,fullName,userEmail,userAddress,userAge,userGender,userRole,userPhoneNumber)
         const userData = { firstName, lastName, fullName, userEmail, userAddress, userAge, userGender, userRole, userPhoneNumber }
 
         if (role === '') {
@@ -146,15 +145,24 @@ const Register = () => {
                         toast.success('Register successfull')
                     }
                 }).catch(err => console.log(err))
+            if (error === undefined || error) {
+                return
+            }
+            else {
+                fetch('http://localhost:4000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+
+                })
+            }
         }
-
-
-
-
     }
-
     if (user) {
-        navigate('/dashboard')
+        navigate('/dashboard/home')
+        toast.success('Register successfull')
     }
 
     return (
@@ -198,9 +206,9 @@ const Register = () => {
                         </select>
                         <input autoComplete='off' required className='short-input' name='phoneNumber' type="number" placeholder='Phone number' />
                     </div>
-                    <label>
+                    <label className='flex'>
                         <input autoComplete='off' required name='checkBox' type="checkbox" />
-                        <p> Accept our <Link className='term-link' to='/terms'> terms </Link> and condition</p>
+                        <p> Accept our <Link className='term-link' to='/terms'> terms and condition</Link></p>
                     </label>
                     {emailError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />{emailError}</p>

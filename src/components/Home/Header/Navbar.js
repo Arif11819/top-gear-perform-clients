@@ -15,10 +15,7 @@ const Navbar = () => {
     const [toggle, setToggle] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
-        signOut(auth)
-            .then(() => {
-                toast.success('Logout Succesful')
-            })
+        
 
     }
     return (
@@ -28,7 +25,7 @@ const Navbar = () => {
                     <Link to="/team">About us</Link>
                     <Link to="/">Blog</Link>
                     <Link to="/">Contact us</Link>
-                    {user ? <Link onClick={handleSignout} to="/">Logout </Link> : <Link to="/login">Sign in </Link>}
+                    <Link to="/login">Sign in </Link>
                     <RiGlobalLine className='global-icon' />
                 </div>
                 <div className="main-nav-bar">
@@ -62,7 +59,7 @@ const Navbar = () => {
                             </ul>
                         </div>
 
-                        <Link to='/'>PRICING</Link>
+                        <Link to='/pricing'>PRICING</Link>
 
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">RESOURCES<RiArrowDownSLine className='arrow-icon' /> </label>
