@@ -35,7 +35,6 @@ const HelpCard = ({value}) => {
 //   </div>
 // </div>
 <div class="card card-side bg-base-100 ">
-  <img src={urlToImage} width={400} alt="business"/>
   <div class="card-body">
     <h2 class="card-title">{description}</h2>
     <h2 class="card-title">{title}</h2>
