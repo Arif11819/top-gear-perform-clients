@@ -10,7 +10,7 @@ const CompleteData = ({ complete }) => {
 
     const handleDeleteTask = id => {
 
-        const url = `http://localhost:5000/complete/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/complete/${id}`
         fetch(url, {
             method: 'DELETE'
         })
