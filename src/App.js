@@ -27,6 +27,7 @@ import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
 import Team from './components/Home/Team/Team';
 import Terms from './components/pages/Login/Terms';
 import ChatInput from './components/Chat/ChatInput';
+import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 
 
 
@@ -49,6 +50,7 @@ function App() {
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
           <Route path='action' element={<Action />} />
+          <Route path='notes' element={<NoteHome />} />
         </Route>
 
         <Route path='/signUp' element={<Register />} />
