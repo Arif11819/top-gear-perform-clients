@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HelpCard = ({value}) => {
-    const { author, description, url, urlToImage, title} = value
+    const { author, description, url,  title} = value
     return (
     //     <div>
     //         <div class="card w-96 bg-base-100 ">
