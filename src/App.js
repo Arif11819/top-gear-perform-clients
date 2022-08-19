@@ -25,6 +25,7 @@ import Chat from './components/pages/Dashboard/Chat/Chat';
 import Notifications from './components/pages/Dashboard/Notifications/Notifications';
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
+import Charts from './components/Chart/Charts';
 
 
 
@@ -51,6 +52,7 @@ function App() {
 
         <Route path='/signUp' element={<Register />} />
         <Route path='/reviews' element={<Reviews />} />
+        <Route path='/chart' element={<Charts />} />
         <Route path='/praise' element={<Praise />} />
         <Route path='/schedule' element={<ScheduleDemo />} />
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
