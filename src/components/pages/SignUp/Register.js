@@ -149,7 +149,7 @@ const Register = () => {
                 return
             }
             else {
-                fetch('http://localhost:4000/users', {
+                fetch('https://dry-ravine-83506.herokuapp.com/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

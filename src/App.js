@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
@@ -25,16 +24,23 @@ import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
 import Charts from './components/Chart/Charts';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+
 import Pricing from './components/Pricing/Pricing';
 import Team from './components/Home/Team/Team';
 import Terms from './components/pages/Login/Terms';
 import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
+import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
+
+
 
 function App() {
   const { pathname } = useLocation()
   return (
+
+
+
 
     <>
       <ToastContainer limit={1} />
@@ -49,6 +55,7 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
+          <Route path='newsfeed' element={<NewsFeed />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
         </Route>

@@ -1,11 +1,9 @@
-import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 import { RiArrowDownSLine, RiGlobalLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import './Header.css'
 
@@ -24,12 +22,8 @@ const Navbar = () => {
                 <div className="top-nav-bar">
                     <Link to="/team">About us</Link>
                     <Link to="/">Blog</Link>
-                    <Link to="/">Contact us</Link>
-                    <Link to="/login">Sign in </Link>
-
                     <Link to="/contact">Contact us</Link>
                     {user ? <Link onClick={handleSignout} to="/">Logout </Link> : <Link to="/login">Sign in </Link>}
-
                     <RiGlobalLine className='global-icon' />
                 </div>
                 <div className="main-nav-bar">
