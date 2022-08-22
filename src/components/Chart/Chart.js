@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, ResponsiveContainer } from 'recharts';
-import { } from 'recharts';
+
 
 const Chart = ({ ch }) => {
     const { image, TotalGoal, Target, Achieved, _id, name, Role, Experience } = ch;
