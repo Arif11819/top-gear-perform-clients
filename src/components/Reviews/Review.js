@@ -9,7 +9,7 @@ const Review = ({ review }) => {
         navigate(`/reviews/${id}`);
     }
     return (
-        <div class="card w-80 bg-base-100 shadow-xl">
+        <div className="card w-80 bg-base-100 shadow-xl">
             <figure><img className='w-full' src={img} alt="Shoes" /></figure>
             <div className="card-body pt-3">
                 <h2 className="">
@@ -24,9 +24,9 @@ const Review = ({ review }) => {
                         <img src={logo} alt="" />
                     </div>
                 </div>
-                <div class="card-actions justify-between">
-                    <div class="badge badge-outline p-3"><button onClick={() => handleNavigateToFullReview(_id)} >Read full case study</button></div>
-                    <div class="badge badge-outline p-3 bg-blue-400"><button>Watch Now</button></div>
+                <div className="card-actions justify-between">
+                    <div className="badge badge-outline p-3"><button onClick={() => handleNavigateToFullReview(_id)} >Read full case study</button></div>
+                    <div className="badge badge-outline p-3 bg-blue-400"><button>Watch Now</button></div>
 
                 </div>
             </div>

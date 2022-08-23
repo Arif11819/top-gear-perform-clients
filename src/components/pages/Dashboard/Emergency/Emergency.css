@@ -1,0 +1,9 @@
+.info{
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin-left: 450px;
+}
+.info:hover{
+  background-color: skyblue;
+}

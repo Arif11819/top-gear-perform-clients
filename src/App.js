@@ -33,6 +33,7 @@ import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
+import Emergency from './components/pages/Dashboard/Emergency/Emergency';
 
 
 
@@ -43,7 +44,7 @@ function App() {
 
 
 
-    <>
+    <div className='bg-slate-100'>
       <ToastContainer limit={1} />
       {pathname?.includes('/dashboard') ? null : <Navbar></Navbar>}
       <Routes>
@@ -59,6 +60,7 @@ function App() {
           <Route path='newsfeed' element={<NewsFeed/>} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
+          <Route path='emergency' element={<Emergency/>} />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/signUp' element={<Register />} />
@@ -78,7 +80,7 @@ function App() {
       {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
       {pathname?.includes('/dashboard') ? null : <Footer></Footer>}
 
-    </>
+    </div>
 
   )
 

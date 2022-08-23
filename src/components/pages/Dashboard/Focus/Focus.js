@@ -4,7 +4,7 @@ import './Focus.css'
 const Focus = () => {
     return (
         <div>
-            <ul class="menu bg-base-100 w-56 p-2 rounded-box">
+            <ul className="menu bg-base-100 w-56 p-2 rounded-box">
         {/* num-01 */}
 
         <li className="notification-text" tabindex="0">
@@ -45,7 +45,7 @@ const Focus = () => {
 
         <li className="notification-text" tabindex="6">
           <span>OKRs by KPIs</span>
-          <ul class="bg-base-100">
+          <ul className="bg-base-100">
             <li>
               <a href="/">All</a>
               <a href="/">Watched</a>
@@ -73,7 +73,7 @@ const Focus = () => {
 
         <li className="notification-text" tabindex="6">
           <span>OKRs Program Status</span>
-          <ul class="bg-base-100">
+          <ul className="bg-base-100">
             <li>
               <a href="/">OKRs Authoring</a>
               <a href="/">OKRs Progress</a>
