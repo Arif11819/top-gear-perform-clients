@@ -19,6 +19,7 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
 
     }
 
+
     const fromDate = new Date(from);
     const toDate = new Date(to);
     const time = Math.abs(toDate - fromDate);
@@ -27,15 +28,16 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
     const handleSelectChange = e => {
         setDayOffType(e.target.value)
     }
+
     useEffect(() => {
-        fetch(`http://localhost:5000/vacation/${dayOffType}`)
+        fetch(`http://localhost:5000/namevacation?type=${dayOffType}&email=${user.email}`)
             .then(res => res.json())
             .then(data => setSingleVacation(data))
-    }, [dayOffType])
+    }, [dayOffType, user.email])
 
     const handleSubmit = () => {
         const count = parseInt(singleVacation.day) - parseInt(day);
-        const updateDay = { count }
+        const updateDay = { count, email: user.email }
 
         const url = `http://localhost:5000/vacation/${dayOffType}`
         fetch(url, {
@@ -72,7 +74,7 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
             .then(res => res.json())
             .then(data => {
 
-                console.log(data);
+
                 setOpenModal(null)
             })
 

@@ -3,9 +3,12 @@ import { FaCalendarDay } from 'react-icons/fa'
 import { useQuery } from 'react-query';
 import { BsFillCheckCircleFill } from 'react-icons/bs'
 import { BsCalendarMinus } from 'react-icons/bs'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
 
 const VacationShow = () => {
-    const { data: vacationStore, isLoading, refetch } = useQuery('vacationStore', () => fetch('http://localhost:5000/vacationstore', {
+    const [user] = useAuthState(auth);
+    const { data: vacationStore, isLoading, refetch } = useQuery('vacationStore', () => fetch(`http://localhost:5000/vacationstore/${user.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))
