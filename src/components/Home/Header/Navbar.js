@@ -1,11 +1,9 @@
-import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 import { RiArrowDownSLine, RiGlobalLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import './Header.css'
 
