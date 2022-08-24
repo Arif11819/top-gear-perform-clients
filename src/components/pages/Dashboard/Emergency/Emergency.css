@@ -7,3 +7,8 @@
 .info:hover{
   background-color: skyblue;
 }
+
+.emg-card{
+  height: 350px;
+  width: 450px;
+}

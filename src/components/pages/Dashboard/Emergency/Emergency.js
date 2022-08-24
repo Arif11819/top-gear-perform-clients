@@ -7,7 +7,7 @@ import SingleEmgContact from "./SingleEmgContact";
 import { useForm } from "react-hook-form";
 
 const Emergency = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, reset, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
     const url = `http://localhost:5000/emgcontact`;
@@ -21,6 +21,7 @@ const Emergency = () => {
     .then(res=> res.json())
     .then(result =>{
       console.log(result);
+      reset();
     })
   };
 
@@ -31,7 +32,7 @@ const Emergency = () => {
     fetch("http://localhost:5000/emgcontact")
       .then((res) => res.json())
       .then((data) => setEmgContacts(data));
-  }, []);
+  }, [emgContacts]);
 
   return (
     <div className="m-36">
@@ -151,14 +152,12 @@ const Emergency = () => {
           </div>
         </div>
 
-        <input className="btn bg-sky-400 text-white info" type="submit" value="Save Information" />
+        <input className="btn bg-sky-100 text-white info" type="submit" value="Save Information" />
       </form>
 
     
       <div className="divider"></div>
-      <button className="btn bg-sky-400 text-white info ">
-        Add New Information
-      </button>
+      
 
       <section>
         <div className="grid grid-cols-2 gap-5 m-28">

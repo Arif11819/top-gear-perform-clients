@@ -44,7 +44,7 @@ function App() {
 
 
 
-    <div className='bg-slate-100'>
+    <div className=''>
       <ToastContainer limit={1} />
       {pathname?.includes('/dashboard') ? null : <Navbar></Navbar>}
       <Routes>
