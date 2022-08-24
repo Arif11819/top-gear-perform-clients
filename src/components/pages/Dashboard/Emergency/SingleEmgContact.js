@@ -13,7 +13,7 @@ const SingleEmgContact = ({ emgContact }) => {
         fetch('http://localhost:5000/emgcontact')
         .then(res => res.json())
         .then (data => setDisplays(data));
-    }, [displays]);
+    }, [emgContact, displays]);
 
   
   const handleDelete = id =>{

@@ -1,8 +1,6 @@
 .info{
-  align-items: center;
-  justify-content: center;
   width: 500px;
-  margin-left: 450px;
+  margin-left: 100px;
 }
 .info:hover{
   background-color: skyblue;
@@ -11,4 +9,26 @@
 .emg-card{
   height: 350px;
   width: 450px;
+}
+
+.emg-field{
+  height: 80px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 689px){
+  .info{
+    width: 150px;
+    margin-top: 20px;
+  }
+  .emg-card{
+    height: 400px;
+    width: 250px;
+    margin: 15px;
+  }
+  .emg-field{
+    height: 100px;
+    width: 150px;
+  }
+  
 }

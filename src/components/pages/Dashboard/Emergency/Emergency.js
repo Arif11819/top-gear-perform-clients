@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { ImMobile } from "react-icons/im";
 import { MdOutlineMapsHomeWork } from "react-icons/md";
 import { HiOfficeBuilding } from "react-icons/hi";
-import "./Emergency.css";
 import SingleEmgContact from "./SingleEmgContact";
 import { useForm } from "react-hook-form";
+import "./Emergency.css";
 
 const Emergency = () => {
   const { register, reset, handleSubmit } = useForm();
@@ -35,13 +35,14 @@ const Emergency = () => {
   }, [emgContacts]);
 
   return (
-    <div className="m-36">
-      <div className=" text-4xl text-sky-500 text-center font-bold items-center m-8">
+    <div className="mx-8">
+      <div className=" lg:text-4xl text-2xl text-sky-500 text-center font-bold items-center m-8">
         Emergency Contact
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-3 gap-3">
-          <label className="input-group input-group-vertical ">
+      <div className="">
+      <form className="lg:mx-72" onSubmit={handleSubmit(onSubmit)}>
+        <div className=" lg:mx-24">
+          <label className="input-group input-group-vertical emg-field m-auto lg:m-5">
             <span className="font-bold">Name</span>
             <input
               placeholder="Type Name"
@@ -51,11 +52,11 @@ const Emergency = () => {
             />
           </label>
 
-          <label className="input-group input-group-vertical">
+          <label className="input-group input-group-vertical emg-field m-auto lg:m-5">
             <span className="font-bold">Relationship</span>
             <select
               placeholder="Type Name"
-              className="input input-bordered"
+              className="input input-bordered "
               required
               {...register("relationship")}
             >
@@ -72,62 +73,53 @@ const Emergency = () => {
               <option value="Others">Others</option>
             </select>
           </label>
-          <label className="label cursor-pointer">
-                  <input
-                    required
-                    type="checkbox"
-                    className="checkbox "
-                    autoComplete="off"
-                  />
-                  <span className="label-text font-bold text-sky-500 w-96">
-                    Primary Contact
-                  </span>
-                </label>
-        </div>
-        <div className="  mx-8">
-          <h1 className="font-bold text-start text-md m-5">Phone</h1>
-          <label className="input-group input-group-md lg:my-2">
+          </div>
+         
+        <div className="lg:mx-48">
+        <label className="label">
+            <span className="label-text">Phone</span>
+          </label>
+          <label className="input-group input-group-md my-2">
             <span>
               <MdOutlineMapsHomeWork />
             </span>
             <input
-              placeholder="Phone number 01"
+              placeholder="Home number"
               className="input input-bordered input-md"
               type="number"
               {...register("phoneNumberone")}
             />
           </label>
 
-          <label className="input-group input-group-md lg:my-2">
+          <label className="input-group input-group-md my-2">
             <span>
               <HiOfficeBuilding />
             </span>
             <input
-              placeholder="Phone number 02"
+              placeholder="Office number "
               className="input input-bordered input-md"
               type="number"
               {...register("phoneNumbertwo")}
             />
           </label> 
 
-          <label className="input-group input-group-md lg:my-2">
+          <label className="input-group input-group-md my-2">
             <span>
               <ImMobile />
             </span>
             <input
-              placeholder="Phone number 03"
+              placeholder="Emergency number"
               className="input input-bordered input-md"
               type="number"
               {...register("phoneNumberthree")}
             />
           </label> 
         
-        <div className="grid grid-cols-2">
-          <div className="">
+        
           <label className="label">
-            <span className="label-text font-bold text-md my-5">Add Email</span>
+            <span className="label-text lg:my-2">Add Email</span>
           </label>
-          <label className="input-group">
+          <label className="input-group input-group-md my-2">
             <span>Email</span>
             <input
               type="text"
@@ -137,30 +129,27 @@ const Emergency = () => {
               {...register("email")}
             />
           </label>
-          </div>
-          <div className="m-5">
-          <label className="label my-2 font-bold">
-            <span className="label-text font-bold">Address</span>
+          <label className="label">
+            <span className="label-text my-2">Address</span>
           </label>
           <textarea
-            className="textarea textarea-bordered h-24"
+            className="textarea textarea-bordered mx-4 my-2 h-24"
             placeholder="Add Address"
             required
             {...register("address")}
           ></textarea>
-          </div>
-          </div>
         </div>
 
-        <input className="btn bg-sky-100 text-white info" type="submit" value="Save Information" />
+        <input className="btn bg-sky-400 text-black info" type="submit" value="Save Information" />
       </form>
+      </div>
 
     
       <div className="divider"></div>
       
 
       <section>
-        <div className="grid grid-cols-2 gap-5 m-28">
+        <div className="grid lg:grid-cols-2 lg:gap-5 lg:m-28">
           {emgContacts.map((emgContact) => (
             <SingleEmgContact
               key={emgContact._id}
