@@ -1,6 +1,7 @@
 import React from "react";
 import {MdDeleteForever} from 'react-icons/md';
 import { useEffect, useState } from "react";
+import { toast } from 'react-toastify';
 
 const SingleEmgContact = ({ emgContact }) => {
 
@@ -26,7 +27,7 @@ const SingleEmgContact = ({ emgContact }) => {
      })
      .then(res => res.json())
      .then(data => {
-       console.log(data);
+       toast.success("Successfully deleted!")
        const remaining = displays.filter(display => display._id !== id)
        setDisplays(remaining);
      })

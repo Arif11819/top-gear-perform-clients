@@ -4,12 +4,12 @@ import { MdOutlineMapsHomeWork } from "react-icons/md";
 import { HiOfficeBuilding } from "react-icons/hi";
 import SingleEmgContact from "./SingleEmgContact";
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 import "./Emergency.css";
 
 const Emergency = () => {
   const { register, reset, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
     const url = `http://localhost:5000/emgcontact`;
     fetch(url, {
       method: 'POST',
@@ -20,7 +20,7 @@ const Emergency = () => {
     })
     .then(res=> res.json())
     .then(result =>{
-      console.log(result);
+      toast.success("Successfully added!")
       reset();
     })
   };
@@ -36,7 +36,7 @@ const Emergency = () => {
 
   return (
     <div className="mx-8">
-      <div className=" lg:text-4xl text-2xl text-sky-500 text-center font-bold items-center m-8">
+      <div className=" text-2xl text-sky-500 text-center font-bold items-center m-8">
         Emergency Contact
       </div>
       <div className="">
