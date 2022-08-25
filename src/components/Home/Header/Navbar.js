@@ -13,7 +13,7 @@ const Navbar = () => {
     const [toggle, setToggle] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
-        
+
 
     }
     return (

@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
@@ -58,7 +57,7 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
-          <Route path='newsfeed' element={<NewsFeed/>} />
+          <Route path='newsfeed' element={<NewsFeed />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
           <Route path='course' element={<Course/>} />
