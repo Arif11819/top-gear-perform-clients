@@ -13,11 +13,11 @@ const BusinessPlatform = () => {
                 <br /> iterative business execution platform
             </h1>
             <p className='text-center text-xl text-gray-400'>Grow your business with our All-Inclusive OKR Tool</p>
-            <div class="hero ">
+            <div className="hero ">
 
-                <div class="hero-content flex-col lg:flex-row-reverse">
+                <div className="hero-content flex-col lg:flex-row-reverse">
 
-                    <img src="https://i.ibb.co/xCyYYns/Logo.png" class="rounded-lg lg:w-96 lg:ml-20 ml-0" alt='video icon' />
+                    <img src="https://i.ibb.co/xCyYYns/Logo.png" className="rounded-lg lg:w-96 lg:ml-20 ml-0" alt='video icon' />
 
                     <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-20 sm:mt-10 '>
                         <Card img="https://i.ibb.co/1dPFd8f/task-list.png" title={'Task Management '} downTitle={`Track Better. Do More.`} />

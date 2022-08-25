@@ -9,14 +9,14 @@ import './Actions.css';
 const Action = () => {
   return (
     <div>
-      <ul class="menu bg-base-100 w-56 p-2  rounded-box">
+      <ul className="menu bg-base-100 w-56 p-2  rounded-box">
 
         {/* num-01 */}
 
 
         <li className='actions-text' tabindex="0">
           <span><AiOutlineKey />KR Controls</span>
-          <ul class="bg-base-100">.
+          <ul className="bg-base-100">.
             <li><a href='/'>KR Alignment Requests</a></li>
             <li><a href='/'>KR Assignment Requests</a></li>
             <li><a href='/'>KR Dependency Requests</a></li>
@@ -28,7 +28,7 @@ const Action = () => {
 
         <li className='actions-text' tabindex="1">
           <span><AiOutlineSchedule />Meetings</span>
-          <ul class="bg-base-100">
+          <ul className="bg-base-100">
             <li><a href='/'>Weekly Meeting</a></li>
             <li><a href='/'>1:1 Meetings</a></li>
             <li><a href='/'>Quarterly Meetings</a></li>
@@ -42,7 +42,7 @@ const Action = () => {
 
         <li className='actions-text' tabindex="2">
           <span><BiCurrentLocation />OKR Definition</span>
-          <ul class="bg-base-100">
+          <ul className="bg-base-100">
             <li><a href='/'>Lock/Unlock Requests</a></li>
             <li><a href='/'>Move OKR Requests</a></li>
             <li><a href='/'>OKR Alignment Requests</a></li>
@@ -55,7 +55,7 @@ const Action = () => {
 
         <li className='actions-text' tabindex="3">
           <span><MdOutlineAddLocationAlt />Pending Check-ins</span>
-          <ul class="bg-base-100">
+          <ul className="bg-base-100">
             <li><a href='/'>Due Today</a></li>
             <li><a href='/'>Overdue</a></li>
           </ul>
@@ -65,7 +65,7 @@ const Action = () => {
 
         <li className='actions-text' tabindex="4">
           <span><AiFillMessage />Servey Feedback</span>
-          <ul class="bg-base-100">
+          <ul className="bg-base-100">
             <li><a href='/'>Servey Feedback Request</a></li>
           </ul>
         </li>

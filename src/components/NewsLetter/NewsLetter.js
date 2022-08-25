@@ -29,7 +29,7 @@ const NewsLetter = () => {
                         <div className="relative">
                             <form onSubmit={submitHandler}>
                                 <input type="email" placeholder="Enter your valid email" className="input input-bordered w-full pr-16" required onChange={inputHandler} />
-                                <button type='submit' className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                                <button type='submit' className="btn newsbtn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
                             </form>
                         </div>
                     </div>

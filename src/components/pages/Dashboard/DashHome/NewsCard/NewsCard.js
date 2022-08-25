@@ -6,8 +6,8 @@ const NewsCard = ({ news }) => {
     return (
         <div className='news-card'>
            <div className='flex items-center mb-4'>
-           <div class="avatar ">
-                <div class="w-12 rounded-full">
+           <div className="avatar ">
+                <div className="w-12 rounded-full">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW47UEfYkQQFKwJfi2sD9SjB4uMYS6zC_RAw&usqp=CAU" alt='user profile' /> 
                 </div>
             </div>
