@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-const useDisplays = () =>{
+const useDisplays = () => {
   const [displays, setDisplays] = useState([]);
 
-  useEffect ( ()=>{
-    
-      fetch('http://localhost:5000/emgcontact')
+  useEffect(() => {
+
+    fetch('https://dry-ravine-83506.herokuapp.com/emgcontact')
       .then(res => res.json())
-      .then (data => setDisplays(data));
+      .then(data => setDisplays(data));
   }, []);
   return [displays, setDisplays]
 }

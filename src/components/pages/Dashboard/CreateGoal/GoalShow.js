@@ -7,7 +7,7 @@ import { MdDelete } from 'react-icons/md'
 
 const GoalShow = () => {
     const [user] = useAuthState(auth);
-    const { data: goalData, isLoading, refetch } = useQuery('goalData', () => fetch(`http://localhost:5000/usergoal/${user?.email}`, {
+    const { data: goalData, isLoading, refetch } = useQuery('goalData', () => fetch(`https://dry-ravine-83506.herokuapp.com/usergoal/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))
@@ -16,7 +16,7 @@ const GoalShow = () => {
         return <p>Loading...</p>
     }
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/goal/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/goal/${id}`
         fetch(url, {
             method: 'DELETE',
         })

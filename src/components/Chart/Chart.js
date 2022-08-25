@@ -14,7 +14,7 @@ const Chart = ({ ch }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure delete this?');
         if (proceed) {
-            const url = `http://localhost:5000/employee/${id}`;
+            const url = `https://dry-ravine-83506.herokuapp.com/employee/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
