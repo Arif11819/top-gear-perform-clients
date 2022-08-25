@@ -62,7 +62,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
-        <Route path='/addemployee' element={<AddEmployee />} />
+        <Route path='/add-employee' element={<AddEmployee />} />
+
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='home' element={<DashHome />} />
@@ -70,12 +71,9 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
-          <Route path='newsfeed' element={<NewsFeed />} />
-
-          <Route path='newfeed' element={<NewsFeed />} />
-
-          <Route path='newsfeed' element={<NewsFeed />} />
-
+          <Route path='news-feed' element={<NewsFeed />} />
+          <Route path='/employee' element={<Charts />} />
+          <Route path='/employee/:employeeId' element={<Charts />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency />} />
@@ -98,8 +96,7 @@ function App() {
             <Reviews></Reviews>
           </RequireAuth>
         } />
-        <Route path='/employee' element={<Charts />} />
-        <Route path='/employee/:employeeId' element={<Charts />} />
+
         <Route path='/praise' element={<Praise />} />
         <Route path='/schedule' element={<ScheduleDemo />} />
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
