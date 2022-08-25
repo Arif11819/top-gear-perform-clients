@@ -60,13 +60,6 @@ const Dashboard = () => {
             </Link>
             <div className="profie">
               <CgProfile className="dash-nav-icon" />
-              <p className="inline text-sm">
-                Sumaya Islam <MdOutlineKeyboardArrowDown className="inline" />
-              </p>
-              <CgProfile
-                onClick={() => setShowProfile(!showProfile)}
-                className="dash-nav-icon"
-              />
               <p
                 onClick={() => setShowProfile(!showProfile)}
                 className="inline text-sm"
@@ -89,23 +82,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        {/* <div>
-          <h1 className="text-cyan-500 text-center text-2xl  my-20 lg:text-2xl font-bold">
-            Welcome to Dashbroad
-          </h1>
-          <h5 className="text-center  my-20 text-3xl lg:text-xl font-bold">
-            Check Your Performance
-          </h5>
-          <p className="text-center  my-20 lg:text-3xl text-xl font-bold">
-            Check your performance by clicking navbar options.
-            <Link
-              to="/dashboard/home"
-              className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 mt-4 "
-            >
-              Check Now
-            </Link>
-          </p>
-        </div> */}
+        
         <div className="dashboard-body">
           <Outlet />
         </div>
