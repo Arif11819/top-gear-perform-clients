@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.css'
 import '../SignUp/Register.css'
 import { Link, useNavigate } from 'react-router-dom';
@@ -17,11 +17,20 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
+
+    useEffect(() => {
+
+        fetch(`https://dry-ravine-83506.herokuapp.com/user/torik@gmail.com`)
+            .then(res => res.json())
+            .then(data => console.log(data))
+
+
+    }, [])
     if (user) {
 
         navigate('/dashboard/home')
-        toast.success('Login successfull')
+        toast.success('Login successfull', { toastId: 'login' })
     }
     const handleLogin = (event) => {
         event.preventDefault()
@@ -43,9 +52,9 @@ const Login = () => {
                     <p className='error-message'><TiWarning className='warning-icon' />Wrong email or password</p>
                 </div>}
 
-                <button disabled={loading}type='submit'>
-                        {loading ? <Loading /> : <span>Login</span>}
-                    </button>
+                <button disabled={loading} type='submit'>
+                    {loading ? <Loading /> : <span>Login</span>}
+                </button>
                 <small className='text-center block pt-4'>don't have an account ? <Link className='signUp' to='/signUp'>Sign Up</Link></small>
             </form>
 

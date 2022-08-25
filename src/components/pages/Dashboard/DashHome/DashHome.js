@@ -7,6 +7,7 @@ import NewsCard from './NewsCard/NewsCard';
 import auth from '../../../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
+import useUser from '../../../../hooks/useUser';
 
 
 const DashHome = () => {
@@ -15,6 +16,7 @@ const DashHome = () => {
     const [post, setPost] = useState(false)
     const [newses, setNews] = useState([])
     const [postDescription, setPostDescription] = useState('')
+    const [singleUser] = useUser()
     const date = new Date()
     const day = date.getDate()
     const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -23,10 +25,10 @@ const DashHome = () => {
     const month = monthNames[date.getMonth()]
     const year = date.getFullYear()
     const time = `${day} ${month} ${year} `
-
+    const userName = `${singleUser[0]?.firstName } ${singleUser[0]?.lastName }`
 
     useEffect(() => {
-        fetch('http://localhost:4000/news')
+        fetch('https://dry-ravine-83506.herokuapp.com/news')
             .then(res => res.json())
             .then(data => setNews(data))
     }, [load])
@@ -35,9 +37,9 @@ const DashHome = () => {
         const postDesc = postDescription
         const userEmail = user?.email
         const postTime = time
-        const postData = { postDesc, userEmail, postTime }
+        const postData = { postDesc, userEmail, postTime,userName }
         if(postDescription){
-            fetch('http://localhost:4000/postNews', {
+            fetch('https://dry-ravine-83506.herokuapp.com/postNews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

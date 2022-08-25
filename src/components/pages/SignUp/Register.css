@@ -62,7 +62,7 @@ select {
     margin: 20px auto;
 }
 
-label {
+.term-container {
     display: flex;
     align-items: center;
 }

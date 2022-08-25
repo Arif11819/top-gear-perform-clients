@@ -1,32 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import './Dashboard.css'
 import { VscFileSymlinkDirectory } from 'react-icons/vsc'
-import { FiFlag ,FiLogOut} from 'react-icons/fi'
+import { FiFlag, FiLogOut } from 'react-icons/fi'
 import { MdOutlineNotificationsActive, MdOutlineKeyboardArrowDown, MdClose } from 'react-icons/md'
 import { BiHelpCircle, BiMessage } from 'react-icons/bi'
 import { CgProfile } from 'react-icons/cg'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BiTargetLock, BiTask } from 'react-icons/bi'
 import { BsChatLeftDots } from 'react-icons/bs'
-import useUser from '../../../hooks/useUser';
 import { signOut } from 'firebase/auth';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
 const Dashboard = () => {
     const [showProfile, setShowProfile] = useState(false)
-
+    const [singleUser, setUser] = useState([])
+    const [user] = useAuthState(auth)
     const navigate = useNavigate()
-    const [singleUser] = useUser()
-    const handleLogout = ()=>{
+    const userEmail = user?.email
+    useEffect(() => {
+
+        fetch(`https://dry-ravine-83506.herokuapp.com/user/torik@gmail.com`)
+            .then(res => res.json())
+            .then(data => console.log(data))
+    },[])
+    const handleLogout = () => {
         signOut(auth)
             .then(() => {
                 navigate('/')
-                toast.success('Logout Succesful')
+                toast.success('Logout Succesful', { toastId: 'logout' })
             })
     }
+
+
     return (
         <>
+
             <div className='dashboard-container'>
                 <div className="dashboard-navbar">
                     <div onClick={() => navigate('/')} className="dashboard-logo">

@@ -2,7 +2,8 @@ import React from 'react';
 import './NewsCard.css'
 
 const NewsCard = ({ news }) => {
-    const { postDesc,postTime } = news
+    const { postDesc,postTime,userName } = news
+
     return (
         <div className='news-card'>
            <div className='flex items-center mb-4'>
@@ -12,7 +13,7 @@ const NewsCard = ({ news }) => {
                 </div>
             </div>
            <div>
-           <p className='inline px-2'>Torikul Islam</p>
+           <p className='inline px-2'>{userName} </p>
             <p className='post-date px-2'>{postTime}</p>
            </div>
             

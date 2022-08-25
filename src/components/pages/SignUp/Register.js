@@ -8,6 +8,7 @@ import Loading from './Loading/Loading';
 import { toast } from 'react-toastify';
 
 
+
 const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -21,8 +22,9 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+    const [userData, setUserData] = useState(false)
 
- 
+
     // error state
     const [emailError, setEmailError] = useState('')
     const [passwordError, setpasswordError] = useState('')
@@ -132,25 +134,25 @@ const Register = () => {
         if (email && password && confirmPassword && role && age && gender) {
 
             createUserWithEmailAndPassword(email, password)
-            if (error === undefined || error) {
-                return
-            }
-            else{
-                fetch('http://localhost:4000/users', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(userData)
 
-                })
-            }
+            fetch('https://dry-ravine-83506.herokuapp.com/users', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+
+            })
+
         }
+
     }
+
     if (user) {
         navigate('/dashboard/home')
-        toast.success('Register successfull')
+        toast.success('Register successfull',{toastId:'register'})
     }
+
 
     return (
         <div className='register-container'>
@@ -193,7 +195,7 @@ const Register = () => {
                         </select>
                         <input autoComplete='off' required className='short-input' name='phoneNumber' type="number" placeholder='Phone number' />
                     </div>
-                    <label>
+                    <label className='term-container'>
                         <input autoComplete='off' required name='checkBox' type="checkbox" />
                         <p> Accept our <Link className='term-link' to='/term-and-condition'> terms </Link> and condition</p>
                     </label>
