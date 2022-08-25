@@ -24,26 +24,26 @@ const Pricing = () => {
                             <ul className="mb-8 space-y-4 text-left">
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Individual configuration</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>No setup, or hidden fees</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Team size: <span className="font-semibold">1 developer</span></span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Premium support: <span className="font-semibold">6 months</span></span>
                                 </li>
                                 <li className="flex items-center space-x-3">
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
 
                                     <span>Free updates: <span className="font-semibold">6 months</span></span>
                                 </li>
@@ -62,26 +62,26 @@ const Pricing = () => {
                             <ul className="mb-8 space-y-4 text-left">
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Individual configuration</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>No setup, or hidden fees</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
 
                                     <span>Team size: <span className="font-semibold">10 developers</span></span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Premium support: <span className="font-semibold">24 months</span></span>
                                 </li>
                                 <li className="flex items-center space-x-3">
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
 
                                     <span>Free updates: <span className="font-semibold">24 months</span></span>
                                 </li>
@@ -100,27 +100,27 @@ const Pricing = () => {
                             <ul className="mb-8 space-y-4 text-left">
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Individual configuration</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
 
                                     <span>No setup, or hidden fees</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Team size: <span className="font-semibold">100+ developers</span></span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Premium support: <span className="font-semibold">36 months</span></span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <i class="fa text-green-500 fa-check"></i>
+                                    <i className="fa text-green-500 fa-check"></i>
                                     <span>Free updates: <span className="font-semibold">36 months</span></span>
                                 </li>
                             </ul>

@@ -4,13 +4,14 @@ import "./DashHome.css";
 
 const DashHome = () => {
   return (
-    <div className="flex">
+    <div className="flex bg-base-100">
       <div>
-        <ul class="menu bg-base-100 w-56 p-2 rounded-box">
+        <ul className="menu w-56 p-2 rounded-box">
+          
           {/* num-01 */}
 
           <li className="notification-text" tabindex="0">
-            <button>Alignments</button>
+          <Link to="/dashboard/">All Employee</Link>
           </li>
 
           {/* num-02 */}
@@ -22,7 +23,7 @@ const DashHome = () => {
           {/* num-03 */}
 
           <li className="notification-text" tabindex="2">
-            <span>Alignments and Dependencies</span>
+          <Link to="/dashboard/">Person</Link>
           </li>
 
           {/* num-04 */}
@@ -34,24 +35,19 @@ const DashHome = () => {
           {/* num-05 */}
 
           <li className="notification-text" tabindex="4">
-            <span>Company Dashboard</span>
+            <Link to="/dashboard/">Company Dashboard</Link>
           </li>
 
           {/* num-06 */}
 
           <li className="notification-text" tabindex="5">
-            <span>Department Hierarchy</span>
+          <Link to="/dashboard/emergency">Emergency Contact</Link>
           </li>
 
           {/* num-07 */}
 
           <li className="notification-text" tabindex="6">
-            <span>KPI Boards</span>
-            <ul class="bg-base-100">
-              <li>
-                <a href="/">KPI Boards Founds</a>
-              </li>
-            </ul>
+          <Link to="/dashboard/">HR Management</Link>
           </li>
 
           {/* num-09 */}
@@ -63,7 +59,7 @@ const DashHome = () => {
           {/* num-10 */}
 
           <li className="notification-text" tabindex="9">
-            <span>Organizatin Hierarchy</span>
+            <Link to="/dashboard/">Organizatin Hierarchy</Link>
           </li>
           {/* num-11 */}
           <li className="notification-text" tabindex="8">
@@ -75,9 +71,9 @@ const DashHome = () => {
           </li>
         </ul>
       </div>
-      <div>
+      {/* <div>
         <img src="https://i.ibb.co/C2s1jkX/Screenshot-2022-08-12-111904.png" alt="" className="w-3/2 " />
-      </div>
+      </div> */}
     </div>
   );
 };

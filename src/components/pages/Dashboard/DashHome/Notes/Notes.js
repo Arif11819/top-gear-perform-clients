@@ -31,7 +31,7 @@ const Notes = () => {
     return (
         <div className='pl-10'>
             <div className="collapse">
-                <input type="checkbox" class="peer" />
+                <input type="checkbox" className="peer" />
                 <div className="collapse-title">
                     <div className='flex items-center gap-4 text-blue-600 text-lg'>
                         <BiEdit />
@@ -40,7 +40,7 @@ const Notes = () => {
                 </div>
                 <div className="collapse-content ">
                     <form onSubmit={handleSubmit}>
-                        <textarea onChange={handleTextChange} class="textarea mt-3 textarea-bordered" name='note' placeholder="Write notes"></textarea> <br />
+                        <textarea onChange={handleTextChange} className="textarea mt-3 textarea-bordered" name='note' placeholder="Write notes"></textarea> <br />
                         <input className='p-2 mt-3 bg-blue-500 rounded-md cursor-pointer text-white hover:bg-blue-600' type="submit" value="Submit" />
                     </form>
                 </div>

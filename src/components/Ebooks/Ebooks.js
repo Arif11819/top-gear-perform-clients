@@ -15,18 +15,18 @@ const Ebooks = () => {
   return (
     <div className="bg-base-100 pb-20">
       <section>
-        <div class="hero book-head bg-base-200">
-          <div class="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero book-head bg-base-200">
+          <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="lg:p-20 ">
               <img
                 src="https://i.ibb.co/3B1ZhZ4/books-removebg-preview.png"
-                class="small-pic"
+                className="small-pic"
                 alt=""
               />
             </div>
             <div>
-              <h1 class="text-5xl px-5 font-bold text-start">Top-Gear eBooks</h1>
-              <p class="py-20 px-5">
+              <h1 className="text-5xl px-5 font-bold text-start">Top-Gear eBooks</h1>
+              <p className="py-20 px-5">
                 Download free ebooks from our library and learn more about the Objectives and Key Results (TopGear) goal-setting <br /> framework and bridge the gap between strategy and execution.
               </p>
             </div>
