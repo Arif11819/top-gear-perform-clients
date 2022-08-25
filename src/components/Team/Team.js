@@ -4,8 +4,8 @@ import { BsGithub } from 'react-icons/bs'
 
 const Team = () => {
   return (
-    <div className="bg-black lg:p-20">
-      <h1 className="text-5xl lg:p-20 font-bold text-orange-500 text-center">Our Team Members</h1>
+    <div className=" lg:p-10">
+      <h1 className="text-5xl lg:p-20 font-bold text-black text-center">Our Team Members</h1>
       <div className="grid lg:grid-cols-3 lg:gap:5 lg:gap-10 lg:mx-40">
         {/* card-01 */}
         <div
@@ -168,7 +168,7 @@ const Team = () => {
             <div class="avatar">
               <div class="lg:w-24 w-28 rounded-full">
                 <img
-                  src="https://placeimg.com/192/192/people"
+                  src="https://i.ibb.co/jRCyJ3S/296137484-3900390096853472-296651066539726617-n.jpg"
                   alt="Person pic"
                 />
               </div>

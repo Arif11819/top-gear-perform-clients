@@ -1,5 +1,7 @@
 
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
 import Home from './components/Home/Home';
@@ -23,16 +25,24 @@ import Notifications from './components/pages/Dashboard/Notifications/Notificati
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
 import Charts from './components/Chart/Charts';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
-
 import Pricing from './components/Pricing/Pricing';
-import Team from './components/Home/Team/Team';
 import Terms from './components/pages/Login/Terms';
 import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
+import Blogs from './components/Blogs/Blogs';
+import PostBlog from './components/Blogs/PostBlog/PostBlog';
+import ManageBlogs from './components/Blogs/ManageBlogs/ManageBlogs';
+import ManageUsers from './components/ManageUsers/ManageUsers';
+import ManageBook from './components/Ebooks/ManageBook/ManageBook';
+import AboutUs from './components/pages/AboutUs/AboutUs';
+import ManageUsersData from './components/ManageUsers/ManageUsersData/ManageUsersData';
+import UploadFile from './components/UploadFile/UploadFile';
+import ScheduleDemoDetails from './components/Home/ScheduleDemo/ScheduleDemoDetails/ScheduleDemoDetails';
+
+
+
 
 
 
@@ -56,11 +66,20 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
-          <Route path='newsfeed' element={<NewsFeed/>} />
+          <Route path='newfeed' element={<NewsFeed />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/add-blogs' element={<PostBlog />} />
+        <Route path='/manage-blogs' element={<ManageBlogs />} />
+        <Route path='/manage-users' element={<ManageUsers />} />
+        <Route path='/manage-book' element={<ManageBook />} />
+        <Route path='/demo-details' element={<ScheduleDemoDetails />} />
+        <Route path='/upload-file' element={<UploadFile />} />
+
+
         <Route path='/signUp' element={<Register />} />
         <Route path='/reviews' element={<Reviews />} />
         <Route path='/chart' element={<Charts />} />
@@ -69,7 +88,7 @@ function App() {
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />
-        <Route path='/team' element={<Team />} />
+        <Route path='/aboutUs' element={<AboutUs />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/reviews/:reviewsId' element={<FullReview />} />

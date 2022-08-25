@@ -13,7 +13,7 @@ import useUser from '../../../hooks/useUser';
 import { signOut } from 'firebase/auth';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
-const Dashboard = () => {
+const Dashboard = ({ user }) => {
     const [showProfile, setShowProfile] = useState(false)
 
     const navigate = useNavigate()
@@ -24,7 +24,10 @@ const Dashboard = () => {
                 navigate('/')
                 toast.success('Logout Succesful')
             })
-    }
+    };
+
+
+
     return (
         <>
             <div className='dashboard-container'>
@@ -42,7 +45,7 @@ const Dashboard = () => {
                         <Link to="/dashboard/chat">< BiMessage className='dash-nav-icon' /></Link>
                         <div className="profie">
                             <CgProfile className='dash-nav-icon' />
-                            <p className='inline text-sm'>Sumaya Islam <MdOutlineKeyboardArrowDown className='inline' /></p>
+                            <p className='inline text-sm'>Sumaya Islam<MdOutlineKeyboardArrowDown className='inline' /></p>
                             <CgProfile onClick={() => setShowProfile(!showProfile)} className='dash-nav-icon' />
                             <p onClick={() => setShowProfile(!showProfile)} className='inline text-sm'>{singleUser[0]?.fullName} <MdOutlineKeyboardArrowDown className='inline' /></p>
                             {showProfile && <div className="user-profile">
