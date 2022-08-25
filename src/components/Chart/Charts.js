@@ -2,6 +2,7 @@ import React from 'react';
 import useChart from '../../hooks/useChart';
 import Chart from './Chart';
 
+
 const Charts = () => {
     const [chart] = useChart();
     return (
