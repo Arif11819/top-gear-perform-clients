@@ -5,7 +5,7 @@ import auth from '../firebase.init';
 const useUser = () => {
     const [user] = useAuthState(auth)
     const userEmail = user?.email
-    const [singleUser, setUser] = useState({})
+    const [singleUser, setUser] = useState({});
 
     useEffect(() => {
         fetch(`https://dry-ravine-83506.herokuapp.com/user/${userEmail}`)
