@@ -4,7 +4,7 @@ const ScheduleData = ({ schedule }) => {
 
     const [schedules, setSchedules] = useState([]);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/schedule')
+        fetch(`https://dry-ravine-83506.herokuapp.com/schedule`)
             .then(res => res.json())
             .then(data => setSchedules(data))
     }, [schedules]);

@@ -10,7 +10,7 @@ const MyTask = () => {
 
     const [tasks, setTasks] = useState([]);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/task')
+        fetch(`https://dry-ravine-83506.herokuapp.com/task`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [tasks]);
@@ -46,7 +46,7 @@ const MyTask = () => {
                         {tasks.map(task => <MyTaskData key={task._id} task={task}></MyTaskData>)}
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input className=' mx-auto px-2 py-2 mt-1  relative block  border-slate-500  text-gray-900 rounded-t-md  sm:text-sm' placeholder='Write your Task' type="text" {...register("myTask")} />
+                        <input className=' mx-auto px-2 py-2 mt-1  relative block  border-slate-500  text-gray-900 rounded-t-md  sm:text-sm' placeholder='Write your Task' type="text" {...register("myTask")} required />
                         <input className='btn-link mx-20 font-semibold rounded btn-sm text-green-600 ' value='+ Add Task' type="submit" />
                     </form>
                 </div>

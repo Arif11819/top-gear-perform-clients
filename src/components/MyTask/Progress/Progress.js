@@ -37,7 +37,7 @@ const Progress = () => {
                 {progress.map(progres => <ProgressData key={progres._id} progres={progres}></ProgressData>)}
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input className=' mx-auto px-2 py-2 mt-1  relative block  border-slate-500  text-gray-900 rounded-t-md  sm:text-sm' placeholder='Write your Task' type="text" {...register("proceedTask")} />
+                <input className=' mx-auto px-2 py-2 mt-1  relative block  border-slate-500  text-gray-900 rounded-t-md  sm:text-sm' placeholder='Write your Task' type="text" {...register("proceedTask")} required />
                 <input className='btn-link mx-20 font-semibold rounded btn-sm text-green-600 ' value='+ Add Task' type="submit" />
             </form>
         </div>

@@ -35,7 +35,7 @@ const Scheduled = () => {
                 {schedules.map(schedule => <ScheduleData key={schedule._id} schedule={schedule}></ScheduleData>)}
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input className=' mx-auto px-2 py-2 mt-1  relative block  border-slate-500  text-gray-900 rounded-t-md  sm:text-sm' placeholder='Write your Task' type="text" {...register("scheduleTask")} />
+                <input className=' mx-auto px-2 py-2 mt-1  relative block  border-slate-500  text-gray-900 rounded-t-md  sm:text-sm' placeholder='Write your Task' type="text" {...register("scheduleTask")} required />
                 <input className='btn-link mx-20 font-semibold rounded btn-sm text-green-600 ' value='+ Add Task' type="submit" />
             </form>
         </div>

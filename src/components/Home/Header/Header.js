@@ -8,7 +8,7 @@ const Header = () => {
             <header>
                 <div className="header-container">
                     <div className="header-content">
-                        <h1 className='text-start'>OKR Software that helps you execute your strategy</h1>
+                        <h1 className='text-start'>We Believe In Transparency, We Build The Trust.</h1>
                         <p className='banner-desc'>Focus on Goals. Measure your Progress. Achieve Results</p>
                         <div>
                             <button className='primary-btn header-btn'>GET STARTED FREE</button>
