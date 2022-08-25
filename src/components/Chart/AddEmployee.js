@@ -5,7 +5,7 @@ import { IoPeopleCircleSharp } from "react-icons/io5";
 import { ToastContainer, toast } from 'react-toastify';
 
 const AddEmployee = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
     const onSubmit = data => {
         const url = `http://localhost:5000/employee`;
@@ -19,13 +19,14 @@ const AddEmployee = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+                reset();
                 toast.success("Thank You Sir For Adding New Employee!!")
             })
-        navigate('/chart');
+        navigate('/employee');
     };
     return (
         <div>
-            <h1 className='mb-5 flex items-center mt-10 pl-20 text-red-600 font-bold'> <IoPeopleCircleSharp className='text-2xl'></IoPeopleCircleSharp><p className='pl-1 text-md'>New Employee</p></h1>
+            <h1 className='mb-5 flex items-center mt-10 text-lg pl-20 text-blue-600 font-bold'> <IoPeopleCircleSharp className='text-2xl'></IoPeopleCircleSharp><p className='pl-1 text-md'>New Employee</p></h1>
             <form className='flex flex-col pl-20 mb-10' onSubmit={handleSubmit(onSubmit)}>
                 <label className="flex flex-col justify-start items-start">
                     <span className="font-bold my-2">Employee Name *</span>

@@ -8,7 +8,7 @@ const useEmployee = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setEmployee(data))
-    }, [])
+    }, [employee])
     return [employee, setEmployee];
 }
 export default useEmployee;

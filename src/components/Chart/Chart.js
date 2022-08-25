@@ -4,6 +4,9 @@ import { BsPhoneVibrate, BsPhone, BsPeople } from "react-icons/bs";
 import { RiOrganizationChart } from "react-icons/ri";
 import useEmployee from '../../hooks/useEmployee';
 
+
+
+
 const Chart = ({ ch }) => {
     const { name, image, role, address, email, contact1, contact2, reportsto, reports } = ch;
     const [employee, setEmployee] = useEmployee();
@@ -18,7 +21,7 @@ const Chart = ({ ch }) => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    const remainingEmployee = employee.filter(ch => ch._id !== id);
+                    const remainingEmployee = employee.filter(em => em._id !== id);
                     setEmployee(remainingEmployee);
                 })
         }
@@ -48,7 +51,7 @@ const Chart = ({ ch }) => {
                     <h1 className='flex items-center gap-1'><BsPeople></BsPeople><p className='text-sm'>Reprots to {reportsto}</p></h1>
                     <h1 className='flex items-center gap-1'><RiOrganizationChart></RiOrganizationChart><p className='text-sm'>{reports} directs reports</p></h1>
                 </div>
-                <button onClick={() => handleDelete(ch._id)} className='btn btn-primary'>Remove User</button>
+                <button onClick={() => handleDelete(ch._id)} className='btn btn-primary btn-md'>Remove User</button>
             </div>
 
         </div>

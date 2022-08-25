@@ -34,6 +34,7 @@ import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
 import AddEmployee from './components/Chart/AddEmployee';
+import RequireAuth from './components/pages/Login/RequireAuth';
 
 
 
@@ -64,7 +65,11 @@ function App() {
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/signUp' element={<Register />} />
-        <Route path='/reviews' element={<Reviews />} />
+        <Route path='/reviews' element={
+          <RequireAuth>
+            <Reviews></Reviews>
+          </RequireAuth>
+        } />
         <Route path='/employee' element={<Charts />} />
         <Route path='/employee/:employeeId' element={<Charts />} />
         <Route path='/praise' element={<Praise />} />
