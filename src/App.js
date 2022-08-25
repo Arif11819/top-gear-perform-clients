@@ -32,6 +32,8 @@ import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
+import Course from './components/pages/Dashboard/Course/Course';
+import AddCourse from './components/pages/Dashboard/Course/AddCourse';
 
 
 
@@ -58,6 +60,8 @@ function App() {
           <Route path='newsfeed' element={<NewsFeed />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
+          <Route path='course' element={<Course/>} />
+          <Route path='/dashboard/add-course' element={<AddCourse/>} />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/signUp' element={<Register />} />
