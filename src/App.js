@@ -1,4 +1,3 @@
-
 import './App.css';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
@@ -34,6 +33,8 @@ import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
 import Emergency from './components/pages/Dashboard/Emergency/Emergency';
+import Course from './components/pages/Dashboard/Course/Course';
+import AddCourse from './components/pages/Dashboard/Course/AddCourse';
 
 
 
@@ -57,10 +58,12 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
-          <Route path='newsfeed' element={<NewsFeed/>} />
+          <Route path='newsfeed' element={<NewsFeed />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency/>} />
+          <Route path='course' element={<Course/>} />
+          <Route path='/dashboard/add-course' element={<AddCourse/>} />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/signUp' element={<Register />} />

@@ -61,6 +61,14 @@ const DashHome = () => {
           <li className="notification-text" tabindex="9">
             <Link to="/dashboard/">Organizatin Hierarchy</Link>
           </li>
+          {/* num-11 */}
+          <li className="notification-text" tabindex="8">
+            <Link to="/dashboard/course" >Course</Link>
+          </li>
+          {/* num12 */}
+          <li className="notification-text" tabindex="8">
+            <Link to="/dashboard/add-course" >Add-Course</Link>
+          </li>
         </ul>
       </div>
       {/* <div>
