@@ -1,4 +1,3 @@
-
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
@@ -31,17 +30,19 @@ import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
+
 import Blogs from './components/Blogs/Blogs';
 import PostBlog from './components/Blogs/PostBlog/PostBlog';
 import ManageBlogs from './components/Blogs/ManageBlogs/ManageBlogs';
 import ManageUsers from './components/ManageUsers/ManageUsers';
 import ManageBook from './components/Ebooks/ManageBook/ManageBook';
 import AboutUs from './components/pages/AboutUs/AboutUs';
-import ManageUsersData from './components/ManageUsers/ManageUsersData/ManageUsersData';
+
 import UploadFile from './components/UploadFile/UploadFile';
 import ScheduleDemoDetails from './components/Home/ScheduleDemo/ScheduleDemoDetails/ScheduleDemoDetails';
-
-
+import Emergency from './components/pages/Dashboard/Emergency/Emergency';
+import Course from './components/pages/Dashboard/Course/Course';
+import AddCourse from './components/pages/Dashboard/Course/AddCourse';
 
 
 
@@ -53,7 +54,7 @@ function App() {
 
 
 
-    <>
+    <div className=''>
       <ToastContainer limit={1} />
       {pathname?.includes('/dashboard') ? null : <Navbar></Navbar>}
       <Routes>
@@ -66,9 +67,16 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
+
           <Route path='newfeed' element={<NewsFeed />} />
+
+          <Route path='newsfeed' element={<NewsFeed />} />
+
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
+          <Route path='emergency' element={<Emergency />} />
+          <Route path='course' element={<Course />} />
+          <Route path='/dashboard/add-course' element={<AddCourse />} />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/blogs' element={<Blogs />} />
@@ -97,7 +105,7 @@ function App() {
       {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
       {pathname?.includes('/dashboard') ? null : <Footer></Footer>}
 
-    </>
+    </div>
 
   )
 

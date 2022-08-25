@@ -20,8 +20,8 @@ const Footer = () => {
                     <i className="fab fa-twitter"></i>
                     <i className="fab fa-linkedin"></i>
 
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-instagram"></i>
+                    <i className="fab fa-youtube"></i>
+                    <i className="fab fa-instagram"></i>
                 </div>
 
             </div>

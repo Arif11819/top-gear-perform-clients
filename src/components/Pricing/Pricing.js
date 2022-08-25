@@ -44,7 +44,11 @@ const Pricing = () => {
                                 <li className="flex hover:bg-none items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
+
                                     <span>Regular business reviews</span>
+
+                                    <span>Individual configuration</span>
+
                                 </li>
                                 <li className="flex items-center space-x-3">
 
@@ -54,7 +58,11 @@ const Pricing = () => {
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
+
                                     <span>Feedback & Praise</span>
+
+                                    <span>Team size: <span className="font-semibold">1 developer</span></span>
+
                                 </li>
                                 <li className="flex items-center space-x-3">
 
@@ -62,6 +70,12 @@ const Pricing = () => {
                                     <span>Customizable goal weighting</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
+
+                                    <span>Premium support: <span className="font-semibold">6 months</span></span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    <i className="fa text-green-500 fa-check"></i>
+
 
                                     <i className="fa text-green-500 fa-check"></i>
                                     <span>Performance review comment sentiment analysis</span>
@@ -110,6 +124,11 @@ const Pricing = () => {
                                     <span>1:1s & Team Meetings</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
+
+                                    <span>Premium support: <span className="font-semibold">24 months</span></span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+
                                     <i className="fa text-green-500 fa-check"></i>
 
                                     <span>Free updates: <span className="font-semibold">24 months</span></span>
@@ -130,7 +149,11 @@ const Pricing = () => {
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
+
                                     <span>Compensation review setup</span>
+
+                                    <span>Individual configuration</span>
+
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
@@ -140,22 +163,34 @@ const Pricing = () => {
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
 
+
                                     <span>Raise guidance based on performance data</span>
+
+                                    <i className="fa text-green-500 fa-check"></i>
+                                    <span>Team size: <span className="font-semibold">100+ developers</span></span>
+
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
+
                                     <span>Career tracks</span>
+
+                                    <span>Premium support: <span className="font-semibold">36 months</span></span>
+
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
+
                                     <span>Bonus and spot bonus</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
                                     <span>1:1s and Performance Management integration</span>
+                                    <span>Free updates: <span className="font-semibold">36 months</span></span>
+
                                 </li>
                             </ul>
                             <Link to="/schedule" className="text-blue-500 shadow border border-blue-700 bg-white font-bold rounded-lg px-5 py-2.5 text-center ">SCHEDULE DEMO</Link>

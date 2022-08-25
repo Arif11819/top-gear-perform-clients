@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, ResponsiveContainer } from 'recharts';
-import { } from 'recharts';
+
 
 const Chart = ({ ch }) => {
     const { image, TotalGoal, Target, Achieved, _id, name, Role, Experience } = ch;
@@ -19,7 +19,7 @@ const Chart = ({ ch }) => {
         <div className='mt-10'>
             <div className='flex shadow items-center gap-8 pl-6 bg-slate-100'>
                 <div className='flex flex-col gap-3 items-center'>
-                    <div class="avatar mt-2">
+                    <div className="avatar mt-2">
                         <div className="w-16 h-16 mx-auto rounded-full ring ring-primary">
                             <img src={image} alt="" />
                         </div>
