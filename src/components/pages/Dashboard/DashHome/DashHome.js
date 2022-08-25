@@ -11,7 +11,7 @@ const DashHome = () => {
           {/* num-01 */}
 
           <li className="notification-text" tabindex="0">
-            <Link className="dash-link" to="/dashboard/">All Employee</Link>
+            <Link className="dash-link" to="/dashboard/employee">All Employee</Link>
           </li>
 
           {/* num-02 */}
@@ -23,7 +23,7 @@ const DashHome = () => {
           {/* num-03 */}
 
           <li className="notification-text" tabindex="2">
-            <Link className="dash-link" to="/dashboard/">Person</Link>
+            <Link className="dash-link" to="/dashboard/person">Person</Link>
           </li>
 
           {/* num-04 */}
@@ -35,7 +35,7 @@ const DashHome = () => {
           {/* num-05 */}
 
           <li className="notification-text" tabindex="4">
-            <Link className="dash-link" to="/dashboard/">Company Dashboard</Link>
+            <Link className="dash-link" to="/dashboard/company">Company Dashboard</Link>
           </li>
 
           {/* num-06 */}
@@ -47,7 +47,7 @@ const DashHome = () => {
           {/* num-07 */}
 
           <li className="notification-text" tabindex="6">
-            <Link className="dash-link" to="/dashboard/">HR Management</Link>
+            <Link className="dash-link" to="/dashboard/vacation-show">Take Vacation</Link>
           </li>
 
           {/* num-09 */}
@@ -59,7 +59,7 @@ const DashHome = () => {
           {/* num-10 */}
 
           <li className="notification-text" tabindex="9">
-            <Link className="dash-link" to="/dashboard/">Organizatin Hierarchy</Link>
+            <Link className="dash-link" to="/dashboard/manage-blogs">Manage Blog</Link>
           </li>
           {/* num-11 */}
           <li className="notification-text" tabindex="8">

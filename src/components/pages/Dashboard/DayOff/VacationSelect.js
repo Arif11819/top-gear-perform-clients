@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import { FaUserClock } from 'react-icons/fa'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import DayOffModal from './DayOffModal';
 import VacationCard from './VacationCard';
 import { useQuery } from 'react-query'
-import auth from '../firebase.init';
+import auth from '../../../../firebase.init';
 
 const VacationSelect = () => {
     const [user, loading, error] = useAuthState(auth);

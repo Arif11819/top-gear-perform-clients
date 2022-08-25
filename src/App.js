@@ -32,19 +32,19 @@ import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
 import AddEmployee from './components/Chart/AddEmployee';
 import RequireAuth from './components/pages/Login/RequireAuth';
-
 import Blogs from './components/Blogs/Blogs';
 import PostBlog from './components/Blogs/PostBlog/PostBlog';
 import ManageBlogs from './components/Blogs/ManageBlogs/ManageBlogs';
 import ManageUsers from './components/ManageUsers/ManageUsers';
 import ManageBook from './components/Ebooks/ManageBook/ManageBook';
 import AboutUs from './components/pages/AboutUs/AboutUs';
-
 import UploadFile from './components/UploadFile/UploadFile';
 import ScheduleDemoDetails from './components/Home/ScheduleDemo/ScheduleDemoDetails/ScheduleDemoDetails';
 import Emergency from './components/pages/Dashboard/Emergency/Emergency';
 import Course from './components/pages/Dashboard/Course/Course';
 import AddCourse from './components/pages/Dashboard/Course/AddCourse';
+import VacationShow from './components/pages/Dashboard/DayOff/VacationShow';
+import VacationSelect from './components/pages/Dashboard/DayOff/VacationSelect';
 
 
 
@@ -72,31 +72,32 @@ function App() {
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
           <Route path='news-feed' element={<NewsFeed />} />
-          <Route path='/employee' element={<Charts />} />
-          <Route path='/employee/:employeeId' element={<Charts />} />
+          <Route path='employee' element={<Charts />} />
+          <Route path='employee/:employeeId' element={<Charts />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency />} />
           <Route path='course' element={<Course />} />
+          <Route path='vacation-show' element={<VacationShow/>} />
+          <Route path='vacation-select' element={<VacationSelect/>} />
+          
+        <Route path='manage-users' element={<ManageUsers />} />
+        <Route path='manage-book' element={<ManageBook />} />
+        <Route path='demo-details' element={<ScheduleDemoDetails />} />
+        <Route path='upload-file' element={<UploadFile />} />
+          
+        <Route path='manage-blogs' element={<ManageBlogs />} />
           <Route path='/dashboard/add-course' element={<AddCourse />} />
-        </Route>
-        <Route path='/pricing' element={<Pricing />} />
-        <Route path='/blogs' element={<Blogs />} />
-        <Route path='/add-blogs' element={<PostBlog />} />
-        <Route path='/manage-blogs' element={<ManageBlogs />} />
-        <Route path='/manage-users' element={<ManageUsers />} />
-        <Route path='/manage-book' element={<ManageBook />} />
-        <Route path='/demo-details' element={<ScheduleDemoDetails />} />
-        <Route path='/upload-file' element={<UploadFile />} />
-
-
-        <Route path='/signUp' element={<Register />} />
-        <Route path='/reviews' element={
+          <Route path='reviews' element={
           <RequireAuth>
             <Reviews></Reviews>
           </RequireAuth>
         } />
-
+        </Route>
+        <Route path='/pricing' element={<Pricing />} />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/add-blogs' element={<PostBlog />} />
+        <Route path='/signUp' element={<Register />} />
         <Route path='/praise' element={<Praise />} />
         <Route path='/schedule' element={<ScheduleDemo />} />
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />

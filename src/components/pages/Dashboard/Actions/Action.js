@@ -14,69 +14,42 @@ const Action = () => {
         {/* num-01 */}
 
 
-        <li className='actions-text' tabindex="0">
-          <span><AiOutlineKey />KR Controls</span>
-          <ul className="bg-base-100">.
-            <li><a href='/'>KR Alignment Requests</a></li>
-            <li><a href='/'>KR Assignment Requests</a></li>
-            <li><a href='/'>KR Dependency Requests</a></li>
-          </ul>
-        </li>
+        <li className="actions-text" tabindex="6">
+            <Link className="dash-link" to="/dashboard/reviews">Reviews</Link>
+          </li>
 
         {/* num-02 */}
 
 
-        <li className='actions-text' tabindex="1">
-          <span><AiOutlineSchedule />Meetings</span>
-          <ul className="bg-base-100">
-            <li><a href='/'>Weekly Meeting</a></li>
-            <li><a href='/'>1:1 Meetings</a></li>
-            <li><a href='/'>Quarterly Meetings</a></li>
-            <li><a href='/'>Quarterly Progess Meetings</a></li>
-            <li><a href='/'>Team Meetings</a></li>
-            <li><a href='/'>Weekly Progress Meeting</a></li>
-          </ul>
-        </li>
+        <li className="actions-text" tabindex="6">
+            <Link className="dash-link" to="/dashboard/manage-users">Manage User</Link>
+          </li>
         {/* num-03 */}
 
 
-        <li className='actions-text' tabindex="2">
-          <span><BiCurrentLocation />OKR Definition</span>
-          <ul className="bg-base-100">
-            <li><a href='/'>Lock/Unlock Requests</a></li>
-            <li><a href='/'>Move OKR Requests</a></li>
-            <li><a href='/'>OKR Alignment Requests</a></li>
-            <li><a href='/'>OKR Dependency Requests</a></li>
-          </ul>
-        </li>
+        <li className="actions-text" tabindex="6">
+            <Link className="dash-link" to="/dashboard/manage-book">Manage Book</Link>
+          </li>
 
         {/* num-04 */}
 
 
-        <li className='actions-text' tabindex="3">
-          <span><MdOutlineAddLocationAlt />Pending Check-ins</span>
-          <ul className="bg-base-100">
-            <li><a href='/'>Due Today</a></li>
-            <li><a href='/'>Overdue</a></li>
-          </ul>
-        </li>
+        <li className="actions-text" tabindex="6">
+            <Link className="dash-link" to="/dashboard/demo-details">Demo Details</Link>
+          </li>
 
         {/* num-05 */}
 
-        <li className='actions-text' tabindex="4">
-          <span><AiFillMessage />Servey Feedback</span>
-          <ul className="bg-base-100">
-            <li><a href='/'>Servey Feedback Request</a></li>
-          </ul>
-        </li>
+        <li className="actions-text" tabindex="6">
+            <Link className="dash-link" to="/dashboard/upload-file">Upload File</Link>
+          </li>
 
         {/* num-06 */}
 
 
-        <li className='actions-text' tabindex="5">
-          <Link to='/dashboard/task'><FaTasks />Tasks</Link>
-
-        </li>
+        <li className="actions-text" tabindex="6">
+            <Link className="dash-link" to="/dashboard/vacation-select">Select Vacation</Link>
+          </li>
 
 
 
