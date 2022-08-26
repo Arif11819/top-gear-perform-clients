@@ -15,12 +15,16 @@ const Navbar = () => {
     const [showProfile, setShowProfile] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
+<<<<<<< HEAD
+
+=======
         signOut(auth)
             .then(() => {
                 setShowProfile(false)
             })
             .catch((err) => console.log(err))
         navigate('/login')
+>>>>>>> e92dd09299c4b2d9f38ecdbd4acfd4d1b3f17baa
 
     }
     return (
