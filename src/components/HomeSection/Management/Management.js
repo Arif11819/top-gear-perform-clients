@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Manage.css";
 
 const Management = () => {
   return (
-    <div className="bg-base-200">
+    <div className="">
       <h1 className="text-center pt-10 font-bold text-black text-2xl lg:text-4xl">
         Manage your strategy, OKRs, people, process and <br /> <span className="text-sky-500">performance in
           one platform</span>
@@ -59,9 +60,9 @@ const Management = () => {
 
             <div className="flex items-center">
               <button className=" secondary-btn ">Get a free Demo</button>
-              <a href="www.facebook" className="link text-sky-400 m-3">
-                Learn more →
-              </a>
+              <Link to="/blogs" className="link text-sky-400 m-3">
+                                Learn more →
+               </Link>
             </div>
           </div>
         </div>

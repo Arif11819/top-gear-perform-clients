@@ -27,8 +27,8 @@ const Navbar = () => {
         <>
             <nav>
                 <div className="top-nav-bar">
-                    <Link to="/team">About us</Link>
-                    <Link to="/">Blog</Link>
+                    <Link to="/aboutUs">About us</Link>
+                    <Link to="/blogs">Blog</Link>
                     <Link to="/contact">Contact us</Link>
                     {user ? <Link onClick={handleSignout} to="/login">Logout </Link> : <Link to="/login">Sign in </Link>}
                     <RiGlobalLine className='global-icon' />
@@ -166,9 +166,9 @@ const Navbar = () => {
                     </div>
                     <hr />
 
-                    <Link className='price-link mt-4 mb-4' to='/'>ABOUT US</Link>
+                    <Link className='price-link mt-4 mb-4' to='/team'>ABOUT US</Link>
                     <hr />
-                    <Link className='price-link mt-4 mb-4' to='/'>BLOG</Link>
+                    <Link className='price-link mt-4 mb-4' to='/blogs'>BLOG</Link>
                     <hr />
                     <Link className='price-link mt-4 mb-4' to='/contact'>CONTACT US</Link>
                     <hr />
