@@ -72,7 +72,7 @@ const DashHome = () => {
         </ul>
       </div>
       {/* <div>
-        <img src="https://i.ibb.co/C2s1jkX/Screenshot-2022-08-12-111904.png" alt="" className="w-3/2 " />
+        <img src="https://i.ibb.co/tP9B9ZP/Screenshot-12.png" alt="" className="w-3/2 " />
       </div> */}
     </div>
   );
