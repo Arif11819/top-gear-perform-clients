@@ -1,8 +1,8 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
-import auth from '../../firebase.init';
 import { MdDelete } from 'react-icons/md'
+import auth from '../../../../firebase.init';
 
 
 const GoalShow = () => {

@@ -45,6 +45,8 @@ import Course from './components/pages/Dashboard/Course/Course';
 import AddCourse from './components/pages/Dashboard/Course/AddCourse';
 import VacationShow from './components/pages/Dashboard/DayOff/VacationShow';
 import VacationSelect from './components/pages/Dashboard/DayOff/VacationSelect';
+import DaysOffHome from './components/pages/Dashboard/DayOff/DaysOffHome';
+import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHome';
 
 
 
@@ -62,7 +64,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
-        <Route path='/add-employee' element={<AddEmployee />} />
+        
 
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/dashboard' element={<Dashboard />}>
@@ -78,8 +80,9 @@ function App() {
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency />} />
           <Route path='course' element={<Course />} />
-          <Route path='vacation-show' element={<VacationShow/>} />
-          <Route path='vacation-select' element={<VacationSelect/>} />
+          <Route path='take-vacation' element={<DaysOffHome/>} />
+          <Route path='add-employee' element={<AddEmployee />} />
+          <Route path='add-goal' element={<CreateGoalHome />} />
           
         <Route path='manage-users' element={<ManageUsers />} />
         <Route path='manage-book' element={<ManageBook />} />

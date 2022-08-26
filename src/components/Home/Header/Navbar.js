@@ -5,25 +5,32 @@ import { GrClose } from 'react-icons/gr';
 import { RiArrowDownSLine, RiGlobalLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import './Header.css'
+import './Header.css';
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
     const [user] = useAuthState(auth)
 
     const [toggle, setToggle] = useState(false)
+    const [showProfile, setShowProfile] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
-
+        signOut(auth)
+            .then(() => {
+                setShowProfile(false)
+            })
+            .catch((err) => console.log(err))
+        navigate('/login')
 
     }
     return (
         <>
             <nav>
                 <div className="top-nav-bar">
-                    <Link to="/aboutUs">About us</Link>
-                    <Link to="/blogs">Blog</Link>
+                    <Link to="/team">About us</Link>
+                    <Link to="/">Blog</Link>
                     <Link to="/contact">Contact us</Link>
-                    {user ? <Link onClick={handleSignout} to="/">Logout </Link> : <Link to="/login">Sign in </Link>}
+                    {user ? <Link onClick={handleSignout} to="/login">Logout </Link> : <Link to="/login">Sign in </Link>}
                     <RiGlobalLine className='global-icon' />
                 </div>
                 <div className="main-nav-bar">

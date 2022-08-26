@@ -25,7 +25,7 @@ const Home = () => {
     return (
         <div>
             <Header></Header>
-            <ExploreProduct></ExploreProduct>
+            {/* <ExploreProduct></ExploreProduct> */}
             <Partner></Partner>
             <BusinessPlatform></BusinessPlatform>
             <Management></Management>

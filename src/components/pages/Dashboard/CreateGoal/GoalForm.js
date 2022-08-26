@@ -2,8 +2,8 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { BsCheckLg } from 'react-icons/bs'
 import { toast } from 'react-toastify';
-import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
+import auth from '../../../../firebase.init';
 
 const GoalForm = () => {
     const [user] = useAuthState(auth);

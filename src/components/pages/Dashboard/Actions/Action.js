@@ -50,6 +50,13 @@ const Action = () => {
         <li className="actions-text" tabindex="6">
             <Link className="dash-link" to="/dashboard/vacation-select">Select Vacation</Link>
           </li>
+          
+        {/* num-07 */}
+
+
+        <li className="actions-text" tabindex="6">
+            <Link className="dash-link" to="/dashboard/add-goal">Add Goal</Link>
+          </li>
 
 
 

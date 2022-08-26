@@ -22,7 +22,7 @@ const AddEmployee = () => {
                 reset();
                 toast.success("Thank You Sir For Adding New Employee!!")
             })
-        navigate('/employee');
+        navigate('/dashboard/employee');
     };
     return (
         <div>

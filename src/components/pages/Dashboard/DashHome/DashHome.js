@@ -47,7 +47,7 @@ const DashHome = () => {
           {/* num-07 */}
 
           <li className="notification-text" tabindex="6">
-            <Link className="dash-link" to="/dashboard/vacation-show">Take Vacation</Link>
+            <Link className="dash-link" to="/dashboard/take-vacation">Take Vacation</Link>
           </li>
 
           {/* num-09 */}
