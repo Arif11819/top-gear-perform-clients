@@ -51,7 +51,7 @@ const Chart = ({ ch }) => {
                     <h1 className='flex items-center gap-1'><BsPeople></BsPeople><p className='text-sm'>Reprots to {reportsto}</p></h1>
                     <h1 className='flex items-center gap-1'><RiOrganizationChart></RiOrganizationChart><p className='text-sm'>{reports} directs reports</p></h1>
                 </div>
-                <button onClick={() => handleDelete(ch._id)} className='btn btn-primary btn-md'>Remove User</button>
+                <button onClick={() => handleDelete(ch._id)} className='text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-4 py-3 text-center'>Remove User</button>
             </div>
 
         </div>
