@@ -21,9 +21,9 @@ const TaskManagement = () => {
                                 {" "}
                                 <label>
                                     <input
-                                        className="mx-3"
+                                        className="mx-3 checkbox-accent checkbox checkbox-sm"
                                         type="checkbox"
-                                        className="checkbox-accent checkbox checkbox-sm"
+
                                         checked
                                     />
                                 </label>
