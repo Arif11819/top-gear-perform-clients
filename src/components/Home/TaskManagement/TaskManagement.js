@@ -54,7 +54,7 @@ const TaskManagement = () => {
                         </div>
 
                         <div className="flex items-center justify-start pt-3">
-                            <button className="secondary-btn">Get a free Demo</button>
+                            <Link to='/schedule' className="secondary-btn">Get a free Demo</Link>
                             <Link to="/blogs" className="link text-sky-400 m-3">
                                 Learn more →
                             </Link>
