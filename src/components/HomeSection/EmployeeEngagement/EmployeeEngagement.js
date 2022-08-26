@@ -2,7 +2,7 @@ import React from "react";
 
 const EmployeeEngagement = () => {
   return (
-    <div className="hero min-h-screen bg-base-200 ">
+    <div className="hero min-h-screen ">
       <div className="hero-content grid lg:grid-cols-2 lg:gap-8 mx-8">
         <div className=" ">
           <h1 className="lg:text-3xl text-2xl font-bold ">Employee Engagement Software</h1>

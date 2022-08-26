@@ -1,4 +1,6 @@
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
 import Home from './components/Home/Home';
@@ -22,19 +24,30 @@ import Notifications from './components/pages/Dashboard/Notifications/Notificati
 import Action from './components/pages/Dashboard/Actions/Action';
 import ScheduleSubmit from './components/Home/ScheduleDemo/ScheduleSubmit';
 import Charts from './components/Chart/Charts';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
-
 import Pricing from './components/Pricing/Pricing';
-import Team from './components/Home/Team/Team';
 import Terms from './components/pages/Login/Terms';
 import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
+import AddEmployee from './components/Chart/AddEmployee';
+import RequireAuth from './components/pages/Login/RequireAuth';
+import Blogs from './components/Blogs/Blogs';
+import PostBlog from './components/Blogs/PostBlog/PostBlog';
+import ManageBlogs from './components/Blogs/ManageBlogs/ManageBlogs';
+import ManageUsers from './components/ManageUsers/ManageUsers';
+import ManageBook from './components/Ebooks/ManageBook/ManageBook';
+import AboutUs from './components/pages/AboutUs/AboutUs';
+import UploadFile from './components/UploadFile/UploadFile';
+import ScheduleDemoDetails from './components/Home/ScheduleDemo/ScheduleDemoDetails/ScheduleDemoDetails';
 import Emergency from './components/pages/Dashboard/Emergency/Emergency';
 import Course from './components/pages/Dashboard/Course/Course';
 import AddCourse from './components/pages/Dashboard/Course/AddCourse';
+import VacationShow from './components/pages/Dashboard/DayOff/VacationShow';
+import VacationSelect from './components/pages/Dashboard/DayOff/VacationSelect';
+import DaysOffHome from './components/pages/Dashboard/DayOff/DaysOffHome';
+import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHome';
+
 
 
 
@@ -51,6 +64,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
+        
+
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='home' element={<DashHome />} />
@@ -58,23 +73,40 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
-          <Route path='newsfeed' element={<NewsFeed />} />
+          <Route path='news-feed' element={<NewsFeed />} />
+          <Route path='employee' element={<Charts />} />
+          <Route path='employee/:employeeId' element={<Charts />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
-          <Route path='emergency' element={<Emergency/>} />
-          <Route path='course' element={<Course/>} />
-          <Route path='/dashboard/add-course' element={<AddCourse/>} />
+          <Route path='emergency' element={<Emergency />} />
+          <Route path='course' element={<Course />} />
+          <Route path='take-vacation' element={<DaysOffHome/>} />
+          <Route path='add-employee' element={<AddEmployee />} />
+          <Route path='add-goal' element={<CreateGoalHome />} />
+          
+        <Route path='manage-users' element={<ManageUsers />} />
+        <Route path='manage-book' element={<ManageBook />} />
+        <Route path='demo-details' element={<ScheduleDemoDetails />} />
+        <Route path='upload-file' element={<UploadFile />} />
+          
+        <Route path='manage-blogs' element={<ManageBlogs />} />
+          <Route path='/dashboard/add-course' element={<AddCourse />} />
+          <Route path='reviews' element={
+          <RequireAuth>
+            <Reviews></Reviews>
+          </RequireAuth>
+        } />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/add-blogs' element={<PostBlog />} />
         <Route path='/signUp' element={<Register />} />
-        <Route path='/reviews' element={<Reviews />} />
-        <Route path='/chart' element={<Charts />} />
         <Route path='/praise' element={<Praise />} />
         <Route path='/schedule' element={<ScheduleDemo />} />
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />
-        <Route path='/team' element={<Team />} />
+        <Route path='/aboutUs' element={<AboutUs />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/reviews/:reviewsId' element={<FullReview />} />

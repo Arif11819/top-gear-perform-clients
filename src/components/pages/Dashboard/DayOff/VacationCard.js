@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { BiCalendarMinus } from 'react-icons/bi'
 import { BsCalendarCheck } from 'react-icons/bs'
 

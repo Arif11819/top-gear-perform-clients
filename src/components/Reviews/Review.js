@@ -1,33 +1,96 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AiFillStar } from 'react-icons/ai'
+import { AiOutlineStar } from 'react-icons/ai'
+import useReviews from '../../hooks/useReviews';
 
 const Review = ({ review }) => {
-    const { _id, img, feedback, name, position, logo } = review;
+    const { _id, img, feedback, name, rating } = review;
+    const [reviews, setReviews] = useReviews();
     const navigate = useNavigate();
 
     const handleNavigateToFullReview = (id) => {
         navigate(`/reviews/${id}`);
     }
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure delete this?');
+        if (proceed) {
+            const url = `https://dry-ravine-83506.herokuapp.com/reviews/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remainingReview = reviews.filter(review => review._id !== id);
+                    setReviews(remainingReview);
+                })
+        }
+    }
+
     return (
-        <div className="card w-80 bg-base-100 shadow-xl">
-            <figure><img className='w-full' src={img} alt="Shoes" /></figure>
-            <div className="card-body pt-3">
-                <h2 className="">
-                    {feedback}
-                </h2>
-                <div className='pt-4 flex pb-8'>
-                    <div>
-                        <p className='font-bold text-sm'>{name}</p>
-                        <p className='text-sm'>{position}</p>
-                    </div>
-                    <div className='pl-10 pt-6'>
-                        <img src={logo} alt="" />
+        <div class="card w-80 h-84 bg-base-100 shadow-xl border border-slate-200 text-slate-200">
+            <div className='bg-blue-500 mt-32 ml-4 mr-4 mb-4 rounded-lg flex flex-col'>
+                <div class="avatar mt-[-90px]">
+                    <div className="w-28 h-28 mx-auto rounded-full ring ring-amber-200">
+                        <img src={img} alt="" />
                     </div>
                 </div>
-                <div className="card-actions justify-between">
-                    <div className="badge badge-outline p-3"><button onClick={() => handleNavigateToFullReview(_id)} >Read full case study</button></div>
-                    <div className="badge badge-outline p-3 bg-blue-400"><button>Watch Now</button></div>
+                <div className="card-body pt-1 text-sm">
+                    <div className='text-center pt-2'>
+                        <p className='font-bold text-sm'>{name}</p>
+                    </div>
+                    <div className='flex justify-center items-center'>
+                        {(rating == 1) && <div className='flex text-amber-400'>
+                            <AiFillStar></AiFillStar>
+                            <AiOutlineStar />
+                            <AiOutlineStar />
+                            <AiOutlineStar />
+                            <AiOutlineStar />
+                        </div>}
+                        {(rating == 2) && <div className='flex text-amber-400'>
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiOutlineStar />
+                            <AiOutlineStar />
+                            <AiOutlineStar />
+                        </div>}
+                        {(rating == 3) && <div className='flex text-amber-400'>
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiOutlineStar />
+                            <AiOutlineStar />
 
+                        </div>}
+                        {(rating == 4) && <div className='flex text-amber-400'>
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiOutlineStar />
+
+                        </div>}
+                        {(rating == 5) && <div className='flex text-amber-400'>
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+                            <AiFillStar />
+
+                        </div>}
+                    </div>
+
+                    <div className='pt-1 flex'>
+                        <h2>
+                            "{feedback}"
+                        </h2>
+                    </div>
+                    <div class="card-actions pt-3 text-black flex">
+                        <div class="bg-amber-500 p-1 rounded-sm"><button onClick={() => handleNavigateToFullReview(_id)} >Read full case study</button></div>
+                        <div class="bg-red-500 p-1 rounded-sm"><button onClick={() => handleDelete(_id)} >Remove</button></div>
+                    </div>
                 </div>
             </div>
         </div>
