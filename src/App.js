@@ -5,8 +5,8 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
 import Home from './components/Home/Home';
 import Reviews from './components/Reviews/Reviews';
-import Footer from './components/Home/Footer/Footer';
-import Execute from './components/Execute/Execute';
+// import Footer from './components/Home/Footer/Footer';
+// import Execute from './components/Execute/Execute';
 import Navbar from './components/Home/Header/Navbar';
 import FullReview from './components/FullReview/FullReview';
 import NotFound from './components/NotFound/NotFound';
@@ -62,7 +62,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
-        
+
 
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/dashboard' element={<Dashboard />}>
@@ -78,22 +78,22 @@ function App() {
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency />} />
           <Route path='course' element={<Course />} />
-          <Route path='take-vacation' element={<DaysOffHome/>} />
+          <Route path='take-vacation' element={<DaysOffHome />} />
           <Route path='add-employee' element={<AddEmployee />} />
           <Route path='add-goal' element={<CreateGoalHome />} />
-          
-        <Route path='manage-users' element={<ManageUsers />} />
-        <Route path='manage-book' element={<ManageBook />} />
-        <Route path='demo-details' element={<ScheduleDemoDetails />} />
-        <Route path='upload-file' element={<UploadFile />} />
-          
-        <Route path='manage-blogs' element={<ManageBlogs />} />
+
+          <Route path='manage-users' element={<ManageUsers />} />
+          <Route path='manage-book' element={<ManageBook />} />
+          <Route path='demo-details' element={<ScheduleDemoDetails />} />
+          <Route path='upload-file' element={<UploadFile />} />
+
+          <Route path='manage-blogs' element={<ManageBlogs />} />
           <Route path='/dashboard/add-course' element={<AddCourse />} />
-          <Route path='reviews' element={
-          <RequireAuth>
-            <Reviews></Reviews>
-          </RequireAuth>
-        } />
+          <Route path='/dashboard/reviews' element={
+            <RequireAuth>
+              <Reviews></Reviews>
+            </RequireAuth>
+          } />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/blogs' element={<Blogs />} />
@@ -110,8 +110,8 @@ function App() {
         <Route path='/reviews/:reviewsId' element={<FullReview />} />
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
-      {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
-      {pathname?.includes('/dashboard') ? null : <Footer></Footer>}
+      {/* {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
+      {pathname?.includes('/dashboard') ? null : <Footer></Footer>} */}
 
     </div>
 

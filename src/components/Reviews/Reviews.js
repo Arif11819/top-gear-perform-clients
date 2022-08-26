@@ -21,7 +21,6 @@ const Reviews = () => {
                     ></Review>)
                 }
             </div>
-            <Recognition></Recognition>
         </div>
     );
 };

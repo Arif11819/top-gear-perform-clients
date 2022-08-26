@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PerformanceManagement = () => {
   return (
@@ -51,7 +52,7 @@ const PerformanceManagement = () => {
           </div>
 
           <div className="flex items-center">
-            <button className=" secondary-btn ">Get a free Demo</button>
+            <Link to='/schedule' className=" secondary-btn ">Get a free Demo</Link>
             <a href="www.facebook" className="link text-sky-400 m-3">
               Learn more →
             </a>

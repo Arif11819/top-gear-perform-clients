@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoCheckmarkCircle } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 import './Execute.css'
 const Execute = () => {
@@ -17,8 +18,8 @@ const Execute = () => {
 
             </div>
             <div className='lg:mx-auto px-10 pr-16 mt-10 text-center'>
-                <button className='primary-btn free-btn h-btn'>GET STARTED FREE</button>
-                <button className='outline-btn'>SCHEDULE DEMO</button>
+                <Link to='/login' className='primary-btn free-btn h-btn'>GET STARTED FREE</Link>
+                <Link to='/schedule' className='outline-btn'>SCHEDULE DEMO</Link>
             </div>
 
         </div>

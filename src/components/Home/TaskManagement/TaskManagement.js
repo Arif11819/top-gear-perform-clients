@@ -54,7 +54,7 @@ const TaskManagement = () => {
                         </div>
 
                         <div className="flex items-center justify-start pt-3">
-                            <button className="secondary-btn">Get a free Demo</button>
+                            <Link to='/schedule' className="secondary-btn">Get a free Demo</Link>
                             <Link to="/blogs" className="link text-sky-400 m-3">
                                 Learn more →
                             </Link>
@@ -62,7 +62,7 @@ const TaskManagement = () => {
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000">
                         <img
-                            src="https://i.ibb.co/dkJXn1J/Task-management.png"
+                            src="https://i.ibb.co/Z2XzQ7C/create-goal.png"
                             alt=""
                             className="rounded-lg shadow-2xl"
                         />
