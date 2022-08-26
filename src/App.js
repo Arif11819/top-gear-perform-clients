@@ -5,8 +5,8 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
 import Home from './components/Home/Home';
 import Reviews from './components/Reviews/Reviews';
-import Footer from './components/Home/Footer/Footer';
-import Execute from './components/Execute/Execute';
+// import Footer from './components/Home/Footer/Footer';
+// import Execute from './components/Execute/Execute';
 import Navbar from './components/Home/Header/Navbar';
 import FullReview from './components/FullReview/FullReview';
 import NotFound from './components/NotFound/NotFound';
@@ -30,19 +30,23 @@ import ChatInput from './components/Chat/ChatInput';
 import NoteHome from './components/pages/Dashboard/DashHome/Notes/NoteHome';
 import NewsFeed from './components/pages/Dashboard/DashHome/NewsFeed/NewsFeed';
 import ContactUs from './components/ContactUs/ContactUs';
-
+import AddEmployee from './components/Chart/AddEmployee';
+import RequireAuth from './components/pages/Login/RequireAuth';
 import Blogs from './components/Blogs/Blogs';
 import PostBlog from './components/Blogs/PostBlog/PostBlog';
 import ManageBlogs from './components/Blogs/ManageBlogs/ManageBlogs';
 import ManageUsers from './components/ManageUsers/ManageUsers';
 import ManageBook from './components/Ebooks/ManageBook/ManageBook';
 import AboutUs from './components/pages/AboutUs/AboutUs';
-
 import UploadFile from './components/UploadFile/UploadFile';
 import ScheduleDemoDetails from './components/Home/ScheduleDemo/ScheduleDemoDetails/ScheduleDemoDetails';
 import Emergency from './components/pages/Dashboard/Emergency/Emergency';
 import Course from './components/pages/Dashboard/Course/Course';
 import AddCourse from './components/pages/Dashboard/Course/AddCourse';
+import VacationShow from './components/pages/Dashboard/DayOff/VacationShow';
+import VacationSelect from './components/pages/Dashboard/DayOff/VacationSelect';
+import DaysOffHome from './components/pages/Dashboard/DayOff/DaysOffHome';
+import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHome';
 
 
 
@@ -67,30 +71,32 @@ function App() {
           <Route path='task' element={<MyTask />} />
           <Route path='chat' element={<ChatInput />} />
           <Route path='notification' element={<Notifications />} />
-
-          <Route path='newfeed' element={<NewsFeed />} />
-
-          <Route path='newsfeed' element={<NewsFeed />} />
-
+          <Route path='news-feed' element={<NewsFeed />} />
+          <Route path='employee' element={<Charts />} />
+          <Route path='employee/:employeeId' element={<Charts />} />
           <Route path='action' element={<Action />} />
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency />} />
           <Route path='course' element={<Course />} />
+          <Route path='take-vacation' element={<DaysOffHome />} />
+          <Route path='add-employee' element={<AddEmployee />} />
+          <Route path='add-goal' element={<CreateGoalHome />} />
+          <Route path='manage-users' element={<ManageUsers />} />
+          <Route path='manage-book' element={<ManageBook />} />
+          <Route path='demo-details' element={<ScheduleDemoDetails />} />
+          <Route path='upload-file' element={<UploadFile />} />
+          <Route path='manage-blogs' element={<ManageBlogs />} />
           <Route path='/dashboard/add-course' element={<AddCourse />} />
+          <Route path='/dashboard/reviews' element={
+            <RequireAuth>
+              <Reviews></Reviews>
+            </RequireAuth>
+          } />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/add-blogs' element={<PostBlog />} />
-        <Route path='/manage-blogs' element={<ManageBlogs />} />
-        <Route path='/manage-users' element={<ManageUsers />} />
-        <Route path='/manage-book' element={<ManageBook />} />
-        <Route path='/demo-details' element={<ScheduleDemoDetails />} />
-        <Route path='/upload-file' element={<UploadFile />} />
-
-
         <Route path='/signUp' element={<Register />} />
-        <Route path='/reviews' element={<Reviews />} />
-        <Route path='/chart' element={<Charts />} />
         <Route path='/praise' element={<Praise />} />
         <Route path='/schedule' element={<ScheduleDemo />} />
         <Route path='/scheduleSubmit' element={<ScheduleSubmit />} />
@@ -102,8 +108,8 @@ function App() {
         <Route path='/reviews/:reviewsId' element={<FullReview />} />
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
-      {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
-      {pathname?.includes('/dashboard') ? null : <Footer></Footer>}
+      {/* {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
+      {pathname?.includes('/dashboard') ? null : <Footer></Footer>} */}
 
     </div>
 

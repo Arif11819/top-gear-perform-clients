@@ -173,7 +173,7 @@ const Register = () => {
                 "email": email
             }
         ]
-        fetch('http://localhost:5000/vacation', {
+        fetch('https://dry-ravine-83506.herokuapp.com/vacationstore', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const Ebooks = () => {
   const [books, setbooks] = useState([]);
 
   useEffect(() => {
-    fetch("books.json")
+    fetch(`https://dry-ravine-83506.herokuapp.com/ebook`)
       .then((res) => res.json())
       .then((data) => setbooks(data));
   }, []);

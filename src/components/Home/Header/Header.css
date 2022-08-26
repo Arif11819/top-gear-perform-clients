@@ -132,9 +132,11 @@ label {
     padding: 8px 20px;
     font-weight: 500;
 }
-#demo-text{
+
+#demo-text {
     color: white;
 }
+
 .outline-button {
     background-color: white;
     font-weight: 600;
@@ -218,6 +220,11 @@ label {
     to {
         right: 0;
     }
+}
+
+.text-heading{
+    font-size: 25px;
+    color: red;
 }
 
 
