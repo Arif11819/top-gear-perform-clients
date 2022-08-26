@@ -32,12 +32,8 @@ const Home = () => {
             <TaskManagement />
             <PerformanceManagement></PerformanceManagement>
             <EmployeeEngagement></EmployeeEngagement>
-
             <BlogSection></BlogSection>
-
             <WhyTopGear />
-
-
             <CountDown targetDate={dateTimeAfterTwentyDays}></CountDown>
             <NewsLetter></NewsLetter>
 
