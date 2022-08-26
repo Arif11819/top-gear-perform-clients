@@ -27,15 +27,3 @@
   color: black;
   border-radius: 5px;
 }
-
-.ebook-btn:hover {
-  background-color: #da621e;
-}
-
-.ebookcard:hover {
-  background-color: rgba(187, 234, 247, 0.991);
-}
-
-.newbookcard:hover {
-  background-color: rgba(187, 234, 247, 0.991);
-}

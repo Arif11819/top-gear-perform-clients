@@ -1,0 +1,25 @@
+[
+  {
+    "_id": 1,
+    "name": "Abcd",
+    "relationship": "Father",
+    "phn1": "7785",
+    "phn2": "7785",
+    "phn3": "7785",
+    "email": "7785",
+    "address": "7785"
+  },
+  {
+    "_id": 2 ,
+    "name": "Abcd",
+    "relationship": "Father",
+    "phn1": "7785",
+    "phn2": "7785",
+    "phn3": "7785",
+    "email": "7785",
+    "address": "7785"
+  }
+    
+  
+  
+]

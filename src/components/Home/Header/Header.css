@@ -222,6 +222,11 @@ label {
     }
 }
 
+.text-heading{
+    font-size: 25px;
+    color: red;
+}
+
 
 
 /* responsive for mobile device */

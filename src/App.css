@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0px;
   -webkit-user-drag: none;
-  user-select: none;
+  /* user-select: none; */
 }
 
 
@@ -16,7 +16,10 @@
   font-family: 'Inter', sans-serif;
 
 }
-
+.home-color{
+  
+  background-color: #f3f8fe;
+}
 .primary-btn {
   background-color: #58A0EF;
   padding: 7px 10px;

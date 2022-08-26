@@ -23,9 +23,9 @@ const Home = () => {
 
     const dateTimeAfterTwentyDays = NOW_IN_MS + TWENTY_DAYS_IN_MS;
     return (
-        <div>
+        <div className='home-color'>
             <Header></Header>
-            <ExploreProduct></ExploreProduct>
+            {/* <ExploreProduct></ExploreProduct> */}
             <Partner></Partner>
             <BusinessPlatform></BusinessPlatform>
             <Management></Management>
@@ -36,7 +36,6 @@ const Home = () => {
             <BlogSection></BlogSection>
 
             <WhyTopGear />
-            <NewsLetter />
 
 
             <CountDown targetDate={dateTimeAfterTwentyDays}></CountDown>

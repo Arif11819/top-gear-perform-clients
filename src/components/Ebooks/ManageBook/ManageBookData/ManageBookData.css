@@ -1,0 +1,18 @@
+.book-head {
+    height: 20%;
+    background-image: url(https://storage.googleapis.com/profit-prod/wp-content/uploads/2022/03/71b089b1-bannner-bg.png);
+}
+
+.newbookcard {
+    height: 450px;
+    width: 300px;
+}
+
+.ebookcard {
+    height: 480px;
+    width: 300px;
+}
+
+.book-description {
+    font-size: 12px;
+}

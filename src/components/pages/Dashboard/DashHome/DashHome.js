@@ -4,72 +4,76 @@ import "./DashHome.css";
 
 const DashHome = () => {
   return (
-    <div className="flex">
+    <div className="flex bg-base-100">
       <div>
-        <ul class="menu bg-base-100 w-56 p-2 rounded-box">
+        <ul className="menu w-56 p-2 rounded-box">
+
           {/* num-01 */}
 
           <li className="notification-text" tabindex="0">
-            <button>Alignments</button>
+            <Link className="dash-link" to="/dashboard/employee">All Employee</Link>
           </li>
 
           {/* num-02 */}
 
           <li className="notification-text" tabindex="1">
-            <Link to="/dashboard/action">Action Center</Link>
+            <Link className="dash-link" to="/dashboard/action">Action Center</Link>
           </li>
 
           {/* num-03 */}
 
           <li className="notification-text" tabindex="2">
-            <span>Alignments and Dependencies</span>
+            <Link className="dash-link" to="/dashboard/person">Person</Link>
           </li>
 
           {/* num-04 */}
 
           <li className="notification-text" tabindex="3">
-            <Link to='/dashboard/notes'>Notes</Link>
+            <Link className="dash-link" to='/dashboard/notes'>Notes</Link>
           </li>
 
           {/* num-05 */}
 
           <li className="notification-text" tabindex="4">
-            <span>Company Dashboard</span>
+            <Link className="dash-link" to="/dashboard/company">Company Dashboard</Link>
           </li>
 
           {/* num-06 */}
 
           <li className="notification-text" tabindex="5">
-            <span>Department Hierarchy</span>
+            <Link className="dash-link" to="/dashboard/emergency">Emergency Contact</Link>
           </li>
 
           {/* num-07 */}
 
           <li className="notification-text" tabindex="6">
-            <span>KPI Boards</span>
-            <ul class="bg-base-100">
-              <li>
-                <a href="/">KPI Boards Founds</a>
-              </li>
-            </ul>
+            <Link className="dash-link" to="/dashboard/take-vacation">Take Vacation</Link>
           </li>
 
           {/* num-09 */}
 
           <li className="notification-text" tabindex="8">
-            <Link to="/dashboard/newsfeed" >News Feed</Link>
+            <Link className="dash-link" to="/dashboard/newsfeed" >News Feed</Link>
           </li>
 
           {/* num-10 */}
 
           <li className="notification-text" tabindex="9">
-            <span>Organizatin Hierarchy</span>
+            <Link className="dash-link" to="/dashboard/manage-blogs">Manage Blog</Link>
+          </li>
+          {/* num-11 */}
+          <li className="notification-text" tabindex="8">
+            <Link className="dash-link" to="/dashboard/course" >Course</Link>
+          </li>
+          {/* num12 */}
+          <li className="notification-text" tabindex="8">
+            <Link className="dash-link" to="/dashboard/add-course" >Add-Course</Link>
           </li>
         </ul>
       </div>
-      <div>
+      {/* <div>
         <img src="https://i.ibb.co/C2s1jkX/Screenshot-2022-08-12-111904.png" alt="" className="w-3/2 " />
-      </div>
+      </div> */}
     </div>
   );
 };

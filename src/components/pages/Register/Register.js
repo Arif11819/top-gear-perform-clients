@@ -5,6 +5,7 @@ import auth from '../../../firebase.init'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { TiWarning } from 'react-icons/ti'
 import Loading from './Loading/Loading';
+import { toast } from 'react-toastify';
 
 
 const Register = () => {
@@ -29,7 +30,6 @@ const Register = () => {
     const [ageError, setAgeError] = useState('')
     const [genderError, setGenderError] = useState('')
     const [roleError, setroleError] = useState('')
-    const [firebaseError, setFirebaseError] = useState('')
 
     const navigate = useNavigate()
 
@@ -106,6 +106,18 @@ const Register = () => {
     const submitResgisterForm = (event) => {
         event.preventDefault()
 
+        const firstName = event.target.firstName.value
+        const lastName = event.target.lastName.value
+        const fullName = `${firstName} ${lastName}`
+        const userEmail = email
+        const userAddress = event.target.address.value
+        const userAge = event.target.age.value
+        const userGender = event.target.gender.value
+        const userRole = event.target.role.value
+        const userPhoneNumber = event.target.phoneNumber.value
+
+        const userData = { firstName, lastName, fullName, userEmail, userAddress, userAge, userGender, userRole, userPhoneNumber }
+
         if (role === '') {
             setroleError('Please select your role')
             return;
@@ -120,25 +132,69 @@ const Register = () => {
         if (email && password && confirmPassword && role && age && gender) {
 
             createUserWithEmailAndPassword(email, password)
+            fetch('https://dry-ravine-83506.herokuapp.com/users', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+
+            })
+                .then((data) => {
+                    if (data.status === 200) {
+                        toast.success('Register successfull')
+                    }
+                }).catch(err => console.log(err))
+            if (error === undefined || error) {
+                return
+            }
+            else {
+                fetch('https://dry-ravine-83506.herokuapp.com/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+
+                })
+            }
         }
+        const vacation = [
+            {
+                "name": "Vacation",
+                "day": 60,
+                "vName": "Vacation full-time",
+                "email": email
+            },
+            {
+                "name": "Sick",
+                "day": 45,
+                "vName": "Sick full-time",
+                "email": email
+            }
+        ]
+        fetch('http://localhost:5000/vacation', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(vacation)
+        })
+            .then(res => res.json())
+            .then(data => {
 
-
-        if (error) {
-            console.log(error)
-            setFirebaseError('Email already exist')
-        }
-
+            })
     }
-
     if (user) {
-        navigate('/')
+        navigate('/dashboard/home')
+        toast.success('Register successfull')
     }
 
     return (
         <div className='register-container'>
             <div className="register-img">
                 <img src="https://i.ibb.co/WD9s7s8/Mobile-login-bro.png" alt="" />
-                <h1 className='text-white text-4xl'>Hey welcome <br /> Looks like you are new here !</h1>
+                <h1 className='text-4xl'>Hey welcome <br /> Looks like you are new here !</h1>
             </div>
 
 
@@ -175,9 +231,9 @@ const Register = () => {
                         </select>
                         <input autoComplete='off' required className='short-input' name='phoneNumber' type="number" placeholder='Phone number' />
                     </div>
-                    <label>
+                    <label className='flex'>
                         <input autoComplete='off' required name='checkBox' type="checkbox" />
-                        <p > Accept our <Link className='term-link' to='/term-and-condition'> terms </Link> and condition</p>
+                        <p> Accept our <Link className='term-link' to='/terms'> terms and condition</Link></p>
                     </label>
                     {emailError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />{emailError}</p>
@@ -197,12 +253,13 @@ const Register = () => {
                     {genderError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' /> {genderError}</p>
                     </div>}
-                    {firebaseError && <div className='error-container'>
-                        <p className='error-message'><TiWarning className='warning-icon' /> {firebaseError}</p>
+                    {error && <div className='error-container'>
+                        <p className='error-message'><TiWarning className='warning-icon' />Email already exist</p>
                     </div>}
-                    <button disabled={loading} className='register-button' type='submit'>
-                        {loading ? <Loading /> : <span>Register Now</span>}
+                    <button disabled={loading} type='submit' className='register-button '>
+                        {loading ? <Loading /> : <span>Sign Up</span>}
                     </button>
+
                 </form>
             </div>
         </div>
