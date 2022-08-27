@@ -2,8 +2,8 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { BsCheckLg } from 'react-icons/bs'
 import { toast } from 'react-toastify';
-import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
+import auth from '../../../../firebase.init';
 
 const GoalForm = () => {
     const [user] = useAuthState(auth);
@@ -13,7 +13,7 @@ const GoalForm = () => {
             form: data,
             user: user.email
         }
-        fetch('http://localhost:5000/usergoal', {
+        fetch('https://dry-ravine-83506.herokuapp.com/usergoal', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

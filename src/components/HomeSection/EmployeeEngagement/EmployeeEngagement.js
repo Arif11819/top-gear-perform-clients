@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const EmployeeEngagement = () => {
   return (
-    <div className="hero min-h-screen bg-base-200 ">
+    <div className="hero min-h-screen ">
       <div className="hero-content grid lg:grid-cols-2 lg:gap-8 mx-8">
         <div className=" ">
           <h1 className="lg:text-3xl text-2xl font-bold ">Employee Engagement Software</h1>
@@ -44,7 +45,7 @@ const EmployeeEngagement = () => {
           </div>
 
           <div className="flex items-center">
-            <button className=" secondary-btn ">Get a free Demo</button>
+            <Link to='/schedule' className=" secondary-btn ">Get a free Demo</Link>
             <a href="www.facebook" className="link text-sky-400 m-3">
               Learn more →
             </a>
@@ -52,7 +53,7 @@ const EmployeeEngagement = () => {
         </div>
         <div>
           <img
-            src="https://cdns.profit.co/site/v1.2.1/images/Employee-management.png"
+            src="https://i.ibb.co/p3JFF30/Screenshot-10.png"
             alt=""
             className="rounded-lg shadow-2xl"
           />

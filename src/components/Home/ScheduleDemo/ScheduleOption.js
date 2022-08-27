@@ -8,11 +8,11 @@ const ScheduleOption = ({ setTimeZone, setLanguageSelect }) => {
         setLanguageSelect(e.target.value)
     }
     return (
-        <div>
+        <div className='dark:bg-slate-50'>
             <div>
-                <label htmlFor="timezone" className="absolute ml-6 bg-white text-sm font-medium">Time Zone</label>
+                <label htmlFor="timezone" className="absolute ml-6 bg-slate-50 text-sm font-medium">Time Zone</label>
                 <div className='p-3'>
-                    <select onChange={handleTimeZone} id="timezone" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <select onChange={handleTimeZone} id="timezone" className="bg-white border border-gray-300 text-nlack text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:text-white ">
                         <option defaultValue="-12:00">(GMT -12:00) Eniwetok</option>
                         <option defaultValue="-12:00">(GMT -12:00) Kwajalein</option>
                         <option defaultValue="-11:00">(GMT -11:00) Midway</option>
@@ -108,7 +108,7 @@ const ScheduleOption = ({ setTimeZone, setLanguageSelect }) => {
             <div>
                 <label htmlFor="language" className="absolute ml-6 bg-white text-sm font-medium">Demo Language</label>
                 <div className='p-3'>
-                    <select onChange={handleLanguageSelect} id="language" className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <select onChange={handleLanguageSelect} id="language" className=" border border-gray-300 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:text-white ">
                         <option defaultValue="English">English</option>
                         <option defaultValue="Spanish">Spanish</option>
                         <option defaultValue="Brazilian Portuguese">Brazilian Portuguese</option>

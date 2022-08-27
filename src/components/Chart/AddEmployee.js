@@ -8,7 +8,7 @@ const AddEmployee = () => {
     const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
     const onSubmit = data => {
-        const url = `http://localhost:5000/employee`;
+        const url = `https://dry-ravine-83506.herokuapp.com/employee`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -22,7 +22,7 @@ const AddEmployee = () => {
                 reset();
                 toast.success("Thank You Sir For Adding New Employee!!")
             })
-        navigate('/employee');
+        navigate('/dashboard/employee');
     };
     return (
         <div>
