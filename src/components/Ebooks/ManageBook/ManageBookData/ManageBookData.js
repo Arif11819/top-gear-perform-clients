@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 const ManageBookData = ({ ebook }) => {
-
+    console.log(ebook)
     const [ebooks, setEbooks] = useState([]);
     useEffect(() => {
         fetch(`https://dry-ravine-83506.herokuapp.com/ebook`)

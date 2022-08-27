@@ -30,9 +30,9 @@ const Review = ({ review }) => {
     }
 
     return (
-        <div class="card w-80 h-84 bg-slate-50 shadow-xl border border-slate-200 text-slate-200">
+        <div className="card w-80 h-84 bg-slate-50 shadow-xl border border-slate-200 text-slate-200">
             <div className='bg-blue-500 mt-32 ml-4 mr-4 mb-4 rounded-lg flex flex-col'>
-                <div class="avatar mt-[-90px]">
+                <div className="avatar mt-[-90px]">
                     <div className="w-28 h-28 mx-auto rounded-full ring ring-amber-200">
                         <img src={img} alt="" />
                     </div>
@@ -87,9 +87,9 @@ const Review = ({ review }) => {
                             "{feedback}"
                         </h2>
                     </div>
-                    <div class="card-actions pt-3 text-black flex">
-                        <div class="bg-amber-500 p-1 rounded-sm"><button onClick={() => handleNavigateToFullReview(_id)} >Read full case study</button></div>
-                        <div class="bg-red-500 p-1 rounded-sm"><button onClick={() => handleDelete(_id)} >Remove</button></div>
+                    <div className="card-actions pt-3 text-black flex">
+                        <div className="bg-amber-500 p-1 rounded-sm"><button onClick={() => handleNavigateToFullReview(_id)} >Read full case study</button></div>
+                        <div className="bg-red-500 p-1 rounded-sm"><button onClick={() => handleDelete(_id)} >Remove</button></div>
                     </div>
                 </div>
             </div>
