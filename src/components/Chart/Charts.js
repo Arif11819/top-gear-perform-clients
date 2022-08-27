@@ -14,7 +14,7 @@ const Charts = () => {
     const [employee] = useEmployee();
     const navigate = useNavigate();
     const handleNewEmployee = () => {
-        navigate('/addemployee');
+        navigate('/dashboard/add-employee');
     }
     return (
         <div className='flex flex-col pl-20 pr-20 mt-10 mb-12'>

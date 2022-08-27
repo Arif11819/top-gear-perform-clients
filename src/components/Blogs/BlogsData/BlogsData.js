@@ -6,7 +6,7 @@ const BlogsData = ({ blog }) => {
         <div className='w-60 bg-sky-50  rounded'>
             <img className='cover rounded-xl p-2' src={blog.image} alt='' />
             <div className='p-2'>
-                <h1 className='font-extrabold text-xl'>{blog.title}</h1>
+                <h1 className=' text-xl'>{blog.title}</h1>
                 <p className='text-sm text-gray-600 mt-1'>{blog.description}</p>
             </div>
             <div className='mt-2 p-2'>

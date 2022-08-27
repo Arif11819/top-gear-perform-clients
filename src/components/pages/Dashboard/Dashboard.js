@@ -59,10 +59,6 @@ const Dashboard = () => {
               <BiMessage className="dash-nav-icon" />
             </Link>
             <div className="profie">
-              <CgProfile className="dash-nav-icon" />
-              <p className="inline text-sm">
-                Sumaya Islam <MdOutlineKeyboardArrowDown className="inline" />
-              </p>
               <CgProfile
                 onClick={() => setShowProfile(!showProfile)}
                 className="dash-nav-icon"
@@ -115,7 +111,7 @@ const Dashboard = () => {
             {" "}
             <AiOutlineHome className="sidebar-icon" />{" "}
           </Link>
-          <Link to="/dashboard/focus">
+          <Link to="/dashboard/action">
             {" "}
             <BiTargetLock className="sidebar-icon" />{" "}
           </Link>

@@ -3,7 +3,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import useCourse from '../../../../hooks/useCourse';
 
 const AddCourse = () => {
-    const [productItems, setProductItems] = useCourse() ;
+    const [productItems, setProductItems] = useCourse();
 
     const hendelCourseSubmit = (event) => {
         event.preventDefault();
@@ -21,7 +21,7 @@ const AddCourse = () => {
 
         // post data to server
 
-        fetch('http://localhost:5000/course', {
+        fetch('https://dry-ravine-83506.herokuapp.com/course', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const AddCourse = () => {
                     <div class="text-center lg:text-left ">
                         <img src="https://cdn.dribbble.com/users/222905/screenshots/10786822/media/e774910b6ea55bfa1443b8c1178d0b6e.png?compress=1&resize=400x300&vertical=top" alt="" />
                     </div>
-                    <div class="card flex-shrink-0 w-full max-w-sm shadow- bg-base-100">
+                    <div class="card flex-shrink-0 w-full max-w-sm shadow- bg-slate-50">
                         <form onSubmit={hendelCourseSubmit}>
 
 

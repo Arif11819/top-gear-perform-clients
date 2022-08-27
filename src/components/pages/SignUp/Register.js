@@ -173,7 +173,7 @@ const Register = () => {
                 "email": email
             }
         ]
-        fetch('http://localhost:5000/vacation', {
+        fetch('https://dry-ravine-83506.herokuapp.com/vacationstore', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -193,8 +193,8 @@ const Register = () => {
     return (
         <div className='register-container'>
             <div className="register-img">
-                <img src="https://i.ibb.co/WD9s7s8/Mobile-login-bro.png" alt="" />
-                <h1 className='text-4xl'>Hey welcome <br /> Looks like you are new here !</h1>
+                <img src="https://img.freepik.com/free-vector/authentication-concept-illustration_114360-2168.jpg?size=338&ext=jpg&ga=GA1.2.1420769679.1661487831" alt="" />
+                <h1 className='text-2xl font-bold'>Hey welcome <br /> Looks like you are new here !</h1>
             </div>
 
 
