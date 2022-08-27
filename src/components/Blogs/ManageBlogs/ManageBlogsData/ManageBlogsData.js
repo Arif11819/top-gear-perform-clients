@@ -3,14 +3,14 @@ import { toast } from 'react-toastify';
 const ManageBlogsData = ({ blog }) => {
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/blog')
+        fetch('http://localhost:5000/blog')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [blogs]);
 
     const handleDeleteBlog = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/blog/${id}`
+        const url = `http://localhost:5000/blog/${id}`
         fetch(url, {
             method: 'DELETE'
         })

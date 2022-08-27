@@ -4,14 +4,14 @@ import { toast } from 'react-toastify';
 const ScheduleDemoDetails = () => {
     const [scheduleUsers, setScheduleUsers] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/scheduleUser`)
+        fetch(`http://localhost:5000/scheduleUser`)
             .then(res => res.json())
             .then(data => setScheduleUsers(data))
     }, [scheduleUsers]);
 
     const handleCancelSchedule = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/scheduleUser/${id}`
+        const url = `http://localhost:5000/scheduleUser/${id}`
         fetch(url, {
             method: 'DELETE'
         })

@@ -3,7 +3,7 @@ import './TaskManagement.css';
 
 const TaskManagement = () => {
     return (
-        <div className="bg-base-200">
+        <div className="bg-slate-50">
             <div className="hero min-h-screen ">
                 <div className="hero-content grid grid-cols-1 lg:grid-cols-2 gap-10 mx-8">
                     <div>
@@ -62,7 +62,7 @@ const TaskManagement = () => {
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000">
                         <img
-                            src="https://i.ibb.co/dkJXn1J/Task-management.png"
+                            src="https://i.ibb.co/Z2XzQ7C/create-goal.png"
                             alt=""
                             className="rounded-lg shadow-2xl"
                         />

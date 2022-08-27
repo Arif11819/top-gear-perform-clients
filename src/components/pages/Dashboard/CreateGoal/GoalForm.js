@@ -13,7 +13,7 @@ const GoalForm = () => {
             form: data,
             user: user.email
         }
-        fetch('https://dry-ravine-83506.herokuapp.com/usergoal', {
+        fetch('http://localhost:5000/usergoal', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

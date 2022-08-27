@@ -9,7 +9,7 @@ const Praise = () => {
             <Motive></Motive>
             <h1 className='text-5xl mb-4 mt-4 text-center font-bold'>Why Our Customers Love Us?</h1>
             <div className='justify-items-center praise mx-auto px-10 py-10 '>
-                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-base-100 ">
+                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-slate-50 ">
                     <figure className="px-10 pt-10">
                         <img src="https://i.ibb.co/KGFZN0P/6a16e2d4-earliest-badge.png" alt="html-icon" className="rounded-xl w-20" />
                     </figure>
@@ -19,7 +19,7 @@ const Praise = () => {
 
                     </div>
                 </div>
-                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-base-100 shadow">
+                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-slate-50 shadow">
                     <figure className="px-10 pt-10">
                         <img src="https://i.ibb.co/4gSM52X/7f8850a5-high-performer-enterprise.png" alt="html-icon" className="rounded-xl w-20" />
                     </figure>
@@ -29,7 +29,7 @@ const Praise = () => {
 
                     </div>
                 </div>
-                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-base-100 shadow">
+                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-slate-50 shadow">
                     <figure className="px-10 pt-10">
                         <img src="https://i.ibb.co/yyxfnG1/ecdcd833-leader-summer-2022.png" alt="html-icon" className="rounded-xl w-20" />
                     </figure>
@@ -39,7 +39,7 @@ const Praise = () => {
 
                     </div>
                 </div>
-                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-base-100 shadow">
+                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-slate-50 shadow">
                     <figure className="px-10 pt-10">
                         <img src="https://i.ibb.co/1ZzMRNW/27b458d8-best-support-enterprise.png" alt="html-icon" className="rounded-xl w-20" />
                     </figure>
@@ -49,7 +49,7 @@ const Praise = () => {
 
                     </div>
                 </div>
-                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-base-100 shadow">
+                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-slate-50 shadow">
                     <figure className="px-10 pt-10">
                         <img src="https://i.ibb.co/zGVZwxW/fdb05511-momentum-leader-summer.png" alt="html-icon" className="rounded-xl w-20" />
                     </figure>
@@ -59,7 +59,7 @@ const Praise = () => {
 
                     </div>
                 </div>
-                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-base-100 shadow">
+                <div className="card transform transition duration-500 hover:scale-110 w-80 bg-slate-50 shadow">
                     <figure className="px-10 pt-10">
                         <img src="https://i.ibb.co/b2T3TPz/af4ad196-asia-pacific-summer.png" alt="html-icon" className="rounded-xl w-20" />
                     </figure>

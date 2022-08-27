@@ -7,14 +7,14 @@ const ManageUsers = () => {
 
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/users`)
+        fetch(`http://localhost:5000/users`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users]);
 
     const handleDeleteUser = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/users/${id}`
+        const url = `http://localhost:5000/users/${id}`
         fetch(url, {
             method: 'DELETE'
         })

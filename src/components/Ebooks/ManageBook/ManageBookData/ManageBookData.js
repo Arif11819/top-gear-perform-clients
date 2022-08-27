@@ -5,14 +5,14 @@ const ManageBookData = ({ ebook }) => {
 
     const [ebooks, setEbooks] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/ebook`)
+        fetch(`http://localhost:5000/ebook`)
             .then(res => res.json())
             .then(data => setEbooks(data))
     }, []);
 
     const handleDeleteBook = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/ebook/${id}`
+        const url = `http://localhost:5000/ebook/${id}`
         fetch(url, {
             method: 'DELETE'
         })

@@ -4,7 +4,7 @@ const useEmployeeOne = employeeId => {
     const [employeeOne, setEmployeeOne] = useState({});
 
     useEffect(() => {
-        const url = `https://dry-ravine-83506.herokuapp.com/employee/${employeeId}`;
+        const url = `http://localhost:5000/employee/${employeeId}`;
 
         fetch(url)
             .then(res => res.json())

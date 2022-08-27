@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 const CompleteData = ({ complete }) => {
     const [completes, setCompletes] = useState([]);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/complete')
+        fetch('http://localhost:5000/complete')
             .then(res => res.json())
             .then(data => setCompletes(data))
     }, [completes]);
 
     const handleDeleteTask = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/complete/${id}`
+        const url = `http://localhost:5000/complete/${id}`
         fetch(url, {
             method: 'DELETE'
         })
@@ -25,7 +25,7 @@ const CompleteData = ({ complete }) => {
             })
     }
     return (
-        <div className="card w-72  bg-base-100 shadow">
+        <div className="card w-72  bg-slate-50 shadow">
             <div className="card-body text-center items-center">
                 <h2 className='text-black'>{complete.compTask}</h2>
                 <div className="card-actions mt-3 justify-end">

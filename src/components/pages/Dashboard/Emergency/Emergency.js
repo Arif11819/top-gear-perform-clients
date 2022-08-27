@@ -10,7 +10,7 @@ import "./Emergency.css";
 const Emergency = () => {
   const { register, reset, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    const url = `https://dry-ravine-83506.herokuapp.com/emgcontact`;
+    const url = `http://localhost:5000/emgcontact`;
     fetch(url, {
       method: 'POST',
       headers: {
@@ -29,7 +29,7 @@ const Emergency = () => {
   const [emgContacts, setEmgContacts] = useState([]);
 
   useEffect(() => {
-    fetch("https://dry-ravine-83506.herokuapp.com/emgcontact")
+    fetch("http://localhost:5000/emgcontact")
       .then((res) => res.json())
       .then((data) => setEmgContacts(data));
   }, [emgContacts]);

@@ -5,14 +5,14 @@ const Scheduled = () => {
 
     const [schedules, setSchedules] = useState([]);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/schedule')
+        fetch('http://localhost:5000/schedule')
             .then(res => res.json())
             .then(data => setSchedules(data))
     }, [schedules]);
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/schedule`;
+        const url = `http://localhost:5000/schedule`;
         fetch(url, {
             method: 'POST',
             headers: {

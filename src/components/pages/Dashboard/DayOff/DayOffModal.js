@@ -30,7 +30,7 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
     }
 
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/namevacation?type=${dayOffType}&email=${user.email}`)
+        fetch(`http://localhost:5000/namevacation?type=${dayOffType}&email=${user.email}`)
             .then(res => res.json())
             .then(data => setSingleVacation(data))
     }, [dayOffType, user.email])
@@ -39,7 +39,7 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
         const count = parseInt(singleVacation.day) - parseInt(day);
         const updateDay = { count, email: user.email }
 
-        const url = `https://dry-ravine-83506.herokuapp.com/vacation/${dayOffType}`
+        const url = `http://localhost:5000/vacation/${dayOffType}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -64,7 +64,7 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
             notes: notes,
             email: user.email
         }
-        fetch('https://dry-ravine-83506.herokuapp.com/vacationstore', {
+        fetch('http://localhost:5000/vacationstore', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

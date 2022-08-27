@@ -7,7 +7,7 @@ const CourseCard = ({ item, setProductItems, productItems }) => {
     const proceed = window.confirm('are you sure delete')
     if (proceed) {
       console.log('delete with id', id)
-      const url = (`https://dry-ravine-83506.herokuapp.com/course/${id}`);
+      const url = (`http://localhost:5000/course/${id}`);
 
       fetch(url, {
         method: 'DELETE'
@@ -29,7 +29,7 @@ const CourseCard = ({ item, setProductItems, productItems }) => {
   return (
     <>
 
-      <div class="card w-96 glass">
+      <div class="card w-96">
         <figure><img src={item.image} alt="car!" /></figure>
         <div class="card-body">
           <h2 class="card-title">{item.name}</h2>
