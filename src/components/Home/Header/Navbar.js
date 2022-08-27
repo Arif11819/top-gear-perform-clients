@@ -33,6 +33,7 @@ const Navbar = () => {
                     <Link to="/aboutUs">About us</Link>
                     <Link to="/blogs">Blog</Link>
                     <Link to="/contact">Contact us</Link>
+                    {user && <Link onClick={handleSignout} to="/dashboard/home">Dashbroad </Link> }
                     {user ? <Link onClick={handleSignout} to="/login">Logout </Link> : <Link to="/login">Sign in </Link>}
                     <RiGlobalLine className='global-icon' />
                 </div>
