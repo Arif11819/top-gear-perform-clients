@@ -6,7 +6,7 @@ const ManageBook = () => {
 
     const [ebooks, setEbooks] = useState([]);
     useEffect(() => {
-        fetch('ebook.json')
+        fetch(`https://dry-ravine-83506.herokuapp.com/ebook`)
             .then(res => res.json())
             .then(data => setEbooks(data))
     }, [ebooks]);
@@ -15,7 +15,7 @@ const ManageBook = () => {
             <PublishBook />
             <h1 className='text-4xl mb-10  text-center font-bold text-black'>Manage Our Published books</h1>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-20 lg:mx-20 lg:px-24 mx-8 px-5'>
-                {ebooks.map(ebook => <ManageBookData key={ebook._id} ebook={ebook}></ManageBookData>)}
+                {ebooks.map(book => <ManageBookData key={book._id} ebook={book}></ManageBookData>)}
 
             </div>
         </div>
