@@ -1,8 +1,13 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../../../firebase.init";
+import useAdmin from "../../../../hooks/useAdmin";
 import "./DashHome.css";
 
 const DashHome = () => {
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
   return (
     <div className="flex bg-slate-50">
       <div>
@@ -11,19 +16,35 @@ const DashHome = () => {
           {/* num-01 */}
 
           <li className="notification-text" tabindex="0">
+
             <Link className="dash-link" to="/dashboard/employee">All Employee</Link>
+
+            <Link to="/dashboard/">All Employee</Link>
+
           </li>
 
           {/* num-02 */}
+
 
           <li className="notification-text" tabindex="1">
             <Link className="dash-link" to="/dashboard/action">Action Center</Link>
           </li>
 
+          {
+            admin && <li className="notification-text" tabindex="1">
+              <Link to="/dashboard/action">Admin Activity</Link>
+            </li>
+          }
+
+
           {/* num-03 */}
 
           <li className="notification-text" tabindex="2">
+
             <Link className="dash-link" to="/dashboard/person">Person</Link>
+
+            <Link to="/dashboard/">Person</Link>
+
           </li>
 
           {/* num-04 */}
@@ -41,13 +62,21 @@ const DashHome = () => {
           {/* num-06 */}
 
           <li className="notification-text" tabindex="5">
+
             <Link className="dash-link" to="/dashboard/emergency">Emergency Contact</Link>
+
+            <Link to="/dashboard/emergency">Emergency Contact</Link>
+
           </li>
 
           {/* num-07 */}
 
           <li className="notification-text" tabindex="6">
+
             <Link className="dash-link" to="/dashboard/take-vacation">Take Vacation</Link>
+
+            <Link to="/dashboard/">HR Management</Link>
+
           </li>
 
           {/* num-09 */}

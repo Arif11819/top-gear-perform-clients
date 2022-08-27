@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "top-gear-perform"
-  }
+    "default": "topgearperformbd",
+    "topgearperform": "topgearperformbd"
+  },
+  "targets": {},
+  "etags": {}
 }
