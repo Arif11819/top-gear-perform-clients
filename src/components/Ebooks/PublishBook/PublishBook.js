@@ -5,7 +5,7 @@ const PublishBook = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/ebook`;
+        const url = `https://dry-ravine-83506.herokuapp.com/ebook`;
         fetch(url, {
             method: 'POST',
             headers: {

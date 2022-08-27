@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ProgressData = ({ progres }) => {
     const [progress, setprogress] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/progress`)
+        fetch(`https://dry-ravine-83506.herokuapp.com/progress`)
             .then(res => res.json())
             .then(data => setprogress(data))
     }, [progress]);
@@ -12,7 +12,7 @@ const ProgressData = ({ progres }) => {
 
 
 
-        const url = `http://localhost:5000/progress/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/progress/${id}`
 
         fetch(url, {
             method: 'DELETE'

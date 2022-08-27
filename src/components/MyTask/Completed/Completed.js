@@ -6,7 +6,7 @@ const Completed = () => {
 
     const [completes, setCompletes] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/complete`)
+        fetch(`https://dry-ravine-83506.herokuapp.com/complete`)
             .then(res => res.json())
             .then(data => setCompletes(data))
     }, [completes]);
@@ -14,7 +14,7 @@ const Completed = () => {
 
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/complete`;
+        const url = `https://dry-ravine-83506.herokuapp.com/complete`;
         fetch(url, {
             method: 'POST',
             headers: {

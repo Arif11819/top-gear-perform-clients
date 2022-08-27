@@ -4,14 +4,14 @@ const ScheduleData = ({ schedule }) => {
 
     const [schedules, setSchedules] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/schedule`)
+        fetch(`https://dry-ravine-83506.herokuapp.com/schedule`)
             .then(res => res.json())
             .then(data => setSchedules(data))
     }, [schedules]);
 
     const handleDeleteTask = id => {
 
-        const url = `http://localhost:5000/schedule/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/schedule/${id}`
         fetch(url, {
             method: 'DELETE'
         })

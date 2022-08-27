@@ -15,7 +15,7 @@ const Notes = () => {
             email: user?.email,
             note: text,
         }
-        fetch('http://localhost:5000/notes', {
+        fetch('https://dry-ravine-83506.herokuapp.com/notes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

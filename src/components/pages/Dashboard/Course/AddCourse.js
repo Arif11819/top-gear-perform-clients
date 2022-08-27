@@ -21,7 +21,7 @@ const AddCourse = () => {
 
         // post data to server
 
-        fetch('http://localhost:5000/course', {
+        fetch('https://dry-ravine-83506.herokuapp.com/course', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

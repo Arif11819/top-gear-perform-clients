@@ -4,14 +4,14 @@ const MyTaskData = ({ task }) => {
 
     const [tasks, setTasks] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/task')
+        fetch('https://dry-ravine-83506.herokuapp.com/task')
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [tasks]);
 
     const handleDeleteTask = id => {
 
-        const url = `http://localhost:5000/task/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/task/${id}`
         fetch(url, {
             method: 'DELETE'
         })

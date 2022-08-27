@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 const CompleteData = ({ complete }) => {
     const [completes, setCompletes] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/complete')
+        fetch('https://dry-ravine-83506.herokuapp.com/complete')
             .then(res => res.json())
             .then(data => setCompletes(data))
     }, [completes]);
 
     const handleDeleteTask = id => {
 
-        const url = `http://localhost:5000/complete/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/complete/${id}`
         fetch(url, {
             method: 'DELETE'
         })

@@ -6,7 +6,7 @@ const PostBlog = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/blog`;
+        const url = `https://dry-ravine-83506.herokuapp.com/blog`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -9,7 +9,7 @@ import auth from '../../../../firebase.init';
 const VacationSelect = () => {
     const [user, loading, error] = useAuthState(auth);
     const [openModal, setOpenModal] = useState(null);
-    const { data: vacations, isLoading, refetch } = useQuery('vacation', () => fetch(`http://localhost:5000/vacation/${user?.email}`, {
+    const { data: vacations, isLoading, refetch } = useQuery('vacation', () => fetch(`https://dry-ravine-83506.herokuapp.com/vacation/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))

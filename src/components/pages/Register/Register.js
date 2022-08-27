@@ -132,7 +132,7 @@ const Register = () => {
         if (email && password && confirmPassword && role && age && gender) {
 
             createUserWithEmailAndPassword(email, password)
-            fetch('http://localhost:5000/users', {
+            fetch('https://dry-ravine-83506.herokuapp.com/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -149,7 +149,7 @@ const Register = () => {
                 return
             }
             else {
-                fetch('http://localhost:5000/users', {
+                fetch('https://dry-ravine-83506.herokuapp.com/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -173,7 +173,7 @@ const Register = () => {
                 "email": email
             }
         ]
-        fetch('http://localhost:5000/vacationstore', {
+        fetch('https://dry-ravine-83506.herokuapp.com/vacationstore', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

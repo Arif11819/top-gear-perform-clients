@@ -11,7 +11,7 @@ const SingleEmgContact = ({ emgContact }) => {
 
   useEffect(() => {
 
-    fetch('http://localhost:5000/emgcontact')
+    fetch('https://dry-ravine-83506.herokuapp.com/emgcontact')
       .then(res => res.json())
       .then(data => setDisplays(data));
   }, [emgContact, displays]);
@@ -21,7 +21,7 @@ const SingleEmgContact = ({ emgContact }) => {
 
     const proceed = window.confirm('Are you sure?');
     if (proceed) {
-      const url = `http://localhost:5000/emgcontact/${id}`;
+      const url = `https://dry-ravine-83506.herokuapp.com/emgcontact/${id}`;
       fetch(url, {
         method: 'DELETE'
       })

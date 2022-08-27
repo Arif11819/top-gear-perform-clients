@@ -4,7 +4,7 @@ const useReviewDetails = reviewsId => {
     const [reviews, setReviews] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/reviews/${reviewsId}`;
+        const url = `https://dry-ravine-83506.herokuapp.com/reviews/${reviewsId}`;
 
         fetch(url)
             .then(res => res.json())

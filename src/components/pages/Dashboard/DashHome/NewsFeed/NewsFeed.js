@@ -27,7 +27,7 @@ const NewsFeed = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/news')
+    fetch('https://dry-ravine-83506.herokuapp.com/news')
       .then(res => res.json())
       .then(data => setNews(data))
   }, [load])
@@ -38,7 +38,7 @@ const NewsFeed = () => {
     const postTime = time
     const postData = { postDesc, userEmail, postTime }
     if (postDescription) {
-      fetch('http://localhost:5000/postNews', {
+      fetch('https://dry-ravine-83506.herokuapp.com/postNews', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

@@ -10,7 +10,7 @@ const MyTask = () => {
 
     const [tasks, setTasks] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/task`)
+        fetch(`https://dry-ravine-83506.herokuapp.com/task`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [tasks]);
@@ -19,7 +19,7 @@ const MyTask = () => {
 
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/task`;
+        const url = `https://dry-ravine-83506.herokuapp.com/task`;
         fetch(url, {
             method: 'POST',
             headers: {
