@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+
+.App {
+  background-color: rgb(248 250 252);
+
+}
+
 * {
   padding: 0px;
   box-sizing: border-box;
@@ -16,10 +22,12 @@
   font-family: 'Inter', sans-serif;
 
 }
-.home-color{
-  
+
+.home-color {
+
   background-color: #f3f8fe;
 }
+
 .primary-btn {
   background-color: #58A0EF;
   padding: 7px 10px;

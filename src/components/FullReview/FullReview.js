@@ -8,8 +8,8 @@ const FullReview = () => {
     return (
         <div className='mt-24 mb-24 flex flex-col'>
             <div className='lg:flex lg:flex-row flex flex-col lg:gap-24 lg:px-80'>
-                <div class="avatar mt-8 flex">
-                    <div class="w-32 h-32 mx-auto rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <div className="avatar mt-8 flex">
+                    <div className="w-32 h-32 mx-auto rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={reviews.img} alt='' />
                     </div>
                 </div>

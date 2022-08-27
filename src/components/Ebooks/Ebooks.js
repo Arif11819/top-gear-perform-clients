@@ -7,15 +7,15 @@ const Ebooks = () => {
   const [books, setbooks] = useState([]);
 
   useEffect(() => {
-    fetch("books.json")
+    fetch(`https://dry-ravine-83506.herokuapp.com/ebook`)
       .then((res) => res.json())
       .then((data) => setbooks(data));
   }, []);
 
   return (
-    <div className="bg-base-100 pb-20">
+    <div className="bg-slate-50 pb-20">
       <section>
-        <div className="hero book-head bg-base-200">
+        <div className="hero book-head bg-slate-50">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="lg:p-20 ">
               <img

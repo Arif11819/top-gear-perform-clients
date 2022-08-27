@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { FaCalendarDay } from 'react-icons/fa'
 import { useQuery } from 'react-query';
 import { BsFillCheckCircleFill } from 'react-icons/bs'

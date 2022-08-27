@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './pricing.css'
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import { HiPhoneOutgoing, HiLocationMarker, HiOutlineMail } from "react-icons/hi";
@@ -23,73 +24,67 @@ const Pricing = () => {
     }
     return (
         <div>
-            <section className="bg-white dark:bg-gray-900">
+            <section className="bg-slate-50">
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                     <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Let’s get you on the right plan!</h2>
+                        <h2 className="mb-10 text-4xl font-extrabold text-black ">Let’s get you on the right plan!</h2>
 
                     </div>
                     <div className="space-y-8 mt-5 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
 
 
-                        <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white transform transition duration-500 hover:scale-110">
+                        <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-black-900 bg-white rounded-lg border border-black-100 shadow xl:p-8  transform transition duration-500 hover:scale-110">
                             <h3 className="mb-4 text-2xl font-semibold">Basic</h3>
-                            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option for personal use & for your next project.</p>
+                            <p className="font-light text-black-500 sm:text-lg ">Best option for personal use & for your next project.</p>
                             <div className="flex justify-center items-baseline my-8">
                                 <span className="mr-2 text-5xl font-extrabold">$200</span>
-                                <span className="text-gray-500 dark:text-gray-400">/month</span>
+                                <span className="text-black-500 ">/month</span>
                             </div>
-
                             <ul className="mb-8 space-y-4 text-left">
                                 <li className="flex hover:bg-none items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>Regular business reviews</span>
-
-                                    <span>Individual configuration</span>
+                                    <span className='pricing-text'>Regular business reviews</span>
 
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span>No setup, or hidden fees</span>
+                                    <span className='pricing-text'>No setup, or hidden fees</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>Feedback & Praise</span>
+                                    <span className='pricing-text'>Feedback & Praise</span>
 
-                                    <span>Team size: <span className="font-semibold">1 developer</span></span>
 
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span>Customizable goal weighting</span>
-                                </li>
-                                <li className="flex items-center space-x-3">
-
-                                    <span>Premium support: <span className="font-semibold">6 months</span></span>
+                                    <span className='pricing-text'>Customizable goal weighting</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
-
-
-                                    <i className="fa text-green-500 fa-check"></i>
-                                    <span>Performance review comment sentiment analysis</span>
+                                    <span className='pricing-text'>Customizable goal weighting</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>1:1s & Team Meetings</span>
+                                    <span className='pricing-text'>Performance review comment sentiment analysis</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+                                    <i className="fa text-green-500 fa-check"></i>
+
+                                    <span className='pricing-text'>1:1s & Team Meetings</span>
                                 </li>
                             </ul>
                             <Link to="/schedule" className="text-blue-500 shadow border border-blue-700 bg-white font-bold rounded-lg px-5 py-2.5 text-center ">SCHEDULE DEMO</Link>
                         </div>
 
-                        <div className="flex shadow-2xl flex-col p-6 mx-auto max-w-lg text-center text-white rounded-xl border border-gray-100 bg-blue-500 dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white transform transition duration-500 hover:scale-110">
+                        <div className="flex shadow-2xl flex-col p-6 mx-auto max-w-lg text-center text-white rounded-xl border border-black-100 bg-blue-500  xl:p-8 transform transition duration-500 hover:scale-110">
                             <h3 className="mb-4 text-2xl font-semibold">Premium</h3>
                             <p className="font-light sm:text-lg">Relevant for multiple users, extended & premium support.</p>
                             <div className="flex justify-center items-baseline my-8">
@@ -101,48 +96,55 @@ const Pricing = () => {
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span>Individual configuration</span>
+                                    <span className='pricing-texts'>Individual configuration</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span>No setup, or hidden fees</span>
+                                    <span className='pricing-texts'>No setup, or hidden fees</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>Goal Analytics</span>
+                                    <span className='pricing-texts'>Goal Analytics</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span>Onboarding Surveys</span>
+                                    <span className='pricing-texts'>Onboarding Surveys</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span>1:1s & Team Meetings</span>
+                                    <span className='pricing-texts'>1:1s & Team Meetings</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
-                                    <span>Premium support: <span className="font-semibold">24 months</span></span>
+                                    <i className="fa text-green-500 fa-check"></i>
+                                    <span className='pricing-texts'>Onboarding Surveys</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>Free updates: <span className="font-semibold">24 months</span></span>
+                                    <span className='pricing-texts'>Compensation review setup</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+
+                                    <i className="fa text-green-500 fa-check"></i>
+
+                                    <span className='pricing-texts'>Compensation review setup</span>
                                 </li>
                             </ul>
                             <Link to="/schedule" className="text-blue-500 shadow border border-blue-700 bg-white font-bold rounded-lg px-5 py-2.5 text-center ">SCHEDULE DEMO</Link>
                         </div>
 
-                        <div className="flex shadow flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white transform transition duration-500 hover:scale-110">
+                        <div className="flex shadow flex-col p-6 mx-auto max-w-lg text-center text-black-900 bg-white rounded-lg border border-black-100  xl:p-8   transform transition duration-500 hover:scale-110">
                             <h3 className="mb-4 text-2xl font-semibold ">Unlimited</h3>
-                            <p className="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best for large scale uses and extended redistribution rights.</p>
+                            <p className="font-light text-black-500 sm:text-lg ">Best for large scale uses and extended redistribution rights.</p>
                             <div className="flex justify-center items-baseline my-8">
                                 <span className="mr-2 text-3xl font-extrabold">Custom Pricing</span>
-                                <span className="text-gray-500 dark:text-gray-400">/Quarter</span>
+                                <span className="text-black-500 ">/Quarter</span>
                             </div>
 
                             <ul className="mb-8 space-y-4 text-left">
@@ -150,48 +152,48 @@ const Pricing = () => {
 
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>Compensation review setup</span>
-
-                                    <span>Individual configuration</span>
+                                    <span className='pricing-text'>Compensation review setup</span>
 
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>No setup, or hidden fees</span>
+                                    <span className='pricing-text'>No setup, or hidden fees</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
 
 
-                                    <span>Raise guidance based on performance data</span>
+                                    <span className='pricing-text'>Raise guidance based on performance data</span>
 
-                                    <i className="fa text-green-500 fa-check"></i>
-                                    <span>Team size: <span className="font-semibold">100+ developers</span></span>
 
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>Career tracks</span>
-
-                                    <span>Premium support: <span className="font-semibold">36 months</span></span>
+                                    <span className='pricing-text'>Career tracks</span>
 
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span>Bonus and spot bonus</span>
+                                    <span className='pricing-text'>Bonus and spot bonus</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span>1:1s and Performance Management integration</span>
-                                    <span>Free updates: <span className="font-semibold">36 months</span></span>
+                                    <span className='pricing-text'> Performance Management integration</span>
 
                                 </li>
+                                <li className="flex items-center space-x-3">
+
+                                    <i className="fa text-green-500 fa-check"></i>
+                                    <span className='pricing-text'> Performance Management integration</span>
+
+                                </li>
+
                             </ul>
                             <Link to="/schedule" className="text-blue-500 shadow border border-blue-700 bg-white font-bold rounded-lg px-5 py-2.5 text-center ">SCHEDULE DEMO</Link>
                         </div>
