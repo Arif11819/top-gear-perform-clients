@@ -127,6 +127,32 @@ const Register = () => {
             return;
         }
 
+        const vacation = [
+            {
+                "name": "Vacation",
+                "day": 60,
+                "vName": "Vacation full-time",
+                "email": email
+            },
+            {
+                "name": "Sick",
+                "day": 45,
+                "vName": "Sick full-time",
+                "email": email
+            }
+        ]
+        fetch('https://dry-ravine-83506.herokuapp.com/vacation', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(vacation)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
+
         // creating new user here
 
         if (email && password && confirmPassword && role && age && gender) {
@@ -159,31 +185,7 @@ const Register = () => {
                 })
             }
         }
-        const vacation = [
-            {
-                "name": "Vacation",
-                "day": 60,
-                "vName": "Vacation full-time",
-                "email": email
-            },
-            {
-                "name": "Sick",
-                "day": 45,
-                "vName": "Sick full-time",
-                "email": email
-            }
-        ]
-        fetch('https://dry-ravine-83506.herokuapp.com/vacationstore', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(vacation)
-        })
-            .then(res => res.json())
-            .then(data => {
 
-            })
     }
     if (user) {
         navigate('/dashboard/home')
