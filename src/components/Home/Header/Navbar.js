@@ -43,25 +43,26 @@ const Navbar = () => {
                     </div>
                     <GiHamburgerMenu onClick={() => setToggle(!toggle)} className='burger-icon' />
                     <div className="main-nav-links">
-                        <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
+                        <div className="dropdown  dropdown-hover cursor-pointer dropdown-container">
+                            
                             <label tabIndex="0">PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu shadow bg-slate-50 w-72">
 
-                                <li className='hover:none'> <Link to='/login'><img src="https://i.ibb.co/rMtSDJZ/product-overview.png" alt="" />Product Overview</Link></li>
+                                <li className='hover:none '> <Link className='dash-link' to='/login'><img src="https://i.ibb.co/rMtSDJZ/product-overview.png" alt="" />Product Overview</Link></li>
 
-                                <li><Link to='/dashboard/add-goal'><img src="https://i.ibb.co/cXYpzBx/performance.png" alt="" />  Performance Management</Link></li>
+                                <li ><Link className='dash-link' to='/dashboard/add-goal'><img src="https://i.ibb.co/cXYpzBx/performance.png" alt="" />  Performance Management</Link></li>
 
-                                <li><Link to='/dashboard/task'><img src="https://i.ibb.co/L51BwxN/task-Management.png" alt="" /> Task Management</Link></li>
+                                <li ><Link className='dash-link' to='/dashboard/task'><img src="https://i.ibb.co/L51BwxN/task-Management.png" alt="" /> Task Management</Link></li>
 
-                                <li><Link to='/dashboard/employee'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Employee Management</Link></li>
+                                <li ><Link className='dash-link' to='/dashboard/employee'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Employee Management</Link></li>
 
                             </ul>
                         </div>
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">CUSTOMERS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu  shadow bg-slate-50 w-72">
-                                <li><Link to='/dashboard/reviews'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
-                                <li><Link to='/praise'><img src="https://i.ibb.co/thRDcVS/integrations.png" alt="" /> Why TopGear Perform</Link></li>
+                                <li><Link className='dash-link' to='/dashboard/reviews'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
+                                <li><Link className='dash-link' to='/praise'><img src="https://i.ibb.co/thRDcVS/integrations.png" alt="" /> Why TopGear Perform</Link></li>
                             </ul>
                         </div>
 
@@ -70,11 +71,11 @@ const Navbar = () => {
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">RESOURCES<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu shadow bg-slate-50 w-72">
-                                <li><Link to='/ebook'><img src="https://i.ibb.co/7C61C9N/books.png" alt="" /> eBooks</Link></li>
+                                <li><Link className='dash-link' to='/ebook'><img src="https://i.ibb.co/7C61C9N/books.png" alt="" /> eBooks</Link></li>
 
-                                <li><Link to='/blogs'><img src="https://i.ibb.co/mbkby2D/library.png" alt="" />Blogs</Link></li>
+                                <li><Link className='dash-link' to='/blogs'><img src="https://i.ibb.co/mbkby2D/library.png" alt="" />Blogs</Link></li>
 
-                                <li><Link to='/dashboard/course'><img src="https://i.ibb.co/xqvZ74w/example-Copy.png" alt="" />Our Examples</Link></li>
+                                <li><Link className='dash-link' to='/dashboard/course'><img src="https://i.ibb.co/xqvZ74w/example-Copy.png" alt="" />Our Examples</Link></li>
 
                             </ul>
                         </div>
@@ -82,11 +83,11 @@ const Navbar = () => {
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">SUPPORT<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-slate-50 w-72">
-                                <li> <Link to='/faq'><img src="https://i.ibb.co/kHtgtPX/faq.png" alt="" />Answers FAQ</Link></li>
+                                <li> <Link className='dash-link' to='/faq'><img src="https://i.ibb.co/kHtgtPX/faq.png" alt="" />Answers FAQ</Link></li>
 
-                                <li><Link to='/helpCenter'><img src="https://i.ibb.co/GsNLVfK/help.png" alt="" /> Help Center</Link></li>
+                                <li><Link className='dash-link' to='/helpCenter'><img src="https://i.ibb.co/GsNLVfK/help.png" alt="" /> Help Center</Link></li>
 
-                                <li><Link to='/dashboard/chat'><img src="https://i.ibb.co/BPqdR82/update.png" alt="" />Chat</Link></li>
+                                <li><Link className='dash-link' to='/dashboard/chat'><img src="https://i.ibb.co/BPqdR82/update.png" alt="" />Chat</Link></li>
                             </ul>
                         </div>
                         <button className='primary-btn'><Link to='/login'>TRY IT FREE</Link></button>
