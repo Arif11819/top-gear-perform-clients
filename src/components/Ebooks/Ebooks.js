@@ -13,9 +13,9 @@ const Ebooks = () => {
   }, []);
 
   return (
-    <div className="bg-base-100 pb-20">
+    <div className="bg-slate-50 pb-20">
       <section>
-        <div className="hero book-head bg-base-200">
+        <div className="hero book-head bg-slate-50">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="lg:p-20 ">
               <img

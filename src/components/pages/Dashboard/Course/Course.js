@@ -6,14 +6,8 @@ const Course = () => {
 
     const [productItems, setProductItems] = useCourse();
 
-
-
-
-
-
-
     return (
-        <div>
+        <div className='bg-slate-50'>
             <h1 className='text-center text-4xl font-bold mt-20 mb-20'>Welcome to Our courses</h1>
 
             <div className='container'>

@@ -29,7 +29,7 @@ const CourseCard = ({ item, setProductItems, productItems }) => {
   return (
     <>
 
-      <div class="card w-96 glass">
+      <div class="card w-96">
         <figure><img src={item.image} alt="car!" /></figure>
         <div class="card-body">
           <h2 class="card-title">{item.name}</h2>

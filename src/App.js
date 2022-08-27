@@ -58,7 +58,7 @@ function App() {
 
 
 
-    <div className=''>
+    <div className='App'>
       <ToastContainer limit={1} />
       {pathname?.includes('/dashboard') ? null : <Navbar></Navbar>}
       <Routes>
@@ -87,6 +87,7 @@ function App() {
           <Route path='upload-file' element={<UploadFile />} />
           <Route path='manage-blogs' element={<ManageBlogs />} />
           <Route path='/dashboard/add-course' element={<AddCourse />} />
+          <Route path='/dashboard/course' element={<Course />} />
           <Route path='/dashboard/reviews' element={
             <RequireAuth>
               <Reviews></Reviews>

@@ -44,7 +44,7 @@ const Navbar = () => {
                     <div className="main-nav-links">
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
-                            <ul tabIndex="0" className="dropdown-content menu shadow bg-base-100 w-72">
+                            <ul tabIndex="0" className="dropdown-content menu shadow bg-slate-50 w-72">
 
                                 <li className='hover:none'> <Link to='/login'><img src="https://i.ibb.co/rMtSDJZ/product-overview.png" alt="" />Product Overview</Link></li>
 
@@ -58,7 +58,7 @@ const Navbar = () => {
                         </div>
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">CUSTOMERS<RiArrowDownSLine className='arrow-icon' /> </label>
-                            <ul tabIndex="0" className="dropdown-content menu  shadow bg-base-100 w-72">
+                            <ul tabIndex="0" className="dropdown-content menu  shadow bg-slate-50 w-72">
                                 <li><Link to='/dashboard/reviews'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
                                 <li><Link to='/praise'><img src="https://i.ibb.co/thRDcVS/integrations.png" alt="" /> Why TopGear Perform</Link></li>
                             </ul>
@@ -68,7 +68,7 @@ const Navbar = () => {
 
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">RESOURCES<RiArrowDownSLine className='arrow-icon' /> </label>
-                            <ul tabIndex="0" className="dropdown-content menu shadow bg-base-100 w-72">
+                            <ul tabIndex="0" className="dropdown-content menu shadow bg-slate-50 w-72">
                                 <li><Link to='/ebook'><img src="https://i.ibb.co/7C61C9N/books.png" alt="" /> eBooks</Link></li>
 
                                 <li><Link to='/blogs'><img src="https://i.ibb.co/mbkby2D/library.png" alt="" />Blogs</Link></li>
@@ -80,7 +80,7 @@ const Navbar = () => {
 
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">SUPPORT<RiArrowDownSLine className='arrow-icon' /> </label>
-                            <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 w-72">
+                            <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-slate-50 w-72">
                                 <li> <Link to='/faq'><img src="https://i.ibb.co/kHtgtPX/faq.png" alt="" />Answers FAQ</Link></li>
 
                                 <li><Link to='/helpCenter'><img src="https://i.ibb.co/GsNLVfK/help.png" alt="" /> Help Center</Link></li>
@@ -102,7 +102,7 @@ const Navbar = () => {
 
                     <div className="dropdown dropdown-hover cursor-pointer dropdown-container block mt-4 mb-4">
                         <label tabIndex="0">PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
-                        <ul tabIndex="0" className="dropdown-content menu  shadow-xl bg-base-100 ml-20 w-72">
+                        <ul tabIndex="0" className="dropdown-content menu  shadow-xl bg-slate-50 ml-20 w-72">
 
                             <li> <a href='/'>Product Overview</a></li>
 
@@ -120,7 +120,7 @@ const Navbar = () => {
                     <hr />
                     <div className="dropdown dropdown-hover cursor-pointer dropdown-container block mt-4 mb-4">
                         <label tabIndex="0">CUSTOMERS<RiArrowDownSLine className='arrow-icon' /> </label>
-                        <ul tabIndex="0" className="dropdown-content menu shadow-xl ml-20 bg-base-100 w-72">
+                        <ul tabIndex="0" className="dropdown-content menu shadow-xl ml-20 bg-slate-50 w-72">
                             <li><a href='/'> Case Study</a></li>
                             <li><a href='/'> Why TopGear Perform</a></li>
                         </ul>
@@ -130,7 +130,7 @@ const Navbar = () => {
                     <hr />
                     <div className="dropdown dropdown-hover cursor-pointer dropdown-container block mt-4 mb-4">
                         <label tabIndex="0">RESOURCES<RiArrowDownSLine className='arrow-icon' /> </label>
-                        <ul tabIndex="0" className="dropdown-content menu  shadow-xl ml-20 bg-base-100 w-72">
+                        <ul tabIndex="0" className="dropdown-content menu  shadow-xl ml-20 bg-slate-50 w-72">
                             <li> <a href='/'>OKR University</a></li>
 
 
@@ -147,7 +147,7 @@ const Navbar = () => {
                     <hr />
                     <div className="dropdown dropdown-hover cursor-pointer dropdown-containermt-4 mt-4 mb-4">
                         <label tabIndex="0">SUPPORT<RiArrowDownSLine className='arrow-icon' /> </label>
-                        <ul tabIndex="0" className="dropdown-content menu p-2 shadow-xl ml-20 bg-base-100 w-72">
+                        <ul tabIndex="0" className="dropdown-content menu p-2 shadow-xl ml-20 bg-slate-50 w-72">
                             <li> <Link to='/faq'>Answers FAQ</Link></li>
 
                             <li><Link href='/'> OKI Canvas</Link></li>

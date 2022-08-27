@@ -4,7 +4,7 @@ import "./DashHome.css";
 
 const DashHome = () => {
   return (
-    <div className="flex bg-base-100">
+    <div className="flex bg-slate-50">
       <div>
         <ul className="menu w-56 p-2 rounded-box">
 

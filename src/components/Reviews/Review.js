@@ -30,7 +30,7 @@ const Review = ({ review }) => {
     }
 
     return (
-        <div class="card w-80 h-84 bg-base-100 shadow-xl border border-slate-200 text-slate-200">
+        <div class="card w-80 h-84 bg-slate-50 shadow-xl border border-slate-200 text-slate-200">
             <div className='bg-blue-500 mt-32 ml-4 mr-4 mb-4 rounded-lg flex flex-col'>
                 <div class="avatar mt-[-90px]">
                     <div className="w-28 h-28 mx-auto rounded-full ring ring-amber-200">
