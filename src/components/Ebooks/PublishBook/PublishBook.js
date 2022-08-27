@@ -23,11 +23,11 @@ const PublishBook = () => {
     };
 
     return (
-        <section class="bg-slate-50">
+        <section className="bg-slate-50">
             <h1 className='text-4xl mb-4 mt-4 mx-a text-center font-bold text-black'>Publish a new Book  </h1>
-            <div class="grid max-w-screen-xl mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div className="grid max-w-screen-xl mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
 
-                <div class="mr-auto place-self-center lg:col-span-7 mx-auto">
+                <div className="mr-auto place-self-center lg:col-span-7 mx-auto">
 
                     <div className=' mb-20 mt-5 items-center justify-start'>
                         <form className='w-96' onSubmit={handleSubmit(onSubmit)}>
@@ -43,7 +43,7 @@ const PublishBook = () => {
                     </div>
 
                 </div>
-                <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
                     <img src="https://i.ibb.co/tYNTkJf/istockphoto-166025443-612x612-removebg-preview.png" alt="mockup" />
                 </div>
             </div>

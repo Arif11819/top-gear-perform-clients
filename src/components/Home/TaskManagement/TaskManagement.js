@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './TaskManagement.css';
 
 const TaskManagement = () => {
     return (
-        <div className="">
+        <div className="bg-slate-50">
             <div className="hero min-h-screen ">
                 <div className="hero-content grid grid-cols-1 lg:grid-cols-2 gap-10 mx-8">
                     <div>
@@ -22,8 +21,9 @@ const TaskManagement = () => {
                                 {" "}
                                 <label>
                                     <input
+                                        className="mx-3 checkbox-accent checkbox checkbox-sm"
                                         type="checkbox"
-                                        className="checkbox-accent checkbox checkbox-sm mx-3"
+
                                         checked
                                     />
                                 </label>
@@ -54,10 +54,10 @@ const TaskManagement = () => {
                         </div>
 
                         <div className="flex items-center justify-start pt-3">
-                            <Link to='/schedule' className="secondary-btn">Get a free Demo</Link>
-                            <Link to="/blogs" className="link text-sky-400 m-3">
+                            <button className="secondary-btn">Get a free Demo</button>
+                            <a href="www.facebook" className="link text-sky-400 m-3">
                                 Learn more →
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000">

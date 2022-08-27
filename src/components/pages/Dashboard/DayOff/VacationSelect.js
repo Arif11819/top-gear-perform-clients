@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { FaUserClock } from 'react-icons/fa'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import DayOffModal from './DayOffModal';

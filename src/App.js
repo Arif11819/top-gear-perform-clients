@@ -58,14 +58,12 @@ function App() {
 
 
 
-    <div className=''>
+    <div className='App'>
       <ToastContainer limit={1} />
       {pathname?.includes('/dashboard') ? null : <Navbar></Navbar>}
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
-
-
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='home' element={<DashHome />} />
@@ -83,14 +81,13 @@ function App() {
           <Route path='take-vacation' element={<DaysOffHome />} />
           <Route path='add-employee' element={<AddEmployee />} />
           <Route path='add-goal' element={<CreateGoalHome />} />
-
           <Route path='manage-users' element={<ManageUsers />} />
           <Route path='manage-book' element={<ManageBook />} />
           <Route path='demo-details' element={<ScheduleDemoDetails />} />
           <Route path='upload-file' element={<UploadFile />} />
-
           <Route path='manage-blogs' element={<ManageBlogs />} />
           <Route path='/dashboard/add-course' element={<AddCourse />} />
+          <Route path='/dashboard/course' element={<Course />} />
           <Route path='/dashboard/reviews' element={
             <RequireAuth>
               <Reviews></Reviews>
