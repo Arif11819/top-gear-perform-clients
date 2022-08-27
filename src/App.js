@@ -43,8 +43,6 @@ import ScheduleDemoDetails from './components/Home/ScheduleDemo/ScheduleDemoDeta
 import Emergency from './components/pages/Dashboard/Emergency/Emergency';
 import Course from './components/pages/Dashboard/Course/Course';
 import AddCourse from './components/pages/Dashboard/Course/AddCourse';
-import VacationShow from './components/pages/Dashboard/DayOff/VacationShow';
-import VacationSelect from './components/pages/Dashboard/DayOff/VacationSelect';
 import DaysOffHome from './components/pages/Dashboard/DayOff/DaysOffHome';
 import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHome';
 
