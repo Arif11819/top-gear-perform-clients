@@ -9,7 +9,7 @@ const ManageBook = () => {
         fetch('ebook.json')
             .then(res => res.json())
             .then(data => setEbooks(data))
-    }, []);
+    }, [ebooks]);
     return (
         <div >
             <PublishBook />
