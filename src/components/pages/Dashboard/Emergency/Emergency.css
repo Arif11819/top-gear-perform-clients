@@ -1,6 +1,6 @@
-.info{
-  width: 500px;
-  margin-left: 100px;
+ .info{
+  width: 400px;
+  margin-left: 80px;
 }
 .info:hover{
   background-color: skyblue;
@@ -9,6 +9,10 @@
 .emg-card{
   height: 350px;
   width: 450px;
+  border: solid gray 1px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
 }
 
 .emg-field{

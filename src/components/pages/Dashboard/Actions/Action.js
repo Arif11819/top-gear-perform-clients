@@ -9,7 +9,8 @@ const Action = () => {
   const [user] = useAuthState(auth);
   const [admin] = useAdmin(user);
   return (
-    <div>
+    <div className='flex'>
+      <div >
       <ul className="menu bg-slate-50 w-56 p-2  rounded-box">
 
         {/* num-01 */}
@@ -64,11 +65,15 @@ const Action = () => {
         <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/add-goal">Add Goal</Link>
         </li>
+        </ul>
+        </div>
+
+        <div>
+        <img className=" h-screen" src="https://i.ibb.co/ypyQChc/Rapport-et-Dashboard-comprendre-la-difference-entre-les-deux-concepts.jpg" alt="" />
+      </div>
 
 
-
-
-      </ul>
+      
     </div>
   );
 };
