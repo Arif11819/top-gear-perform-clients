@@ -36,7 +36,7 @@ const Dashboard = () => {
           <div onClick={() => navigate("/")} >
           <div className="dash-logo flex">
                         <img onClick={() => navigate('/')} src="https://i.ibb.co/sbWSq7g/bandwidth.png" alt="" />
-                        <p className='text-xl font-bold text-sky-600 ml-4 mt-2 '>TopGear Perform</p>
+                        <p className='lg:text-xl font-bold text-sky-600 lg:ml-4 lg:mt-2 '>TopGear Perform</p>
                     </div>
           </div>
           <div className="dashboard-links">
@@ -74,7 +74,7 @@ const Dashboard = () => {
                     className="profile-close-icon"
                   />
                   <button onClick={handleLogout}>
-                    <FiLogOut className="inline text-xl mr-3" />
+                    <FiLogOut className="inline lg:text-xl lg:mr-3" />
                     Logout
                   </button>
                 </div>
