@@ -94,7 +94,9 @@ const DashHome = () => {
           </li>}
         </ul>
       </div>
-      
+      <div>
+        <img className=" h-screen" src="https://i.ibb.co/ypyQChc/Rapport-et-Dashboard-comprendre-la-difference-entre-les-deux-concepts.jpg" alt="" />
+      </div>
     </div>
   );
 };
