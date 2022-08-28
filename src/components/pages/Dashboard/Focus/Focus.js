@@ -5,44 +5,44 @@ const Focus = () => {
   return (
     <div>
       <ul className="menu bg-slate-50 w-56 p-2 rounded-box">
-        <li className="actions-text" tabindex="6">
+        <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/reviews">Reviews</Link>
         </li>
 
         {/* num-02 */}
 
 
-        <li className="actions-text" tabindex="6">
+        <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/manage-users">Manage User</Link>
         </li>
 
         {/* num-03 */}
 
-        <li className="notification-text" tabindex="2">
+        <li className="notification-text" tabIndex="2">
           <span>Top Gear OkRs</span>
         </li>
 
         {/* num-04 */}
 
-        <li className="notification-text" tabindex="3">
+        <li className="notification-text" tabIndex="3">
           <span>My Org's OKRs</span>
         </li>
 
         {/* num-05 */}
 
-        <li className="notification-text" tabindex="4">
+        <li className="notification-text" tabIndex="4">
           <span>Watched OKRs</span>
         </li>
 
         {/* num-06 */}
 
-        <li className="notification-text" tabindex="5">
+        <li className="notification-text" tabIndex="5">
           <span>Shared OKRs</span>
         </li>
 
         {/* num-07 */}
 
-        <li className="notification-text" tabindex="6">
+        <li className="notification-text" tabIndex="6">
           <span>OKRs by KPIs</span>
           <ul className="bg-slate-50">
             <li>
@@ -54,23 +54,23 @@ const Focus = () => {
 
         {/* num-09 */}
 
-        <li className="notification-text" tabindex="8">
+        <li className="notification-text" tabIndex="8">
           <span>All Employess' OKRs</span>
         </li>
         {/* num-09 */}
 
-        <li className="notification-text" tabindex="8">
+        <li className="notification-text" tabIndex="8">
           <span>All Departments' OKRs</span>
         </li>
         {/* num-09 */}
 
-        <li className="notification-text" tabindex="8">
+        <li className="notification-text" tabIndex="8">
           <span>Manager's ORKs</span>
         </li>
 
         {/* num-07 */}
 
-        <li className="notification-text" tabindex="6">
+        <li className="notification-text" tabIndex="6">
           <span>OKRs Program Status</span>
           <ul className="bg-slate-50">
             <li>

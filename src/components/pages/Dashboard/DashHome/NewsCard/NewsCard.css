@@ -2,9 +2,10 @@
     width: 80%;
     display: block;
     margin: 15px auto;
-    background-color: bisque;
     min-height: 200px;
     padding: 10px;
+    border: solid rgb(88, 84, 84) 1px;
+    border-radius: 25px;
 }
 .post-date{
     font-size: 11px;

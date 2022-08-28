@@ -1,12 +1,13 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom'
-import { BiCurrentLocation } from 'react-icons/bi';
-import { FaTasks } from 'react-icons/fa';
-import { MdOutlineAddLocationAlt } from 'react-icons/md';
-import { AiFillMessage, AiOutlineKey, AiOutlineSchedule } from 'react-icons/ai';
+import auth from '../../../../firebase.init';
+import useAdmin from '../../../../hooks/useAdmin';
 import './Actions.css';
 
 const Action = () => {
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
   return (
     <div>
       <ul className="menu bg-slate-50 w-56 p-2  rounded-box">
@@ -14,47 +15,53 @@ const Action = () => {
         {/* num-01 */}
 
 
-        <li className="actions-text" tabindex="6">
+
+        <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/reviews">Reviews</Link>
         </li>
 
         {/* num-02 */}
 
-
-        <li className="actions-text" tabindex="6">
-          <Link className="dash-link" to="/dashboard/manage-users">Manage User</Link>
-        </li>
+        {
+            admin && <li className="actions-text" tabIndex="6">
+            <Link className="dash-link" to="/dashboard/manage-users">Manage User</Link>
+          </li>
+          }
+        
         {/* num-03 */}
 
 
-        <li className="actions-text" tabindex="6">
+        {
+            admin && <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/manage-book">Manage Book</Link>
-        </li>
+        </li>}
 
         {/* num-04 */}
 
 
-        <li className="actions-text" tabindex="6">
+        {
+            admin && <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/demo-details">Demo Details</Link>
         </li>
+      }
 
         {/* num-05 */}
 
-        <li className="actions-text" tabindex="6">
+        <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/upload-file">Upload File</Link>
         </li>
 
         {/* num-06 */}
 
 
-        <li className="actions-text" tabindex="6">
+        <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/vacation-select">Select Vacation</Link>
         </li>
 
         {/* num-07 */}
 
 
-        <li className="actions-text" tabindex="6">
+        <li className="actions-text" tabIndex="6">
           <Link className="dash-link" to="/dashboard/add-goal">Add Goal</Link>
         </li>
 

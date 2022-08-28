@@ -208,6 +208,13 @@ label {
 
 }
 
+.dash-link:hover {
+    background-color: white;
+    font-weight: 700;
+    color: black;
+
+}
+
 .toggle-top-menu a {
     margin: 5px 10px;
 }

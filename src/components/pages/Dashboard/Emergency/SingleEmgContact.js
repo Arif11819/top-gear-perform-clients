@@ -37,7 +37,7 @@ const SingleEmgContact = ({ emgContact }) => {
 
   return (
     <div>
-      <div className="card emg-card bg-slate-100 shadow-xl">
+      <div className="card emg-card  shadow-xl">
         <div className="card-body">
           <div className="card-actions justify-end">
             <button className='mx-2 text-3xl'

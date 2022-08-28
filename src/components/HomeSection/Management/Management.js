@@ -21,7 +21,6 @@ const Management = () => {
           <div className=" ">
             <h1 className="lg:text-3xl text-2xl font-bold ">OKR Management Software</h1>
             <p className=" text-sky-500">Focus. Measure. Achieve.</p>
-            <progress className="progress w-56"></progress>
             <p className="lg:py-6 py-2 text-xl">
               Bridge your strategy-execution gap using TopGear Employee Management
             </p>
