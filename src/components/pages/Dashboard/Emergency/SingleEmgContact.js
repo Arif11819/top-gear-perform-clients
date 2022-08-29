@@ -1,5 +1,5 @@
 import React from "react";
-import { MdDeleteForever } from 'react-icons/md';
+import { BsPersonXFill, BsFillFileEarmarkPersonFill } from 'react-icons/bs';
 import { useEffect, useState } from "react";
 import { toast } from 'react-toastify';
 
@@ -37,12 +37,16 @@ const SingleEmgContact = ({ emgContact }) => {
 
   return (
     <div>
-      <div className="card emg-card  shadow-xl">
-        <div className="card-body">
-          <div className="card-actions justify-end">
-            <button className='mx-2 text-3xl'
+      <div className=" emg-card  shadow-xl">
+        <div className="flex">
+          <div className="mr-44 text-3xl">
+            <BsFillFileEarmarkPersonFill/>
+          </div>
+        <div className="">
+            <button className='ml-44 text-3xl'
               onClick={() => handleDelete(emgContact._id)}
-            ><MdDeleteForever /></button>
+            ><BsPersonXFill /></button>
+          </div>
           </div>
           <div>
             <p className="text-2xl">Name: {name}</p>
@@ -51,7 +55,6 @@ const SingleEmgContact = ({ emgContact }) => {
             <p>Email: {email}</p>
             <p>Address: {address}</p>
           </div>
-        </div>
       </div>
     </div>
   );
