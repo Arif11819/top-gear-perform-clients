@@ -6,7 +6,7 @@
 
 .login-form {
     background-color: #f3f8fe;
-    padding: 70px;  
+    padding: 70px;
     width: 40%;
     height: 100%;
 }
@@ -21,15 +21,17 @@
     color: rgba(0, 0, 0, 0.534);
 
 }
-.login-form input:focus{
+
+.login-form input:focus {
     outline: none;
 }
-.login-form h1{
+
+.login-form h1 {
     text-align: center;
     font-size: 30px;
     margin-top: 50px;
     font-weight: bold;
-    color: #58A0EF ;
+    color: #58A0EF;
 
 }
 
@@ -61,17 +63,83 @@
     height: 100%;
     width: 100%;
 }
-.signUp{
+
+.signUp {
     color: #58A0EF;
 }
 
+.forgot {
+    color: #58A0EF;
+    font-size: 15px;
+    margin-left: 33px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.forgotBackdrop {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.521);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forgotModal {
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.forgotModal input {
+    display: block;
+    width: 300px;
+    margin: 0px auto;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.418);
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.534);
+}
+
+.forgotModal input:focus {
+    outline: none;
+}
+
+.forgotModal button {
+    background-color: #58A0EF;
+    padding: 7px 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 15px auto;
+    font-weight: 600;
+    width: 300px;
+
+
+}
+
 @media only screen and (max-width:600px) {
-    .right-side{
+    .right-side {
         display: none;
     }
-     .login-form{
+
+    .login-form {
         width: 100%;
         padding: 10px;
         padding-top: 100px;
-     }
+    }
 }

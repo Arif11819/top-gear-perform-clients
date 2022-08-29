@@ -18,9 +18,9 @@ const NewsLetter = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src="https://i.ibb.co/jHK4FTY/istockphoto-1351881144-612x612.jpg" alt='' className="max-w-sm rounded-lg" />
                 <div className='pt-20 pb-20'>
-                    <h1 className="text-xl font-bold text-start">Keep Yourself Updated With All  </h1>
-                    <h1 className="text-xl font-bold text-start"> The Latest News About</h1>
-                    <h1 className="text-xl font-bold text-start"> TopgearPerform</h1>
+                    <h2 className="text-xl font-bold text-start">Keep Yourself Updated With All  </h2>
+                    <h2 className="text-xl font-bold text-start"> The Latest News About</h2>
+                    <h2 className="text-xl font-bold text-start"> TopgearPerform</h2>
                     <p className="py-6">Subscribe to our newsletter to get all the latest updates about our offers, promotion, Partnerships, and so on. But promise we will not spam your mail. So you can consider subscribing to us.</p>
                     <div className="form-control w-80">
                         <label className="label">

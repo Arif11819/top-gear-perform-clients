@@ -1,31 +1,23 @@
-import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 import { RiArrowDownSLine, RiGlobalLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import auth from '../../../firebase.init';
 import './Header.css'
 
 const Navbar = () => {
-    const [user] = useAuthState(auth)
 
     const [toggle, setToggle] = useState(false)
     const navigate = useNavigate()
-    const handleSignout = () => {
-        
-
-    }
     return (
         <>
             <nav>
                 <div className="top-nav-bar">
-                    <Link to="/">About us</Link>
+                    <Link to="/team">About us</Link>
                     <Link to="/">Blog</Link>
-                    <Link to="/">Contact us</Link>
-                    <Link to="/login">Sign in </Link>
+                    <Link to="/contact">Contact us</Link>
+             <Link to="/login">Sign in </Link>
                     <RiGlobalLine className='global-icon' />
                 </div>
                 <div className="main-nav-bar">
@@ -59,7 +51,7 @@ const Navbar = () => {
                             </ul>
                         </div>
 
-                        <Link to='/'>PRICING</Link>
+                        <Link to='/pricing'>PRICING</Link>
 
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">RESOURCES<RiArrowDownSLine className='arrow-icon' /> </label>
@@ -152,11 +144,11 @@ const Navbar = () => {
                         <ul tabIndex="0" className="dropdown-content menu p-2 shadow-xl ml-20 bg-base-100 w-72">
                             <li> <Link to='/faq'>Answers FAQ</Link></li>
 
-                            <li><Link href='/'> OKI Canvas</Link></li>
+                            <li><Link to='/'> OKI Canvas</Link></li>
 
                             <li><Link to='/helpCenter'> Help Center</Link></li>
 
-                            <li><Link href='/'>Release and Updates</Link></li>
+                            <li><Link to='/'>Release and Updates</Link></li>
                         </ul>
                     </div>
                     <hr />
@@ -165,7 +157,7 @@ const Navbar = () => {
                     <hr />
                     <Link className='price-link mt-4 mb-4' to='/'>BLOG</Link>
                     <hr />
-                    <Link className='price-link mt-4 mb-4' to='/'>CONTACT US</Link>
+                    <Link className='price-link mt-4 mb-4' to='/contact'>CONTACT US</Link>
                     <hr />
                     <Link className='price-link mt-4 mb-4' to='/login'>SIGN IN</Link>
                     <hr />

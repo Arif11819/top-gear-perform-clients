@@ -8,7 +8,6 @@ import Loading from './Loading/Loading';
 import { toast } from 'react-toastify';
 
 
-
 const Register = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -22,7 +21,6 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
-    const [userData, setUserData] = useState(false)
 
 
     // error state
@@ -134,7 +132,6 @@ const Register = () => {
         if (email && password && confirmPassword && role && age && gender) {
 
             createUserWithEmailAndPassword(email, password)
-
             fetch('https://dry-ravine-83506.herokuapp.com/users', {
                 method: 'POST',
                 headers: {
@@ -143,16 +140,18 @@ const Register = () => {
                 body: JSON.stringify(userData)
 
             })
-
+                .then((data) => {
+                    if (data.status === 200) {
+                        toast.success('Register successfull')
+                    }
+                })
+          
         }
-
     }
-
     if (user) {
         navigate('/dashboard/home')
         toast.success('Register successfull',{toastId:'register'})
     }
-
 
     return (
         <div className='register-container'>
@@ -195,9 +194,9 @@ const Register = () => {
                         </select>
                         <input autoComplete='off' required className='short-input' name='phoneNumber' type="number" placeholder='Phone number' />
                     </div>
-                    <label className='term-container'>
+                    <label className='flex'>
                         <input autoComplete='off' required name='checkBox' type="checkbox" />
-                        <p> Accept our <Link className='term-link' to='/term-and-condition'> terms </Link> and condition</p>
+                        <p> Accept our <Link className='term-link' to='/terms'> terms and condition</Link></p>
                     </label>
                     {emailError && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />{emailError}</p>
@@ -220,6 +219,7 @@ const Register = () => {
                     {error && <div className='error-container'>
                         <p className='error-message'><TiWarning className='warning-icon' />Email already exist</p>
                     </div>}
+                   
                     <button disabled={loading} type='submit' className='register-button '>
                         {loading ? <Loading /> : <span>Sign Up</span>}
                     </button>

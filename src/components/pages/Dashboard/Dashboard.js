@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom'
-import './Dashboard.css'
+import './Dashboard.css';
 import { VscFileSymlinkDirectory } from 'react-icons/vsc'
 import { FiFlag, FiLogOut } from 'react-icons/fi'
 import { MdOutlineNotificationsActive, MdOutlineKeyboardArrowDown, MdClose } from 'react-icons/md'
@@ -23,8 +23,9 @@ const Dashboard = () => {
 
         fetch(`https://dry-ravine-83506.herokuapp.com/user/torik@gmail.com`)
             .then(res => res.json())
-            .then(data => console.log(data))
-    },[])
+            .then(data => setUser(data))
+    }, [])
+
     const handleLogout = () => {
         signOut(auth)
             .then(() => {
@@ -40,15 +41,18 @@ const Dashboard = () => {
             <div className='dashboard-container'>
                 <div className="dashboard-navbar">
                     <div onClick={() => navigate('/')} className="dashboard-logo">
-                        <img src="https://i.ibb.co/f9ZDrz1/logo.png" width='200px' alt="" />
+                        <div className="logo">
+                            <img onClick={() => navigate('/dashboard')} width='200px' src="https://i.ibb.co/f9ZDrz1/logo.png" alt="" />
+                        </div>
                     </div>
                     <div className="dashboard-links">
                         <Link to="">< VscFileSymlinkDirectory className='dash-nav-icon' /></Link>
-                        <Link to="">< FiFlag className='dash-nav-icon' /></Link>
-                        <Link to="">< MdOutlineNotificationsActive className='dash-nav-icon' /></Link>
+                        <Link to="/dashboard/action">< FiFlag className='dash-nav-icon' /></Link>
+                        <Link to="/dashboard/notification">< MdOutlineNotificationsActive className='dash-nav-icon' /></Link>
                         <Link to="">< BiHelpCircle className='dash-nav-icon' /></Link>
-                        <Link to="">< BiMessage className='dash-nav-icon' /></Link>
+                        <Link to="/dashboard/chat">< BiMessage className='dash-nav-icon' /></Link>
                         <div className="profie">
+                          
                             <CgProfile onClick={() => setShowProfile(!showProfile)} className='dash-nav-icon' />
                             <p onClick={() => setShowProfile(!showProfile)} className='inline text-sm'>{singleUser[0]?.fullName} <MdOutlineKeyboardArrowDown className='inline' /></p>
                             {showProfile && <div className="user-profile">

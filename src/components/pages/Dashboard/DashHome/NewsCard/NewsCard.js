@@ -13,7 +13,7 @@ const NewsCard = ({ news }) => {
                 </div>
             </div>
            <div>
-           <p className='inline px-2'>{userName} </p>
+           <p  className='inline px-2 post-name'>{userName} </p>
             <p className='post-date px-2'>{postTime}</p>
            </div>
             
