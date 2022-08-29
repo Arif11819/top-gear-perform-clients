@@ -1,32 +1,39 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import auth from '../../../firebase.init';
 import CompleteData from '../CompleteData/CompleteData';
 
 const Completed = () => {
 
     const [completes, setCompletes] = useState([]);
+    const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/complete`)
+        fetch(`https://dry-ravine-83506.herokuapp.com/complete/${user?.email}`)
             .then(res => res.json())
             .then(data => setCompletes(data))
     }, [completes]);
     const { register, handleSubmit, reset } = useForm();
-
     const onSubmit = data => {
-
-        const url = `https://dry-ravine-83506.herokuapp.com/complete`;
-        fetch(url, {
+        const compTask = {
+            form: data,
+            user: user.email
+        }
+        fetch('https://dry-ravine-83506.herokuapp.com/complete', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(compTask)
         })
             .then(res => res.json())
-            .then(result => {
-                console.log(result)
-                reset()
+            .then(data => {
+                if (data) {
+                    console.log(data);
+                    reset();
+                }
             })
+
 
     };
     return (

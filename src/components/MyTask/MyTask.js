@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import auth from '../../firebase.init';
 import Completed from './Completed/Completed';
 import './MyTask.css'
 import MyTaskData from './MyTaskData/MyTaskData';
@@ -9,30 +11,35 @@ import Scheduled from './Scheduled/Scheduled';
 const MyTask = () => {
 
     const [tasks, setTasks] = useState([]);
+    const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/task`)
+        fetch(`https://dry-ravine-83506.herokuapp.com/task/${user?.email}`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [tasks]);
 
+
     const { register, handleSubmit, reset } = useForm();
-
     const onSubmit = data => {
-
-        const url = `https://dry-ravine-83506.herokuapp.com/task`;
-        fetch(url, {
+        const myTask = {
+            form: data,
+            user: user.email
+        }
+        fetch('https://dry-ravine-83506.herokuapp.com/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(myTask)
         })
             .then(res => res.json())
-            .then(result => {
-                console.log(result)
-
-                reset()
+            .then(data => {
+                if (data) {
+                    console.log(data);
+                    reset();
+                }
             })
+
 
     };
 

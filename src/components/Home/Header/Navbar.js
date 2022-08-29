@@ -40,7 +40,7 @@ const Navbar = () => {
                 <div className="main-nav-bar">
                     <div className="logo flex">
                         <img onClick={() => navigate('/')} src="https://i.ibb.co/sbWSq7g/bandwidth.png" alt="" />
-                        <p className='text-2xl font-bold text-sky-600 ml-6 mt-2'>TopGear Perform</p>
+                        <p onClick={() => navigate('/')} className='text-2xl font-bold text-sky-600 ml-6 mt-2'>TopGear Perform</p>
                     </div>
                     <GiHamburgerMenu onClick={() => setToggle(!toggle)} className='burger-icon' />
                     <div className="main-nav-links">

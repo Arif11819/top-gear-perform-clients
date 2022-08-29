@@ -1,32 +1,40 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import auth from '../../../firebase.init';
 import ProgressData from '../ProgressData/ProgressData';
 
 const Progress = () => {
 
     const [progress, setprogress] = useState([]);
+    const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/progress')
+        fetch(`https://dry-ravine-83506.herokuapp.com/progress/${user?.email}`)
             .then(res => res.json())
             .then(data => setprogress(data))
     }, [progress]);
 
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-
-        const url = `https://dry-ravine-83506.herokuapp.com/progress`;
-        fetch(url, {
+        const proceedTask = {
+            form: data,
+            user: user.email
+        }
+        fetch('https://dry-ravine-83506.herokuapp.com/progress', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(proceedTask)
         })
             .then(res => res.json())
-            .then(result => {
-                console.log(result)
-                reset()
+            .then(data => {
+                if (data) {
+                    console.log(data);
+                    reset();
+                }
             })
+
 
     };
 

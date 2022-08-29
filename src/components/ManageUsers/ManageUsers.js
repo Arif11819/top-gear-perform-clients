@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 
 
 
+
 const ManageUsers = () => {
 
     const [users, setUsers] = useState([]);
@@ -29,6 +30,31 @@ const ManageUsers = () => {
 
             })
     }
+
+
+    const handleMakeAdmin = id => {
+
+        const url = `http://localhost:5000/user/admin/${id}`
+        fetch(url, {
+            method: 'PUT'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    console.log(data)
+                    toast.success(`Admin made successfully `)
+                } else {
+                    toast.error(`Failed to make an admin `)
+                }
+
+            })
+
+    };
+
+
+
+
+
     return (
         <div className="overflow-x-auto">
             <h1 className='text-3xl mb-4 mt-5  text-center font-bold text-black'>Manage All of Our Users</h1>
@@ -41,6 +67,7 @@ const ManageUsers = () => {
                         <th>Company</th>
                         <th>Role</th>
                         <th>Email</th>
+                        <th>Action</th>
                         <th>Delete User</th>
 
                     </tr>
@@ -53,7 +80,7 @@ const ManageUsers = () => {
                         <td>{user.company}</td>
                         <td>{user.userRole}</td>
                         <td>{user.userEmail}</td>
-
+                        <td>{user.role !== "admin" && <button onClick={() => handleMakeAdmin(user._id)} className='text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-3 py-1 text-center'>Make Admin</button>}</td>
                         <td><button onClick={() => handleDeleteUser(user._id)} className='text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-1 text-center'> Delete</button></td>
 
                     </tr>)}

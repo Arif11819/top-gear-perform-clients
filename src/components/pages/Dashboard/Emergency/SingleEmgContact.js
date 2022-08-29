@@ -40,21 +40,21 @@ const SingleEmgContact = ({ emgContact }) => {
       <div className=" emg-card  shadow-xl">
         <div className="flex">
           <div className="mr-44 text-3xl">
-            <BsFillFileEarmarkPersonFill/>
+            <BsFillFileEarmarkPersonFill />
           </div>
-        <div className="">
+          <div className="">
             <button className='ml-44 text-3xl'
               onClick={() => handleDelete(emgContact._id)}
             ><BsPersonXFill /></button>
           </div>
-          </div>
-          <div>
-            <p className="text-2xl">Name: {name}</p>
-            <p>Relationship: {relationship}</p>
-            <p>Phone: <br /> {phoneNumberone} <br /> {phoneNumbertwo} <br /> {phoneNumberthree} </p>
-            <p>Email: {email}</p>
-            <p>Address: {address}</p>
-          </div>
+        </div>
+        <div>
+          <p className="text-2xl">Name: {name}</p>
+          <p>Relationship: {relationship}</p>
+          <p>Phone: <br /> {phoneNumberone} <br /> {phoneNumbertwo} <br /> {phoneNumberthree} </p>
+          <p>Email: {email}</p>
+          <p>Address: {address}</p>
+        </div>
       </div>
     </div>
   );

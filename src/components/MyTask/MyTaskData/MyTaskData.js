@@ -1,13 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
+import auth from '../../../firebase.init';
 
 const MyTaskData = ({ task }) => {
 
     const [tasks, setTasks] = useState([]);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/task')
+        fetch(`https://dry-ravine-83506.herokuapp.com/task/${user?.email}`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [tasks]);
+    const [user] = useAuthState(auth);
+    const { data: myTask, isLoading, refetch } = useQuery('myTask', () => fetch(`https://dry-ravine-83506.herokuapp.com/task/${user?.email}`, {
+        method: 'GET',
+    })
+        .then(res => res.json()))
+    refetch()
+    if (isLoading) {
+        return <p>Loading...</p>
+    }
+
 
     const handleDeleteTask = id => {
 
@@ -28,7 +41,7 @@ const MyTaskData = ({ task }) => {
     return (
         <div className="card w-72 bg-slate-50 shadow">
             <div className="card-body text-center items-center">
-                <h2 className='text-black'>{task.myTask}</h2>
+                <h2 className='text-black'>{task.form.myTask}</h2>
 
 
                 <div className="card-actions mt-3 justify-end">
