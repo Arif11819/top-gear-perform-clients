@@ -47,7 +47,7 @@ const Chats = ({ socket, userName, room }) => {
                     }
                 </ScrollToBottom>
             </div>
-            <div className='chat-footer shadow-xl border'>
+            <div className='chat-footer shadow-xl border-0'>
                 <input type="text" value={currentMessage} placeholder='Type your message...' onChange={(e) => { setCurrentMessage(e.target.value) }}
                     onKeyPress={(e) => { e.key === "Enter" && sendMessage() }}
                 />
