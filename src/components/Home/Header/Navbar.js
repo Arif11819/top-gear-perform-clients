@@ -38,8 +38,9 @@ const Navbar = () => {
                     <RiGlobalLine className='global-icon' />
                 </div>
                 <div className="main-nav-bar">
-                    <div className="logo">
-                        <img onClick={() => navigate('/')} width='300px' src="https://i.ibb.co/f9ZDrz1/logo.png" alt="" />
+                    <div className="logo flex">
+                        <img onClick={() => navigate('/')} src="https://i.ibb.co/sbWSq7g/bandwidth.png" alt="" />
+                        <p className='text-2xl font-bold text-sky-600 ml-6 mt-2'>TopGear Perform</p>
                     </div>
                     <GiHamburgerMenu onClick={() => setToggle(!toggle)} className='burger-icon' />
                     <div className="main-nav-links">

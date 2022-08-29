@@ -18,6 +18,7 @@ import { signOut } from "firebase/auth";
 import auth from "../../../firebase.init";
 import { toast } from "react-toastify";
 const Dashboard = () => {
+
   const [showProfile, setShowProfile] = useState(false);
 
   const navigate = useNavigate();
@@ -30,17 +31,13 @@ const Dashboard = () => {
   };
   return (
     <>
-      <div className="dashboard-container">
+      <div className="dashboard-container ">
         <div className="dashboard-navbar">
-          <div onClick={() => navigate("/")} className="dashboard-logo">
-            <div className="logo">
-              <img
-                onClick={() => navigate("/dashboard")}
-                width="200px"
-                src="https://i.ibb.co/f9ZDrz1/logo.png"
-                alt=""
-              />
-            </div>
+          <div onClick={() => navigate("/")} >
+          <div className="dash-logo flex">
+                        <img onClick={() => navigate('/')} src="https://i.ibb.co/sbWSq7g/bandwidth.png" alt="" />
+                        <p className='lg:text-xl font-bold text-sky-600 lg:ml-4 lg:mt-2 '>TopGear Perform</p>
+                    </div>
           </div>
           <div className="dashboard-links">
             <Link to="">
@@ -77,7 +74,7 @@ const Dashboard = () => {
                     className="profile-close-icon"
                   />
                   <button onClick={handleLogout}>
-                    <FiLogOut className="inline text-xl mr-3" />
+                    <FiLogOut className="inline lg:text-xl lg:mr-3" />
                     Logout
                   </button>
                 </div>
@@ -85,27 +82,13 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        {/* <div>
-          <h1 className="text-cyan-500 text-center text-2xl  my-20 lg:text-2xl font-bold">
-            Welcome to Dashbroad
-          </h1>
-          <h5 className="text-center  my-20 text-3xl lg:text-xl font-bold">
-            Check Your Performance
-          </h5>
-          <p className="text-center  my-20 lg:text-3xl text-xl font-bold">
-            Check your performance by clicking navbar options.
-            <Link
-              to="/dashboard/home"
-              className="btn btn-primary bg-gradient-to-r from-cyan-500 to-blue-500 mt-4 "
-            >
-              Check Now
-            </Link>
-          </p>
-        </div> */}
+        
+        
         <div className="dashboard-body">
           <Outlet />
         </div>
-
+        
+       
         <div className="sidebar">
           <Link to="/dashboard/home">
             {" "}
@@ -124,7 +107,8 @@ const Dashboard = () => {
             <BsChatLeftDots className="sidebar-icon" />
           </Link>
         </div>
-      </div>
+      
+   </div>
     </>
   );
 };

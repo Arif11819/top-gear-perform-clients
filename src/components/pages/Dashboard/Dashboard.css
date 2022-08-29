@@ -44,7 +44,7 @@
     z-index: 1;
     left: 0;
     top: 50px;
-    background-color: #58A0EF;
+    background-color: #81b2e7;
 }
 
 .sidebar-icon {
@@ -77,6 +77,12 @@
     transition: 0.3s;
 
 
+}
+.dash-logo img {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    padding: 3px;
 }
 
 .profile-close-icon:hover {

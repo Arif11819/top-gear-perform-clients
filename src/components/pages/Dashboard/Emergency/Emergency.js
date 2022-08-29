@@ -35,14 +35,15 @@ const Emergency = () => {
   }, [emgContacts]);
 
   return (
-    <div className="mx-8">
+    <div className="lg:m-28">
       <div className=" text-2xl text-sky-500 text-center font-bold items-center m-8">
         Emergency Contact
       </div>
-      <div className="">
-        <form className="lg:mx-72" onSubmit={handleSubmit(onSubmit)}>
-          <div className=" lg:mx-24">
-            <label className="input-group input-group-vertical emg-field m-auto lg:m-5">
+      <div className="grid lg:grid-cols-2 lg:gap-5 ">
+      <section className="">
+        <form className="" onSubmit={handleSubmit(onSubmit)}>
+          <div className="">
+            <label className="input-group input-group-vertical emg-field ">
               <span className="font-bold">Name</span>
               <input
                 placeholder="Type Name"
@@ -52,7 +53,7 @@ const Emergency = () => {
               />
             </label>
 
-            <label className="input-group input-group-vertical emg-field m-auto lg:m-5">
+            <label className="input-group input-group-vertical emg-field">
               <span className="font-bold">Relationship</span>
               <select
                 placeholder="Type Name"
@@ -75,7 +76,7 @@ const Emergency = () => {
             </label>
           </div>
 
-          <div className="lg:mx-48">
+          
             <label className="label">
               <span className="label-text">Phone</span>
             </label>
@@ -138,18 +139,15 @@ const Emergency = () => {
               required
               {...register("address")}
             ></textarea>
-          </div>
 
           <input className="btn bg-sky-400 text-black info" type="submit" value="Save Information" />
         </form>
-      </div>
+      </section>
 
-
-      <div className="divider"></div>
 
 
       <section>
-        <div className="grid lg:grid-cols-2 lg:gap-5 lg:m-28">
+        <div >
           {emgContacts.map((emgContact) => (
             <SingleEmgContact
               key={emgContact._id}
@@ -158,6 +156,7 @@ const Emergency = () => {
           ))}
         </div>
       </section>
+      </div>
     </div>
   );
 };
