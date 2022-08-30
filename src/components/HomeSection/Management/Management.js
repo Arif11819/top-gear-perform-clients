@@ -5,11 +5,11 @@ import "./Manage.css";
 const Management = () => {
   return (
     <div className="">
-      <h1 className="text-center pt-10 font-bold text-black text-2xl lg:text-4xl">
-        Manage your strategy, OKRs, people, process and <br /> <span className="text-sky-500">performance in
+      <h1 className="text-center pt-10 m-4 font-bold text-black text-xl lg:text-2xl">
+        Manage your strategy, people, process and <br /> <span className="text-sky-500 ">performance in
           one platform</span>
       </h1>
-      <div className="hero lg:min-h-screen ">
+      <div className="hero my-12">
         <div className="hero-content grid lg:grid-cols-2 lg:gap-8 mx-8">
           <div>
             <img
@@ -19,7 +19,7 @@ const Management = () => {
             />
           </div>
           <div className=" ">
-            <h1 className="lg:text-3xl text-2xl font-bold ">OKR Management Software</h1>
+            <h1 className="lg:text-3xl text-2xl font-bold ">Management Software</h1>
             <p className=" text-sky-500">Focus. Measure. Achieve.</p>
             <p className="lg:py-6 py-2 text-xl">
               Bridge your strategy-execution gap using TopGear Employee Management

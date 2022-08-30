@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const PerformanceManagement = () => {
   return (
-    <div className="hero min-h-screen ">
+    <div className="hero my-12">
       <div className="hero-content grid lg:grid-cols-2 lg:gap-8 mx-8">
         <div>
           <img

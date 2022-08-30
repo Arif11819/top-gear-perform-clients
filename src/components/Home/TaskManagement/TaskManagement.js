@@ -3,8 +3,8 @@ import './TaskManagement.css';
 
 const TaskManagement = () => {
     return (
-        <div className="bg-slate-50">
-            <div className="hero min-h-screen ">
+        <div className="">
+            <div className="hero my-12 ">
                 <div className="hero-content grid grid-cols-1 lg:grid-cols-2 gap-10 mx-8">
                     <div>
                         <h1 className="text-3xl font-bold ">Task Management Software</h1>
