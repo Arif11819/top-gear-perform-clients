@@ -62,7 +62,7 @@ const TaskManagement = () => {
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000">
                         <img
-                            src="https://i.ibb.co/Z2XzQ7C/create-goal.png"
+                            src="https://i.ibb.co/B2Wcjd1/Screenshot-9.png"
                             alt=""
                             className="rounded-lg shadow-2xl"
                         />

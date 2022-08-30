@@ -13,7 +13,7 @@ const Management = () => {
         <div className="hero-content grid lg:grid-cols-2 lg:gap-8 mx-8">
           <div>
             <img
-              src="https://i.ibb.co/B2Wcjd1/Screenshot-9.png"
+              src="https://i.ibb.co/Z2XzQ7C/create-goal.png"
               alt=""
               className="rounded-lg shadow-2xl"
             />
