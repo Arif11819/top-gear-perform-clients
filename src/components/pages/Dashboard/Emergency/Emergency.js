@@ -35,8 +35,8 @@ const Emergency = () => {
   }, [emgContacts]);
 
   return (
-    <div className="lg:m-28">
-      <div className=" text-2xl text-sky-500 text-center font-bold items-center m-8">
+    <div className="lg:mx-28 lg:my-10">
+      <div className=" text-3xl text-sky-500 m-4 font-bold ">
         Emergency Contact
       </div>
       <div className="grid lg:grid-cols-2 lg:gap-5 ">
@@ -80,19 +80,19 @@ const Emergency = () => {
             <label className="label">
               <span className="label-text">Phone</span>
             </label>
-            <label className="input-group input-group-md my-2">
+            <label className="input-group lg:input-group-md w-52 lg:w-72 lg:my-2">
               <span>
                 <MdOutlineMapsHomeWork />
               </span>
               <input
                 placeholder="Home number"
-                className="input input-bordered input-md"
+                className="input input-bordered lg:input-md"
                 type="number"
                 {...register("phoneNumberone")}
               />
             </label>
 
-            <label className="input-group input-group-md my-2">
+            <label className="input-group input-group-md w-52 lg:w-72 my-2">
               <span>
                 <HiOfficeBuilding />
               </span>
@@ -104,7 +104,7 @@ const Emergency = () => {
               />
             </label>
 
-            <label className="input-group input-group-md my-2">
+            <label className="input-group input-group-md w-52 lg:w-72 my-2">
               <span>
                 <ImMobile />
               </span>
@@ -118,29 +118,29 @@ const Emergency = () => {
 
 
             <label className="label">
-              <span className="label-text lg:my-2">Add Email</span>
+              <span className="label-text  lg:my-2">Add Email</span>
             </label>
-            <label className="input-group input-group-md my-2">
+            <label className="input-group input-group-md my-2 w-52 lg:w-72">
               <span>Email</span>
               <input
                 type="text"
                 placeholder="info@site.com"
-                className="input input-bordered"
+                className="input input-bordered w-52  lg:w-72"
                 required
                 {...register("email")}
               />
             </label>
             <label className="label">
-              <span className="label-text my-2">Address</span>
+              <span className="label-text lg:my-2">Address</span>
             </label>
             <textarea
-              className="textarea textarea-bordered mx-4 my-2 h-24"
+              className="textarea textarea-bordered h-8 w-52  lg:w-72 mx-4 lg:my-2 lg:h-24"
               placeholder="Add Address"
               required
               {...register("address")}
             ></textarea>
 
-          <input className="btn bg-sky-400 text-black info" type="submit" value="Save Information" />
+          <input className="btn bg-sky-400 text-black info " type="submit" value="Save Information" />
         </form>
       </section>
 

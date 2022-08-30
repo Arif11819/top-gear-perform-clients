@@ -12,7 +12,7 @@ const Navbar = () => {
     const [user] = useAuthState(auth)
 
     const [toggle, setToggle] = useState(false)
-    const [showProfile, setShowProfile] = useState(false)
+    const [ setShowProfile] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
 
