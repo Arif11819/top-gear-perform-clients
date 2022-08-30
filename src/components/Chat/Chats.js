@@ -29,6 +29,7 @@ const Chats = ({ socket, userName, room }) => {
                 <p className='m-0 block p-2'> Chat for us!</p>
             </div>
             <div className='chat-body'>
+                <p className='text-center text-gray-200 p-1 bg-slate-400 font-bold'>How can we help you?</p>
                 <ScrollToBottom className="message-container">
                     {
                         messageList.map((messageContent) => {
