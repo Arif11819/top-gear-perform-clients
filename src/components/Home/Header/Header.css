@@ -150,6 +150,8 @@ label {
     transition: 0.2s;
 }
 
+
+
 .outline-btn:hover {
     background-color: #58A0EF;
     color: white;
@@ -230,7 +232,7 @@ label {
     }
 }
 
-.text-heading{
+.text-heading {
     font-size: 25px;
     color: red;
 }
@@ -248,6 +250,7 @@ label {
         height: 75px;
         padding: 0px;
     }
+
 
     .header-image {
         display: none;

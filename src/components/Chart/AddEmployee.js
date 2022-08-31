@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { IoPeopleCircleSharp } from "react-icons/io5";
 import { ToastContainer, toast } from 'react-toastify';
-
+import './addemployee.css'
 const AddEmployee = () => {
     const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
@@ -25,15 +25,15 @@ const AddEmployee = () => {
         navigate('/dashboard/employee');
     };
     return (
-        <div>
-            <h1 className='mb-5 flex items-center mt-10 text-lg pl-20 text-blue-600 font-bold'> <IoPeopleCircleSharp className='text-2xl'></IoPeopleCircleSharp><p className='pl-1 text-md'>New Employee</p></h1>
-            <form className='flex flex-col pl-20 mb-10' onSubmit={handleSubmit(onSubmit)}>
+        <div className='pb-20 justify-center justify-items-center flex flex-col'>
+            <h1 className='mb-5 justify-center flex items-center mt-10 text-lg pl-20 text-blue-600 font-bold'> <IoPeopleCircleSharp className='text-2xl'></IoPeopleCircleSharp><p className='pl-1 text-md'>New Employee</p></h1>
+            <form className='flex flex-col pl-20 mb-10 ' onSubmit={handleSubmit(onSubmit)}>
                 <label className="flex flex-col justify-start items-start">
                     <span className="font-bold my-2">Employee Name *</span>
                     <input
                         type="text"
                         placeholder="Type Name"
-                        className="input input-bordered w-96"
+                        className="input input-bordered"
                         required
                         {...register("name")}
                     />
@@ -41,7 +41,7 @@ const AddEmployee = () => {
                 <label className='flex flex-col justify-start items-start'>
                     <span className='my-3'>Role *</span>
                     <select
-                        className="input input-bordered w-96"
+                        className="input input-bordered "
                         placeholder='Select Role'
                         required
                         {...register("role")}
@@ -63,7 +63,7 @@ const AddEmployee = () => {
                     <span className="font-bold my-2">Employee Profile Image *</span>
                     <input
                         placeholder="Image Link"
-                        className="input input-bordered w-96"
+                        className="input input-bordered "
                         required
                         {...register("image")}
                     />
@@ -72,7 +72,7 @@ const AddEmployee = () => {
                     <span className="font-bold my-2">Address *</span>
                     <input
                         placeholder="Type Address"
-                        className="input input-bordered w-96"
+                        className="input input-bordered "
                         required
                         {...register("address")}
                     />
@@ -82,7 +82,7 @@ const AddEmployee = () => {
                     <input
                         type='email'
                         placeholder="Type Email"
-                        className="input input-bordered w-96"
+                        className="input input-bordered "
                         required
                         {...register("email")}
                     />
@@ -92,7 +92,7 @@ const AddEmployee = () => {
                     <input
                         // type='number'
                         placeholder="Provide Contact"
-                        className="input input-bordered w-96"
+                        className="input input-bordered "
                         required
                         {...register("contact1")}
                     />
@@ -102,32 +102,14 @@ const AddEmployee = () => {
                     <input
                         // type='number'
                         placeholder="Provide Contact"
-                        className="input input-bordered w-96"
+                        className="input input-bordered "
                         required
                         {...register("contact2")}
                     />
                 </label>
-                <label className="flex flex-col justify-start items-start">
-                    <span className="font-bold my-2">Reports To *</span>
-                    <input
-                        type='text'
-                        placeholder="Reports To"
-                        className="input input-bordered w-96"
-                        required
-                        {...register("reportsto")}
-                    />
-                </label>
-                <label className="flex flex-col justify-start items-start">
-                    <span className="font-bold my-2">Reports *</span>
-                    <input
-                        type='number'
-                        placeholder="Reprots"
-                        className="input input-bordered w-96"
-                        required
-                        {...register("reports")}
-                    />
-                </label>
-                <input className='btn btn-danger w-28 ml-3 mt-2' type="submit" value="Save" />
+
+
+                <div className='flex justify-center mb-4'> <input className='btn btn-danger w-40   ml-3 mt-2' type="submit" value="Add New Employee" /></div>
                 <ToastContainer className="w-20 ml-48 pt-4" />
             </form>
         </div>

@@ -38,12 +38,13 @@ const Scheduled = () => {
 
     return (
         <div>
-            <div className='tasks justify-items-center'>
+            <div className='grid grid-cols-1 gap-5 justify-items-center'>
                 {schedules.map(schedule => <ScheduleData key={schedule._id} schedule={schedule}></ScheduleData>)}
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input className=' mx-auto px-2 py-2 mt-1  relative block  border-slate-500  text-gray-900 rounded-t-md  sm:text-sm' placeholder='Write your Task' type="text" {...register("scheduleTask")} required />
-                <input className='btn-link mx-20 font-semibold rounded btn-sm text-green-600 ' value='+ Add Task' type="submit" />
+                <input className=' mx-auto w-3/4 px-2 py-2 mt-1  relative block  border-slate-500  text-gray-900 rounded-t-md  sm:text-sm' placeholder='Write your Task' type="text" {...register("scheduleTask")} required />
+                <input className=' mx-auto w-3/4 px-2 py-2 text-blue-500 mt-1  relative block  border border-gray-300 rounded-t-md  sm:text-sm' type="date"{...register("date")} required />
+                <div className='flex justify-center'> <input className='btn-link mx-20 font-semibold rounded btn-sm text-green-600 ' value='+ Add Task' type="submit" /></div>
             </form>
         </div>
     );

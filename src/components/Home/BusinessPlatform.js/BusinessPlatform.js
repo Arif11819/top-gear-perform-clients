@@ -12,7 +12,7 @@ const BusinessPlatform = () => {
             <h1 className='text-4xl text-center font-bold'>Experience the world’s best
                 <br /> iterative business execution platform
             </h1>
-            <p className='text-center text-xl text-gray-400'>Grow your business with our All-Inclusive OKR Tool</p>
+            <p className='text-center text-xl text-gray-400'>Grow your business with our All-Inclusive Employee Management Tool</p>
             <div className="hero ">
 
                 <div className="hero-content flex-col lg:flex-row-reverse">

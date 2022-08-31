@@ -29,10 +29,10 @@ const Team = () => {
             <p className="font-bold py-7 ">Team Leader of Team The Errors</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
-            <a href="https://twitter.com/ArifulI12455813 " className="link text-sky-500 link-hover text-3xl"> <FaTwitterSquare /></a>
-            <a href="https://www.linkedin.com/in/md-ariful-islam-032243241/" className="link link-hover text-3xl text-blue-900">< FaLinkedin /></a>
-            <a href="https://github.com/Arif11819" className="link link-hover text-3xl "><BsGithub /></a>
-            <a href="https://www.facebook.com/profile.php?id=100014002066391" className="link link-hover text-sky-600 text-3xl  "><FaFacebookSquare /></a>
+            <a href="https://twitter.com/ArifulI12455813 " target="_blank" className="link text-sky-500 link-hover text-3xl"> <FaTwitterSquare /></a>
+            <a href="https://www.linkedin.com/in/md-ariful-islam-032243241/" target="_blank" className="link link-hover text-3xl text-blue-900">< FaLinkedin /></a>
+            <a href="https://github.com/Arif11819" target="_blank" className="link link-hover text-3xl "><BsGithub /></a>
+            <a href="https://www.facebook.com/profile.php?id=100014002066391" target="_blank" className="link link-hover text-sky-600 text-3xl  "><FaFacebookSquare /></a>
           </div>
         </div>
 
@@ -59,10 +59,10 @@ const Team = () => {
             <p className="font-bold py-5 ">Member of Team The Errors</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
-            <a href="https://twitter.com/mehadyhasan1000" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
-            <a href="https://www.linkedin.com/in/md-mehady-hasan-akash-64400721a/" className="link link-hover text-blue-900 text-3xl ">< FaLinkedin /></a>
-            <a href="https://github.com/Mehadyhasanakash" className="link link-hover text-3xl "><BsGithub /></a>
-            <a href="https://www.facebook.com/md.mehadyhasanakash" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
+            <a href="https://twitter.com/mehadyhasan1000" target="_blank" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
+            <a href="https://www.linkedin.com/in/md-mehady-hasan-akash-64400721a/" target="_blank" className="link link-hover text-blue-900 text-3xl ">< FaLinkedin /></a>
+            <a href="https://github.com/Mehadyhasanakash" target="_blank" className="link link-hover text-3xl "><BsGithub /></a>
+            <a href="https://www.facebook.com/md.mehadyhasanakash" target="_blank" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
           </div>
         </div>
 
@@ -89,10 +89,10 @@ const Team = () => {
             <p className="font-bold py-5 ">Member of Team The Errors</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
-            <a href="https://www.facebook.com/timutorikul/" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
-            <a href="https://twitter.com/timutorikul" className="link link-hover text-3xl text-blue-900">< FaLinkedin /></a>
-            <a href="https://github.com/torikul00" className="link link-hover text-3xl "><BsGithub /></a>
-            <a href="https://www.linkedin.com/in/torikul1/" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
+            <a href="https://www.facebook.com/timutorikul/" target="_blank" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
+            <a href="https://twitter.com/timutorikul" target="_blank" className="link link-hover text-3xl text-blue-900">< FaLinkedin /></a>
+            <a href="https://github.com/torikul00" target="_blank" className="link link-hover text-3xl "><BsGithub /></a>
+            <a href="https://www.linkedin.com/in/torikul1/" target="_blank" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
           </div>
         </div>
 
@@ -119,10 +119,10 @@ const Team = () => {
             <p className="font-bold py-5 ">Member of Team The Errors</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
-            <a href="https://twitter.com/eshita_sumaya" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
-            <a href="https://www.linkedin.com/in/sheikh-sumaya-37454b217/" className="link link-hover text-blue-900 text-3xl ">< FaLinkedin /></a>
-            <a href="https://github.com/sheikhsumaya" className="link link-hover text-3xl "><BsGithub /></a>
-            <a href="https://www.facebook.com/sumaya.eshita" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
+            <a href="https://twitter.com/eshita_sumaya" target="_blank" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
+            <a href="https://www.linkedin.com/in/sheikh-sumaya-37454b217/" target="_blank" className="link link-hover text-blue-900 text-3xl ">< FaLinkedin /></a>
+            <a href="https://github.com/sheikhsumaya" target="_blank" className="link link-hover text-3xl "><BsGithub /></a>
+            <a href="https://www.facebook.com/sumaya.eshita" target="_blank" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
           </div>
         </div>
 
@@ -149,10 +149,10 @@ const Team = () => {
             <p className="font-bold py-5 ">Member of Team The Errors</p>
           </div>
           <div className="grid gap-8 grid-cols-4 mb-10 mx-20 text-center ">
-            <a href="https://twitter.com/badhonchaki3" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
-            <a href="https://www.linkedin.com/in/badhon-chaki-utsho-762128175" className="link link-hover text-blue-900 text-3xl ">< FaLinkedin /></a>
-            <a href="https://github.com/Chaki360" className="link link-hover text-3xl "><BsGithub /></a>
-            <a href="https://www.facebook.com/Chaki360" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
+            <a href="https://twitter.com/badhonchaki3" target="_blank" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
+            <a href="https://www.linkedin.com/in/badhon-chaki-utsho-762128175" target="_blank" className="link link-hover text-blue-900 text-3xl ">< FaLinkedin /></a>
+            <a href="https://github.com/Chaki360" target="_blank" className="link link-hover text-3xl "><BsGithub /></a>
+            <a href="https://www.facebook.com/Chaki360" target="_blank" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
           </div>
         </div>
 
@@ -179,10 +179,10 @@ const Team = () => {
             <p className="font-bold py-5 ">Member of Team The Errors</p>
           </div>
           <div className="grid gap-5 lg:gap-8 grid-cols-4 mb-10 mx-20  text-center ">
-            <a href="https://www.facebook.com/timutorikul/" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
-            <a href="https://twitter.com/timutorikul" className="link link-hover text-blue-900 text-3xl ">< FaLinkedin /></a>
-            <a href="https://github.com/torikul00" className="link link-hover text-3xl "><BsGithub /></a>
-            <a href="https://www.linkedin.com/in/torikul1/" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
+            <a href="https://www.facebook.com/timutorikul/" target="_blank" className="link link-hover text-sky-500 text-3xl "> <FaTwitterSquare /></a>
+            <a href="https://twitter.com/timutorikul" target="_blank" className="link link-hover text-blue-900 text-3xl ">< FaLinkedin /></a>
+            <a href="https://github.com/torikul00" target="_blank" className="link link-hover text-3xl "><BsGithub /></a>
+            <a href="https://www.linkedin.com/in/torikul1/" target="_blank" className="link link-hover text-sky-600 text-3xl "><FaFacebookSquare /></a>
           </div>
         </div>
 

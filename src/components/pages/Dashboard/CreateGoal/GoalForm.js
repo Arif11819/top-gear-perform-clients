@@ -98,7 +98,7 @@ const GoalForm = () => {
                             </select>
                         </div>
                         <div className='flex justify-center my-5'>
-                            <input type="submit" value='Create One' className='p-2 font-bold bg-blue-500 text-white px-10 py-3 rounded-lg hover:bg-blue-700  cursor-pointer' />
+                            <input type="submit" value='Create One' className='p-2 font-bold bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-700  cursor-pointer' />
                         </div>
                     </form>
                 </div>

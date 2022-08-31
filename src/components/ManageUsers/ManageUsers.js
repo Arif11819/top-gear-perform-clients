@@ -34,7 +34,7 @@ const ManageUsers = () => {
 
     const handleMakeAdmin = id => {
 
-        const url = `http://localhost:5000/user/admin/${id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/user/admin/${id}`
         fetch(url, {
             method: 'PUT'
         })
@@ -80,7 +80,7 @@ const ManageUsers = () => {
                         <td>{user.company}</td>
                         <td>{user.userRole}</td>
                         <td>{user.userEmail}</td>
-                        <td>{user.role !== "admin" && <button onClick={() => handleMakeAdmin(user._id)} className='text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-3 py-1 text-center'>Make Admin</button>}</td>
+                        <td>{user.role !== "admin" && <button onClick={() => handleMakeAdmin(user._id)} className='text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-1 text-center'>Make Admin</button>}</td>
                         <td><button onClick={() => handleDeleteUser(user._id)} className='text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-1 text-center'> Delete</button></td>
 
                     </tr>)}

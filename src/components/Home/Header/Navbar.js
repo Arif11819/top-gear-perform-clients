@@ -91,7 +91,7 @@ const Navbar = () => {
                                 <li><Link className='dash-link' to='/dashboard/chat'><img src="https://i.ibb.co/BPqdR82/update.png" alt="" />Chat</Link></li>
                             </ul>
                         </div>
-                        <button className='primary-btn'><Link to='/login'>TRY IT FREE</Link></button>
+                        <button className='primary-btn text-white hover:text-white hover:bg-blue-700'><Link to='/login'>TRY IT FREE</Link></button>
                         <button className='secondary-btn'> <Link id='demo-text' to="/schedule">SCHEDULE DEMO</Link> </button>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ const Navbar = () => {
                     <Link className='price-link mt-4 mb-4' to='/login'>SIGN IN</Link>
                     <hr />
                     <div className='mt-8'>
-                        <button className='primary-btn'>TRY IT FREE</button>
+                        <button className='primary-btn text-white hover:text-white hover:bg-blue-700'>TRY IT FREE</button>
                         <button className='secondary-btn'> <Link to="/schedule">SCHEDULE DEMO</Link> </button>
                     </div>
                 </div>
