@@ -20,8 +20,7 @@ const Header = () => {
                         <div className="awards-container mt-10">
                             <p className='award-title'>Awards & Recognitions</p>
                         </div>
-                        <img className='w-screen' src="https://koronapos.com/wp-content/uploads/2021/06/1092032_Badge-Update_060921-1024x159.png" alt="" />
-
+                        <img src="https://i.ibb.co/nwMG6Rk/awards-removebg-preview.png" alt="" />
                     </div>
                     <div className="header-image">
                         <img src="https://i.ibb.co/Dk39vZs/banner-progress-img.png" alt="" />

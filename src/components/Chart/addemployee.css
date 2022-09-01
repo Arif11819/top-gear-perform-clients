@@ -1,7 +1,14 @@
-input {
+.input-width {
     width: 500px;
+    height: 45px;
+    border: solid 1px gray;
+
 }
 
 select {
     width: 500px;
+}
+
+.add-employee {
+    margin: auto;
 }

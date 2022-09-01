@@ -47,6 +47,10 @@ import DaysOffHome from './components/pages/Dashboard/DayOff/DaysOffHome';
 import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHome';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Team from './components/Team/Team';
+import ManageEmergency from './components/pages/Dashboard/Emergency/ManageEmergency/ManageEmergency';
+
+
+
 
 
 
@@ -105,6 +109,7 @@ function App() {
         <Route path='/ebook' element={<Ebooks />} />
         <Route path='/aboutUs' element={<AboutUs />} />
         <Route path='/team-members' element={<Team />} />
+        <Route path='/manage-users-emergency-contact' element={<ManageEmergency />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/faq' element={<Faq />} />

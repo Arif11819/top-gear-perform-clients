@@ -2,7 +2,7 @@ import React from 'react';
 import './Faq.css'
 const Faq = () => {
     return (
-        <section className='bg-black'>
+        <section className=''>
             <h1 className='text-4xl mb-4 mt-5  text-center font-bold text-white'>Frequently Asked Questions</h1>
             <ul className='text-white ' id='accordion'>
                 <li>
