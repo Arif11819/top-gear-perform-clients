@@ -17,16 +17,21 @@ const DashHome = () => {
           {
             admin && <li className="notification-text" tabIndex="0">
 
-            <Link className="dash-link" to="/dashboard/employee">All Employee</Link>
+              <Link className="dash-link" to="/dashboard/employee">All Employee</Link>
 
 
-          </li>
+            </li>
           }
-          
+
 
           {
             admin && <li className="notification-text" tabIndex="1">
               <Link className="dash-link" to="/dashboard/action">Admin Activity</Link>
+            </li>
+          }
+          {
+            admin && <li className="notification-text" tabIndex="1">
+              <Link className="dash-link" to="/dashboard/chatrequest">Chat Request</Link>
             </li>
           }
 
@@ -62,7 +67,7 @@ const DashHome = () => {
 
           {/* num-07 */}
 
-          { !admin && <li className="notification-text" tabIndex="6">
+          {!admin && <li className="notification-text" tabIndex="6">
 
             <Link className="dash-link" to="/dashboard/take-vacation">Take Vacation</Link>
 
@@ -79,10 +84,10 @@ const DashHome = () => {
 
           {
             admin && <li className="notification-text" tabIndex="9">
-            <Link className="dash-link" to="/dashboard/manage-blogs">Manage Blog</Link>
-          </li>
+              <Link className="dash-link" to="/dashboard/manage-blogs">Manage Blog</Link>
+            </li>
           }
-          
+
           {/* num-11 */}
           <li className="notification-text" tabIndex="8">
             <Link className="dash-link" to="/dashboard/course" >Course</Link>
@@ -90,8 +95,8 @@ const DashHome = () => {
           {/* num12 */}
           {
             admin && <li className="notification-text" tabIndex="8">
-            <Link className="dash-link" to="/dashboard/add-course" >Add-Course</Link>
-          </li>}
+              <Link className="dash-link" to="/dashboard/add-course" >Add-Course</Link>
+            </li>}
         </ul>
       </div>
       <div>
