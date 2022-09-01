@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import EmployeesCard from './EmployeesCard';
 
 const EmployeesVacation = () => {
-    const { data: vacationstore, isLoading, refetch } = useQuery('vacationstore', () => fetch(`https://dry-ravine-83506.herokuapp.com/vacationstore`, {
+    const { data: vacationstore, isLoading, refetch } = useQuery('vacationstore', () => fetch(`http://localhost:5000/vacationstore`, {
         method: 'GET',
     })
         .then(res => res.json()))
@@ -13,7 +13,7 @@ const EmployeesVacation = () => {
     return (
         <div className='mx-10'>
             {
-                vacationstore?.reverse().map(vacation => <EmployeesCard key={vacation._id} vacation={vacation} />)
+                vacationstore?.map(vacation => <EmployeesCard key={vacation._id} vacation={vacation} />)
             }
         </div>
     );

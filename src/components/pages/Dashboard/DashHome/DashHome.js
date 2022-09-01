@@ -34,6 +34,16 @@ const DashHome = () => {
               <Link className="dash-link" to="/dashboard/chatrequest">Chat Request</Link>
             </li>
           }
+          {
+            admin && <li className="notification-text" tabIndex="1">
+              <Link className="dash-link" to="/dashboard/employeesvacation">Employees All Vacation</Link>
+            </li>
+          }
+          {
+            admin && <li className="notification-text" tabIndex="1">
+              <Link className="dash-link" to="/dashboard/employeesgoal">Employees All Goal</Link>
+            </li>
+          }
 
 
           {/* num-03

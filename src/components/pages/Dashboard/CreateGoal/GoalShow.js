@@ -53,6 +53,7 @@ const GoalShow = () => {
                                 <p className='font-bold'>{goal.form.to}</p>
                             </div>
                             <p>Description: <span className='text-slate-500'>{goal.form.goalDes}</span></p>
+                            <p>Admin Feedback: {goal.feedback ? goal.feedback : <span>No Feedback</span>}</p>
                         </div>
                     </div>)
                 }
