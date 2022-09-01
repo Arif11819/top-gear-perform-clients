@@ -9,7 +9,7 @@ const EmployeesCard = ({ vacation }) => {
             text: feedbackText
         }
 
-        const url = `http://localhost:5000/vacationstore/feedback/${vacation?._id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/vacationstore/feedback/${vacation?._id}`
         fetch(url, {
             method: "PUT",
             headers: {

@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import EmployeeGoalCard from './EmployeeGoalCard';
 
 const EmployeesGoal = () => {
-    const { data: employeesgoal, isLoading, refetch } = useQuery('Employeesgoal', () => fetch(`http://localhost:5000/usergoal`, {
+    const { data: employeesgoal, isLoading, refetch } = useQuery('Employeesgoal', () => fetch(`https://dry-ravine-83506.herokuapp.com/usergoal`, {
         method: 'GET',
     })
         .then(res => res.json()))

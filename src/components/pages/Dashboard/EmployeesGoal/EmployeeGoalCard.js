@@ -8,7 +8,7 @@ const EmployeeGoalCard = ({ employeegoal }) => {
             text: feedbackText
         }
 
-        const url = `http://localhost:5000/usergoal/feedback/${employeegoal?._id}`
+        const url = `https://dry-ravine-83506.herokuapp.com/usergoal/feedback/${employeegoal?._id}`
         fetch(url, {
             method: "PUT",
             headers: {
