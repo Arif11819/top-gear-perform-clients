@@ -29,11 +29,11 @@ const EmployeesCard = ({ vacation }) => {
             <p className='border border-gray-300 mt-3'></p>
             <div className='flex gap-32 p-3'>
                 <div className='flex items-center gap-4'>
-                    <BsCalendarMinus className='text-3xl text-[#527a00]' />
+                    <BsCalendarMinus className='text-3xl text-blue-500' />
                     <div>
                         <h2>{vacation.from} to {vacation.to}</h2>
                         <div className='flex items-center gap-2'>
-                            <BsFillCheckCircleFill className='text-green-700' />
+                            <BsFillCheckCircleFill className='text-blue-500' />
                             <p className='text-slate-600'>{vacation.day} days of {vacation.vacationType}</p>
                         </div>
                         <p>Employees Email: {vacation.email}</p>
@@ -48,13 +48,13 @@ const EmployeesCard = ({ vacation }) => {
                     <div className="collapse">
                         <input type="checkbox" className="peer" />
                         <div className="collapse-title">
-                            <button className='btn btn-xs btn-success'>Add feedback</button>
+                            <button className='btn btn-xs bg-blue-500 border-none'>Add feedback</button>
                         </div>
                         <div className="collapse-content">
                             <div className='flex flex-col justify-end gap-4'>
                                 <form className='flex gap-3' onSubmit={handleFeedback}>
                                     <input className='p-3 border' type="text" name="feedback" placeholder='Write feedback...' />
-                                    <input type='submit' className='btn btn-xs btn-success' value="Send Feedback" />
+                                    <input type='submit' className='btn btn-xs btn-success text-white' value="Give Feedback" />
                                 </form>
                             </div>
                         </div>
