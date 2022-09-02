@@ -54,43 +54,24 @@ const SingleEmgContact = ({ emgContact }) => {
     <div className="mx-10">
       <div className=" emg-card text-center lg:mx-2  shadow-xl">
         <div className="flex">
-
-          <div className="mr-44 text-3xl">
+          <div className="lg:mr-44 mr-20 lg:text-3xl">
             <BsFillFileEarmarkPersonFill />
           </div>
           <div className="">
-            <button className='ml-44 text-3xl'
+            <button className='lg:ml-44 ml-24 lg:text-3xl'
               onClick={() => handleDelete(emgContact._id)}
             ><BsPersonXFill /></button>
           </div>
         </div>
         <div>
-          <p className="text-2xl">Name: {name}</p>
-          <p>Relationship: {relationship}</p>
-          <p>Phone: <br /> {phoneNumberone} <br /> {phoneNumbertwo} <br /> {phoneNumberthree} </p>
-          <p>Email: {email}</p>
-          <p>Address: {address}</p>
-        </div>
-
-        <div className="lg:mr-44 mr-20 lg:text-3xl">
-          <BsFillFileEarmarkPersonFill />
-        </div>
-        <div className="">
-          <button className='lg:ml-44 ml-24 lg:text-3xl'
-            onClick={() => handleDelete(emgContact._id)}
-          ><BsPersonXFill /></button>
+          <p className="text-2xl">Name: {emgContact.form.name}</p>
+          <p>Relationship: {emgContact.form.relationship}</p>
+          <p>Phone: <br /> {emgContact.form.phoneNumberone} <br /> {emgContact.form.phoneNumbertwo} <br /> {emgContact.form.phoneNumberthree} </p>
+          <p>Email: {emgContact.form.email}</p>
+          <p>Address: {emgContact.form.address}</p>
         </div>
       </div>
-      <div>
-        <p className="text-2xl">Name: {emgContact.form.name}</p>
-        <p>Relationship: {emgContact.form.relationship}</p>
-        <p>Phone: <br /> {emgContact.form.phoneNumberone} <br /> {emgContact.form.phoneNumbertwo} <br /> {emgContact.form.phoneNumberthree} </p>
-        <p>Email: {emgContact.form.email}</p>
-        <p>Address: {emgContact.form.address}</p>
-      </div>
-
     </div>
-    </div >
   );
 };
 

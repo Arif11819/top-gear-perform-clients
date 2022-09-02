@@ -12,30 +12,30 @@ import auth from "../../../../firebase.init";
 
 const Emergency = () => {
   const [user] = useAuthState(auth);
-  
+
 
   const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data => {
-        const emgcontact = {
-            form: data,
-            user: user.email
+  const onSubmit = data => {
+    const emgcontact = {
+      form: data,
+      user: user.email
+    }
+    fetch('https://dry-ravine-83506.herokuapp.com/emgcontact', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(emgcontact)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data) {
+          console.log(data);
+          reset();
         }
-        fetch('https://dry-ravine-83506.herokuapp.com/emgcontact', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(emgcontact)
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data) {
-                    console.log(data);
-                    reset();
-                }
-            })
+      })
 
-    };
+  };
 
   const [emgContacts, setEmgContacts] = useState([]);
 
@@ -151,15 +151,9 @@ const Emergency = () => {
               {...register("address")}
             ></textarea>
 
-<<<<<<< HEAD
-            <input className="btn bg-sky-400 text-black info" type="submit" value="Save Information" />
+            <input className="btn bg-sky-400 text-black info " type="submit" value="Save Information" />
           </form>
         </section>
-=======
-          <input className="btn bg-sky-400 text-black info " type="submit" value="Save Information" />
-        </form>
-      </section>
->>>>>>> f95480a406c429f3baf9b04b5121d17f5f404e2a
 
 
 

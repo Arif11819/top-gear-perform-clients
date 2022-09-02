@@ -19,11 +19,11 @@ const Management = () => {
             />
           </div>
           <div className=" ">
-<<<<<<< HEAD
+
             <h1 className="lg:text-3xl text-2xl font-bold ">Task Management Software</h1>
-=======
+
             <h1 className="lg:text-3xl text-2xl font-bold ">Management Software</h1>
->>>>>>> f95480a406c429f3baf9b04b5121d17f5f404e2a
+
             <p className=" text-sky-500">Focus. Measure. Achieve.</p>
             <p className="lg:py-6 py-2 text-xl">
               Bridge your strategy-execution gap using TopGear Employee Management

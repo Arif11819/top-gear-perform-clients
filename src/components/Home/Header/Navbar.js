@@ -12,7 +12,7 @@ const Navbar = () => {
     const [user] = useAuthState(auth)
 
     const [toggle, setToggle] = useState(false)
-    const [ setShowProfile] = useState(false)
+    const [setShowProfile] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
 
@@ -40,22 +40,13 @@ const Navbar = () => {
                 <div className="main-nav-bar">
                     <div className="logo flex">
                         <img onClick={() => navigate('/')} src="https://i.ibb.co/sbWSq7g/bandwidth.png" alt="" />
-<<<<<<< HEAD
-                        <p onClick={() => navigate('/')} className='text-2xl font-bold text-sky-600 ml-6 mt-2'>TopGear Perform</p>
-=======
                         <p onClick={() => navigate('/')} className='text-2xl top-text font-bold text-sky-600 ml-6 mt-2'>TopGear Perform</p>
->>>>>>> f95480a406c429f3baf9b04b5121d17f5f404e2a
                     </div>
                     <GiHamburgerMenu onClick={() => setToggle(!toggle)} className='burger-icon' />
                     <div className="main-nav-links">
                         <div className="dropdown  dropdown-hover cursor-pointer dropdown-container">
-<<<<<<< HEAD
 
-                            <label tabIndex="0">PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
-=======
-                            
                             <label tabIndex="0" className='top-text'>PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
->>>>>>> f95480a406c429f3baf9b04b5121d17f5f404e2a
                             <ul tabIndex="0" className="dropdown-content menu shadow bg-slate-50 w-72">
 
                                 <li className='hover:none '> <Link className='dash-link' to='/login'><img src="https://i.ibb.co/rMtSDJZ/product-overview.png" alt="" />Product Overview</Link></li>
@@ -100,7 +91,7 @@ const Navbar = () => {
                                 <li><Link className='dash-link' to='/dashboard/chat'><img src="https://i.ibb.co/BPqdR82/update.png" alt="" />Chat</Link></li>
                             </ul>
                         </div>
-                        <button className='primary-btn text-white hover:text-white hover:bg-blue-700'><Link to='/login'>TRY IT FREE</Link></button>
+                        <button className='primary-btn'><Link to='/login'>TRY IT FREE</Link></button>
                         <button className='secondary-btn'> <Link id='demo-text' to="/schedule">SCHEDULE DEMO</Link> </button>
                     </div>
                 </div>
@@ -169,7 +160,7 @@ const Navbar = () => {
                     <Link className='price-link mt-4 mb-4' to='/login'>SIGN IN</Link>
                     <hr />
                     <div className='mt-8'>
-                        <button className='primary-btn text-white hover:text-white hover:bg-blue-700'>TRY IT FREE</button>
+                        <button className='primary-btn'>TRY IT FREE</button>
                         <button className='secondary-btn'> <Link to="/schedule">SCHEDULE DEMO</Link> </button>
                     </div>
                 </div>
