@@ -30,7 +30,7 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
     }
 
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/namevacation?type=${dayOffType}&email=${user.email}`)
+        fetch(`https://dry-ravine-83506.herokuapp.com/namevacation?type=${dayOffType}&email=${user?.email}`)
             .then(res => res.json())
             .then(data => setSingleVacation(data))
     }, [dayOffType, user.email])

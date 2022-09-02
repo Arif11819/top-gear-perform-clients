@@ -9,6 +9,22 @@ const ChatInput = () => {
     const [show, setShow] = useState(false);
     const joinRoom = () => {
         if (userName !== "" && room !== "") {
+            const userInfo = {
+                userName: userName,
+                email: room
+            }
+            fetch('https://dry-ravine-83506.herokuapp.com/chatuser', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(userInfo)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+
+                })
             socket.emit("join_room", room)
             setShow(true)
         }
