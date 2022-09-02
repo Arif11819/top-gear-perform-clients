@@ -3,7 +3,7 @@ import emergenciesReducer from "./components/pages/Dashboard/Emergency/ManageEme
 import thunk from "redux-thunk"
 
 
-const store = createStore(emergenciesReducer, applyMiddleware(thunk));
+const stores = createStore(emergenciesReducer, applyMiddleware(thunk));
 
 
-export default store;
+export default stores;
