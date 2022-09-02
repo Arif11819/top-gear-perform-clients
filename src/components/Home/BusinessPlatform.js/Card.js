@@ -6,7 +6,7 @@ const Card = ({ title, img, downTitle }) => {
 
       <div className="card-body">
         <h2 className="card-title">
-          <figure><img src={img} width={50} alt="Shoes" /></figure>
+          <figure><img src={img} width={50} alt="tools" /></figure>
         </h2>
         <h2 className='text-2xl text-cyan-700	'>{title}</h2>
         <p>{downTitle}</p>
