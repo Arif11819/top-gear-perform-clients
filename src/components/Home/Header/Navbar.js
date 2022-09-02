@@ -76,7 +76,7 @@ const Navbar = () => {
 
                                 <li><Link className='dash-link' to='/blogs'><img src="https://i.ibb.co/mbkby2D/library.png" alt="" />Blogs</Link></li>
 
-                                <li><Link className='dash-link' to='/dashboard/course'><img src="https://i.ibb.co/xqvZ74w/example-Copy.png" alt="" />Our Examples</Link></li>
+                                <li><Link className='dash-link' to='/course'><img src="https://i.ibb.co/xqvZ74w/example-Copy.png" alt="" />Our Courses</Link></li>
 
                             </ul>
                         </div>

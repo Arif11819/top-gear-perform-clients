@@ -34,8 +34,6 @@ const SingleEmgContact = ({ emgContact }) => {
 
   const handleDelete = id => {
 
-    const proceed = window.confirm('Are you sure?');
-    if (proceed) {
       const url = `https://dry-ravine-83506.herokuapp.com/emgcontact/${id}`;
       fetch(url, {
         method: 'DELETE'
@@ -46,7 +44,6 @@ const SingleEmgContact = ({ emgContact }) => {
           const remaining = displays.filter(display => display._id !== id)
           setDisplays(remaining);
         })
-    }
 
   }
 

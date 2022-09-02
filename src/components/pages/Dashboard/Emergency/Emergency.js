@@ -43,7 +43,7 @@ const Emergency = () => {
     fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setEmgContacts(data));
-  }, [user?.email]);
+  }, [emgContacts, user?.email]);
 
   return (
     <div className="lg:mx-28 lg:my-10">

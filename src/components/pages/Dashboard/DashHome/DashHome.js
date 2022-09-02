@@ -14,76 +14,83 @@ const DashHome = () => {
     <div className="flex ">
       <div>
         <ul className="menu w-56 p-2 rounded-box">
-
-          {
-            admin && <li className="notification-text" tabIndex="0">
-
-              <Link className="dash-link" to="/dashboard/employee">All Employee</Link>
+          {(admin || manager) && (
+            <li className="notification-text" tabIndex="0">
+              <Link className="dash-link" to="/dashboard/employee">
+                All Employee
+              </Link>
             </li>
-          }
+          )}
 
-          {
-            admin && <li className="notification-text" tabIndex="1">
-              <Link className="dash-link" to="/dashboard/action">Admin Activity</Link>
+          {!(admin || manager) && (
+            <li className="actions-text" tabIndex="6">
+              <Link className="dash-link" to="/dashboard/reviews">
+                Reviews
+              </Link>
             </li>
-          }
+          )}
 
-          {
-            (admin || manager) && <li className="notification-text" tabIndex="1">
-              <Link className="dash-link" to="/dashboard/chatrequest">Chat Request</Link>
+          {admin && (
+            <li className="notification-text" tabIndex="1">
+              <Link className="dash-link" to="/dashboard/admin">
+                Admin Activity
+              </Link>
             </li>
-          }
+          )}
 
-          {
-            (admin || manager) && <li className="notification-text" tabIndex="1">
-              <Link className="dash-link" to="/dashboard/employeesvacation">Employees All Vacation</Link>
+          {(admin || manager) && (
+            <li className="notification-text" tabIndex="1">
+              <Link className="dash-link" to="/dashboard/manager">
+                Manager Activity
+              </Link>
             </li>
-          }
-
-          {
-            (admin || manager) && <li className="notification-text" tabIndex="1">
-              <Link className="dash-link" to="/dashboard/employeesgoal">Employees All Goal</Link>
-            </li>
-          }
+          )}
 
           <li className="notification-text" tabIndex="3">
-            <Link className="dash-link" to='/dashboard/notes'>Notes</Link>
+            <Link className="dash-link" to="/dashboard/notes">
+              Keep Notes
+            </Link>
           </li>
 
-          <li className="notification-text" tabIndex="5">
-
-            <Link className="dash-link" to="/dashboard/emergency">Emergency Contact</Link>
-
-          </li>
-
-          {!admin && <li className="notification-text" tabIndex="6">
-
-            <Link className="dash-link" to="/dashboard/take-vacation">Take Vacation</Link>
-
-          </li>}
-
-
-          <li className="notification-text" tabIndex="8">
-            <Link className="dash-link" to="/dashboard/news-feed" >News Feed</Link>
-          </li>
-
-          {
-            admin && <li className="notification-text" tabIndex="9">
-              <Link className="dash-link" to="/dashboard/manage-blogs">Manage Blog</Link>
+          {!(admin || manager) && (
+            <li className="notification-text" tabIndex="5">
+              <Link className="dash-link" to="/dashboard/emergency">
+                Emergency Contact
+              </Link>
             </li>
-          }
+          )}
+          {!(admin || manager) && (
+            <li className="actions-text" tabIndex="6">
+              <Link className="dash-link" to="/dashboard/vacation-select">
+              Take Vacation
+              </Link>
+            </li>
+          )}
+          {!(admin || manager) && (
+            <li className="actions-text" tabIndex="6">
+              <Link className="dash-link" to="/dashboard/upload-file">
+                Upload File
+              </Link>
+            </li>
+          )}
+
+         
 
           <li className="notification-text" tabIndex="8">
-            <Link className="dash-link" to="/dashboard/course" >Course</Link>
+            <Link className="dash-link" to="/dashboard/news-feed">
+              News Feed
+            </Link>
           </li>
-          {
-            admin && <li className="notification-text" tabIndex="8">
-              <Link className="dash-link" to="/dashboard/add-course" >Add-Course</Link>
-            </li>}
+
+          
         </ul>
       </div>
       <div>
-        <img className=" h-screen" src="https://i.ibb.co/ypyQChc/Rapport-et-Dashboard-comprendre-la-difference-entre-les-deux-concepts.jpg" alt="" />
+        <img
+          className=" h-screen"
+          src="https://i.ibb.co/ypyQChc/Rapport-et-Dashboard-comprendre-la-difference-entre-les-deux-concepts.jpg"
+          alt=""
+        />
       </div>
     </div>
   );

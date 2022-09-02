@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import "./Dashboard.css";
-import { VscFileSymlinkDirectory } from "react-icons/vsc";
-import { FiFlag, FiLogOut } from "react-icons/fi";
+import { FiLogOut } from "react-icons/fi";
 import {
   MdOutlineNotificationsActive,
   MdOutlineKeyboardArrowDown,
@@ -11,12 +10,14 @@ import {
 import { BiHelpCircle, BiMessage } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineHome } from "react-icons/ai";
-import { BiTargetLock, BiTask } from "react-icons/bi";
+import {  BiTask } from "react-icons/bi";
 import { BsChatLeftDots } from "react-icons/bs";
 import useUser from "../../../hooks/useUser";
 import { signOut } from "firebase/auth";
 import auth from "../../../firebase.init";
 import { toast } from "react-toastify";
+
+
 const Dashboard = () => {
 
   const [showProfile, setShowProfile] = useState(false);
@@ -40,16 +41,11 @@ const Dashboard = () => {
                     </div>
           </div>
           <div className="dashboard-links">
-            <Link to="">
-              <VscFileSymlinkDirectory className="dash-nav-icon" />
-            </Link>
-            <Link to="/dashboard/action">
-              <FiFlag className="dash-nav-icon" />
-            </Link>
+            
             <Link to="/dashboard/notification">
               <MdOutlineNotificationsActive className="dash-nav-icon" />
             </Link>
-            <Link to="">
+            <Link to="/helpCenter">
               <BiHelpCircle className="dash-nav-icon" />
             </Link>
             <Link to="/dashboard/chat">
@@ -94,10 +90,7 @@ const Dashboard = () => {
             {" "}
             <AiOutlineHome className="sidebar-icon" />{" "}
           </Link>
-          <Link to="/dashboard/action">
-            {" "}
-            <BiTargetLock className="sidebar-icon" />{" "}
-          </Link>
+          
           <Link to="/dashboard/task">
             {" "}
             <BiTask className="sidebar-icon" />{" "}
