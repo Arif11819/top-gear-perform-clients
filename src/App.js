@@ -45,6 +45,9 @@ import Course from './components/pages/Dashboard/Course/Course';
 import AddCourse from './components/pages/Dashboard/Course/AddCourse';
 import DaysOffHome from './components/pages/Dashboard/DayOff/DaysOffHome';
 import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHome';
+import ChatRequest from './components/pages/Dashboard/ChatRequest/ChatRequest';
+import EmployeesVacation from './components/pages/Dashboard/EmployeesVacation/EmployeesVacation';
+import EmployeesGoal from './components/pages/Dashboard/EmployeesGoal/EmployeesGoal';
 
 
 
@@ -73,6 +76,9 @@ function App() {
           <Route path='employee' element={<Charts />} />
           <Route path='employee/:employeeId' element={<Charts />} />
           <Route path='action' element={<Action />} />
+          <Route path='chatrequest' element={<ChatRequest />} />
+          <Route path='employeesvacation' element={<EmployeesVacation />} />
+          <Route path='employeesgoal' element={<EmployeesGoal />} />
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency />} />
           <Route path='course' element={<Course />} />
