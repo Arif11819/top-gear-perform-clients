@@ -19,7 +19,7 @@ const ManageEmergency = () => {
         fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact`)
             .then(res => res.json())
             .then(data => setEmergencies(data))
-    }, [emergencies]);
+    }, [emergenciess]);
 
     const handleDelete = id => {
 

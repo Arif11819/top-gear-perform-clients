@@ -1,24 +1,32 @@
 [
   {
-    "_id": 1,
-    "name": "পাইথন দিয়ে প্রোগ্রামিং",
-    "url": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/6f3aabfa2_150795.jpg",
-    "description": "The purpose of this ebook is to help you identify potential red flags in your OKR program and how to successfully navigate through them to avoid pitfalls.",
-    "btn": "https://www.rokomari.com/book/150795/python-diye-programing-shekha-2nd-part-object-oriented-programming-and-web-crawling"
+    "name": "The Four Greatest Coaching Conversations",
+    "image": "https://i.ibb.co/8mJ8131/960x0.jpg",
+    "description": "Based on data and insights from over 100k virtual and in-person coaching conversations conducted by the talented coaches of BTS Coach comes the first book to take ",
+    "pdf": "https://www.reviewsnap.com/blog/complete-performance-review-self-evaluation/"
   },
   {
-    "_id": 2 ,
-    "name": "কম্পিউটার প্রোগ্রামিং",
-    "url": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/0a7334a0a_119934.jpg",
-    "description": "The purpose of this ebook is to help you identify potential red flags in your OKR program and how to successfully navigate through them to avoid pitfalls.",
-    "btn": "https://www.rokomari.com/book/119934/computer-programming-2nd-part"
+    "name": "Atomic Habits",
+    "image": "https://i.ibb.co/6YKMRbV/51-uspgq-WIL-SX329-BO1-204-203-200.jpg",
+    "description": "No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals",
+    "pdf": "https://www.reviewsnap.com/blog/complete-performance-review-self-evaluation/"
   },
-    
   {
-    "_id": 3,
-    "name": "বেসিক প্রোগ্রামিং",
-    "url": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/8cf40d98f_137482.jpg",
-    "description": "The purpose of this ebook is to help you identify potential red flags in your OKR program and how to successfully navigate through them to avoid pitfalls.",
-    "btn": "https://www.rokomari.com/book/137482/basic-programing"
+    "name": "Great at Work",
+    "image": "https://i.ibb.co/3cQJ70L/960x0.jpg",
+    "description": "Why do some people perform better at work than others? This deceptively simple question continues to confound professionals in all sectors of the workforce. ",
+    "pdf": "https://www.reviewsnap.com/blog/complete-performance-review-self-evaluation/"
+  },
+  {
+    "name": "Employee Experience",
+    "image": "https://i.ibb.co/3c0b2RG/960x0.jpg",
+    "description": "To develop top-performing employees, HR professionals need to move beyond ad hoc engagement initiatives and instead design and embed employee experience throughout ",
+    "pdf": "https://www.reviewsnap.com/blog/complete-performance-review-self-evaluation/"
+  },
+  {
+    "name": "Creating a Culture for Learning",
+    "image": "https://i.ibb.co/Tbt69Nt/22353750.jpg",
+    "description": "Creating a Culture for Learning is based on the belief that all schools must create cultures that promote professional growth in order to succeed in their commitment",
+    "pdf": "https://www.reviewsnap.com/blog/complete-performance-review-self-evaluation/"
   }
 ]
