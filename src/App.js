@@ -42,11 +42,20 @@ import Course from './components/pages/Dashboard/Course/Course';
 import AddCourse from './components/pages/Dashboard/Course/AddCourse';
 import DaysOffHome from './components/pages/Dashboard/DayOff/DaysOffHome';
 import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHome';
+
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
+import Team from './components/Team/Team';
+import ManageEmergency from './components/pages/Dashboard/Emergency/ManageEmergency/ManageEmergency';
+
+
+
+
 import ChatRequest from './components/pages/Dashboard/ChatRequest/ChatRequest';
 import EmployeesVacation from './components/pages/Dashboard/EmployeesVacation/EmployeesVacation';
 import EmployeesGoal from './components/pages/Dashboard/EmployeesGoal/EmployeesGoal';
 import ShowReview from './components/Reviews/ShowReview';
 import AddReview from './components/Reviews/AddReview';
+
 
 
 
@@ -104,7 +113,10 @@ function App() {
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />
         <Route path='/aboutUs' element={<AboutUs />} />
+        <Route path='/team-members' element={<Team />} />
+        <Route path='/manage-users-emergency-contact' element={<ManageEmergency />} />
         <Route path='/terms' element={<Terms />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/reviews/:reviewsId' element={<FullReview />} />
         <Route path='*' element={<NotFound />}></Route>

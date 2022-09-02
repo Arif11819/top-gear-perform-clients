@@ -8,6 +8,7 @@ const Review = ({ review }) => {
     const [reviews, setReviews] = useReviews();
 
     const handleDelete = id => {
+
         const url = `https://dry-ravine-83506.herokuapp.com/reviews/${id}`;
         fetch(url, {
             method: 'DELETE'

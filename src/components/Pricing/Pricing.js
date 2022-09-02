@@ -68,7 +68,7 @@ const Pricing = () => {
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span className='pricing-text'>Customizable goal weighting</span>
+                                    <span className='pricing-text'>Engagement training</span>
                                 </li>
                                 <li className="flex items-center space-x-3">
                                     <i className="fa text-green-500 fa-check"></i>
@@ -133,7 +133,7 @@ const Pricing = () => {
 
                                     <i className="fa text-green-500 fa-check"></i>
 
-                                    <span className='pricing-texts'>Compensation review setup</span>
+                                    <span className='pricing-texts'>Career vision tools</span>
                                 </li>
                             </ul>
                             <Link to="/schedule" className="text-blue-500 shadow border border-blue-700 bg-white font-bold rounded-lg px-5 py-2.5 text-center ">SCHEDULE DEMO</Link>
@@ -190,7 +190,7 @@ const Pricing = () => {
                                 <li className="flex items-center space-x-3">
 
                                     <i className="fa text-green-500 fa-check"></i>
-                                    <span className='pricing-text'> Performance Management integration</span>
+                                    <span className='pricing-text'> Employees total rewards view</span>
 
                                 </li>
 

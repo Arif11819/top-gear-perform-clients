@@ -12,30 +12,30 @@ import auth from "../../../../firebase.init";
 
 const Emergency = () => {
   const [user] = useAuthState(auth);
-  
+
 
   const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data => {
-        const emgcontact = {
-            form: data,
-            user: user.email
+  const onSubmit = data => {
+    const emgcontact = {
+      form: data,
+      user: user.email
+    }
+    fetch('https://dry-ravine-83506.herokuapp.com/emgcontact', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(emgcontact)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data) {
+          console.log(data);
+          reset();
         }
-        fetch('https://dry-ravine-83506.herokuapp.com/emgcontact', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(emgcontact)
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data) {
-                    console.log(data);
-                    reset();
-                }
-            })
+      })
 
-    };
+  };
 
   const [emgContacts, setEmgContacts] = useState([]);
 
@@ -51,43 +51,43 @@ const Emergency = () => {
         Emergency Contact
       </div>
       <div className="grid lg:grid-cols-2 lg:gap-5 ">
-      <section className="">
-        <form className="" onSubmit={handleSubmit(onSubmit)}>
-          <div className="">
-            <label className="input-group input-group-vertical emg-field ">
-              <span className="font-bold">Name</span>
-              <input
-                placeholder="Type Name"
-                className="input input-bordered"
-                required
-                {...register("name")}
-              />
-            </label>
+        <section className="">
+          <form className="" onSubmit={handleSubmit(onSubmit)}>
+            <div className="">
+              <label className="input-group input-group-vertical emg-field ">
+                <span className="font-bold">Name</span>
+                <input
+                  placeholder="Type Name"
+                  className="input input-bordered"
+                  required
+                  {...register("name")}
+                />
+              </label>
 
-            <label className="input-group input-group-vertical emg-field">
-              <span className="font-bold">Relationship</span>
-              <select
-                placeholder="Type Name"
-                className="input input-bordered "
-                required
-                {...register("relationship")}
-              >
-                <option value="Father">Father</option>
-                <option value="Mother">Mother</option>
-                <option value="Son">Son</option>
-                <option value="Daughter">Daughter</option>
-                <option value="Husband">Husband</option>
-                <option value="Wife">Wife</option>
-                <option value="Sister">Sister</option>
-                <option value="Brother">Brother</option>
-                <option value="Friend">Friend</option>
-                <option value="Uncle">Uncle</option>
-                <option value="Others">Others</option>
-              </select>
-            </label>
-          </div>
+              <label className="input-group input-group-vertical emg-field">
+                <span className="font-bold">Relationship</span>
+                <select
+                  placeholder="Type Name"
+                  className="input input-bordered "
+                  required
+                  {...register("relationship")}
+                >
+                  <option value="Father">Father</option>
+                  <option value="Mother">Mother</option>
+                  <option value="Son">Son</option>
+                  <option value="Daughter">Daughter</option>
+                  <option value="Husband">Husband</option>
+                  <option value="Wife">Wife</option>
+                  <option value="Sister">Sister</option>
+                  <option value="Brother">Brother</option>
+                  <option value="Friend">Friend</option>
+                  <option value="Uncle">Uncle</option>
+                  <option value="Others">Others</option>
+                </select>
+              </label>
+            </div>
 
-          
+
             <label className="label">
               <span className="label-text">Phone</span>
             </label>
@@ -151,22 +151,22 @@ const Emergency = () => {
               {...register("address")}
             ></textarea>
 
-          <input className="btn bg-sky-400 text-black info " type="submit" value="Save Information" />
-        </form>
-      </section>
+            <input className="btn bg-sky-400 text-black info " type="submit" value="Save Information" />
+          </form>
+        </section>
 
 
 
-      <section>
-        <div >
-          {emgContacts.map((emgContact) => (
-            <SingleEmgContact
-              key={emgContact._id}
-              emgContact={emgContact}
-            ></SingleEmgContact>
-          ))}
-        </div>
-      </section>
+        <section>
+          <div >
+            {emgContacts.map((emgContact) => (
+              <SingleEmgContact
+                key={emgContact._id}
+                emgContact={emgContact}
+              ></SingleEmgContact>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

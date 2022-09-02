@@ -69,7 +69,7 @@ const ScheduleDemo = () => {
                     <ScheduleOption setTimeZone={setTimeZone} setLanguageSelect={setLanguageSelect} />
 
                 </div>
-                <p className='ml-3 my-4 text-slate-500'>Date</p>
+                <p className='ml-3 my-4 text-black'>Date</p>
                 <div className='p-4'>
                     <ScheduleCalender bookedTime={bookedTime} date={date} setDate={setDate} time={time} setTime={setTime} timeSlots={timeSlots} setTimeSlots={setTimeSlots} />
                     <p className='text-red-600 font-bold text-center'>{bookedTime}</p>

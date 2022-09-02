@@ -1,13 +1,13 @@
 import React from 'react';
 import './TaskManagement.css';
-
+import { Link } from 'react-router-dom';
 const TaskManagement = () => {
     return (
         <div className="">
             <div className="hero my-12 ">
                 <div className="hero-content grid grid-cols-1 lg:grid-cols-2 gap-10 mx-8">
                     <div>
-                        <h1 className="text-3xl font-bold ">Task Management Software</h1>
+                        <h1 className="text-3xl font-bold ">Goal Management Software</h1>
                         <p className=" text-sky-500 pt-3">Track Better. Do More.</p>
                         <p className="py-6 text-2xl">
                             Make your team’s work more efficient with <br /> our intuitive Task Management Software
@@ -16,48 +16,37 @@ const TaskManagement = () => {
                             Connect day-to-day work to higher order company <br /> goals and harvest benefits like:
                         </p>
 
-                        <div className='pt-8'>
-                            <p className="flex items-center">
-                                {" "}
-                                <label>
-                                    <input
-                                        className="mx-3 checkbox-accent checkbox checkbox-sm"
-                                        type="checkbox"
+                        <div>
+                            <ul className="mb-4 mt-4 space-y-4 text-left">
+                                <li className="flex hover:bg-none items-center space-x-3">
 
-                                        checked
-                                    />
-                                </label>
-                                <p className="text-xl pl-2 m-2 pb-2">Tasks aligned with OKRs</p>
-                            </p>
-                            <p className="flex items-center">
-                                {" "}
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        className="checkbox-accent checkbox checkbox-sm"
-                                        checked
-                                    />
-                                </label>
-                                <p className="text-xl m-2 pl-2 pb-2">Manage team’s workflow</p>
-                            </p>
-                            <p className="flex items-center">
-                                {" "}
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        className="checkbox-accent checkbox checkbox-sm"
-                                        checked
-                                    />
-                                </label>
-                                <p className="text-xl pl-2 m-2 pb-2">Streamlined Project Execution</p>
-                            </p>
+                                    <i className=" text-blue-500 fas fa-check-circle"></i>
+
+                                    <span className='pricing-text'>Goal management training</span>
+
+                                </li>
+                                <li className="flex items-center space-x-3">
+
+                                    <i className=" text-blue-500 fas fa-check-circle"></i>
+
+                                    <span className='pricing-text'>Goal Analytics</span>
+                                </li>
+                                <li className="flex items-center space-x-3">
+
+                                    <i className=" text-blue-500 fas fa-check-circle"></i>
+
+                                    <span className='pricing-text'>Activity Feed</span>
+
+
+                                </li>
+                            </ul>
                         </div>
 
                         <div className="flex items-center justify-start pt-3">
-                            <button className="secondary-btn">Get a free Demo</button>
-                            <a href="www.facebook" className="link text-sky-400 m-3">
+                            <Link to='/schedule' className="secondary-btn">Get a free Demo</Link>
+                            <Link to='/login' className="link text-sky-400 m-3">
                                 Learn more →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000">
