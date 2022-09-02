@@ -47,7 +47,7 @@ const CountDown = ({ targetDate }) =>  {
     return <ExpiredNotice />;
   } else {
     return (
-      <div className="bg-base-200">
+      <div className="">
       <div className="text-center my-20">
         <h1 className="text-center text-black text-3xl lg:text-5xl pt-10 lg:pt-20 lg:pb-5 font-bold">Wait For Our <span className="text-sky-500">New Services</span></h1>
         <p className="text-center text-sky-500 mb-10 text-md lg:text-xl">After this update you can get much more experience!</p>

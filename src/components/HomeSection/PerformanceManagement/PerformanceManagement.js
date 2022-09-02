@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PerformanceManagement = () => {
   return (
-    <div className="hero min-h-screen bg-base-200 ">
+    <div className="hero my-12">
       <div className="hero-content grid lg:grid-cols-2 lg:gap-8 mx-8">
         <div>
           <img
@@ -51,7 +52,7 @@ const PerformanceManagement = () => {
           </div>
 
           <div className="flex items-center">
-            <button className=" secondary-btn ">Get a free Demo</button>
+            <Link to='/schedule' className=" secondary-btn ">Get a free Demo</Link>
             <a href="www.facebook" className="link text-sky-400 m-3">
               Learn more →
             </a>

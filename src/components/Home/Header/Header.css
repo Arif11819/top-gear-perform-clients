@@ -17,7 +17,12 @@ nav {
 }
 
 .logo img {
-    width: 250px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.top-text{
     cursor: pointer;
 }
 
@@ -132,9 +137,11 @@ label {
     padding: 8px 20px;
     font-weight: 500;
 }
-#demo-text{
+
+#demo-text {
     color: white;
 }
+
 .outline-button {
     background-color: white;
     font-weight: 600;
@@ -206,6 +213,13 @@ label {
 
 }
 
+.dash-link:hover {
+    background-color: white;
+    font-weight: 700;
+    color: black;
+
+}
+
 .toggle-top-menu a {
     margin: 5px 10px;
 }
@@ -218,6 +232,11 @@ label {
     to {
         right: 0;
     }
+}
+
+.text-heading{
+    font-size: 25px;
+    color: red;
 }
 
 

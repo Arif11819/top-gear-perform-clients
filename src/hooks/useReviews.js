@@ -8,7 +8,7 @@ const useReviews = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setReviews(data))
-    }, [])
+    }, [reviews])
     return [reviews, setReviews];
 }
 export default useReviews;

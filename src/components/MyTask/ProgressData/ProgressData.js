@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ProgressData = ({ progres }) => {
     const [progress, setprogress] = useState([]);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/progress')
+        fetch(`https://dry-ravine-83506.herokuapp.com/progress`)
             .then(res => res.json())
             .then(data => setprogress(data))
     }, [progress]);
@@ -27,7 +27,7 @@ const ProgressData = ({ progres }) => {
             })
     }
     return (
-        <div className="card w-72 bg-base-100 shadow">
+        <div className="card w-72 bg-slate-50 shadow">
             <div className="card-body text-center items-center">
                 <h2 className='text-black'>{progres.proceedTask}</h2>
                 <div className="card-actions mt-3 justify-end">
