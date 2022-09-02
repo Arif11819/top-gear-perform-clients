@@ -96,7 +96,7 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
                             <label htmlFor="date-2">To</label> <br />
                             <input onChange={(e) => setTo(e.target.value)} className='border px-2 py-1 rounded border-blue-500 text-gray-500' type="date" name="date-2" id="date-2" required />
                         </div>
-                        <button className='btn btn-xs mt-5' onClick={handleDays}>Check days</button>
+                        <button className='text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-1 py-2 text-center cursor-pointer mt-5' onClick={handleDays}>Check days</button>
                     </div>
                     <div className='my-5 ml-4'>
                         <p className='font-bold'>Total rest days: {days} days</p>
@@ -110,11 +110,11 @@ const DayOffModal = ({ vacations, setOpenModal }) => {
                     </div>
                     <div className='ml-4 mt-5'>
                         <label htmlFor="note">Note</label> <br />
-                        <textarea onChange={(e) => setNotes(e.target.value)} className='border border-blue-500 px-2 p-1 rounded' placeholder='Write note...' name="note" id="note" cols="30" rows="2"></textarea>
+                        <textarea onChange={(e) => setNotes(e.target.value)} className='border h-48 w-96 border-blue-500 px-2 p-1 rounded' placeholder='Write note...' name="note" id="note"></textarea>
                     </div>
                     <div className="ml-4 mt-5 flex gap-4">
-                        <button onClick={handleSubmit} className='btn btn-xs btn-success hover:scale-110 hover:text-white'>Save</button>
-                        <label htmlFor="DayOffModal" className="btn btn-xs btn-error hover:scale-110 hover:text-white">Cancel</label>
+                        <button onClick={handleSubmit} className='text-white bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-3 py-1 text-center cursor-pointer'>Save</button>
+                        <label htmlFor="DayOffModal" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-1 text-center">Cancel</label>
                     </div>
                 </div>
             </div>

@@ -63,11 +63,11 @@ const ManageEmergency = () => {
                         <tbody>
 
                             {emergencies.map(emergency => <tr key={emergency._id}>
-                                <td>{emergency.name
+                                <td>{emergency.form.name
                                 }</td>
-                                <td>{emergency.relationship}</td>
-                                <td>{emergency.email}</td>
-                                <td>{emergency.phoneNumberone
+                                <td>{emergency.form.relationship}</td>
+                                <td>{emergency.form.email}</td>
+                                <td>{emergency.form.phoneNumberone
                                 }</td>
                                 <td><button onClick={() => handleDelete(emergency._id)} className='text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-3 py-1 text-center'> Delete</button></td>
 

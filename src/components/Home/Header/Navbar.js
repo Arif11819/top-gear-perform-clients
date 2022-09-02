@@ -62,7 +62,7 @@ const Navbar = () => {
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0" className='top-text'>CUSTOMERS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu  shadow bg-slate-50 w-72">
-                                <li><Link className='dash-link' to='/dashboard/reviews'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
+                                <li><Link className='dash-link' to='/full-case-study'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
                                 <li><Link className='dash-link' to='/praise'><img src="https://i.ibb.co/thRDcVS/integrations.png" alt="" /> Why TopGear Perform</Link></li>
                             </ul>
                         </div>
