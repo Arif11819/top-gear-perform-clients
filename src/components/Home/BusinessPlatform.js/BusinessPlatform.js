@@ -12,7 +12,11 @@ const BusinessPlatform = () => {
             <h1 className='text-4xl text-center font-bold'>Experience the world’s best
                 <br /> iterative business execution platform
             </h1>
+<<<<<<< HEAD
             <p className='text-center text-xl text-gray-400'>Grow your business with our All-Inclusive Employee Management Tool</p>
+=======
+            <p className='text-center text-xl text-gray-400'>Grow your business with our All-Inclusive Top Gear's Tool</p>
+>>>>>>> f95480a406c429f3baf9b04b5121d17f5f404e2a
             <div className="hero ">
 
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -22,7 +26,7 @@ const BusinessPlatform = () => {
                     <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-20 sm:mt-10 '>
                         <Card img="https://i.ibb.co/1dPFd8f/task-list.png" title={'Task Management '} downTitle={`Track Better. Do More.`} />
                         <Card img="https://i.ibb.co/h8WJLh0/employee.png" title={'Employee Engagement '} downTitle={`Build Trust. Boost Engagement.`} />
-                        <Card img="https://i.ibb.co/rv3sq23/archery.png" title={`OKR Management `} downTitle={`Focus. Measure. Achieve.`} />
+                        <Card img="https://i.ibb.co/rv3sq23/archery.png" title={`Progess Management `} downTitle={`Focus. Measure. Achieve.`} />
                         <Card img="https://i.ibb.co/2PG9HsK/growth.png" title={`Performance Management`} downTitle={`Leverage OKRs. Ignite Performance.`} />
 
                     </div>

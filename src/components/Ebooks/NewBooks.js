@@ -5,7 +5,11 @@ const NewBooks = () => {
   const [newbooks, setnewbooks] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch(`https://dry-ravine-83506.herokuapp.com/new-ebook`)
+=======
+    fetch("https://dry-ravine-83506.herokuapp.com/new-ebook")
+>>>>>>> f95480a406c429f3baf9b04b5121d17f5f404e2a
       .then((res) => res.json())
       .then((data) => setnewbooks(data));
   }, []);

@@ -2,7 +2,11 @@ import React from 'react';
 
 const NewBook = ({ newbook }) => {
 
+<<<<<<< HEAD
   const { name, pdf, image, description } = newbook;
+=======
+  const { name, image, pdf , description } = newbook;
+>>>>>>> f95480a406c429f3baf9b04b5121d17f5f404e2a
 
   return (
     <div>
