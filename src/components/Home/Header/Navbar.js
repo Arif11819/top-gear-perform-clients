@@ -12,7 +12,7 @@ const Navbar = () => {
     const [user] = useAuthState(auth)
 
     const [toggle, setToggle] = useState(false)
-    const [showProfile, setShowProfile] = useState(false)
+    const [setShowProfile] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
 
@@ -33,20 +33,20 @@ const Navbar = () => {
                     <Link to="/aboutUs">About us</Link>
                     <Link to="/blogs">Blog</Link>
                     <Link to="/contact">Contact us</Link>
-                    {user && <Link onClick={handleSignout} to="/dashboard/home">Dashbroad </Link> }
+                    {user && <Link onClick={handleSignout} to="/dashboard/home">Dashbroad </Link>}
                     {user ? <Link onClick={handleSignout} to="/login">Logout </Link> : <Link to="/login">Sign in </Link>}
                     <RiGlobalLine className='global-icon' />
                 </div>
                 <div className="main-nav-bar">
                     <div className="logo flex">
                         <img onClick={() => navigate('/')} src="https://i.ibb.co/sbWSq7g/bandwidth.png" alt="" />
-                        <p className='text-2xl font-bold text-sky-600 ml-6 mt-2'>TopGear Perform</p>
+                        <p onClick={() => navigate('/')} className='text-2xl top-text font-bold text-sky-600 ml-6 mt-2'>TopGear Perform</p>
                     </div>
                     <GiHamburgerMenu onClick={() => setToggle(!toggle)} className='burger-icon' />
                     <div className="main-nav-links">
                         <div className="dropdown  dropdown-hover cursor-pointer dropdown-container">
-                            
-                            <label tabIndex="0">PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
+
+                            <label tabIndex="0" className='top-text'>PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu shadow bg-slate-50 w-72">
 
                                 <li className='hover:none '> <Link className='dash-link' to='/login'><img src="https://i.ibb.co/rMtSDJZ/product-overview.png" alt="" />Product Overview</Link></li>
@@ -60,14 +60,14 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
-                            <label tabIndex="0">CUSTOMERS<RiArrowDownSLine className='arrow-icon' /> </label>
+                            <label tabIndex="0" className='top-text'>CUSTOMERS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu  shadow bg-slate-50 w-72">
-                                <li><Link className='dash-link' to='/dashboard/reviews'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
+                                <li><Link className='dash-link' to='/full-case-study'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
                                 <li><Link className='dash-link' to='/praise'><img src="https://i.ibb.co/thRDcVS/integrations.png" alt="" /> Why TopGear Perform</Link></li>
                             </ul>
                         </div>
 
-                        <Link to='/pricing'>PRICING</Link>
+                        <Link to='/pricing' className='top-text'>PRICING</Link>
 
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0">RESOURCES<RiArrowDownSLine className='arrow-icon' /> </label>
@@ -76,13 +76,13 @@ const Navbar = () => {
 
                                 <li><Link className='dash-link' to='/blogs'><img src="https://i.ibb.co/mbkby2D/library.png" alt="" />Blogs</Link></li>
 
-                                <li><Link className='dash-link' to='/dashboard/course'><img src="https://i.ibb.co/xqvZ74w/example-Copy.png" alt="" />Our Examples</Link></li>
+                                <li><Link className='dash-link' to='/course'><img src="https://i.ibb.co/xqvZ74w/example-Copy.png" alt="" />Our Courses</Link></li>
 
                             </ul>
                         </div>
 
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
-                            <label tabIndex="0">SUPPORT<RiArrowDownSLine className='arrow-icon' /> </label>
+                            <label tabIndex="0" className='top-text'>SUPPORT<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-slate-50 w-72">
                                 <li> <Link className='dash-link' to='/faq'><img src="https://i.ibb.co/kHtgtPX/faq.png" alt="" />Answers FAQ</Link></li>
 

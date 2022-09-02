@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
+import auth from '../../../firebase.init';
 
 const ProgressData = ({ progres }) => {
     const [progress, setprogress] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/progress`)
+        fetch(`https://dry-ravine-83506.herokuapp.com/task/${user?.email}`)
             .then(res => res.json())
             .then(data => setprogress(data))
     }, [progress]);
+
+    const [user] = useAuthState(auth);
+    const { data: proceedTask, isLoading, refetch } = useQuery('proceedTask', () => fetch(`https://dry-ravine-83506.herokuapp.com/progress/${user?.email}`, {
+        method: 'GET',
+    })
+        .then(res => res.json()))
+    refetch()
+    if (isLoading) {
+        return <p>Loading...</p>
+    }
+
     const handleDeleteTask = id => {
-
-
-
 
         const url = `https://dry-ravine-83506.herokuapp.com/progress/${id}`
 
@@ -29,9 +40,10 @@ const ProgressData = ({ progres }) => {
     return (
         <div className="card w-72 bg-slate-50 shadow">
             <div className="card-body text-center items-center">
-                <h2 className='text-black'>{progres.proceedTask}</h2>
-                <div className="card-actions mt-3 justify-end">
-                    <button className=" text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-1 py-1 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Edit</button>
+                <h2 className='text-black'>{progres.form.proceedTask}</h2>
+                <h2 className='text-blue-500 text-xs'>{progres.form.date}</h2>
+                <div className="card-actions mt-10 mb-0  justify-end">
+
                     <button onClick={() => handleDeleteTask(progres._id)} className=" text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-2 py-1 text-center">Delete</button>
                 </div>
             </div>

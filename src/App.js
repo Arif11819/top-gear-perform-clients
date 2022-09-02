@@ -4,9 +4,6 @@ import { ToastContainer } from 'react-toastify';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
 import Home from './components/Home/Home';
-import Reviews from './components/Reviews/Reviews';
-// import Footer from './components/Home/Footer/Footer';
-// import Execute from './components/Execute/Execute';
 import Navbar from './components/Home/Header/Navbar';
 import FullReview from './components/FullReview/FullReview';
 import NotFound from './components/NotFound/NotFound';
@@ -46,6 +43,17 @@ import AddCourse from './components/pages/Dashboard/Course/AddCourse';
 import DaysOffHome from './components/pages/Dashboard/DayOff/DaysOffHome';
 import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHome';
 
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
+import Team from './components/Team/Team';
+import ManageEmergency from './components/pages/Dashboard/Emergency/ManageEmergency/ManageEmergency';
+
+import ChatRequest from './components/pages/Dashboard/ChatRequest/ChatRequest';
+import EmployeesVacation from './components/pages/Dashboard/EmployeesVacation/EmployeesVacation';
+import EmployeesGoal from './components/pages/Dashboard/EmployeesGoal/EmployeesGoal';
+import ShowReview from './components/Reviews/ShowReview';
+import AddReview from './components/Reviews/AddReview';
+
+
 
 
 
@@ -62,8 +70,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
+        <Route path='/full-case-study' element={<ShowReview />} />
         <Route path='/contact' element={<ContactUs />} />
-        <Route path='/dashboard' element={<Dashboard />}>
+        <Route path='/dashboard' element={<RequireAuth><Dashboard /> </RequireAuth>}>
           <Route path='home' element={<DashHome />} />
           <Route path='focus' element={<Focus />} />
           <Route path='task' element={<MyTask />} />
@@ -72,11 +81,14 @@ function App() {
           <Route path='news-feed' element={<NewsFeed />} />
           <Route path='employee' element={<Charts />} />
           <Route path='employee/:employeeId' element={<Charts />} />
-          <Route path='action' element={<Action />} />
+          <Route path='admin' element={<Action />} />
+          <Route path='manager' element={<Action />} />
+          <Route path='chatrequest' element={<ChatRequest />} />
+          <Route path='employeesvacation' element={<EmployeesVacation />} />
+          <Route path='employeesgoal' element={<EmployeesGoal />} />
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency />} />
           <Route path='course' element={<Course />} />
-          <Route path='take-vacation' element={<DaysOffHome />} />
           <Route path='add-employee' element={<AddEmployee />} />
           <Route path='add-goal' element={<CreateGoalHome />} />
           <Route path='manage-users' element={<ManageUsers />} />
@@ -84,13 +96,12 @@ function App() {
           <Route path='demo-details' element={<ScheduleDemoDetails />} />
           <Route path='upload-file' element={<UploadFile />} />
           <Route path='manage-blogs' element={<ManageBlogs />} />
+          <Route path='vacation-select' element={<DaysOffHome/>} />
+          
+        <Route path='manage-users-emergency-contact' element={<ManageEmergency />} />
           <Route path='/dashboard/add-course' element={<AddCourse />} />
           <Route path='/dashboard/course' element={<Course />} />
-          <Route path='/dashboard/reviews' element={
-            <RequireAuth>
-              <Reviews></Reviews>
-            </RequireAuth>
-          } />
+          <Route path='/dashboard/reviews' element={<AddReview></AddReview>} />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/blogs' element={<Blogs />} />
@@ -102,13 +113,15 @@ function App() {
         <Route path='/helpCenter' element={<HelpCenter />} />
         <Route path='/ebook' element={<Ebooks />} />
         <Route path='/aboutUs' element={<AboutUs />} />
+        <Route path='/team-members' element={<Team />} />
+        <Route path='/manage-users-emergency-contact' element={<ManageEmergency />} />
         <Route path='/terms' element={<Terms />} />
+        <Route path='/course' element={<Course />}  />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/reviews/:reviewsId' element={<FullReview />} />
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
-      {/* {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
-      {pathname?.includes('/dashboard') ? null : <Footer></Footer>} */}
 
     </div>
 
