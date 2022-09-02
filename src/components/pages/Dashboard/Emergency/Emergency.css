@@ -1,6 +1,6 @@
  .info{
   width: 400px;
-  margin-left: 80px;
+  margin-left: 15px;
 }
 .info:hover{
   background-color: skyblue;
@@ -24,6 +24,7 @@
   .info{
     width: 150px;
     margin-top: 20px;
+    margin-right: 15px;
   }
   .emg-card{
     height: 400px;

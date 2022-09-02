@@ -24,7 +24,7 @@ const Header = () => {
 
                     </div>
                     <div className="header-image">
-                        <img src="https://cdns.profit.co/site/v1.2.21/images/banner-progress-img.png" alt="" />
+                        <img src="https://i.ibb.co/Dk39vZs/banner-progress-img.png" alt="" />
                     </div>
                 </div>
 
