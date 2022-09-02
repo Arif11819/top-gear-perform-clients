@@ -3,11 +3,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../../firebase.init";
 import useAdmin from "../../../../hooks/useAdmin";
+import useManager from "../../../../hooks/useManager";
 import "./DashHome.css";
 
 const DashHome = () => {
   const [user] = useAuthState(auth);
   const [admin] = useAdmin(user);
+  const [manager] = useManager(user)
   return (
     <div className="flex ">
       <div>
@@ -30,7 +32,7 @@ const DashHome = () => {
             </li>
           }
           {
-            admin && <li className="notification-text" tabIndex="1">
+            (admin || manager) && <li className="notification-text" tabIndex="1">
               <Link className="dash-link" to="/dashboard/chatrequest">Chat Request</Link>
             </li>
           }
