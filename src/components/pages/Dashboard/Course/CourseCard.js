@@ -30,21 +30,21 @@ const CourseCard = ({ item, setProductItems, productItems }) => {
        <>
        
        <div class="card w-96 glass">
-  <figure><img src={item.image} alt="car!"/></figure>
+  <figure><img width={400} className= 'p-5' src={item.image} alt="car!"/></figure>
   <div class="card-body">
     <h2 class="card-title">{item.name}</h2>
     <h2 class="card-title">{item.Created}</h2>
     <p>{item.description}</p>
         <div className='flex justify-between align-center'>
         <div class="card-actions justify-end">
-      <button className='card-btn btn-primary p-4 rounded-lg'>
+      <button className='badge badge-outline'>
                         <a href={item.link} target="_blank" >
                         <p>{`enable course`} </p> </a>
                     </button>
                     
     </div>
     <div class="card-actions justify-start">
-      <button onClick={() => hendelDeleteCourse(item._id)}  className='card-btn btn-primary p-4 rounded-lg'>
+      <button onClick={() => hendelDeleteCourse(item._id)}  className='badge badge-outline'>
                         <p>Delete course</p>
                     </button>
     </div>

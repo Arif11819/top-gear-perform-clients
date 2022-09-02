@@ -44,7 +44,7 @@ function App() {
 
 
 
-    <>
+    <div className='bg-white'>
       <ToastContainer limit={1} />
       {pathname?.includes('/dashboard') ? null : <Navbar></Navbar>}
       <Routes>
@@ -81,7 +81,7 @@ function App() {
       {pathname?.includes('/dashboard') ? null : <Execute></Execute>}
       {pathname?.includes('/dashboard') ? null : <Footer></Footer>}
 
-    </>
+    </div>
 
   )
 
