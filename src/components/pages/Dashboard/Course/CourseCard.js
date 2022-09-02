@@ -1,9 +1,17 @@
 // import { id } from 'date-fns/locale';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../../firebase.init';
+import useAdmin from '../../../../hooks/useAdmin';
+import useManager from '../../../../hooks/useManager';
 
 const CourseCard = ({ item, setProductItems, productItems }) => {
+  const [user] = useAuthState(auth);
+  const [admin] = useAdmin(user);
+  const [manager] = useManager(user);
 
   const hendelDeleteCourse = (id) => {
+
     const proceed = window.confirm('are you sure delete')
     if (proceed) {
       console.log('delete with id', id)
@@ -43,11 +51,13 @@ const CourseCard = ({ item, setProductItems, productItems }) => {
               </button>
 
             </div>
+            {(admin || manager) &&
             <div class="card-actions justify-start">
               <button onClick={() => hendelDeleteCourse(item._id)} className='badge badge-outline'>
-                <p>Delete course</p>
+               <p>Delete course</p> 
               </button>
             </div>
+}
           </div>
 
         </div>

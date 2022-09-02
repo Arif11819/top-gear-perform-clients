@@ -47,9 +47,6 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Team from './components/Team/Team';
 import ManageEmergency from './components/pages/Dashboard/Emergency/ManageEmergency/ManageEmergency';
 
-
-
-
 import ChatRequest from './components/pages/Dashboard/ChatRequest/ChatRequest';
 import EmployeesVacation from './components/pages/Dashboard/EmployeesVacation/EmployeesVacation';
 import EmployeesGoal from './components/pages/Dashboard/EmployeesGoal/EmployeesGoal';
@@ -75,7 +72,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/full-case-study' element={<ShowReview />} />
         <Route path='/contact' element={<ContactUs />} />
-        <Route path='/dashboard' element={<Dashboard />}>
+        <Route path='/dashboard' element={<RequireAuth><Dashboard /> </RequireAuth>}>
           <Route path='home' element={<DashHome />} />
           <Route path='focus' element={<Focus />} />
           <Route path='task' element={<MyTask />} />
@@ -84,14 +81,14 @@ function App() {
           <Route path='news-feed' element={<NewsFeed />} />
           <Route path='employee' element={<Charts />} />
           <Route path='employee/:employeeId' element={<Charts />} />
-          <Route path='action' element={<Action />} />
+          <Route path='admin' element={<Action />} />
+          <Route path='manager' element={<Action />} />
           <Route path='chatrequest' element={<ChatRequest />} />
           <Route path='employeesvacation' element={<EmployeesVacation />} />
           <Route path='employeesgoal' element={<EmployeesGoal />} />
           <Route path='notes' element={<NoteHome />} />
           <Route path='emergency' element={<Emergency />} />
           <Route path='course' element={<Course />} />
-          <Route path='take-vacation' element={<DaysOffHome />} />
           <Route path='add-employee' element={<AddEmployee />} />
           <Route path='add-goal' element={<CreateGoalHome />} />
           <Route path='manage-users' element={<ManageUsers />} />
@@ -99,6 +96,9 @@ function App() {
           <Route path='demo-details' element={<ScheduleDemoDetails />} />
           <Route path='upload-file' element={<UploadFile />} />
           <Route path='manage-blogs' element={<ManageBlogs />} />
+          <Route path='vacation-select' element={<DaysOffHome/>} />
+          
+        <Route path='manage-users-emergency-contact' element={<ManageEmergency />} />
           <Route path='/dashboard/add-course' element={<AddCourse />} />
           <Route path='/dashboard/course' element={<Course />} />
           <Route path='/dashboard/reviews' element={<AddReview></AddReview>} />
@@ -116,6 +116,7 @@ function App() {
         <Route path='/team-members' element={<Team />} />
         <Route path='/manage-users-emergency-contact' element={<ManageEmergency />} />
         <Route path='/terms' element={<Terms />} />
+        <Route path='/course' element={<Course />}  />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/reviews/:reviewsId' element={<FullReview />} />
