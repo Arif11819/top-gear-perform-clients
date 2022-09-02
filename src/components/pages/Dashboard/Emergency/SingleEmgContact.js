@@ -2,19 +2,34 @@ import React from "react";
 import { BsPersonXFill, BsFillFileEarmarkPersonFill } from 'react-icons/bs';
 import { useEffect, useState } from "react";
 import { toast } from 'react-toastify';
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../../firebase.init";
+import { useQuery } from "react-query";
 
 const SingleEmgContact = ({ emgContact }) => {
-
-  const { name, relationship, phoneNumberone, phoneNumbertwo, phoneNumberthree, email, address } = emgContact;
-
   const [displays, setDisplays] = useState([]);
+  
+  
+
 
   useEffect(() => {
 
-    fetch('https://dry-ravine-83506.herokuapp.com/emgcontact')
+    fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact/${user?.email}`)
       .then(res => res.json())
       .then(data => setDisplays(data));
   }, [emgContact, displays]);
+
+  const [user] = useAuthState(auth);
+
+  const { data: emgcontact, isLoading, refetch } = useQuery('emgcontact', () => fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact/${user?.email}`, {
+    method: 'GET',
+})
+    .then(res => res.json()))
+refetch()
+if (isLoading) {
+    return <p>Loading...</p>
+}
+
 
 
   const handleDelete = id => {
@@ -49,11 +64,11 @@ const SingleEmgContact = ({ emgContact }) => {
           </div>
           </div>
           <div>
-            <p className="text-2xl">Name: {name}</p>
-            <p>Relationship: {relationship}</p>
-            <p>Phone: <br /> {phoneNumberone} <br /> {phoneNumbertwo} <br /> {phoneNumberthree} </p>
-            <p>Email: {email}</p>
-            <p>Address: {address}</p>
+            <p className="text-2xl">Name: {emgContact.form.name}</p>
+            <p>Relationship: {emgContact.form.relationship}</p>
+            <p>Phone: <br /> {emgContact.form.phoneNumberone} <br /> {emgContact.form.phoneNumbertwo} <br /> {emgContact.form.phoneNumberthree} </p>
+            <p>Email: {emgContact.form.email}</p>
+            <p>Address: {emgContact.form.address}</p>
           </div>
       </div>
     </div>

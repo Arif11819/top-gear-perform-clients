@@ -4,35 +4,46 @@ import { MdOutlineMapsHomeWork } from "react-icons/md";
 import { HiOfficeBuilding } from "react-icons/hi";
 import SingleEmgContact from "./SingleEmgContact";
 import { useForm } from "react-hook-form";
-import { toast } from 'react-toastify';
 import "./Emergency.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../../firebase.init";
+
+
 
 const Emergency = () => {
-  const { register, reset, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-    const url = `https://dry-ravine-83506.herokuapp.com/emgcontact`;
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-      .then(res => res.json())
-      .then(result => {
-        toast.success("Successfully added!")
-        reset();
-      })
-  };
+  const [user] = useAuthState(auth);
+  
 
+  const { register, handleSubmit, reset } = useForm();
+    const onSubmit = data => {
+        const emgcontact = {
+            form: data,
+            user: user.email
+        }
+        fetch('https://dry-ravine-83506.herokuapp.com/emgcontact', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(emgcontact)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    console.log(data);
+                    reset();
+                }
+            })
+
+    };
 
   const [emgContacts, setEmgContacts] = useState([]);
 
   useEffect(() => {
-    fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact`)
+    fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setEmgContacts(data));
-  }, [emgContacts]);
+  }, [user?.email]);
 
   return (
     <div className="lg:mx-28 lg:my-10">
