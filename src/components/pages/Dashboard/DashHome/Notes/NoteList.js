@@ -11,7 +11,7 @@ const NoteList = () => {
         .then(res => res.json()))
     refetch()
     if (isLoading) {
-        return <p>Loding...</p>
+        return <p>Loading...</p>
     }
     return (
         <div className='pl-16'>

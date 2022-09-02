@@ -8,7 +8,12 @@ import {
   QueryClient,
   QueryClientProvider,
 } from 'react-query'
+
+
+
 import chatStore from './chatStore';
+import stores from './emergencyStore';
+
 
 const queryClient = new QueryClient()
 
@@ -16,10 +21,12 @@ const queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <QueryClientProvider client={queryClient}>
-      <Provider store={chatStore}>
+
+    <Provider store={chatStore} stores={stores} >
+      <QueryClientProvider client={queryClient}>
         <App />
-      </Provider>
-    </QueryClientProvider>
+      </QueryClientProvider>
+    </Provider>
+
   </BrowserRouter>
 );

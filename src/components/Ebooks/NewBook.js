@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewBook = ({ newbook }) => {
 
-  const { name, image, pdf , description } = newbook;
+  const { name, image, pdf, description } = newbook;
 
   return (
     <div>

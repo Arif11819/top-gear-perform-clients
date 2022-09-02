@@ -28,14 +28,15 @@ const Home = () => {
         <div className='home-color'>
             <Header></Header>
             {/* <ExploreProduct></ExploreProduct> */}
-            <Partner></Partner>
+
             <BusinessPlatform></BusinessPlatform>
             <Management></Management>
             <TaskManagement />
             <PerformanceManagement></PerformanceManagement>
             <EmployeeEngagement></EmployeeEngagement>
-            {/* <BlogSection></BlogSection> */}
+            <BlogSection></BlogSection>
             {/* <WhyTopGear /> */}
+            <Partner></Partner>
             <CountDown targetDate={dateTimeAfterTwentyDays}></CountDown>
             <NewsLetter></NewsLetter>
             <Execute></Execute>

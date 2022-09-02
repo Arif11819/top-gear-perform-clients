@@ -30,7 +30,7 @@ const ScheduleDemoDetails = () => {
 
     return (
         <div>
-            <h1 className='text-4xl mb-12 mt-4 text-center font-bold text-black'>Manage Our Scheduled Users Detail</h1>
+            <h1 className='text-4xl mb-12 mt-10 text-center font-bold text-black'>Manage Our Scheduled User Details</h1>
             <table className="table mx-auto">
 
                 <thead>

@@ -8,8 +8,8 @@ import { useQuery } from "react-query";
 
 const SingleEmgContact = ({ emgContact }) => {
   const [displays, setDisplays] = useState([]);
-  
-  
+
+
 
 
   useEffect(() => {
@@ -23,12 +23,12 @@ const SingleEmgContact = ({ emgContact }) => {
 
   const { data: emgcontact, isLoading, refetch } = useQuery('emgcontact', () => fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact/${user?.email}`, {
     method: 'GET',
-})
+  })
     .then(res => res.json()))
-refetch()
-if (isLoading) {
+  refetch()
+  if (isLoading) {
     return <p>Loading...</p>
-}
+  }
 
 
 
@@ -55,21 +55,21 @@ if (isLoading) {
       <div className=" emg-card text-center lg:mx-2  shadow-xl">
         <div className="flex">
           <div className="lg:mr-44 mr-20 lg:text-3xl">
-            <BsFillFileEarmarkPersonFill/>
+            <BsFillFileEarmarkPersonFill />
           </div>
-        <div className="">
+          <div className="">
             <button className='lg:ml-44 ml-24 lg:text-3xl'
               onClick={() => handleDelete(emgContact._id)}
             ><BsPersonXFill /></button>
           </div>
-          </div>
-          <div>
-            <p className="text-2xl">Name: {emgContact.form.name}</p>
-            <p>Relationship: {emgContact.form.relationship}</p>
-            <p>Phone: <br /> {emgContact.form.phoneNumberone} <br /> {emgContact.form.phoneNumbertwo} <br /> {emgContact.form.phoneNumberthree} </p>
-            <p>Email: {emgContact.form.email}</p>
-            <p>Address: {emgContact.form.address}</p>
-          </div>
+        </div>
+        <div>
+          <p className="text-2xl">Name: {emgContact.form.name}</p>
+          <p>Relationship: {emgContact.form.relationship}</p>
+          <p>Phone: <br /> {emgContact.form.phoneNumberone} <br /> {emgContact.form.phoneNumbertwo} <br /> {emgContact.form.phoneNumberthree} </p>
+          <p>Email: {emgContact.form.email}</p>
+          <p>Address: {emgContact.form.address}</p>
+        </div>
       </div>
     </div>
   );

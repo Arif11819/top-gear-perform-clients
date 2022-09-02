@@ -14,19 +14,18 @@ const Review = ({ review }) => {
     }
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure delete this?');
-        if (proceed) {
-            const url = `https://dry-ravine-83506.herokuapp.com/reviews/${id}`;
-            fetch(url, {
-                method: 'DELETE'
+
+        const url = `https://dry-ravine-83506.herokuapp.com/reviews/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                const remainingReview = reviews.filter(review => review._id !== id);
+                setReviews(remainingReview);
             })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    const remainingReview = reviews.filter(review => review._id !== id);
-                    setReviews(remainingReview);
-                })
-        }
+
     }
 
     return (
