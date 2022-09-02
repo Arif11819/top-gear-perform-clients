@@ -4,7 +4,6 @@ import { ToastContainer } from 'react-toastify';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Login from './components/pages/Login/Login';
 import Home from './components/Home/Home';
-import Reviews from './components/Reviews/Reviews';
 import Navbar from './components/Home/Header/Navbar';
 import FullReview from './components/FullReview/FullReview';
 import NotFound from './components/NotFound/NotFound';
@@ -46,6 +45,8 @@ import CreateGoalHome from './components/pages/Dashboard/CreateGoal/CreateGoalHo
 import ChatRequest from './components/pages/Dashboard/ChatRequest/ChatRequest';
 import EmployeesVacation from './components/pages/Dashboard/EmployeesVacation/EmployeesVacation';
 import EmployeesGoal from './components/pages/Dashboard/EmployeesGoal/EmployeesGoal';
+import ShowReview from './components/Reviews/ShowReview';
+import AddReview from './components/Reviews/AddReview';
 
 
 
@@ -63,6 +64,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />} />
+        <Route path='/full-case-study' element={<ShowReview />} />
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/dashboard' element={<Dashboard />}>
           <Route path='home' element={<DashHome />} />
@@ -90,11 +92,7 @@ function App() {
           <Route path='manage-blogs' element={<ManageBlogs />} />
           <Route path='/dashboard/add-course' element={<AddCourse />} />
           <Route path='/dashboard/course' element={<Course />} />
-          <Route path='/dashboard/reviews' element={
-            <RequireAuth>
-              <Reviews></Reviews>
-            </RequireAuth>
-          } />
+          <Route path='/dashboard/reviews' element={<AddReview></AddReview>} />
         </Route>
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/blogs' element={<Blogs />} />

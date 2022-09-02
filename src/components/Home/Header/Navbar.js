@@ -12,7 +12,7 @@ const Navbar = () => {
     const [user] = useAuthState(auth)
 
     const [toggle, setToggle] = useState(false)
-    const [ setShowProfile] = useState(false)
+    const [setShowProfile] = useState(false)
     const navigate = useNavigate()
     const handleSignout = () => {
 
@@ -33,7 +33,7 @@ const Navbar = () => {
                     <Link to="/aboutUs">About us</Link>
                     <Link to="/blogs">Blog</Link>
                     <Link to="/contact">Contact us</Link>
-                    {user && <Link onClick={handleSignout} to="/dashboard/home">Dashbroad </Link> }
+                    {user && <Link onClick={handleSignout} to="/dashboard/home">Dashbroad </Link>}
                     {user ? <Link onClick={handleSignout} to="/login">Logout </Link> : <Link to="/login">Sign in </Link>}
                     <RiGlobalLine className='global-icon' />
                 </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
                     <GiHamburgerMenu onClick={() => setToggle(!toggle)} className='burger-icon' />
                     <div className="main-nav-links">
                         <div className="dropdown  dropdown-hover cursor-pointer dropdown-container">
-                            
+
                             <label tabIndex="0" className='top-text'>PRODUCTS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu shadow bg-slate-50 w-72">
 
@@ -62,7 +62,7 @@ const Navbar = () => {
                         <div className="dropdown dropdown-hover cursor-pointer dropdown-container">
                             <label tabIndex="0" className='top-text'>CUSTOMERS<RiArrowDownSLine className='arrow-icon' /> </label>
                             <ul tabIndex="0" className="dropdown-content menu  shadow bg-slate-50 w-72">
-                                <li><Link className='dash-link' to='/dashboard/reviews'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
+                                <li><Link className='dash-link' to='/full-case-study'><img src="https://i.ibb.co/TMJZqKB/employee-engagemnet.png" alt="" /> Case Study</Link></li>
                                 <li><Link className='dash-link' to='/praise'><img src="https://i.ibb.co/thRDcVS/integrations.png" alt="" /> Why TopGear Perform</Link></li>
                             </ul>
                         </div>
