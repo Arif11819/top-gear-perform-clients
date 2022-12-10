@@ -15,7 +15,7 @@ const AddEmployee = () => {
             form: data,
             user: user.email
         }
-        const url = `https://dry-ravine-83506.herokuapp.com/employee`;
+        const url = `https://top-gear-perform-server.vercel.app/employee`;
         fetch(url, {
             method: 'POST',
             headers: {

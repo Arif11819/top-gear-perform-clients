@@ -24,7 +24,7 @@ const ScheduleDemo = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [bookedTime, setBookedTime] = useState('');
     useEffect(() => {
-        fetch("https://dry-ravine-83506.herokuapp.com/timeSlots")
+        fetch("https://top-gear-perform-server.vercel.app/timeSlots")
             .then(res => res.json())
             .then(data => setTimeSlots(data))
     }, [])
@@ -41,7 +41,7 @@ const ScheduleDemo = () => {
             phone: phoneNumber,
             userCount: userCount
         }
-        fetch("https://dry-ravine-83506.herokuapp.com/scheduleData", {
+        fetch("https://top-gear-perform-server.vercel.app/scheduleData", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

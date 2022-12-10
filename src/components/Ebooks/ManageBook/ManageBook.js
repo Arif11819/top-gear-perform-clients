@@ -6,7 +6,7 @@ const ManageBook = () => {
 
     const [ebooks, setEbooks] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/ebook`)
+        fetch(`https://top-gear-perform-server.vercel.app/ebook`)
             .then(res => res.json())
             .then(data => setEbooks(data))
     }, [ebooks]);

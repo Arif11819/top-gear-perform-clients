@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const useReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        const url = 'https://dry-ravine-83506.herokuapp.com/reviews';
+        const url = 'https://top-gear-perform-server.vercel.app/reviews';
 
         fetch(url)
             .then(res => res.json())

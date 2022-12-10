@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const BlogSection = () => {
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('https://dry-ravine-83506.herokuapp.com/blog')
+        fetch('https://top-gear-perform-server.vercel.app/blog')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [blogs]);

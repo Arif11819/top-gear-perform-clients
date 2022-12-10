@@ -20,7 +20,7 @@ const Emergency = () => {
       form: data,
       user: user.email
     }
-    fetch('https://dry-ravine-83506.herokuapp.com/emgcontact', {
+    fetch('https://top-gear-perform-server.vercel.app/emgcontact', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -40,7 +40,7 @@ const Emergency = () => {
   const [emgContacts, setEmgContacts] = useState([]);
 
   useEffect(() => {
-    fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact/${user?.email}`)
+    fetch(`https://top-gear-perform-server.vercel.app/emgcontact/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setEmgContacts(data));
   }, [emgContacts, user?.email]);

@@ -21,7 +21,7 @@ const AddCourse = () => {
 
         // post data to server
 
-        fetch('https://dry-ravine-83506.herokuapp.com/course', {
+        fetch('https://top-gear-perform-server.vercel.app/course', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

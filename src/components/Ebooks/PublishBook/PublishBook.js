@@ -5,7 +5,7 @@ const PublishBook = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/ebook`;
+        const url = `https://top-gear-perform-server.vercel.app/ebook`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -4,7 +4,7 @@ const useReviewDetails = reviewsId => {
     const [reviews, setReviews] = useState({});
 
     useEffect(() => {
-        const url = `https://dry-ravine-83506.herokuapp.com/reviews/${reviewsId}`;
+        const url = `https://top-gear-perform-server.vercel.app/reviews/${reviewsId}`;
 
         fetch(url)
             .then(res => res.json())

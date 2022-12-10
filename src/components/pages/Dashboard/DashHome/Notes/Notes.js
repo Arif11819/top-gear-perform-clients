@@ -15,7 +15,7 @@ const Notes = () => {
             email: user?.email,
             note: text,
         }
-        fetch('https://dry-ravine-83506.herokuapp.com/notes', {
+        fetch('https://top-gear-perform-server.vercel.app/notes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

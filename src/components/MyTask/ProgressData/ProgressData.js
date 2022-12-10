@@ -6,13 +6,13 @@ import auth from '../../../firebase.init';
 const ProgressData = ({ progres }) => {
     const [progress, setprogress] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/task/${user?.email}`)
+        fetch(`https://top-gear-perform-server.vercel.app/task/${user?.email}`)
             .then(res => res.json())
             .then(data => setprogress(data))
     }, [progress]);
 
     const [user] = useAuthState(auth);
-    const { data: proceedTask, isLoading, refetch } = useQuery('proceedTask', () => fetch(`https://dry-ravine-83506.herokuapp.com/progress/${user?.email}`, {
+    const { data: proceedTask, isLoading, refetch } = useQuery('proceedTask', () => fetch(`https://top-gear-perform-server.vercel.app/progress/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))
@@ -23,7 +23,7 @@ const ProgressData = ({ progres }) => {
 
     const handleDeleteTask = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/progress/${id}`
+        const url = `https://top-gear-perform-server.vercel.app/progress/${id}`
 
         fetch(url, {
             method: 'DELETE'

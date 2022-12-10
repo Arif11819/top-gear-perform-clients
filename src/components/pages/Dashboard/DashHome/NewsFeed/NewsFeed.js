@@ -27,7 +27,7 @@ const NewsFeed = () => {
 
 
   useEffect(() => {
-    fetch('https://dry-ravine-83506.herokuapp.com/news')
+    fetch('https://top-gear-perform-server.vercel.app/news')
       .then(res => res.json())
       .then(data => setNews(data))
   }, [load])
@@ -38,7 +38,7 @@ const NewsFeed = () => {
     const postTime = time
     const postData = { postDesc, userEmail, postTime }
     if (postDescription) {
-      fetch('https://dry-ravine-83506.herokuapp.com/postNews', {
+      fetch('https://top-gear-perform-server.vercel.app/postNews', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

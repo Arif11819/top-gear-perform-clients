@@ -13,7 +13,7 @@ const GoalForm = () => {
             form: data,
             user: user.email
         }
-        fetch('https://dry-ravine-83506.herokuapp.com/usergoal', {
+        fetch('https://top-gear-perform-server.vercel.app/usergoal', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -78,7 +78,7 @@ const GoalForm = () => {
                             </div>
                             <div>
                                 <label className='uppercase text-sm font-bold' htmlFor="end">End Date</label> <br />
-                                <input className=' p-2 border w-full border-slate-500 rounded-sm' type="date" name="end" {...register("to")} />
+                                <input className='p-2 border w-full border-slate-500 rounded-sm' type="date" name="end" {...register("to")} />
                             </div>
                         </div>
                         <div>

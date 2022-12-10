@@ -14,14 +14,14 @@ const SingleEmgContact = ({ emgContact }) => {
 
   useEffect(() => {
 
-    fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact/${user?.email}`)
+    fetch(`https://top-gear-perform-server.vercel.app/emgcontact/${user?.email}`)
       .then(res => res.json())
       .then(data => setDisplays(data));
   }, [emgContact, displays]);
 
   const [user] = useAuthState(auth);
 
-  const { data: emgcontact, isLoading, refetch } = useQuery('emgcontact', () => fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact/${user?.email}`, {
+  const { data: emgcontact, isLoading, refetch } = useQuery('emgcontact', () => fetch(`https://top-gear-perform-server.vercel.app/emgcontact/${user?.email}`, {
     method: 'GET',
   })
     .then(res => res.json()))
@@ -34,16 +34,16 @@ const SingleEmgContact = ({ emgContact }) => {
 
   const handleDelete = id => {
 
-      const url = `https://dry-ravine-83506.herokuapp.com/emgcontact/${id}`;
-      fetch(url, {
-        method: 'DELETE'
+    const url = `https://top-gear-perform-server.vercel.app/emgcontact/${id}`;
+    fetch(url, {
+      method: 'DELETE'
+    })
+      .then(res => res.json())
+      .then(data => {
+        toast.success("Successfully deleted!")
+        const remaining = displays.filter(display => display._id !== id)
+        setDisplays(remaining);
       })
-        .then(res => res.json())
-        .then(data => {
-          toast.success("Successfully deleted!")
-          const remaining = displays.filter(display => display._id !== id)
-          setDisplays(remaining);
-        })
 
   }
 

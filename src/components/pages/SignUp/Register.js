@@ -141,7 +141,7 @@ const Register = () => {
                 "email": email
             }
         ]
-        fetch('https://dry-ravine-83506.herokuapp.com/vacation', {
+        fetch('https://top-gear-perform-server.vercel.app/vacation', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -158,7 +158,7 @@ const Register = () => {
         if (email && password && confirmPassword && role && age && gender) {
 
             createUserWithEmailAndPassword(email, password)
-            fetch('https://dry-ravine-83506.herokuapp.com/users', {
+            fetch('https://top-gear-perform-server.vercel.app/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -175,7 +175,7 @@ const Register = () => {
                 return
             }
             else {
-                fetch('https://dry-ravine-83506.herokuapp.com/users', {
+                fetch('https://top-gear-perform-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

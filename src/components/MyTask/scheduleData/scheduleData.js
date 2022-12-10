@@ -7,13 +7,13 @@ const ScheduleData = ({ schedule }) => {
 
     const [schedules, setSchedules] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/schedule/${user?.email}`)
+        fetch(`https://top-gear-perform-server.vercel.app/schedule/${user?.email}`)
             .then(res => res.json())
             .then(data => setSchedules(data))
     }, [schedules]);
 
     const [user] = useAuthState(auth);
-    const { data: scheduleTask, isLoading, refetch } = useQuery('scheduleTask', () => fetch(`https://dry-ravine-83506.herokuapp.com/schedule/${user?.email}`, {
+    const { data: scheduleTask, isLoading, refetch } = useQuery('scheduleTask', () => fetch(`https://top-gear-perform-server.vercel.app/schedule/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))
@@ -24,7 +24,7 @@ const ScheduleData = ({ schedule }) => {
 
     const handleDeleteTask = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/schedule/${id}`
+        const url = `https://top-gear-perform-server.vercel.app/schedule/${id}`
         fetch(url, {
             method: 'DELETE'
         })

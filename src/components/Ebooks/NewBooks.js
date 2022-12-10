@@ -5,7 +5,7 @@ const NewBooks = () => {
   const [newBooks, setBewBooks] = useState([]);
 
   useEffect(() => {
-    fetch("https://dry-ravine-83506.herokuapp.com/new-ebook")
+    fetch("https://top-gear-perform-server.vercel.app/new-ebook")
       .then((res) => res.json())
       .then((data) => setBewBooks(data));
   }, []);

@@ -5,7 +5,7 @@ const useDisplays = () => {
 
   useEffect(() => {
 
-    fetch('https://dry-ravine-83506.herokuapp.com/emgcontact')
+    fetch('https://top-gear-perform-server.vercel.app/emgcontact')
       .then(res => res.json())
       .then(data => setDisplays(data));
   }, []);

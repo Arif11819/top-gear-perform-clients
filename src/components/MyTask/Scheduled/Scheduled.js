@@ -8,7 +8,7 @@ const Scheduled = () => {
     const [schedules, setSchedules] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/schedule/${user?.email}`)
+        fetch(`https://top-gear-perform-server.vercel.app/schedule/${user?.email}`)
             .then(res => res.json())
             .then(data => setSchedules(data))
     }, [schedules]);
@@ -18,7 +18,7 @@ const Scheduled = () => {
             form: data,
             user: user.email
         }
-        fetch('https://dry-ravine-83506.herokuapp.com/schedule', {
+        fetch('https://top-gear-perform-server.vercel.app/schedule', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

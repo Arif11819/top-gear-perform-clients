@@ -8,7 +8,7 @@ const useUser = () => {
     const [singleUser, setUser] = useState({});
 
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/user/${userEmail}`)
+        fetch(`https://top-gear-perform-server.vercel.app/user/${userEmail}`)
             .then(res => res.json())
             .then(data => {
                 if (data) {

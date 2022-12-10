@@ -7,7 +7,7 @@ import auth from '../../../../firebase.init';
 
 const GoalShow = () => {
     const [user] = useAuthState(auth);
-    const { data: goalData, isLoading, refetch } = useQuery('goalData', () => fetch(`https://dry-ravine-83506.herokuapp.com/usergoal/${user?.email}`, {
+    const { data: goalData, isLoading, refetch } = useQuery('goalData', () => fetch(`https://top-gear-perform-server.vercel.app/usergoal/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))
@@ -16,7 +16,7 @@ const GoalShow = () => {
         return <p>Loading...</p>
     }
     const handleDelete = (id) => {
-        const url = `https://dry-ravine-83506.herokuapp.com/goal/${id}`
+        const url = `https://top-gear-perform-server.vercel.app/goal/${id}`
         fetch(url, {
             method: 'DELETE',
         })

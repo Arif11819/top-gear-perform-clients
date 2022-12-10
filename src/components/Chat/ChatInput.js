@@ -13,7 +13,7 @@ const ChatInput = () => {
                 userName: userName,
                 email: room
             }
-            fetch('https://dry-ravine-83506.herokuapp.com/chatuser', {
+            fetch('https://top-gear-perform-server.vercel.app/chatuser', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

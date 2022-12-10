@@ -15,7 +15,7 @@ const CourseCard = ({ item, setProductItems, productItems }) => {
     const proceed = window.confirm('are you sure delete')
     if (proceed) {
       console.log('delete with id', id)
-      const url = (`https://dry-ravine-83506.herokuapp.com/course/${id}`);
+      const url = (`https://top-gear-perform-server.vercel.app/course/${id}`);
 
       fetch(url, {
         method: 'DELETE'
@@ -52,12 +52,12 @@ const CourseCard = ({ item, setProductItems, productItems }) => {
 
             </div>
             {(admin || manager) &&
-            <div class="card-actions justify-start">
-              <button onClick={() => hendelDeleteCourse(item._id)} className='badge badge-outline'>
-               <p>Delete course</p> 
-              </button>
-            </div>
-}
+              <div class="card-actions justify-start">
+                <button onClick={() => hendelDeleteCourse(item._id)} className='badge badge-outline'>
+                  <p>Delete course</p>
+                </button>
+              </div>
+            }
           </div>
 
         </div>

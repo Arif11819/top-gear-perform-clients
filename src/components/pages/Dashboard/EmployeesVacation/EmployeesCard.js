@@ -9,7 +9,7 @@ const EmployeesCard = ({ vacation }) => {
             text: feedbackText
         }
 
-        const url = `https://dry-ravine-83506.herokuapp.com/vacationstore/feedback/${vacation?._id}`
+        const url = `https://top-gear-perform-server.vercel.app/vacationstore/feedback/${vacation?._id}`
         fetch(url, {
             method: "PUT",
             headers: {

@@ -11,7 +11,7 @@ const ChatRequest = () => {
         dispatch(getChatRequest())
     }, [dispatch])
     const handleDelete = (id) => {
-        const url = `https://dry-ravine-83506.herokuapp.com/chatuser/${id}`
+        const url = `https://top-gear-perform-server.vercel.app/chatuser/${id}`
         fetch(url, {
             method: 'DELETE',
         })

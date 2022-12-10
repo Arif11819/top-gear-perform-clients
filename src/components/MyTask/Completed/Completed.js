@@ -9,7 +9,7 @@ const Completed = () => {
     const [completes, setCompletes] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/complete/${user?.email}`)
+        fetch(`https://top-gear-perform-server.vercel.app/complete/${user?.email}`)
             .then(res => res.json())
             .then(data => setCompletes(data))
     }, [completes]);
@@ -19,7 +19,7 @@ const Completed = () => {
             form: data,
             user: user.email
         }
-        fetch('https://dry-ravine-83506.herokuapp.com/complete', {
+        fetch('https://top-gear-perform-server.vercel.app/complete', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

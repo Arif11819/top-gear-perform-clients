@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import EmployeesCard from './EmployeesCard';
 
 const EmployeesVacation = () => {
-    const { data: vacationstore, isLoading, refetch } = useQuery('vacationstore', () => fetch(`https://dry-ravine-83506.herokuapp.com/vacationstore`, {
+    const { data: vacationstore, isLoading, refetch } = useQuery('vacationstore', () => fetch(`https://top-gear-perform-server.vercel.app/vacationstore`, {
         method: 'GET',
     })
         .then(res => res.json()))

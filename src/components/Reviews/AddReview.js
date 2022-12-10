@@ -7,7 +7,7 @@ const AddReview = () => {
     const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
     const onSubmit = data => {
-        const url = `https://dry-ravine-83506.herokuapp.com/reviews`;
+        const url = `https://top-gear-perform-server.vercel.app/reviews`;
         fetch(url, {
             method: 'POST',
             headers: {

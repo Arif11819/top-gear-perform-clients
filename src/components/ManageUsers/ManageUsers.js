@@ -6,14 +6,14 @@ const ManageUsers = () => {
 
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/users`)
+        fetch(`https://top-gear-perform-server.vercel.app/users`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users]);
 
     const handleDeleteUser = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/users/${id}`
+        const url = `https://top-gear-perform-server.vercel.app/users/${id}`
         fetch(url, {
             method: 'DELETE'
         })
@@ -34,7 +34,7 @@ const ManageUsers = () => {
 
     const handleMakeAdmin = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/user/admin/${id}`
+        const url = `https://top-gear-perform-server.vercel.app/user/admin/${id}`
         fetch(url, {
             method: 'PUT'
         })
@@ -53,7 +53,7 @@ const ManageUsers = () => {
 
     const handleMakeManager = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/user/manager/${id}`
+        const url = `https://top-gear-perform-server.vercel.app/user/manager/${id}`
 
         fetch(url, {
             method: 'PUT'

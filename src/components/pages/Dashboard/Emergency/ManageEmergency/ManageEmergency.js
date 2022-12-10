@@ -16,14 +16,14 @@ const ManageEmergency = () => {
 
     const [emergenciess, setEmergencies] = useState([]);
     useEffect(() => {
-        fetch(`https://dry-ravine-83506.herokuapp.com/emgcontact`)
+        fetch(`https://top-gear-perform-server.vercel.app/emgcontact`)
             .then(res => res.json())
             .then(data => setEmergencies(data))
     }, [emergenciess]);
 
     const handleDelete = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/emgcontact/${id}`
+        const url = `https://top-gear-perform-server.vercel.app/emgcontact/${id}`
         fetch(url, {
             method: 'DELETE'
         })

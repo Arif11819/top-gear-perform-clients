@@ -9,7 +9,7 @@ const Review = ({ review }) => {
 
     const handleDelete = id => {
 
-        const url = `https://dry-ravine-83506.herokuapp.com/reviews/${id}`;
+        const url = `https://top-gear-perform-server.vercel.app/reviews/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
