@@ -7,12 +7,12 @@ const MyTaskData = ({ task }) => {
 
     const [tasks, setTasks] = useState([]);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/task/${user?.email}`)
+        fetch(`https://top-gear-perform-server.up.railway.app/task/${user?.email}`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [tasks]);
     const [user] = useAuthState(auth);
-    const { data: myTask, isLoading, refetch } = useQuery('myTask', () => fetch(`https://top-gear-perform-server.vercel.app/task/${user?.email}`, {
+    const { data: myTask, isLoading, refetch } = useQuery('myTask', () => fetch(`https://top-gear-perform-server.up.railway.app/task/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))
@@ -24,7 +24,7 @@ const MyTaskData = ({ task }) => {
 
     const handleDeleteTask = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/task/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/task/${id}`
         fetch(url, {
             method: 'DELETE'
         })

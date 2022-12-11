@@ -8,7 +8,7 @@ import auth from '../../../../firebase.init';
 
 const VacationShow = () => {
     const [user] = useAuthState(auth);
-    const { data: vacationStore, isLoading, refetch } = useQuery('vacationStore', () => fetch(`https://top-gear-perform-server.vercel.app/vacationstore/${user?.email}`, {
+    const { data: vacationStore, isLoading, refetch } = useQuery('vacationStore', () => fetch(`https://top-gear-perform-server.up.railway.app/vacationstore/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))

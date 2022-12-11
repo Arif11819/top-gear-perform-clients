@@ -6,7 +6,7 @@ const PostBlog = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = `https://top-gear-perform-server.vercel.app/blog`;
+        const url = `https://top-gear-perform-server.up.railway.app/blog`;
         fetch(url, {
             method: 'POST',
             headers: {

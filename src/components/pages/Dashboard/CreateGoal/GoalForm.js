@@ -13,7 +13,7 @@ const GoalForm = () => {
             form: data,
             user: user.email
         }
-        fetch('https://top-gear-perform-server.vercel.app/usergoal', {
+        fetch('https://top-gear-perform-server.up.railway.app/usergoal', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -13,7 +13,7 @@ const MyTask = () => {
     const [tasks, setTasks] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/task/${user?.email}`)
+        fetch(`https://top-gear-perform-server.up.railway.app/task/${user?.email}`)
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [tasks]);
@@ -25,7 +25,7 @@ const MyTask = () => {
             form: data,
             user: user.email
         }
-        fetch('https://top-gear-perform-server.vercel.app/task', {
+        fetch('https://top-gear-perform-server.up.railway.app/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

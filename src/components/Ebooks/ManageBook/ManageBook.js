@@ -6,7 +6,7 @@ const ManageBook = () => {
 
     const [ebooks, setEbooks] = useState([]);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/ebook`)
+        fetch(`https://top-gear-perform-server.up.railway.app/ebook`)
             .then(res => res.json())
             .then(data => setEbooks(data))
     }, [ebooks]);

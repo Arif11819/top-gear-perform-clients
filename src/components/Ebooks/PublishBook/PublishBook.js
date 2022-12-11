@@ -5,7 +5,7 @@ const PublishBook = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
 
-        const url = `https://top-gear-perform-server.vercel.app/ebook`;
+        const url = `https://top-gear-perform-server.up.railway.app/ebook`;
         fetch(url, {
             method: 'POST',
             headers: {

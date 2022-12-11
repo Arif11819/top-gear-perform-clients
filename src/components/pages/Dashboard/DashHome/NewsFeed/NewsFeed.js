@@ -27,7 +27,7 @@ const NewsFeed = () => {
 
 
   useEffect(() => {
-    fetch('https://top-gear-perform-server.vercel.app/news')
+    fetch('https://top-gear-perform-server.up.railway.app/news')
       .then(res => res.json())
       .then(data => setNews(data))
   }, [load])
@@ -38,7 +38,7 @@ const NewsFeed = () => {
     const postTime = time
     const postData = { postDesc, userEmail, postTime }
     if (postDescription) {
-      fetch('https://top-gear-perform-server.vercel.app/postNews', {
+      fetch('https://top-gear-perform-server.up.railway.app/postNews', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

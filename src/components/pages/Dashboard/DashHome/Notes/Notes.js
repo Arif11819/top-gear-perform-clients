@@ -15,7 +15,7 @@ const Notes = () => {
             email: user?.email,
             note: text,
         }
-        fetch('https://top-gear-perform-server.vercel.app/notes', {
+        fetch('https://top-gear-perform-server.up.railway.app/notes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

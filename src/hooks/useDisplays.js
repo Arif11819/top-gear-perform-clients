@@ -5,7 +5,7 @@ const useDisplays = () => {
 
   useEffect(() => {
 
-    fetch('https://top-gear-perform-server.vercel.app/emgcontact')
+    fetch('https://top-gear-perform-server.up.railway.app/emgcontact')
       .then(res => res.json())
       .then(data => setDisplays(data));
   }, []);

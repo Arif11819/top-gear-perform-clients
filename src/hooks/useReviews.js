@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const useReviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        const url = 'https://top-gear-perform-server.vercel.app/reviews';
+        const url = 'https://top-gear-perform-server.up.railway.app/reviews';
 
         fetch(url)
             .then(res => res.json())

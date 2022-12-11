@@ -13,7 +13,7 @@ const Chart = ({ ch }) => {
 
     const [employee, setEmployee] = useEmployee();
     const [user] = useAuthState(auth);
-    const { data: empoloyeeData, isLoading, refetch } = useQuery('empoloyeeData', () => fetch(`https://top-gear-perform-server.vercel.app/employee/${user?.email}`, {
+    const { data: empoloyeeData, isLoading, refetch } = useQuery('empoloyeeData', () => fetch(`https://top-gear-perform-server.up.railway.app/employee/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))
@@ -23,7 +23,7 @@ const Chart = ({ ch }) => {
     }
     const handleDelete = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/employee/${id}`;
+        const url = `https://top-gear-perform-server.up.railway.app/employee/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

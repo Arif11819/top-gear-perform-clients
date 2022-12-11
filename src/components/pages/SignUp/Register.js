@@ -141,7 +141,7 @@ const Register = () => {
                 "email": email
             }
         ]
-        fetch('https://top-gear-perform-server.vercel.app/vacation', {
+        fetch('https://top-gear-perform-server.up.railway.app/vacation', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -158,7 +158,7 @@ const Register = () => {
         if (email && password && confirmPassword && role && age && gender) {
 
             createUserWithEmailAndPassword(email, password)
-            fetch('https://top-gear-perform-server.vercel.app/users', {
+            fetch('https://top-gear-perform-server.up.railway.app/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -175,7 +175,7 @@ const Register = () => {
                 return
             }
             else {
-                fetch('https://top-gear-perform-server.vercel.app/users', {
+                fetch('https://top-gear-perform-server.up.railway.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

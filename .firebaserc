@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "topgearperformbd",
+    "default": "top-gear-perform",
     "topgearperform": "topgearperformbd"
   },
   "targets": {},

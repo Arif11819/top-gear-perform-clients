@@ -21,7 +21,7 @@ const AddCourse = () => {
 
         // post data to server
 
-        fetch('https://top-gear-perform-server.vercel.app/course', {
+        fetch('https://top-gear-perform-server.up.railway.app/course', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

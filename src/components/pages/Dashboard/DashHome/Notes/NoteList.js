@@ -5,7 +5,7 @@ import auth from '../../../../../firebase.init';
 
 const NoteList = () => {
     const [user] = useAuthState(auth);
-    const { data: notes, isLoading, refetch } = useQuery('taskList', () => fetch(`https://top-gear-perform-server.vercel.app/notes/${user?.email}`, {
+    const { data: notes, isLoading, refetch } = useQuery('taskList', () => fetch(`https://top-gear-perform-server.up.railway.app/notes/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))

@@ -13,7 +13,7 @@ const ChatInput = () => {
                 userName: userName,
                 email: room
             }
-            fetch('https://top-gear-perform-server.vercel.app/chatuser', {
+            fetch('https://top-gear-perform-server.up.railway.app/chatuser', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

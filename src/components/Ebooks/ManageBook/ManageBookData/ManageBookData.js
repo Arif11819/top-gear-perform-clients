@@ -5,14 +5,14 @@ const ManageBookData = ({ ebook }) => {
     console.log(ebook)
     const [ebooks, setEbooks] = useState([]);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/ebook`)
+        fetch(`https://top-gear-perform-server.up.railway.app/ebook`)
             .then(res => res.json())
             .then(data => setEbooks(data))
     }, []);
 
     const handleDeleteBook = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/ebook/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/ebook/${id}`
         fetch(url, {
             method: 'DELETE'
         })

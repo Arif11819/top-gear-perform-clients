@@ -9,7 +9,7 @@ const Progress = () => {
     const [progress, setprogress] = useState([]);
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/progress/${user?.email}`)
+        fetch(`https://top-gear-perform-server.up.railway.app/progress/${user?.email}`)
             .then(res => res.json())
             .then(data => setprogress(data))
     }, [progress]);
@@ -20,7 +20,7 @@ const Progress = () => {
             form: data,
             user: user.email
         }
-        fetch('https://top-gear-perform-server.vercel.app/progress', {
+        fetch('https://top-gear-perform-server.up.railway.app/progress', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

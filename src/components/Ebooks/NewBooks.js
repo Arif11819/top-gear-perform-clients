@@ -5,7 +5,7 @@ const NewBooks = () => {
   const [newBooks, setBewBooks] = useState([]);
 
   useEffect(() => {
-    fetch("https://top-gear-perform-server.vercel.app/new-ebook")
+    fetch("https://top-gear-perform-server.up.railway.app/new-ebook")
       .then((res) => res.json())
       .then((data) => setBewBooks(data));
   }, []);

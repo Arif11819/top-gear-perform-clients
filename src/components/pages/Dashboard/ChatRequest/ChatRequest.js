@@ -11,7 +11,7 @@ const ChatRequest = () => {
         dispatch(getChatRequest())
     }, [dispatch])
     const handleDelete = (id) => {
-        const url = `https://top-gear-perform-server.vercel.app/chatuser/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/chatuser/${id}`
         fetch(url, {
             method: 'DELETE',
         })

@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import EmployeesCard from './EmployeesCard';
 
 const EmployeesVacation = () => {
-    const { data: vacationstore, isLoading, refetch } = useQuery('vacationstore', () => fetch(`https://top-gear-perform-server.vercel.app/vacationstore`, {
+    const { data: vacationstore, isLoading, refetch } = useQuery('vacationstore', () => fetch(`https://top-gear-perform-server.up.railway.app/vacationstore`, {
         method: 'GET',
     })
         .then(res => res.json()))

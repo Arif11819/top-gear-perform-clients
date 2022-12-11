@@ -6,7 +6,7 @@ const useEmployee = () => {
     const [user] = useAuthState(auth);
     const [employee, setEmployee] = useState([]);
     useEffect(() => {
-        const url = `https://top-gear-perform-server.vercel.app/employee/${user?.email}`;
+        const url = `https://top-gear-perform-server.up.railway.app/employee/${user?.email}`;
 
         fetch(url)
             .then(res => res.json())

@@ -24,7 +24,7 @@ const ScheduleDemo = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [bookedTime, setBookedTime] = useState('');
     useEffect(() => {
-        fetch("https://top-gear-perform-server.vercel.app/timeSlots")
+        fetch("https://top-gear-perform-server.up.railway.app/timeSlots")
             .then(res => res.json())
             .then(data => setTimeSlots(data))
     }, [])
@@ -41,7 +41,7 @@ const ScheduleDemo = () => {
             phone: phoneNumber,
             userCount: userCount
         }
-        fetch("https://top-gear-perform-server.vercel.app/scheduleData", {
+        fetch("https://top-gear-perform-server.up.railway.app/scheduleData", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

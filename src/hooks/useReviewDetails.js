@@ -4,7 +4,7 @@ const useReviewDetails = reviewsId => {
     const [reviews, setReviews] = useState({});
 
     useEffect(() => {
-        const url = `https://top-gear-perform-server.vercel.app/reviews/${reviewsId}`;
+        const url = `https://top-gear-perform-server.up.railway.app/reviews/${reviewsId}`;
 
         fetch(url)
             .then(res => res.json())

@@ -15,7 +15,7 @@ const AddEmployee = () => {
             form: data,
             user: user.email
         }
-        const url = `https://top-gear-perform-server.vercel.app/employee`;
+        const url = `https://top-gear-perform-server.up.railway.app/employee`;
         fetch(url, {
             method: 'POST',
             headers: {

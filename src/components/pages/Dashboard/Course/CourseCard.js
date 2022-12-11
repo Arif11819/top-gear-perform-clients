@@ -15,7 +15,7 @@ const CourseCard = ({ item, setProductItems, productItems }) => {
     const proceed = window.confirm('are you sure delete')
     if (proceed) {
       console.log('delete with id', id)
-      const url = (`https://top-gear-perform-server.vercel.app/course/${id}`);
+      const url = (`https://top-gear-perform-server.up.railway.app/course/${id}`);
 
       fetch(url, {
         method: 'DELETE'

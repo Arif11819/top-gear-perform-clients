@@ -6,14 +6,14 @@ const ManageUsers = () => {
 
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/users`)
+        fetch(`https://top-gear-perform-server.up.railway.app/users`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users]);
 
     const handleDeleteUser = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/users/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/users/${id}`
         fetch(url, {
             method: 'DELETE'
         })
@@ -34,7 +34,7 @@ const ManageUsers = () => {
 
     const handleMakeAdmin = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/user/admin/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/user/admin/${id}`
         fetch(url, {
             method: 'PUT'
         })
@@ -53,7 +53,7 @@ const ManageUsers = () => {
 
     const handleMakeManager = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/user/manager/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/user/manager/${id}`
 
         fetch(url, {
             method: 'PUT'

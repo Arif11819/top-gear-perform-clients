@@ -4,14 +4,14 @@ import { toast } from 'react-toastify';
 const ScheduleDemoDetails = () => {
     const [scheduleUsers, setScheduleUsers] = useState([]);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/scheduleUser`)
+        fetch(`https://top-gear-perform-server.up.railway.app/scheduleUser`)
             .then(res => res.json())
             .then(data => setScheduleUsers(data))
     }, [scheduleUsers]);
 
     const handleCancelSchedule = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/scheduleUser/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/scheduleUser/${id}`
         fetch(url, {
             method: 'DELETE'
         })

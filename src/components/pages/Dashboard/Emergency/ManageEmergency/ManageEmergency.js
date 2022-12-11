@@ -16,14 +16,14 @@ const ManageEmergency = () => {
 
     const [emergenciess, setEmergencies] = useState([]);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/emgcontact`)
+        fetch(`https://top-gear-perform-server.up.railway.app/emgcontact`)
             .then(res => res.json())
             .then(data => setEmergencies(data))
     }, [emergenciess]);
 
     const handleDelete = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/emgcontact/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/emgcontact/${id}`
         fetch(url, {
             method: 'DELETE'
         })

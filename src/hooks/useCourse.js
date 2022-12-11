@@ -8,7 +8,7 @@ const useCourse = () => {
     const [productItems, setProductItems] = useState([]);
 
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/course`)
+        fetch(`https://top-gear-perform-server.up.railway.app/course`)
             .then(res => res.json())
             .then(data => setProductItems(data))
 

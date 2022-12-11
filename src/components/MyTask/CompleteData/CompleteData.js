@@ -6,12 +6,12 @@ import auth from '../../../firebase.init';
 const CompleteData = ({ complete }) => {
     const [completes, setCompletes] = useState([]);
     useEffect(() => {
-        fetch(`https://top-gear-perform-server.vercel.app/complete/${user?.email}`)
+        fetch(`https://top-gear-perform-server.up.railway.app/complete/${user?.email}`)
             .then(res => res.json())
             .then(data => setCompletes(data))
     }, [completes]);
     const [user] = useAuthState(auth);
-    const { data: compTask, isLoading, refetch } = useQuery('compTask', () => fetch(`https://top-gear-perform-server.vercel.app/complete/${user?.email}`, {
+    const { data: compTask, isLoading, refetch } = useQuery('compTask', () => fetch(`https://top-gear-perform-server.up.railway.app/complete/${user?.email}`, {
         method: 'GET',
     })
         .then(res => res.json()))
@@ -22,7 +22,7 @@ const CompleteData = ({ complete }) => {
 
     const handleDeleteTask = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/complete/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/complete/${id}`
         fetch(url, {
             method: 'DELETE'
         })

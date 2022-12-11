@@ -7,7 +7,7 @@ const AddReview = () => {
     const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
     const onSubmit = data => {
-        const url = `https://top-gear-perform-server.vercel.app/reviews`;
+        const url = `https://top-gear-perform-server.up.railway.app/reviews`;
         fetch(url, {
             method: 'POST',
             headers: {

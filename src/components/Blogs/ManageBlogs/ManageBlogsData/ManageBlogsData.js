@@ -3,14 +3,14 @@ import { toast } from 'react-toastify';
 const ManageBlogsData = ({ blog }) => {
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('https://top-gear-perform-server.vercel.app/blog')
+        fetch('https://top-gear-perform-server.up.railway.app/blog')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [blogs]);
 
     const handleDeleteBlog = id => {
 
-        const url = `https://top-gear-perform-server.vercel.app/blog/${id}`
+        const url = `https://top-gear-perform-server.up.railway.app/blog/${id}`
         fetch(url, {
             method: 'DELETE'
         })

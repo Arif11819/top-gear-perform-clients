@@ -6,7 +6,7 @@ const useManager = user => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`https://top-gear-perform-server.vercel.app/manager/${email}`, {
+            fetch(`https://top-gear-perform-server.up.railway.app/manager/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

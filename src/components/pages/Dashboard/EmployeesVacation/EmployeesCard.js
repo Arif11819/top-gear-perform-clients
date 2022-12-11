@@ -9,7 +9,7 @@ const EmployeesCard = ({ vacation }) => {
             text: feedbackText
         }
 
-        const url = `https://top-gear-perform-server.vercel.app/vacationstore/feedback/${vacation?._id}`
+        const url = `https://top-gear-perform-server.up.railway.app/vacationstore/feedback/${vacation?._id}`
         fetch(url, {
             method: "PUT",
             headers: {
